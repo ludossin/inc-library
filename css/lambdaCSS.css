@@ -63,21 +63,21 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 /* Font-faces used in styles */
 @font-face {
     font-family: Hkgrotesk;
-    src: url('css/fonts/hkgrotesk-regular-webfont.eot'); /* IE9 Compat Modes */
-    src: url('css/fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('css/fonts/hkgrotesk-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-        url('css/fonts/hkgrotesk-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-        url('css/fonts/hkgrotesk-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('css/fonts/hkgrotesk-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url('fonts/hkgrotesk-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/hkgrotesk-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/hkgrotesk-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        url('fonts/hkgrotesk-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('fonts/hkgrotesk-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 @font-face {
     font-family: HkgroteskBold;
-    src: url('css/fonts/hkgrotesk-bold-webfont.eot'); /* IE9 Compat Modes */
-    src: url('css/fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('css/fonts/hkgrotesk-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-        url('css/fonts/hkgrotesk-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-        url('css/fonts/hkgrotesk-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('css/fonts/hkgrotesk-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url('fonts/hkgrotesk-bold-webfont.eot'); /* IE9 Compat Modes */
+    src: url('fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/hkgrotesk-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/hkgrotesk-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        url('fonts/hkgrotesk-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('fonts/hkgrotesk-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 body{
