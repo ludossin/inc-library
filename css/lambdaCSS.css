@@ -93,9 +93,8 @@ body{
 ************************************/
 body {
     margin: 0;
-    color:#000000;
-    background:#f4f4f4;
-    background-attachment: fixed;
+/*     background:#f4f4f4;
+     */    background-attachment: fixed;
     color: #000000;
     text-rendering: optimizeSpeed;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -120,16 +119,22 @@ body {
     color:#ffffff;
 }
 
-a, a:visited{
+a{
     color:#000000;
     font-family: "HKGroteskbold";
     text-decoration: none;
 }
 
+a:visited{
+    color:#000;
+    font-family: "HKGroteskbold";
+    text-decoration: none !important;
+}
+
 a:hover{
     color:#ff3300;
     font-family: "HKGroteskbold";
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 hr{
@@ -207,9 +212,9 @@ hr{
     /*     z-index: 2;
      */    position: relative;
     text-rendering: optimizeSpeed;
-    padding-left:15px;
-    background-color:#f4f4f4;
-    color: #000000;
+    padding-left:0px;
+/*     background-color:#f4f4f4;
+     */    color: #000000;
 /*     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59); */
@@ -293,9 +298,9 @@ hr{
     margin-right: 0;
     margin-left: 0;
     height: 40px;
-    -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.29) ;
+/*     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.29) ;
         -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.29); 
-        box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.29) ;
+        box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.29) ; */
 }
 
 #library-tree #breadcrumb{
@@ -308,7 +313,7 @@ hr{
     padding: 0px;
     text-indent: 0;
     padding-top:10px;
-    background-color: #f30;
+    background-color: transparent;
     border-radius: 0px;
     text-align: center;
 }
@@ -354,8 +359,8 @@ hr{
     padding-top: 2px;
     font-family: "HKGroteskbold";
     text-decoration: none;
-/*     border: 1px solid #ffffff;
-     */}
+    text-transform: uppercase;
+}
 
 #library-tree  #breadcrumb .breadcrumb a:hover{
     /*   color: #f30;
@@ -406,7 +411,7 @@ hr{
 
 /* How is written the book's title */
 #book-title {
-    font-size: 2.6em;
+    font-size: 4.6em;
     margin-top: 10px;
     line-height: 1em;
     padding: 0px;
@@ -502,10 +507,10 @@ Defines the typography for texts in reader */
     clear: left;
     color: #000000;
     padding-left: 2%;
-    background-color: #ffffff;
+/*     background-color: #ffffff;
     -webkit-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
     -moz-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
-    box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
+    box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99); */
 }
 
 .section p, .section h2, .section h3, .section h1, .section img, .references{
@@ -732,17 +737,17 @@ img {
     margin-bottom: 1.5em;
 }
 /*  img.grayscale {
-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-filter: gray;
--webkit-filter: grayscale(100%); 
--webkit-transition: all .1s ease; 
--webkit-backface-visibility: hidden;
-}
-
-img.grayscale:hover {
-filter: none;
--webkit-filter: grayscale(0%);
-} */
+ filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+ filter: gray;
+ -webkit-filter: grayscale(100%); 
+ -webkit-transition: all .1s ease; 
+ -webkit-backface-visibility: hidden;
+ }
+ 
+ img.grayscale:hover {
+ filter: none;
+ -webkit-filter: grayscale(0%);
+ } */
 
 .section .img-caption{
     font-size: 14px;
@@ -788,9 +793,6 @@ a {
     width: 100%;
     background-color: rgba(255, 51, 0, 0.13);
     border-radius: 5px;
-    /* border-top-left-radius: 0px; */
-    /* border-bottom-left-radius: 0px; */
-    /* border-left: 2px solid #f30; */
 }
 
 .horizScroll, .subScroll{
@@ -854,7 +856,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding: 0;
     height: 100%;
     position:fixed;
-    z-index: 1;
+    z-index: 30;
     max-width: 100%;
     background-attachment: fixed;   
     left: 0;
@@ -967,11 +969,10 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     z-index: 1;
     height: 100%;
     right: 0;
-    /*left: -24%;*/
     position: fixed;
-    /*background-color:#f30;*/
-    background-color: #ffffff;
-    width: 4%; /* 24% */
+    background-color:#f4f4f4;
+    background-color:#f30;
+    width: 5%; /* 24% */
 }
 
 .toggle_menu_right .toggle_menu_right_button{
@@ -996,14 +997,17 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 
 #menu-right-close{
     margin-top: -10px;
-    margin-left: -30px;
+    margin-left: -40px;
     position: absolute;
-    top:50%;
+    top: 50%;
+    /* height: 20px; */
+    padding: 20px 10px 20px 10px;
+    background-color: #f4f4F4;
 }
 
 #menu-right-close:hover{
-    opacity: 0.5;
-    cursor: pointer;
+/*     opacity: 0.5;
+     */    cursor: pointer;
 }
 
 #menu-left-close{
@@ -1064,33 +1068,52 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     height: 100%;
     position: fixed;
     color: #000000;
-    width: 4%;
-    background-color:#FFE5DE;
+    width: 5%;
+    background-color:#f4f4f4;
+    background-color:rgba(255, 51, 0, 0.55);
+
     cursor: pointer;
 /*     -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
     -moz-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
     box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09); */
 }
 
-#menu_bar:hover{
-/*     -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
-    -moz-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
-    box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29); */
+#menu_bar:hover {
+    background-color:rgba(255, 51, 0, 0.35);
 }
 
+#menu_bar:hover #menu_bar_scroll{
+    background-color:#f30
+}
 
+.vertical-text-wrapper{
+    position: absolute;
+    top:60%;
+    width: 400px;
+    left: -170px;
+    height: 10px;
+    text-overflow: ellipsis;
+
+}
+ 
+.vertical-text-wrapper h1{
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 /*******VERTICAL SCROLL BAR*******/
 #menu_bar_scroll {	
     height: 0%;
-    width: 1.8%;
+    width: 5%;
     position: fixed;
-    /* background-color: #f30; */
     display: block;
+    background-color:#5b5b5b;
     background-color:#f30;
-
 }
-
 
 #menu_bar_title_button{
     width:400px;
@@ -1101,12 +1124,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     -webkit-transform:rotate(270deg); /* Safari and Chrome */
     -o-transform:rotate(270deg); /* Opera */
     text-align: right;
-    /*         -ms-transform-origin: 10% 100%; IE 9
-    -webkit-transform-origin: 10% 100%; Chrome, Safari, Opera
-    transform-origin: 10% 100%;
-    */
     font-size: 18px;
-
     color:#000000;
 }
 
@@ -1391,11 +1409,13 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 
 #cancel{
     position: fixed;
-    margin-top: -35px;
-    background-color:transparent;
+    margin-top: -72px;
+    background-color: transparent;
     box-shadow: none;
-    border:none;
-    right:55px;
+    border: none;
+    right: 15px;
+    color: #8e8e8E;
+    font-size: 24px;
 }
 
 .search-found {
@@ -1532,9 +1552,17 @@ fieldset {
     margin: 0;
     padding: 0;
     border-style: none;
+    background-color: transparent;
 }
 
 #filter {
+    border-style: none;
+    background-color: white;
+    box-shadow: none;
+    font-size: 18px;
+    border-radius: 0px;
+    margin-left: 5px;
+    margin-right: 10px;
 }
 
 #filter > * {
@@ -1549,9 +1577,23 @@ fieldset {
     color: #8e8e8E;
     z-index: 1;
     margin-top: -20px;
+    margin-left: 10px;
 }
 
 #filter.text-input {
+}
+
+::-webkit-input-placeholder {
+    color: black;
+}
+:-moz-placeholder {
+    color: black;
+}
+::-moz-placeholder {
+    color: black;
+}
+:-ms-input-placeholder {
+    color: black;
 }
 
 input#filter {
@@ -1663,14 +1705,14 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 /*     -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     box-shadow: 0 10px 15px rgba(0,0,0,0.2); */
-    border:1px solid #f4f4f4;
+    border-bottom:1px solid #f4f4f4;
     padding-left:3px;
     z-index: 1;
 
 }
 
 .ui-menu-item:hover{
-    background-color: #dbdbdb;
+    background-color: #f4f4f4;
 }
 
 .ui-menu-item:focus {
@@ -1787,11 +1829,10 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     text-decoration: none;
     color: #000000;
 }
-f
 
 .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
-    color:#0000ff;
-
+    color: #255fff;
+    background-color: #E8E8FF;
 }
 
 /********CITATIONS************************/
@@ -1816,7 +1857,7 @@ f
 }
 
 #pin:hover{
-    color: rgb(63, 222, 63);
+    color: rgb(24, 255, 121);
 }
 /*.pin-clone {
 color: #0000ff;
@@ -1824,7 +1865,7 @@ color: #0000ff;
 
 .ui-draggable-handle {
     font-size: 10px;
-    color: rgb(63, 222, 63);
+    color: rgb(24, 255, 121);
     cursor: move;
     z-index: 1;
     padding-left:4px;
@@ -1842,13 +1883,13 @@ color: #0000ff;
     font-family: "Hkgrotesk";
     border-style: none;
     background-color: rgb(240, 255, 240);
-    color: rgb(63, 222, 63);
+    color: rgb(24, 255, 121);
     padding: 0;
     margin-left:2px;
     margin-top: 1px;
     border-radius: 8px;
     padding-left: 4px;
-    border:1px solid rgb(63, 222, 63);
+    border:1px solid rgb(24, 255, 121);
 }
 
 .save-pin {
@@ -1858,7 +1899,7 @@ color: #0000ff;
 .pin-close{
     font-size: 16px;
     cursor: pointer;
-    color: rgb(63, 222, 63);
+    color: rgb(24, 255, 121);
 }
 
 .pin-close:hover{
@@ -1877,7 +1918,6 @@ color: #0000ff;
 .full-citation {
     text-align: left;
     word-wrap: break-word;
-    background-color: #ffffff;
     overflow-y: auto;
     border:none;
     font-size: 10px;
@@ -1886,10 +1926,10 @@ color: #0000ff;
     max-height: 9em;
     width: 100%;
     margin: 0px;
-    border-radius: 5px;
-    color: #5b5b5b;
-/*     border:1px dashed #dbdbdb;
-     */    background-color:#f4f4f4;
+/*     border-radius: 5px;
+     */
+    color:black;
+    background-color:transparent;
 }
 
 #citation-box {
@@ -2128,9 +2168,9 @@ ol {
 
 
 .extra, .extra-btn{
-    background-color:#f4f4f4;
-    border-radius:5px;
-    padding: 5px;
+    background-color:white;
+/*     border-radius:5px;
+     */    padding: 5px;
     padding-top:2px;
     padding-bottom: 2px;
     margin-right:4px;
@@ -2144,8 +2184,8 @@ ol {
 }
 
 .extra:hover, .extra-btn:hover{
-    background-color:#dbdbdb;
-    text-decoration: none;
+/*     background-color:#dbdbdb;
+     */    text-decoration: none;
     color: #000000;
     font-family: "HKGrotesk";
 }
@@ -2198,6 +2238,7 @@ ol {
     background-color:#dbdbdb;
 /*     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
      */    color:#000 !important;
+    box-shadow: none;
 }
 .section .keyword-button:focus{
 /*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
@@ -2224,7 +2265,7 @@ ol {
     padding: 0px;
     height: 100%;
     border: none;
-    background-color: #ffffff;
+    background-color: #f4f4F4;
     font-family: "HKGrotesk";
     z-index: 0;
 }
@@ -2241,21 +2282,24 @@ ol {
 
 .panel-group .panel {
     margin-bottom: 0;
-    border-radius: 8px;
+    border-radius: 0px;
     background-color: transparent;
     border:none;
+    box-shadow: none;
 
 }
 
 .panel-group .panel-heading+.panel-collapse>.panel-body {
     border-top: 0px solid #dbdbdb;
     border-bottom: 0px solid #dbdbdb;
-
+    margin: 0;
+    padding: 0;
+    padding-left: 8px;
 }
 
 .panel-body{
     font-size: 13px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 4px;
     padding: 8px;
     border:none;
@@ -2268,14 +2312,15 @@ ol {
 .panel-default>.panel-heading{
     border-radius: 8px;
     padding: 7px;
-    background-color: #f4f4f4;
+    background-color: transparent;
     border:none;
     /*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    */    font-family: "HKGrotesk";
+    */
+    font-family: "HKGroteskbold";
 }
 
 .panel-heading a{
-    font-family: "HKGrotesk";
+    font-family: "HKGroteskbold";
 }
 .panel-default>.panel-heading a:hover, .panel-default>.panel-heading a:focus{
     color: #000000;
@@ -2305,12 +2350,13 @@ ol {
     font-size:11px;
     background-color: transparent;
     color: #000000;
+    font-family: "HKGroteskbold";
 }
 
 .panel-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 16px;
     color: inherit;
     color: #000000;
 }
