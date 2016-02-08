@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 ////AFFIX THE LIBRARY-TREE TO THE TOP OF THE SCREEN
     $('#library-tree').affix({
-            offset: {top: 40}
+            offset: {top: 55}
     });
 
 
