@@ -29,11 +29,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- <link href="css/scrolling-nav.css"> -->
 
-    <link rel="stylesheet" type="text/css" href="css/lambdaCSS.css">
+<!--     <link rel="stylesheet" type="text/css" href="css/lambdaCSS.css">
+     -->    <link rel="stylesheet" type="text/css" href="css/lambdaCSS_02.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/style-lambda3.css" media="screen" /> -->
     <link rel="stylesheet" href="css/styleprint-last.css" type="text/css" media="print" />
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 <!-- –––––––––––––––––––––––––– Scripts –––––––––––––––––––––––––––––––––––––-->
     <!-- // <script src="http://code.jquery.com/jquery-1.7.2.js"></script> -->
    <!--  // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> -->
@@ -72,8 +73,6 @@
 
 
 
-
-
 <!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/      STRUCTURATION      /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
@@ -83,8 +82,21 @@
    
 <div id="main"> <!-- MAIN: DO NOT REMOVE --> 
 
+<!--     <div class="row test-message col-lg-12">
+        <div class="col-lg-8 col-lg-offset-2">
+           
+            <h2>You are looking at a new, experimental reading form for the publications of the <a href="http://networkcultures.org/publications/">Institute of Network Cultures</a>.<br>
+                It is the result of a <a href="http://www.publishinglab.nl/navigating-tod/">research project</a> on online reading and investigates new ways of navigating books in browsers with the aim of making INC publications adaptive to how readers behave online.<br>
+                This design of <i>Gray Zone of Creativity and Capital</i> is currently in the beta stage, and we appreciate all tips and comments from readers.<br>
+            Read it, try it and help us improve it by <a href="#" style="font-weight:600;">giving your feedback</a>.<br>
+                Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
+            <h3>      <a href="http://www.publishinglab.nl">PublishingLab</a>   </h3>      
+           
+        </div>
+    </div> -->
+    
 <!-- –––––––––––––––––––––––––– Pushmenu/Toc (left) –––––––––––––––––––––––––––––––––––––-->
-<div class="container-fluid">
+<div class="container-fluid" >
     <div class="row">
         <div id="menu" class="not col-lg-2 col-md-2 col-sm-2 col-xs-11 ">
             <div id="toc_wrapper">
@@ -269,7 +281,7 @@
                             <button href="#" class="search_nav" id="prev"><i class="fa fa-angle-up"></i></button>
                             <button href="#" class="search_nav" id="next"><i class="fa fa-angle-down"></i></button>
                             <div id="search_ui">
-                                <button id="cancel"><i class="fa fa-times"></i></button>
+                                <button id="cancel">×</button>
                             </div>
                         </div>
 
@@ -291,7 +303,8 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="Download this text in various formats" alt="Download this text in various formats"><i class="fa fa-download"></i> Download</a>
+                                <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="Download this text in various formats" alt="Download this text in various formats">
+                                <!-- <i class="fa fa-download"></i>  -->Download</a>
                                 <br>
                             </h4>
                         </div>
@@ -307,7 +320,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><i class="fa fa-quote-left"></i>
+                                    <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><!-- <i class="fa fa-quote-left"></i> -->
                                         Referencing tool</a>
                                 </h4>
                             </div>
@@ -333,7 +346,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"><i class="fa fa-print"></i> Print</a>
+                                    <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"><!-- <i class="fa fa-print"></i> --> Print</a>
                                 </h4>
                             </div>
                             <div id="collapse5" class="panel-collapse collapse">
@@ -350,7 +363,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a id="settings" data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"><i class="fa fa-wrench"></i> Settings</a>
+                                    <a id="settings" data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"><!-- <i class="fa fa-wrench"></i> --> Settings</a>
                                 </h4>
                             </div>
                             <div id="collapse6" class="panel-collapse collapse">
@@ -376,7 +389,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a id="share" data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"><i class="fa fa-external-link"></i> Share</a>
+                                    <a id="share" data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"><!-- <i class="fa fa-external-link"></i> --> Share</a>
                                 </h4>
                             </div>
                             <div id="collapse7" class="panel-collapse collapse">
@@ -521,6 +534,9 @@
 <!--–––––––––––––––––––––––––– Vertical scrolling indicator –––––––––––––––––––––––––––––––––––––-->
     <div id="menu_bar">
         <div id="menu_bar_scroll"></div>
+        <a class="vertical-text-wrapper">
+            <h1 class="vertical-text">The Gray Zones of Creativity and Capital</h1>
+        </a>
     </div>
        
 
@@ -529,13 +545,13 @@
             <div id="info-box">
                 <!-- INC LOGO -->
 
-                <div class="row" id="inc-navbar">
+               <!--  <div class="row" id="inc-navbar">
                     <div class="col-lg-10 col-lg-offset-1">
                         <img src="http://networkcultures.org/longform/wp-content/uploads/sites/31/2015/04/INC-logo-2.png">
                          
                        
                     </div>
-                </div>
+                </div> -->
                 <!-- BOX TO EXPLAIN THE PROJECT -->
 <!-- 
                 <div class="row" id="inc-info">
@@ -549,19 +565,27 @@
 
                 <div class="row" id="library-tree">
                     <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 hidden-sm hidden-xs" id="breadcrumb">
+                       <!--  <ol class="breadcrumb">
+                            <li>
+                                <a href="#">INC Library</a>
+                            </li>
+                        
+                            <li>
+                                <a href="#">Theory on Demand</a>
+                            </li>
+                        
+                            <li class="active">
+                                <a href="#">The Gray Zones of Creativity and Capital</a>
+                            </li>
+                        </ol> -->
+                        
                         <ol class="breadcrumb">
                             <li>
                                 <a href="#">INC Library</a>
                             </li>
 
-                            <li>
-                                <a href="#">Theory on Demand</a>
-                            </li>
-
-                            <li class="active">
-                                <a href="#">The Gray Zones of Creativity and Capital</a>
-                            </li>
                         </ol>
+                        
                     </div>
                     <div class="breadcrumb hidden-lg hidden-md col-sm-12 col-xs-12">
                         <a href="#"><i class="fa fa-arrow-left"></i>
@@ -591,7 +615,7 @@
                 <!-- SUMMARY BOX -->
 
                 <div class="row">
-                    <div class="info-box-left col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                    <div class="info-box-left col-lg-6 col-lg-offset-0 col-md-offset-1 col-md-5 col-sm-6 col-xs-10">
                         <div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-0" id="info-box-left-img-container">
                             <!-- <img class="img-responsive" src="http://image.issuu.com/150402121056-510d1f3c2060fd382ba9f86be83c1ec6/jpg/page_1.jpg"> -->
                             <img class="img-responsive" src='cover.jpg'>                 
@@ -651,12 +675,12 @@ by Kiliano Foearun & Coolio Andthegang
                 <!-- #info-box-->
                 
                 
-                <div class="row hidden-xs" id="carousel-box">
-
+ <!--                <div class="row hidden-xs" id="carousel-box">
+                
                     <div class="well">
                         <div id="myCarousel" class="carousel slide">
-
-                            <!-- Carousel items -->
+                
+                            Carousel items
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <div class="row">
@@ -665,7 +689,7 @@ by Kiliano Foearun & Coolio Andthegang
                                         <div class="carousel-content col-lg-2 col-md-2 col-sm-3">
                                             <a href="#x">
                                             <img src="http://image.issuu.com/140620081426-d28c76a78a8c783d177b44bb96b1c82b/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive">
-
+                
                                             </a>
                                         </div>
                                         <div class="carousel-content col-lg-2 col-md-2 col-sm-3"><a href="#x"><img src="https://image.isu.pub/110607150248-001100acfe614bfdae29382cf59a82dd/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"></a>
@@ -678,22 +702,22 @@ by Kiliano Foearun & Coolio Andthegang
                                         </div>
                                         <div class="carousel-content col-lg-2 col-md-2 col-sm-3"><a href="#x"><img src="http://image.issuu.com/130219144226-da658d03206545eb992339ceb63209d3/jpg/page_1.jpg" alt="Image" class="img-responsive"></a>
                                         </div>
-
+                
                                     </div>
-                                    <!--/row-->
-
+                                    /row
+                
                                 </div>
-                                <!--/carousel-inner--> <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-
-<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> -->
+                                /carousel-inner <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
                             </div>
-                            <!--/myCarousel-->
+                            /myCarousel
                         </div>
-                        <!--/well-->
-
-
+                        /well
+                
+                
                     </div>
-                </div>
+                </div> -->
 
 
             </div>
@@ -1589,13 +1613,13 @@ by Kiliano Foearun & Coolio Andthegang
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/         FOOTER        /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-->
-
+<!-- 
 <footer class="footer  col-lg-5 col-lg-offset-2 col-md-5 col-sm-8 col-sm-offset-2 col-xs-12" >
     <div class="container">
         <p>Design and development: Josip Batinic and Léna Robin.</p>
     </div>
 </footer>
-
+ -->
 <!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/         SCRIPTS        /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/

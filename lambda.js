@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 ////AFFIX THE LIBRARY-TREE TO THE TOP OF THE SCREEN
     $('#library-tree').affix({
-            offset: {top: 40}
+            offset: {top: 55}
     });
 
 
@@ -77,7 +77,7 @@ $(document).ready(function(){
             //var initial_offset = Math.floor($('#menu-right-wrapper').offset().left);
             //if (Math.floor($('#menu-right-wrapper').offset().left) >= window_width) {
                 $('#menu-right').animate({left: 1});
-                $('.toggle_menu_right').fadeOut();//('background-color', 'white');
+                $('.toggle_menu_right').hide();//('background-color', 'white');
                 $('#arrows').hide();
             //} 
         }
@@ -88,7 +88,8 @@ $(document).ready(function(){
        // $('.toggle_menu_right').css('right', '0px');
         //if (Math.floor($('#menu-right-wrapper').offset().left) <= window_width) {
             //menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
-            $('.toggle_menu_right').fadeIn(250).animate({'background-color': '#f30'});
+          //  $('.toggle_menu_right').fadeIn(0).animate({'background-color': '#ff9e86'});
+            $('.toggle_menu_right').fadeIn(0);
             $('#menu-right').animate({left: + menu_wrapper_width});
             // $(this).hide();
             $('#arrows').show();
@@ -121,9 +122,10 @@ $(document).ready(function(){
             //     $('#menu').animate({left: -menu_width});    
             // } else {
                 // console.log('left was !== 0');
+               // $('#menu').animate({left: 0});
                 $('#menu').animate({left: 0});
 
-                $toggle_menu.fadeOut();
+                $toggle_menu.hide();
                 $('#menu-left-close').show();
             // }
          //   $('#menu_bar').fadeToggle(1000);
@@ -189,7 +191,8 @@ $(document).ready(function(){
     var menu_width = $('#toc_wrapper').width();
     $('#menu').animate({'left': -menu_width});
     $('#menu-right').animate({'left': + menu_wrapper_width});
-    $('.toggle_menu_right').fadeIn(750).animate({'background-color': '#f30'});
+    //$('.toggle_menu_right').fadeIn(750).animate({'background-color': '#f30'});
+    $('.toggle_menu_right').fadeIn(750);
     $('#menu-left-close').hide();
     if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
     // if ($(document).scrollTop() > $('#info-box').offset().top) {
@@ -1180,11 +1183,11 @@ if ($(window).width() > "480") {
         ev.stopPropagation();
         ev.preventDefault();
         var qwer = parseInt(aidee.css('font-size'));
-        console.log(qwer);
+        // console.log(qwer);
         // var nr_font_size = $('#fn'+numbr+':before').css('font-size');
         // console.log(nr_font_size);
         // $(this).effect('transfer', {to: aidee}, 700);
-        aidee.animate({'font-size': qwer*1.75}, 500).animate({'font-size': qwer}, 200);
+        // aidee.animate({'font-size': qwer*1.75}, 500).animate({'font-size': qwer}, 200);
         // console.log(nr_font_size);
 
         // aidee.effect('bounce', 1000);
