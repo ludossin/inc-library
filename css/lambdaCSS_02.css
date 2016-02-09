@@ -1977,6 +1977,47 @@ color: rgb(24, 255, 121);
 color: #f30;
 }
 
+#pins-list{
+    margin-top:30px;
+}
+
+#ul pins-list {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+#pins-list ul {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+/* 
+ul {
+    list-style-type: none;
+}
+ */
+
+
+#sub-navigation-home li.sub-navigation-home-news a 
+
+#pin_wrapper li#pins-list:before {
+    font-family: 'FontAwesome';
+    top: 0;
+    left: 10px;
+    content: "\f08d";
+    margin-right: 4px;
+}
+
+
 #tools {
 top: 2%;
 right: 1%;
