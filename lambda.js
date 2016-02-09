@@ -817,18 +817,29 @@ $(document).ready(function(){
         if (pins.length > 0) {
             pinChanged(pinID);
         }else{
+            //never called, since the pins are created on drop?
             pins.push(pObj);
             localStorage.setItem("saved_pins", JSON.stringify(pins));
         } 
         //saves all we need in localStorage
-        // localStorage.saved_pins = JSON.stringify(pins);
         localStorage.last_pinID = last_pinID;
         localStorage.pin_count = pin_count;
 
         console.log('pin_count -> ' +pin_count);
         console.log('last_pinID ->' +last_pinID);
         console.log('pins.length ->' + pins.length);
+
     } // end function checkPin
+
+    //populates the ul with saved pins
+    function makeList(){
+        if (pins.length > 0) {
+            for (var i=0; i<pins.length; i++) {
+                $('#pins-list').append('<li><a href="#'+pins[i]["id"]+'">'+pins[i]["value"]+'</a></li>');
+            }
+        }
+    }
+
 
 ////GET SAVED ITEMS
     //checks if localStorage is supported and if it has been set
@@ -845,7 +856,6 @@ $(document).ready(function(){
             }
 
             for (var i=0; i<pins.length; i++) {
-                // alert(i);
                 console.log(i);
                 var appended_pins = $('<div style="position: absolute" class="pin-clone"><i class="fa fa-thumb-tack fa-2x"></i><form class="pin-form" action=""><input class="pin-input" type="text" name="fname" placeholder="Tag"></form></div>');
                 appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').attr('id', pins[i]["id"]).draggable({
@@ -857,16 +867,16 @@ $(document).ready(function(){
                     stop: pinMoved
                 });
 
-               // $('#dragged-pin'+i).offset({top: pins[i]["top"], left: pins[i]["left"]});
-               // $('#dragged-pin'+i).find('input').val(pins[i]["value"]);
-                console.log('text: ' +pins[i]["value"]);
-                console.log('top: ' + pins[i]["top"]);
-                console.log('last_pinID: '+ last_pinID);
-                console.log('pin_count: '+ pin_count);
+                // console.log('text: ' +pins[i]["value"]);
+                // console.log('top: ' + pins[i]["top"]);
+                // console.log('last_pinID: '+ last_pinID);
+                // console.log('pin_count: '+ pin_count);
                 appended_pins.offset({top: pins[i]["top"]});
                 appended_pins.offset({left: pins[i]["left"]});
                 appended_pins.find('input').val(pins[i]["value"]);
            }
+           //creates the pins-list in the menu
+            makeList();
 
         } else {
             //localStorage supported, but no values stored
@@ -876,8 +886,10 @@ $(document).ready(function(){
         }
     } else {
         //browser does not support localStorage
-        //TO DO: DISABLE PINS ALTOGETHER THEN
-        // alert('local outer else');
+        //DISABLE PINS ALTOGETHER THEN
+        $("#pin_wrapper").css('display','none');
+        //OR, alternatively
+        //$("#pin_wrapper").html('<p>Your browser does not support localStorage :/');
     }
 
 ////DELETE ALL PINS
@@ -887,29 +899,8 @@ $(document).ready(function(){
             pin_count = 0;
             last_pinID = 0; 
             $('.pin-clone').remove();
-            console.log(pins);
-    });
-
-
-////DELETE SINGLE PIN AND REMOVE FROM ARRAY
-//add this to the creation of the clone 
-    $('#content').on('click', '.pin-close', function() {
-        var pid = $(this).parent().attr('id');
-        console.log(pid);
-        var pinID = $(this).parent().attr('id').substr(11);
-        console.log('will remove ' + pid);
-        //remove the item from the pins array and localStorage
-        for(var i=0; i<pins.length; i++){
-            if(pins[i]["id"] == pid){
-                console.log(pinID, pins);
-                pins.splice(i, 1);
-                console.log(pinID, pins);
-                localStorage.setItem("saved_pins", JSON.stringify(pins));
-                //localStorage.saved_pins = JSON.stringify(pins);
-                // pin_count--;
-                $(this).parent().remove();
-            } //end if
-        } //end for
+            //delete all list
+            $("#pins-list li").remove();
     });
 
 
@@ -927,21 +918,11 @@ $(document).ready(function(){
                 pins[i]["left"] = pleft;
                 pins[i]["top"] = ptop;
                 found = i;
+                //update list on the menu
+                $("#pins-list li").eq(i).find('a').text(t);
             }
         }
         localStorage.setItem("saved_pins", JSON.stringify(pins));
-        // var found = pins.some(function (el) {
-        //     ptop = $('#'+pinID).offset().top;
-        //     pleft = $('#'+pinID).offset().left;
-        //     t = $('#'+pinID).find('input').val();
-        //     el.top = ptop;
-        //     el.left = pleft;
-        //     el.value = t;
-        //     console.log('(inside) checking ' + el.id, el.value);
-        //     localStorage.setItem("saved_pins", JSON.stringify(pins));
-        //     //localStorage.saved_pins = JSON.stringify(pins);
-        //     return el.id === pinID;         
-        // });
         console.log('moved pin AND found is' + found);
     }
 
@@ -958,28 +939,12 @@ $(document).ready(function(){
                 pins[i]["value"] = t;
                 pins[i]["left"] = pleft;
                 pins[i]["top"] = ptop;
+                //update list on the menu
+                $("#pins-list li").eq(i).find('a').text(t);
             }
         }
+
         localStorage.setItem("saved_pins", JSON.stringify(pins));
-        // var found = pins.some(function (el) {
-        //     ptop = $('#'+pinID).offset().top;
-        //     pleft = $('#'+pinID).offset().left;
-        //     t = $('#'+pinID).find('input').val();
-        //     el.top = ptop;
-        //     el.left = pleft;
-        //     el.value = t;
-        //     console.log(pins);
-        //     localStorage.setItem("saved_pins", JSON.stringify(pins));
-        //     //localStorage.saved_pins = JSON.stringify(pins);
-        //     return el.id === pinID;         
-        // });
-        // console.log('changed pin ' + found);
-        // if(!found){
-        //     pins.push(pObj);
-        //     localStorage.setItem("saved_pins", JSON.stringify(pins));
-        //     //localStorage.saved_pins = JSON.stringify(pins);
-        //     //alert('not found, create new one' + pins);
-        // }
     }
 
 
@@ -998,22 +963,75 @@ $(document).ready(function(){
 ////ON HOVER SHOW INPUT AREA AND DELETE BUTTON
     $('#content').on('mouseenter', '.pin-clone', function() {
         $(this).find('.pin-form, .pin-close').fadeIn();
+        $(this).find('.pin-input').focus();
     });
 
     $('#content').on('mouseleave', '.pin-clone', function() {
+        $(this).find('.pin-input').focusout();
         $(this).find('.pin-form, .pin-close').fadeOut();
+        
     });
 
-////DROP THE PIN AND GET THE POSITION AND OTHER INFO BOUT IT
+//// TO BE USED IN PREVIOUSLY CREATED ITEMS 
+////ON SUBMIT PREVENT FORM FROM SUBMITTING   
+    $('#content').on('submit', '.pin-form', function(e) {
+        var pid = $(this).parent().attr("id");
+        checkPin(pid); 
+        e.preventDefault();
+    });
 
-    // if (localStorage.saved_pins) {
-    //     console.log('got pins length');
-    //     pin_count = JSON.parse(localStorage.saved_pins).length +1;
-    //     console.log(pin_count);
-    // } else {
-    //     console.log('new pisn count');
-    //     pin_count = 1;
-    // }
+////ON FOCUSOUT UPDATE VARs, CHECK PIN AND HIDE INPUT AREA + DELETE BTN 
+    $('#content').on('focusout','.pin-input', function() {
+        $(this).blur();
+        console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
+        t = $(this).val();
+        
+        var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
+        var pidnr = pid.substr(11);
+        
+        ptop = $(this).closest('.pin-clone').offset().top;//newPin.offset().top;
+        pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left;
+        pObj = {value : t, top: ptop, left: pleft, id: pid};
+
+        checkPin(pid);
+        $(this).closest('.pin-form, .pin-close').fadeOut();
+    });
+////ON MOUSELEAVE UPDATE VARs, CHECK PIN AND HIDE INPUT AREA + DELETE BTN 
+    $('#content').on('mouseleave', '.pin-input', function() {
+        $(this).blur();
+        console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
+        t = $(this).val();
+        
+        var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
+        var pidnr = pid.substr(11);
+        
+        ptop = $(this).closest('.pin-clone').offset().top;//newPin.offset().top;
+        pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left;
+        pObj = {value : t, top: ptop, left: pleft, id: pid};
+
+        checkPin(pid);
+        $(this).closest('.pin-form, .pin-close').fadeOut();
+    });
+////DELETE SINGLE PIN AND REMOVE FROM ARRAY
+    $('#content').on('click', '.pin-close', function() {
+        var pid = $(this).parent().attr('id');
+        console.log(pid);
+        var pinID = $(this).parent().attr('id').substr(11);
+        console.log('will remove ' + pid);
+        //remove the item from the pins array and localStorage
+        for(var i=0; i<pins.length; i++){
+            if(pins[i]["id"] == pid){
+                console.log(pinID, pins);
+                pins.splice(i, 1);
+                console.log(pinID, pins);
+                localStorage.setItem("saved_pins", JSON.stringify(pins));
+                //delete item on the list as well
+                $("#pins-list li").eq(i).remove();
+                $(this).parent().remove();
+            } //end if
+        } //end for
+        
+    });
 
 ////EXECUTES WHEN NEW PIN IS DROPPED FOR THE FIRST TIME
     function createPin(e, ui) {
@@ -1026,7 +1044,7 @@ $(document).ready(function(){
         var newPin =  $(ui.helper).clone(true);
 
 ////////DRAG IT, GET TAG NAME FROM USER, ASSIGN DEFAULT ID TO IT, AND UPDATE VALUES WHEN EDITED OR MOVED
-        newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
+        newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
             containment: '#main',
             cursor: 'move',
             snapTolerance: 100,
@@ -1041,6 +1059,10 @@ $(document).ready(function(){
         pleft = newPin.offset().left;
         pObj = {value : t, top: ptop, left: pleft, id: pid};
         pins.push(pObj);
+        console.log('t -> '+t);
+        //update the list on the menu
+        $('#pins-list').append('<li><a href="#dragged-pin'+last_pinID+'">new Pin</a></li>');
+        //saves to localStorage
         localStorage.setItem("saved_pins", JSON.stringify(pins));
         localStorage.setItem("last_pinID", last_pinID);
 
@@ -1048,44 +1070,51 @@ $(document).ready(function(){
         newPin.find('.pin-input').focus();
 
 
-////////ON SUBMIT (ENTER) UPDATE PIN DATA ETC
-        newPin.submit(function(e){
-            // t = newPin.find('.pin-input').val();
-            // var pid = newPin.attr("id");
-            // var pidnr = pid.substr(11);
-            // // console.log(pidnr);
-            // ptop = newPin.offset().top;
-            // pleft = newPin.offset().left;
-            // pObj = {value : t, top: ptop, left: pleft, id: pid};
-
-            // checkPin(pidnr);
-            // console.log('qaywsxedcrfvtb');
-             // $(this).find('.pin-input').blur();
-            $(this).find('.pin-form').hide();
+////////ON SUBMIT (ENTER) 
+        newPin.find('.pin-form').submit(function(e){
+            //alert(e.target);
+            //$(this).find('.pin-form').hide();
+           checkPin(pid); //return false there (not anymore)
             e.preventDefault();
+           // return false;
         });
 
 ////////ON FOCUSOUT UPDATE PIN DATA ETC
-        // newPin.find('.pin-input').focusout(function() {
-        $('#content').find('.pin-input').focusout(function() {
-            console.log('mouseout '+ $(this).closest('.pin-clone').attr("id"));
+        newPin.find('.pin-input').focusout(function() {
+        //$('#content').find('.pin-input').focusout(function() {
+            $(this).blur();
+            console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
             t = $(this).val();
-            // var newPin = $(this).closest('.pin-clone');
+            
             var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
             var pidnr = pid.substr(11);
-            // console.log('pidnr: '+pidnr);
-            // console.log('t: '+t);
+            
             ptop = $(this).closest('.pin-clone').offset().top;//newPin.offset().top;
             pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left;
             pObj = {value : t, top: ptop, left: pleft, id: pid};
-            // localStorage.saved_pins = JSON.stringify(pins);
-            // var PinObjects = JSON.parse(localStorage.saved_pins);
-            // alert(PinObjects.value);
 
             checkPin(pid);
+            $(this).closest('.pin-form, .pin-close').fadeOut();
         });
-        pin_count++;
+
+        newPin.find('.pin-input').mouseout(function() {
+        //$('#content').find('.pin-input').mouseout(function() {
+            $(this).blur();
+            console.log('mouseleave '+ $(this).closest('.pin-clone').attr("id"));
+            t = $(this).val();
+
+            var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
+            var pidnr = pid.substr(11);
+
+            ptop = $(this).closest('.pin-clone').offset().top;//newPin.offset().top;
+            pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left;
+            pObj = {value : t, top: ptop, left: pleft, id: pid};
+
+            checkPin(pid);
+            $(this).closest('.pin-form, .pin-close').fadeOut();
+        });
     }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////SHOW/HIDE KEYWORDS
