@@ -1,3 +1,21 @@
+if (!Array.prototype.some)
+{
+   Array.prototype.some = function(fun /*, thisp*/)
+   {
+      var len = this.length;
+      if (typeof fun != "function")
+      throw new TypeError();
+      
+      var thisp = arguments[1];
+      for (var i = 0; i < len; i++)
+      {
+         if (i in this && fun.call(thisp, this[i], i, this))
+         return true;
+      }
+      return false;
+   };
+}
+
 $(document).ready(function(){
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -778,72 +796,55 @@ $(document).ready(function(){
         }
     });
 
-
+//localStorage.clear();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////DRAGGING AND DROPPING THE PIN
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    var pins = [],
-        t,
-        ptop,
-        pleft,
-        pObj;
-    var pin_count;
-    var last_pinID;
+    var pins,           //array that stores pin objects
+        t,              //pin text value
+        ptop,           //pin top position
+        pleft,          //pin left position
+        pObj;           //pin object
+    var pin_count;      //how many pins are currently there (excludes the deleted ones)
+    var last_pinID;     //equals how many pins were ever created (including the ones deleted)
 
 ////UPDATES THE INFO IN THE PINS ARRAY
     function checkPin(pinID) {
+        console.log('pins.length =>' + pins.length);
         if (pins.length > 0) {
-            // alert('longer than 0');
-            for (var i = 0; i < pins.length; i++) {
-                if (pinID > pins.length) {
-                    // alert('if entrance');
-                    pins.push(pObj);
-                    localStorage.last_pinID= JSON.stringify(pin_count);
-                    var PinCount = JSON.parse(localStorage.pin_count);
-                    // alert('PinCount: '+PinCount);
-                    localStorage.saved_pins = JSON.stringify(pins);
-                    var PinObjects = JSON.parse(localStorage.saved_pins);
-                    // alert(PinObjects[i]['value']);
-                    break;
-                } else {
-                    // alert('else entrance');
-                    console.log('Accessed same id');
-                    pins[pinID-1]["value"] = t;
-                    pins[pinID-1]["top"] = ptop;
-                    pins[pinID-1]["left"] = pleft;
-                    console.log(pins);
-                    localStorage.saved_pins = JSON.stringify(pins);
-                    var PinObjects = JSON.parse(localStorage.saved_pins);
-                    // alert(PinObjects[i]['value']);
-                    break;
-                }
-            }
+            pinChanged(pinID);
         }else{
             pins.push(pObj);
-            localStorage.pin_count = JSON.stringify(pin_count);
-            var PinCount = JSON.parse(localStorage.pin_count);
-            // alert('PinCount: '+PinCount);
-            localStorage.saved_pins = JSON.stringify(pins);
-            var PinObjects = JSON.parse(localStorage.saved_pins);
-            // alert(PinObjects[0]['left']);
-            console.log('logged');
+            localStorage.setItem("saved_pins", JSON.stringify(pins));
         } 
-    }
+        //saves all we need in localStorage
+        // localStorage.saved_pins = JSON.stringify(pins);
+        localStorage.last_pinID = last_pinID;
+        localStorage.pin_count = pin_count;
+
+        console.log('pin_count -> ' +pin_count);
+        console.log('last_pinID ->' +last_pinID);
+        console.log('pins.length ->' + pins.length);
+    } // end function checkPin
 
 ////GET SAVED ITEMS
-    if(typeof(Storage) !== "undefined") {
+    //checks if localStorage is supported and if it has been set
+    if(typeof(Storage) !== "undefined") {  //browser supports localStorage
         if(localStorage.getItem("saved_pins")) {
+            //localStorage has been defined before, so let's get the stored values
             pins = JSON.parse(localStorage.getItem("saved_pins"));
-            if(JSON.parse(localStorage.getItem("saved_pins")).length > 0){
-                    pin_count = JSON.parse(localStorage.getItem("saved_pins")).length;
-                }else{
-                    pin_count = 0;
-                }
+            //console.log('pins loaded ' +pins);
+            last_pinID = localStorage.getItem("saved_pins");
+            if(pins.length > 0){
+                pin_count = pins.length;
+            }else{
+                pin_count = 0;
+            }
 
-            for (var i=0; i<JSON.parse(localStorage.saved_pins).length; i++) {
+            for (var i=0; i<pins.length; i++) {
                 // alert(i);
                 var appended_pins = $('<div style="position: absolute" class="pin-clone"><i class="fa fa-thumb-tack fa-2x"></i><form class="pin-form" action=""><input class="pin-input" type="text" name="fname" placeholder="Tag"></form></div>');
-                appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').attr('id', 'dragged-pin'+(i+1)).draggable({
+                appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').attr('id', 'dragged-pin'+pins[i]["id"]).draggable({
                     containment: '#main',
                     cursor: 'move',
                     snapTolerance: 100,
@@ -852,59 +853,98 @@ $(document).ready(function(){
                     stop: pinMoved
                 });
 
-                appended_pins.offset({top: pins[i]["top"]});
-                appended_pins.offset({left: pins[i]["left"]});
-                appended_pins.find('input').val(pins[i]["value"]);
- 
+                $('#dragged-pin'+i).offset({top: pins[i]["top"], left: pins[i]["left"]});
+                $('#dragged-pin'+i).find('input').val(pins[i]["value"]);
+                console.log('text: ' +pins[i]["value"]);
+                //appended_pins.offset({top: pins[i]["top"]});
+                //appended_pins.offset({left: pins[i]["left"]});
+                //appended_pins.find('input').val(pins[i]["value"]);
            }
+
         } else {
-            // alert('local inner else');
+            //localStorage supported, but no values stored
             pins = [];
+            pin_count = 0;
             last_pinID = 0;
         }
     } else {
+        //browser does not support localStorage
+        //TO DO: DISABLE PINS ALTOGETHER THEN
         // alert('local outer else');
     }
 
 ////DELETE ALL PINS
-    $('#delete-pins').click(function() {
-        localStorage.clear();
-        pins = [];
-        $('.pin-clone').remove();
-        console.log(pins);
-    });
+    // $('#delete-pins').click(function() {
+    //     localStorage.clear();
+    //     pins = [];
+    //     $('.pin-clone').remove();
+    //     console.log(pins);
+    // });
 
 
 ////DELETE SINGLE PIN AND REMOVE FROM ARRAY
 //add this to the creation of the clone 
     $('#content').on('click', '.pin-close', function() {
-        $(this).parent().remove();//.css('display', 'none');
         var pid = $(this).parent().attr('id');
         console.log(pid);
         var pinID = $(this).parent().attr('id').substr(11);
-        pins.splice(pinID-1, 1);
-        console.log(pins);
-        localStorage.saved_pins = JSON.stringify(pins);
-        // pin_count--;
+        console.log(pinID);
+        //remove the item from the pins array and localStorage
+        for(var i=0; i<pins.length; i++){
+            if(pins[i]["id"] == Number(pinID)){
+                console.log(pinID, pins);
+                pins.splice(pinID-1, 1);
+                console.log(pinID, pins);
+                localStorage.setItem("saved_pins", JSON.stringify(pins));
+                //localStorage.saved_pins = JSON.stringify(pins);
+                // pin_count--;
+                $(this).parent().remove();
+            } //end if
+        } //end for
     });
 
 
 ////UPDATES INFO ABOUT PINS WHEN MOVED
     function pinMoved() {
         pinID = $(this).attr("id");
+        console.log('moving '+ pinID);
         var found = pins.some(function (el) {
             ptop = $('#'+pinID).offset().top;
             pleft = $('#'+pinID).offset().left;
+            t = $('#'+pinID).find('input').val();
             el.top = ptop;
             el.left = pleft;
-            return el.id === pinID;
-            // localStorage.saved_pin = JSON.stringify(pObj);
-  // save data here as well          
-
+            el.value = t;
+            console.log('checking ' + el.id);
+            localStorage.setItem("saved_pins", JSON.stringify(pins));
+            //localStorage.saved_pins = JSON.stringify(pins);
+            return el.id === pinID;         
         });
-        console.log(pins);
+        console.log('moved pin ' + found);
     }
 
+    //UPDATES INFO ABOUT PINS WHEN CHANGED (called on focusout)
+    function pinChanged(pinID) {
+        var found = pins.some(function (el) {
+            ptop = $('#'+pinID).offset().top;
+            pleft = $('#'+pinID).offset().left;
+            t = $('#'+pinID).find('input').val();
+            el.top = ptop;
+            el.left = pleft;
+            el.value = t;
+            console.log(pins);
+            localStorage.setItem("saved_pins", JSON.stringify(pins));
+            //localStorage.saved_pins = JSON.stringify(pins);
+            return el.id === pinID;         
+        });
+        //console.log('changed pin ' + found);
+        if(!found){
+            pins.push(pObj);
+            localStorage.setItem("saved_pins", JSON.stringify(pins));
+            //localStorage.saved_pins = JSON.stringify(pins);
+            //alert('not found, create new one' + pins);
+        }
+    }
 
 
 ////ORIGINAL PIN, THE BEGINNING OF ALL
@@ -939,7 +979,7 @@ $(document).ready(function(){
     //     pin_count = 1;
     // }
 
-////EXECUTES WHEN NEW PIN IS DROPPED
+////EXECUTES WHEN NEW PIN IS DROPPED FOR THE FIRST TIME
     function getPinPosition(e, ui) {
         // increase last_pinID
         last_pinID++;
@@ -962,15 +1002,15 @@ $(document).ready(function(){
 
 ////////ON SUBMIT (ENTER) UPDATE PIN DATA ETC
         newPin.submit(function(e){
-            t = newPin.find('.pin-input').val();
-            var pid = newPin.attr("id");
-            var pidnr = pid.substr(11);
-            // console.log(pidnr);
-            ptop = newPin.offset().top;
-            pleft = newPin.offset().left;
-            pObj = {value : t, top: ptop, left: pleft, id: pid};
+            // t = newPin.find('.pin-input').val();
+            // var pid = newPin.attr("id");
+            // var pidnr = pid.substr(11);
+            // // console.log(pidnr);
+            // ptop = newPin.offset().top;
+            // pleft = newPin.offset().left;
+            // pObj = {value : t, top: ptop, left: pleft, id: pid};
 
-            checkPin(pidnr);
+            // checkPin(pidnr);
             // console.log('qaywsxedcrfvtb');
              // $(this).find('.pin-input').blur();
             $(this).find('.pin-form').hide();
@@ -980,6 +1020,7 @@ $(document).ready(function(){
 ////////ON FOCUSOUT UPDATE PIN DATA ETC
         // newPin.find('.pin-input').focusout(function() {
         $('#content').find('.pin-input').focusout(function() {
+            console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
             t = $(this).val();
             // var newPin = $(this).closest('.pin-clone');
             var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
@@ -993,7 +1034,7 @@ $(document).ready(function(){
             // var PinObjects = JSON.parse(localStorage.saved_pins);
             // alert(PinObjects.value);
 
-            checkPin(pidnr);
+            checkPin(pid);
         });
         pin_count++;
     }
