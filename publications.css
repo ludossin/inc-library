@@ -127,6 +127,7 @@ body {
     text-rendering: optimizeSpeed;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-x:hidden;
+    background-color: #f4f4f4;
 }	
 
 
@@ -189,6 +190,7 @@ hr{
     margin: 0px;
     padding: 0px;
     border: 0px;
+    
 }
 
 
@@ -210,7 +212,17 @@ hr{
     -webkit-box-shadow: none;
     box-shadow: none;
     border: 0px solid #dbdbdb;
+    -webkit-transition: padding .3s ease;
+    -moz-transition: padding .3s ease;
+    -o-transition: padding .3s ease;
+    transition: padding .3s ease;
+    padding-top: 3px;
+    padding-bottom: 0px;
+}
 
+.well:hover{
+    padding-top: 0px;
+    padding-bottom: 3px;
 }
 
 .carousel-content{
@@ -241,7 +253,7 @@ hr{
     */    position: relative;
     text-rendering: optimizeSpeed;
     padding-left:0px;
-    background-color:mediumpurple;
+    background-color:white;
     /*     background-color:#f4f4f4;
     */    color: #000000;
     /*     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
@@ -452,12 +464,11 @@ color:black;
 
 /* How is written the book's title */
 #book-title {
-    font-size: 4.6em;
+    font-size: 1.6em;
     margin-top: 10px;
     line-height: 1em;
     padding: 0px;
-    padding-left:15Px;
-    text-align: center;
+    padding: 15px;
     padding-top: 40px;
     font-family: "HKGroteskbold";
 }
@@ -468,9 +479,7 @@ color:black;
 
 #book-author{
     color: #000000;
-    padding: 15px;
     font-size: 18px;
-    text-align: center;
 }
 
 #book-keywords{
@@ -766,11 +775,12 @@ Style of each images appearing in the reader, in .text */
 
 /* img: style for each image that appears in the text */
 img {
-    width: 100%;
+    width: 80%;
     text-align: center;
-    margin-top: 30px;
-    margin-left: 0px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border:0px;
+    background-color:transparent;
 }
 
 .section img, img.grayscale{
@@ -805,12 +815,9 @@ filter: none;
     opacity: 0;
     margin-bottom: 100px !important;
     margin-top: 40px;
+    padding-left: 0;
+    padding-right: 0;
 }
-
-a {
-    text-decoration: none;
-}
-
 
 /********* JOSIP'S PART **********/
 
@@ -1110,15 +1117,13 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     height: 100%;
     position: fixed;
     color: #000000;
-    width: 5%;
-    background-color:#f4f4f4;
+    background-color:#f30;
+    left: 0;
     /*     background-color:rgba(255, 51, 0, 0.75);
     */
     z-index: 30;
     cursor: pointer;
-    /*     -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
-    -moz-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
-    box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09); */
+    color: white;
 }
 
 
@@ -2208,6 +2213,40 @@ ol {
 
 }
 
+.btn-default {
+    color: white;
+    background-color: transparent;
+    border-color: none;
+}
+.btn {
+    display: inline-block;
+    padding: 4px 9px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn:hover{
+    color:white;
+    background-color: transparent;
+    border:none;
+    font-family: "HKGroteskbold";
+}
+
 /******* MENU RIGHT *******/
 
 
@@ -2727,4 +2766,127 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+
+
+/* make the well swell */
+.well {
+    background-color: transparent;
+}
+
+
+.post h4 {
+    margin-bottom: 9px;
+}
+
+.post h4 a {
+    color: #333;
+}
+
+.post img.image {
+    max-width: 100%;
+    margin-top: 9px;
+}
+
+.info {
+    padding:4px;
+}
+
+/* Isotope Transitions
+------------------------------- */
+.isotope,
+.isotope .item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property:    -moz-transform, opacity;
+    -ms-transition-property:     -ms-transform, opacity;
+    -o-transition-property:         top, left, opacity;
+    transition-property:         transform, opacity;
+}
+
+
+/* responsive media queries */
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 768px) {
+    header h1 small {
+        display: block;
+    }
+
+    header div.description {
+        padding-top: 9px;
+        padding-bottom: 4px;
+    }
+
+    .isotope .item {
+        position: static ! important;
+        -webkit-transform: translate(0px, 0px) ! important;
+        -moz-transform: translate(0px, 0px) ! important;
+        transform: translate(0px, 0px) ! important;
+    }
+}
+/* 
+@media (max-width: 980px) {
+    header p.lead span {
+        display: block;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+}
+
+
+@media (min-width: 768px) and (max-width: 980px) {
+    .span3 {
+        width: 352px;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+    .span3 {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .span3 {
+        width: 270px;
+    }
+}
+ */
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 5px;
+    line-height: 1.42857143;
+    /* background-color: #fff; */
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    align-content: center;
+    transition: border .2s ease-in-out;
+    border:0px;
+    background-color:transparent;
 }
