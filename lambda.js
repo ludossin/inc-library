@@ -835,7 +835,11 @@ $(document).ready(function(){
     function makeList(){
         if (pins.length > 0) {
             for (var i=0; i<pins.length; i++) {
-                $('#pins-list').append('<li><a href="#'+pins[i]["id"]+'">'+pins[i]["value"]+'</a></li>');
+                var t = pins[i]["value"];
+                if (t == '' || t == ' '){
+                    t = 'Untitled'
+                }
+                $('#pins-list').append('<li><a href="#'+pins[i]["id"]+'">'+t+'</a></li>');
             }
         }
     }
@@ -919,6 +923,9 @@ $(document).ready(function(){
                 pins[i]["top"] = ptop;
                 found = i;
                 //update list on the menu
+                if (t == '' || t == ' '){
+                    t = 'Untitled'
+                }
                 $("#pins-list li").eq(i).find('a').text(t);
             }
         }
@@ -940,6 +947,9 @@ $(document).ready(function(){
                 pins[i]["left"] = pleft;
                 pins[i]["top"] = ptop;
                 //update list on the menu
+                if (t == '' || t == ' '){
+                    t = 'Untitled'
+                }
                 $("#pins-list li").eq(i).find('a').text(t);
             }
         }
