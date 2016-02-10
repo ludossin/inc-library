@@ -127,11 +127,14 @@ body {
     text-rendering: optimizeSpeed;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-x:hidden;
-    background-color: #f4f4f4;
+    background-color: #f30;
 }	
 
 
-
+#content{
+    background-color:#f4f4f4;
+    padding-top: 30px;
+}
 
 
 
@@ -252,15 +255,30 @@ hr{
     /*     z-index: 2;
     */    position: relative;
     text-rendering: optimizeSpeed;
-    padding-left:0px;
-    background-color:white;
+    background-color:#ff8a6d;
     /*     background-color:#f4f4f4;
-    */    color: #000000;
+    */    color: black;
+    text-align: center;
+
+    padding-left: 30px;
     /*     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59); */
-
 }
+.vertical-align {
+    display: flex;
+    align-items: center;
+}/* 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+} */
+
+.go{
+    font-size:40px;
+}
+
 
 #info-box-inside-container{
     color: #f30;
@@ -285,15 +303,9 @@ hr{
 }
 
 #info-box img{
-    max-width: 280px;
-    width: auto;
-    text-align: center;
     margin-top: 30px;
     margin-bottom: 40px;
     border: 1px solid #dbdbdb;
-    align-self: center;
-    /* padding: 0; */
-    margin: 0 auto;
 }
 
 
@@ -542,10 +554,6 @@ color:black;
 }
 
 
-#info-box .summary{
-    margin-top: 20px;
-    font-size: 15px;
-}
 
 /***************************************
 4-2. TEXT TITLES & FONT STYLES
@@ -814,7 +822,7 @@ filter: none;
 #content {
     opacity: 0;
     margin-bottom: 100px !important;
-    margin-top: 40px;
+    margin-top: 0px;
     padding-left: 0;
     padding-right: 0;
 }
@@ -899,7 +907,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 
 /*******MENU WITH THE TOC THAT******************
 ********COMES IN SLIDING FROM THE LEFT*********/
-#menu {			
+#menu_publications {			
     /* left: -16.66666667%; */
     padding: 0;
     height: 100%;
@@ -1123,7 +1131,15 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     */
     z-index: 30;
     cursor: pointer;
+    -webkit-transition: all 2s ease-in;
+    transition: all 1s ease-in;
     color: white;
+}
+
+#menu_bar.affix {
+    position: fixed;
+    top:0px;
+    width: 25%;
 }
 
 
@@ -2820,7 +2836,10 @@ button:focus {
     transition-property:         transform, opacity;
 }
 
+#publications{   
+    padding-left: 30px;
 
+}
 /* responsive media queries */
 
 @media (max-width: 480px) {
@@ -2889,4 +2908,9 @@ button:focus {
     transition: border .2s ease-in-out;
     border:0px;
     background-color:transparent;
+}
+
+#header{
+    height: 235px;
+    background-color:#f30;
 }
