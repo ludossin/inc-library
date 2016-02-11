@@ -275,6 +275,28 @@ hr{
     float: none;
 } */
 
+#novelty{
+    background-color: white;
+    color: #f30;
+    font-size: 26px;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 2%;
+    border: 3px solid #f4f4f4;
+    cursor: pointer;
+
+}
+#novelty:hover{
+    border: 3px solid #f30;
+}
+#novelty h1{
+    font-size:60px;
+    text-transform: uppercase;
+    font-family: "HKGroteskbold";
+}
+#novelty h2{
+    font-size:40px;
+}
 .go{
     font-size:40px;
 }
@@ -2911,6 +2933,5 @@ button:focus {
 }
 
 #header{
-    height: 235px;
-    background-color:#f30;
+    background-color:#f4f4f4;
 }

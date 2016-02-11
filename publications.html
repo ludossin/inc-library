@@ -100,7 +100,16 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                
                
               <div class="row" id="header">
-                  Hello c'est le header et le logo
+                 <div class="row news col-lg-offset-1 col-lg-10" id="novelty">
+                     <h1>Brand new book!</h1>
+                     <h2 class="date">22/01/2016</h2>
+                     <p>Hey this it the content of the actuality. This new book just arrived, please have a look, it is super!</p>
+                 </div>
+                  <div class="row news col-lg-offset-1 col-lg-10" id="novelty">
+                      <h1>Brand new book!</h1>
+                      <h2 class="date">22/01/2016</h2>
+                      <p>Hey this it the content of the actuality. This new book just arrived, please have a look, it is super!</p>                  
+                    </div>
               </div>
 
                
@@ -108,10 +117,81 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                
                 <div class="row">
             <!--–––––––––––––––––––––––––– Vertical scrolling indicator –––––––––––––––––––––––––––––––––––––-->
-                    <div id="menu_bar" class="col-lg-3" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                <div class="row">
-                    <div class="keyword-toggle">
+                    <div id="menu_bar" class="col-lg-5" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+
+                    
+                        <div class="panel-group" id="accordion">
+
+                        
+                            <!-- panel 1: News-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="" alt="">
+                                        News</a>
+                                        <br>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- panel 2: Quote-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="" alt=""><!-- <i class="fa fa-quote-left"></i> -->
+                                            Books</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- panel 3: Print-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper">About</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse">
+                                    <div class="panel-body">Print this book:
+                                        <br>
+                                        <a href="javascript:window.print()" class="extra">Print on your own printer</a>
+                                        <br>
+                                        <a href="http://www.lulu.com/shop/%C5%A1efik-tatli%C4%87-and-gordana-nikoli%C4%87/the-gray-zones-of-creativity-and-capital/paperback/product-22467485.html" class="extra" target="_blank">Print and order on Lulu</a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- #accordion -->
+
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       <div class="keyword-toggle">
+                        
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">INC Readers</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Network Notebooks</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Theory on Demand</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">INC Longforms</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Gert Lovink's books</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Studies in Network Cultures</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Conference reports</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Miscellanea</button> 
+
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Geert Lovink</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Dutch</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">English</button> 
@@ -145,7 +225,6 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                     </div> 
                    
                    
-                </div>
                 
                    
                    
@@ -178,9 +257,13 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
 
                     <div class="container">
                         <div id="publications" class="row">
-                            <div id="1" class="post item col-lg-3 ">
+                            <div id="1" class="post item col-lg-4">
                                 <div class="well">
+                                   <div >
                                     <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2016/01/TOD-Geoblocking-Front.jpg">
+                                    </div>
+                                    <div >
+
                                     <h4>
                                         <a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a>
                                     </h4>
@@ -191,6 +274,7 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                                         <span class="badge">45</span>
                                         <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
                                     </div>
+                                </div>
                                 </div>
                             </div>
                             <div id="2" class="post item col-lg-3 ">
