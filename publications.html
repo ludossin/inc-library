@@ -99,22 +99,99 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
             <div class="container-fluid" >
                
                
-              
+              <div class="row" id="header">
+                 <div class="row news col-lg-offset-1 col-lg-10" id="novelty">
+                     <h1>Brand new book!</h1>
+                     <h2 class="date">22/01/2016</h2>
+                     <p>Hey this it the content of the actuality. This new book just arrived, please have a look, it is super!</p>
+                 </div>
+                  <div class="row news col-lg-offset-1 col-lg-10" id="novelty">
+                      <h1>Brand new book!</h1>
+                      <h2 class="date">22/01/2016</h2>
+                      <p>Hey this it the content of the actuality. This new book just arrived, please have a look, it is super!</p>                  
+                    </div>
+              </div>
 
                
                
                
                 <div class="row">
-                    <div id="menu" class="col-lg-2 col-md-2 col-sm-2 col-xs-11 ">
-                        <div id="toc_wrapper">
-                           
-                        </div></div>
-
             <!--–––––––––––––––––––––––––– Vertical scrolling indicator –––––––––––––––––––––––––––––––––––––-->
-            <div id="menu_bar" class="col-lg-3">
-                <div class="row">
-                    <div class="keyword-toggle">
+                    <div id="menu_bar" class="col-lg-5" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+
+                    
+                        <div class="panel-group" id="accordion">
+
+                        
+                            <!-- panel 1: News-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="" alt="">
+                                        News</a>
+                                        <br>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- panel 2: Quote-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="" alt=""><!-- <i class="fa fa-quote-left"></i> -->
+                                            Books</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- panel 3: Print-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper">About</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse">
+                                    <div class="panel-body">Print this book:
+                                        <br>
+                                        <a href="javascript:window.print()" class="extra">Print on your own printer</a>
+                                        <br>
+                                        <a href="http://www.lulu.com/shop/%C5%A1efik-tatli%C4%87-and-gordana-nikoli%C4%87/the-gray-zones-of-creativity-and-capital/paperback/product-22467485.html" class="extra" target="_blank">Print and order on Lulu</a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- #accordion -->
+
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       <div class="keyword-toggle">
+                        
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">INC Readers</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Network Notebooks</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Theory on Demand</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">INC Longforms</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Gert Lovink's books</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Studies in Network Cultures</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Conference reports</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Miscellanea</button> 
+
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Geert Lovink</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Dutch</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">English</button> 
@@ -122,8 +199,6 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">German</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Spanish</button> 
 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2010</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2011</button>
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2005</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2006</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2007</button> 
@@ -132,10 +207,24 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2009</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2010</button> 
                         <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2011</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2012</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2013</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2014</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2015</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2016</button> 
+
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Johnatan Beller</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Josephine Berry Slater</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Marc James Léger</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Ana Vilenica</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Sandi Abram</button> 
+                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Irmgard Emmelheinz</button> 
+                        
+                        
+                        
                     </div> 
                    
                    
-                </div>
                 
                    
                    
@@ -146,7 +235,7 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                     <h1 class="vertical-text">The Gray Zones of Creativity and Capital</h1>
                 </a>
             </div>
-
+<!-- 
                 <div class="row" id="library-tree">
                     <div class="col-lg-6 col-md-10 hidden-sm hidden-xs" id="breadcrumb">
                 
@@ -158,7 +247,7 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                         </ol>
                 
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -168,9 +257,13 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
 
                     <div class="container">
                         <div id="publications" class="row">
-                            <div id="1" class="post item col-lg-3 ">
+                            <div id="1" class="post item col-lg-4">
                                 <div class="well">
+                                   <div >
                                     <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2016/01/TOD-Geoblocking-Front.jpg">
+                                    </div>
+                                    <div >
+
                                     <h4>
                                         <a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a>
                                     </h4>
@@ -181,6 +274,7 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                                         <span class="badge">45</span>
                                         <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
                                     </div>
+                                </div>
                                 </div>
                             </div>
                             <div id="2" class="post item col-lg-3 ">
@@ -198,163 +292,172 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                             </div>
                             <div id="3" class="post item col-lg-3 ">
                                 <div class="well">
+                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2015/07/cover.png">
                                     <h4>
-                                        <a href="${permalink_absolute}" target="_blank">Layout</a>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
                                     </h4>
-                                    <img class="thumbnail" src="http://placehold.it/250x350">
+
                                     <div class="info">
                                         <span class="badge">100</span>
-                                        <span class="badge">45</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
                                     </div>
                                 </div>
                             </div>
                             <div id="4" class="post item col-lg-3 ">
                                 <div class="well">
+                                    <img class="thumbnail" src="http://www.digitalislam.eu/dwn/1003/7193C350x494_tacticalmedia2.JPG">
                                     <h4>
-                                        <a href="${permalink_absolute}" target="_blank">Responsive</a>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
                                     </h4>
-                                    <img class="thumbnail" src="http://placehold.it/250x350">
+
                                     <div class="info">
                                         <span class="badge">100</span>
-                                        <span class="badge">45</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
                                     </div>
                                 </div>
                             </div>
                             <div id="5" class="post item col-lg-3 ">
                                 <div class="well">
+                                    <img class="thumbnail" src="https://image.isu.pub/140204131523-eee90401b835c676e68b76b820bbdc3d/jpg/page_1_thumb_large.jpg">
                                     <h4>
-                                        <a href="${permalink_absolute}" target="_blank">Sleek</a>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
                                     </h4>
-                                    <img class="thumbnail" src="http://placehold.it/250x350">
+
                                     <div class="info">
                                         <span class="badge">100</span>
-                                        <span class="badge">45</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
                                     </div>
                                 </div>
                             </div>
                             <div id="6" class="post item col-lg-3 ">
                                 <div class="well">
+                                    <img class="thumbnail" src="http://image.issuu.com/151112081142-c39ce0046d665907cde4f1505ae16795/jpg/page_1_thumb_large.jpg">
                                     <h4>
-                                        <a href="${permalink_absolute}" target="_blank">Mobilicious</a>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
                                     </h4>
-                                    <img class="thumbnail" src="http://placehold.it/250x450">
+
                                     <div class="info">
                                         <span class="badge">100</span>
-                                        <span class="badge">45</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2" class="post item col-lg-3 ">
+                                <div class="well">
+                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/07/eindverantwoordingCPOV_voorwebsite-1.jpg">
+                                    <h4>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
+                                    </h4>
+
+                                    <div class="info">
+                                        <span class="badge">100</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
                                     </div>
                                 </div>
                             </div>
                             <div id="7" class="post item col-lg-3 ">
                                 <div class="well">
+                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2010/10/Screen-shot-2010-10-21-at-14.00.101.png">
                                     <h4>
-                                        <a href="${permalink_absolute}" target="_blank">Geekness</a>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
                                     </h4>
-                                    <img class="thumbnail" src="http://placehold.it/250x450">
+
                                     <div class="info">
                                         <span class="badge">100</span>
-                                        <span class="badge">45</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
                                     </div>
                                 </div>
                             </div>
                             <div id="8" class="post item col-lg-3 ">
                                 <div class="well">
+                                    <img class="thumbnail" src="http://www.miningtheseem.org.uk/wp-content/uploads/2015/08/moneylabInterventionPic-m.jpg">
                                     <h4>
-                                        <a href="${permalink_absolute}" target="_blank">Sneaky Kitten</a>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
                                     </h4>
-                                    <img class="thumbnail" src="http://placehold.it/250x450">
+
                                     <div class="info">
-                                        <span class="badge">120</span>
-                                        <span class="badge">46</span>
+                                        <span class="badge">100</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
                                     </div>
                                 </div>
                             </div>
+                            <div id="9" class="post item col-lg-3 ">
+                                <div class="well">
+                                    <img class="thumbnail" src="http://www.miriamrasch.nl/index_files/page0_blog_entry596-anti-media.jpg">
+                                    <h4>
+                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
+                                    </h4>
+
+                                    <div class="info">
+                                        <span class="badge">100</span>
+                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
                         </div>
-                    </div>
 
 
 
 
 
 
-                    <div id="info-box" class="col-lg-12">
+                        <div id="info-box" class="row col-lg-12 vertical-align">
 
-                        <div class="row" id="book-title-box">
                             <!-- BOOK TITLE -->
 
-                            <div class="col-lg-4 col-md-8 col-sm-8 col-xs-11 col-lg-offset-0 col-md-offset-2 col-sm-offset-2 col-xs-offset-0" id="book-title">
+                            <div id="book-title-box" class="col-lg-3 col-md-8 col-sm-8 col-xs-11 col-lg-offset-0 col-md-offset-2 col-sm-offset-2 col-xs-offset-0" id="book-title">
                                 N°17: The Gray Zones of Creativity and Capital
-
+<!-- 
                             <div id="book-author">
                                 Gordana Nikolić & Šefik Tatlić
+                            </div> -->
+                                <p class="info-box-column-header">
+                                    Author(s)
+                                </p>
+
+                                Johnatan Beller, 
+                                Josephine Berry Slater, 
+                                Marc James Léger, 
+                                Ana Vilenica, 
+                                Sandi Abram, 
+                               Irmgard Emmelheinz
+
+                                <p class="info-box-column-header">
+                                    Editor(s)
+                                </p>
+                                <a href="#">Gordana Nikolić</a>, <a href="#">Šefik Tatlić</a>
+                                <p class="info-box-column-header">
+                                    Date
+                                </p>
+                                Writing: 03/12/2014<br>
+                                Publishing: 03/12/2015
+<!--                                 <p class="info-box-column-header">
+                                    ISBN
+                                </p>
+                                978-94-92302-02-1. -->
+                                <p class="info-box-column-header">
+                                    Series
+                                </p>
+                                <a href="#">Theory on Demand</a>
                             </div>
-                            </div>
+                            <div class="summary col-lg-3">
+                                What is the correlation among the creative industries, creative industry policies, new media paradigms and capitalism as colonial relations of dominance? What is the role of these industries in the prioritization of the interests of capital at the expense of those of society and how can these paradigms be criticized in the context of the actual, neoliberal, flexible regime of reproduction of capital?(…)
 
-                        <!-- SUMMARY BOX -->
-
-                        <div class="row">
-                            <div class="info-box-left col-lg-6 col-lg-offset-0 col-md-offset-1 col-md-5 col-sm-6 col-xs-10">
-                                <div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-0" id="info-box-left-img-container">
-                                    <!-- <img class="img-responsive" src="http://image.issuu.com/150402121056-510d1f3c2060fd382ba9f86be83c1ec6/jpg/page_1.jpg"> -->
-                                    <img class="img-responsive" src='cover.jpg'>                 
-                                </div>
-
-                                <div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
-                                    <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
-                                </div>
-
-                            </div>
-
-                            <div class="info-box-right col-lg-6 col-md-5 col-sm-5 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
-                                <div class="summary col-lg-9">
-                                    What is the correlation among the creative industries, creative industry policies, new media paradigms and capitalism as colonial relations of dominance? What is the role of these industries in the prioritization of the interests of capital at the expense of those of society and how can these paradigms be criticized in the context of the actual, neoliberal, flexible regime of reproduction of capital? To what measure is this regime ‘flexible’ and to what measure it is just an extension of rigid, feudal and racial logics that underline (post)modern representational discourses? To what measure do the concepts of creativity, transparency, openness and flexibility conceal the hegemonic nature of modern hierarchies of exploitation?
-                                </div>
-
-                                <div class="col-lg-9">
-                                    <p class="info-box-column-header">
-                                        Author(s)
-                                    </p>
-
-                                    <a href="#">Johnatan Beller</a>, 
-                                    <a href="#">Josephine Berry Slater</a>, 
-                                    <a href="#">Marc James Léger</a>, 
-                                    <a href="#">Ana Vilenica</a>, 
-                                    <a href="#">Sandi Abram</a>, 
-                                    <a href="#">Irmgard Emmelheinz</a>
-
-                                    <p class="info-box-column-header">
-                                        Editor(s)
-                                    </p>
-                                    <a href="#">Gordana Nikolić</a>, <a href="#">Šefik Tatlić</a>
-                                    <p class="info-box-column-header">
-                                        Date
-                                    </p>
-                                    Writing: 03/12/2014<br>
-                                    Publishing: 03/12/2015
-                                    <p class="info-box-column-header">
-                                        ISBN
-                                    </p>
-                                    978-94-92302-02-1.
-                                    <p class="info-box-column-header">
-                                        Series
-                                    </p>
-                                    <a href="#">Theory on Demand</a>
-                                </div>
-                                <!-- another column with image etc -->
-                            </div>
                         </div>
+                        <div class="col-lg-3">
+                            <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                        </div>
+                        <div class="go col-lg-1">
+                            →
+                            </div>
+                            </div>
 
 
+                
                     </div>
-                   
-                   
-                    <div class="publication col-lg-3">
-                        <h2>The Gray Zones of Creativity and Capital: Introduction</h2>
-                        <p class="author">Šefik Tatlić &amp; Gordana Nikolić</p>
-                        <span class="words"></span>
-                        <span class="characterss"></span>
-                        <span class="timee"></span>
-                    </div>                   
-                    
+
                 </div> <!-- END OF MAIN -->   
 
 
@@ -380,6 +483,27 @@ Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
                 });
 
             });
+            
+            /* activate sidebar */
+            $('#menu_bar').affix({
+                offset: {
+                    top: 235,
+                    bottom: function () {
+                    return (this.bottom = $('.footer').outerHeight(true))
+                }
+                }
+            });
+
+            /* activate scrollspy menu */
+            var $body   = $(document.body);
+            var navHeight = $('#header').outerHeight(true) + 10;
+
+            $body.scrollspy({
+                target: '#menu_bar',
+                offset: navHeight
+            });
+
+            
         </script>
 
 
