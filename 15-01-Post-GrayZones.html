@@ -407,14 +407,14 @@
 
 
                     <div id="pin_wrapper">
-                        Drag and drop the pint to save reading position.
+                        Drag and drop the pin to save reading position.
                         <br>
                         <br>
-
-                        <div id="pin" class="pin">
-                            <i class="fa fa-thumb-tack fa-2x"></i>
-                            <form class="pin-form" action="" >
-                                <input class="pin-input" type="text" name="fname"  placeholder="Tag">
+                        <!-- REMOVE INLINE STYLES< MOVE TO CSS FILE -->
+                        <div id="pin" class="pin" style="width: 140px !important;">
+                            <div class="pin-icon" style="float: left; width: 50%;"><i class="fa fa-thumb-tack fa-2x"></i></div><div class="pin-close" style="float: right; width: 50%; text-align: right;"><i class="fa fa-ban"></i></div>
+                            <form class="pin-form" action="" style="width: 120px !important;">
+                                <input class="pin-input" type="text" name="fname"  placeholder="Tag" style="width: 120px !important;">
                             </form>
                         </div>
                         <!-- LIST OF SAVED PINS -->

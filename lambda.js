@@ -811,6 +811,9 @@ $(document).ready(function(){
     var pin_count;      //how many pins are currently there (excludes the deleted ones)
     var last_pinID;     //equals how many pins were ever created (including the ones deleted)
 
+//FADES OUT THE BAN ICON IN THE ORIGINAL PIN ELEMENT
+$("#pin").find('.pin-close').fadeOut();
+
 ////UPDATES THE INFO IN THE PINS ARRAY
     function checkPin(pinID) {
         console.log('CHECKING pins.length =>' + pins.length);
@@ -839,7 +842,7 @@ $(document).ready(function(){
                 if (t == '' || t == ' '){
                     t = 'Untitled'
                 }
-                $('#pins-list').append('<li><a href="#'+pins[i]["id"]+'">'+t+'</a></li>');
+                $('#pins-list').append('<li><a href="#'+pins[i]["id"]+'">'+t+'</a> <i class="fa fa-ban delete-pin" style="color: red; cursor: pointer;"></i></li>');
             }
         }
     }
@@ -859,10 +862,11 @@ $(document).ready(function(){
                 pin_count = 0;
             }
 
+            //CHANGE CSS from inline to CSS file
             for (var i=0; i<pins.length; i++) {
                 console.log(i);
-                var appended_pins = $('<div style="position: absolute" class="pin-clone"><i class="fa fa-thumb-tack fa-2x"></i><form class="pin-form" action=""><input class="pin-input" type="text" name="fname" placeholder="Tag"></form></div>');
-                appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').attr('id', pins[i]["id"]).draggable({
+                var appended_pins = $('<div style="position: absolute; width: 140px !important;" class="pin-clone"><div class="pin-icon" style="float: left; width: 50%;"><i class="fa fa-thumb-tack fa-2x"></i></div><div class="pin-close" style="float: right; width: 50%; text-align: right;"><i class="fa fa-ban"></i></div><form class="pin-form" action="" style="width: 120px !important;"><input class="pin-input" type="text" name="fname" placeholder="Tag"  style="width: 120px !important;"></form></div>');
+                appended_pins.appendTo('#content').attr('id', pins[i]["id"]).draggable({
                     containment: '#main',
                     cursor: 'move',
                     snapTolerance: 100,
@@ -870,6 +874,14 @@ $(document).ready(function(){
                     snapMode: "outer",
                     stop: pinMoved
                 });
+                // appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').attr('id', pins[i]["id"]).draggable({
+                //     containment: '#main',
+                //     cursor: 'move',
+                //     snapTolerance: 100,
+                //     snap: '#content',
+                //     snapMode: "outer",
+                //     stop: pinMoved
+                // });
 
                 // console.log('text: ' +pins[i]["value"]);
                 // console.log('top: ' + pins[i]["top"]);
@@ -878,6 +890,7 @@ $(document).ready(function(){
                 appended_pins.offset({top: pins[i]["top"]});
                 appended_pins.offset({left: pins[i]["left"]});
                 appended_pins.find('input').val(pins[i]["value"]);
+                appended_pins.find('.pin-close').fadeOut();
            }
            //creates the pins-list in the menu
             makeList();
@@ -1022,7 +1035,7 @@ $(document).ready(function(){
         checkPin(pid);
         $(this).closest('.pin-form, .pin-close').fadeOut();
     });
-////DELETE SINGLE PIN AND REMOVE FROM ARRAY
+////DELETE SINGLE PIN, REMOVE FROM ARRAY, LIST AND LOCALSTORAGE
     $('#content').on('click', '.pin-close', function() {
         var pid = $(this).parent().attr('id');
         console.log(pid);
@@ -1043,6 +1056,26 @@ $(document).ready(function(){
         
     });
 
+////DELETE PIN FROM LIST, REMOVE FROM SCREEN, ARRAY AND LOCALSTORAGE
+    $('#pin_wrapper').on('click','.delete-pin', function(){
+        var pid = $(this).siblings('a').attr('href');
+        pid = pid.substr(1);
+        //console.log(pid);
+        
+        for(var i=0; i<pins.length; i++){
+            if(pins[i]["id"] == pid){
+                //console.log(i);
+                pins.splice(i, 1);
+                //console.log(pinID, pins);
+                localStorage.setItem("saved_pins", JSON.stringify(pins));
+                $("#"+pid).remove();
+                //delete item on the list as well
+                //$("#pins-list li").eq(i).remove();
+                $(this).parent().remove();
+            } //end if
+        } //end for
+    });
+
 ////EXECUTES WHEN NEW PIN IS DROPPED FOR THE FIRST TIME
     function createPin(e, ui) {
         console.log('pin released  '+ pin_count);
@@ -1052,9 +1085,10 @@ $(document).ready(function(){
         var pinXPos = ui.offset.left;
         var pinYPos = ui.offset.top;
         var newPin =  $(ui.helper).clone(true);
+        //var pinWidth;
 
 ////////DRAG IT, GET TAG NAME FROM USER, ASSIGN DEFAULT ID TO IT, AND UPDATE VALUES WHEN EDITED OR MOVED
-        newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
+        newPin.appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
             containment: '#main',
             cursor: 'move',
             snapTolerance: 100,
@@ -1062,16 +1096,29 @@ $(document).ready(function(){
             snapMode: "outer",
             stop: pinMoved
         });
+        // newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
+        //     containment: '#main',
+        //     cursor: 'move',
+        //     snapTolerance: 100,
+        //     snap: '#content',
+        //     snapMode: "outer",
+        //     stop: pinMoved
+        // });
 
         t = newPin.find('.pin-input').val();
+       // pinWidth = newPin.find('.pin-form').width();
         pid = newPin.attr("id");
         ptop = newPin.offset().top;
         pleft = newPin.offset().left;
         pObj = {value : t, top: ptop, left: pleft, id: pid};
         pins.push(pObj);
         console.log('t -> '+t);
+        //css the trash icon left margin
+        //newPin.find('.pin-close').css('margin-left',pinWidth - 30+'px');
         //update the list on the menu
-        $('#pins-list').append('<li><a href="#dragged-pin'+last_pinID+'">new Pin</a></li>');
+
+        //MOVE INLINE CSS TO FILE
+        $('#pins-list').append('<li><a href="#dragged-pin'+last_pinID+'">new Pin</a> <i class="fa fa-ban delete-pin" style="color: red; cursor: pointer;"></i></li>');
         //saves to localStorage
         localStorage.setItem("saved_pins", JSON.stringify(pins));
         localStorage.setItem("last_pinID", last_pinID);
