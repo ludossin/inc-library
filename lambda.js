@@ -1448,7 +1448,7 @@ var noteCount = $('.sidenote').length; //nr of sidenotes USED in alignSideNotes
             $('#fn'+tic).each(function(){
                 var anchorposition = $('#fnref'+tic).offset().top;
                 $(this).offset({top: anchorposition});
-                console.log(tic + ' alignSideNotes -> '+ anchorposition);
+                //console.log(tic + ' alignSideNotes -> '+ anchorposition);
             });
         });
         //add last one manually
@@ -1462,7 +1462,7 @@ var noteCount = $('.sidenote').length; //nr of sidenotes USED in alignSideNotes
     
     function alignVertically() {
         $('.sidenote').each(function(count){
-            console.log('count ' + count);
+            //console.log('count ' + count);
             //noteCount = count + 1;
             $('#fn'+count).each(function() {
                 var sideTop = $(this).offset().top;
@@ -1476,7 +1476,7 @@ var noteCount = $('.sidenote').length; //nr of sidenotes USED in alignSideNotes
                 if ((sideBottom-sideNextTop) > 0) {
                     $('#fn'+(count+1)).offset({top: newHeight});
                 }
-                console.log(count + 'alignVertically -> '+ newHeight);
+                //console.log(count + 'alignVertically -> '+ newHeight);
             });
         });       
     }

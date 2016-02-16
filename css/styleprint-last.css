@@ -1,3 +1,198 @@
+/* bootstrap stuff 
+ .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
+  .col-sm-pull-12 {
+    right: 100%;
+  }
+  .col-sm-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-sm-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-sm-pull-9 {
+    right: 75%;
+  }
+  .col-sm-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-sm-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-sm-pull-6 {
+    right: 50%;
+  }
+  .col-sm-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-sm-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-sm-pull-3 {
+    right: 25%;
+  }
+  .col-sm-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-sm-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-sm-pull-0 {
+    right: auto;
+  }
+  .col-sm-push-12 {
+    left: 100%;
+  }
+  .col-sm-push-11 {
+    left: 91.66666667%;
+  }
+  .col-sm-push-10 {
+    left: 83.33333333%;
+  }
+  .col-sm-push-9 {
+    left: 75%;
+  }
+  .col-sm-push-8 {
+    left: 66.66666667%;
+  }
+  .col-sm-push-7 {
+    left: 58.33333333%;
+  }
+  .col-sm-push-6 {
+    left: 50%;
+  }
+  .col-sm-push-5 {
+    left: 41.66666667%;
+  }
+  .col-sm-push-4 {
+    left: 33.33333333%;
+  }
+  .col-sm-push-3 {
+    left: 25%;
+  }
+  .col-sm-push-2 {
+    left: 16.66666667%;
+  }
+  .col-sm-push-1 {
+    left: 8.33333333%;
+  }
+  .col-sm-push-0 {
+    left: auto;
+  }
+  .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-sm-offset-0 {
+    margin-left: 0%;
+  }
+  .visible-xs {
+    display: none !important;
+  }
+  .hidden-xs {
+    display: block !important;
+  }
+  table.hidden-xs {
+    display: table;
+  }
+  tr.hidden-xs {
+    display: table-row !important;
+  }
+  th.hidden-xs,
+  td.hidden-xs {
+    display: table-cell !important;
+  }
+  .hidden-xs.hidden-print {
+    display: none !important;
+  }
+  .hidden-sm {
+    display: none !important;
+  }
+  .visible-sm {
+    display: block !important;
+  }
+  table.visible-sm {
+    display: table;
+  }
+  tr.visible-sm {
+    display: table-row !important;
+  }
+  th.visible-sm,
+  td.visible-sm {
+    display: table-cell !important;
+  }
+*/
+/* end bootstrap stuff */
+
 @font-face {
     font-family: Hkgrotesk;
     src: url(fonts/HKGrotesk-Regular.otf);
@@ -24,6 +219,7 @@ body {
     margin-top: 10mm;
     margin-bottom: 11.5mm;
     margin-left: 0;
+    size: landscape; /* chrome support only */
 }
 
 /*  @page {
@@ -74,14 +270,19 @@ div {
 #content {
     margin: 2cm;
     margin-left: 3cm;
+    /* width: 50%; media queries at the end of file */
 }
 
 .section {
+    /* edit 
     margin-left: -2cm;
+    to change the left margin, edit #content */
 }
 
 .section h2 {
-    width: 10cm;
+    /* edit
+     * width: 10cm; */
+    width: 100%;
     margin: 0;
     padding: 0;
     page-break-before: always !important;
@@ -111,12 +312,18 @@ div {
 }
 
 .section p,.section h3 {
-    width: 10cm;
+    /* edit
+     * width: 10cm;*/
+    width: 100%;
 }
 
 .section h2 {
     margin-bottom: .4cm;
+    /* edit */
+    margin-top: 1cm;
 }
+/* edit */
+.section p, .section h2, .section h3, .section h1, .section img, .references {max-width: 100%;}
 
 .section .author,.section .words {
     font-family: "HKGroteskbold";
@@ -141,26 +348,34 @@ div {
 .section img {
     /*     margin-top:2cm;
     right: 2cm;
-    position: absolute;
+    /* edit  
+    position: absolute;*/
+    positon: static;
     page-break-inside: avoid;
-    page-break-before: always; */
+    page-break-before: always;
     width: auto;
     height: 8cm;
-    position: absolute;
     clear: left;
-    margin-left: 11cm;
+    /* edit 
+    margin-left: 11cm; */
+    margin-left: 0;
     page-break-inside: avoid !important;
 }
 
 .section .img-caption {
     font-size: 7pt;
-    margin-top: 8.5cm;
     text-indent: 0;
     width: 11.5cm;
     height: auto;
-    position: absolute;
+    /* edit 
+    position: absolute;*/
+    position: static;
     clear: left;
-    margin-left: 11cm;
+    /* edit 
+    margin-top: 8.5cm;
+    margin-left: 11cm; */
+    margin-top: 0;
+    margin-left: 0;
     font-family: "HKGroteskbold";
     align-self: baseline;
     vertical-align: bottom;
@@ -226,10 +441,21 @@ li {
     right:0cm; */
     /*         margin-top: -30cm;
     */
-    margin-left: 12cm;
-    position: fixed;
+    
     border: initial;
     border-radius: initial;
+    
+    /* edit
+    margin-left: 12cm;
+    position: fixed;
+    */
+    margin-left: 0;
+    padding-left: 0;
+    page-break-before: always !important;
+    position: static !important;
+    width: 100%; /* removed from .sidenote and changed from 5cm to percentage */
+    -moz-column-count: 4;
+    -moz-column-gap: .25cm;
 }
 
 #chapter8 {
@@ -241,6 +467,12 @@ li {
     */
 }
 
+/* edit */
+#chapter8 ol li{
+    float: none;
+    position: static;
+    float: none;
+}
 #chapter8 ol li:before {
     font-size: 7pt;
     line-height: 9pt;
@@ -288,8 +520,12 @@ li {
 }
 
 .sidenote {
+    /* edit 
     margin-left: 12cm;
-    width: 5cm;
+    */
+    margin-left: 0;
+    /* edit
+     * width: 5cm; moved to #sidenote-wrapper */
     font-size: 7pt;
     line-height: 9pt;
     page-break-inside: avoid;
@@ -304,6 +540,8 @@ li {
     border: initial;
     border-radius: initial;
     margin-left: 13.1cm;
+    /* edit */
+    display: none;
 }
 
 #toc_wrapper {
@@ -377,3 +615,31 @@ li {
 .toggle_menu_left_button div {
     display: none;
 }
+
+/* style sheet for "A4" printing portrait */
+ @media print and (width: 21cm) and (height: 29.7cm) {
+    /*#content{
+        width: 65% !important;
+    }*/
+    .section img{
+        position: static !important;
+        height: 8cm; /* copied from main print css */
+        margin-bottom: 0;
+        clear: left;
+    }
+ }
+
+ /* style sheet for "A4" printing landscape */
+ @media print and (width: 29.7cm) and (height: 21cm) {
+    /*#content{
+        width: 50% !important;
+    }*/
+    .section img{
+        position: relative !important;
+        height: 8cm; /* copied from main print css */
+        clear: none;
+        left: 18cm;
+        margin-bottom: -8cm; /* same as height, but negative - will allow text to flow  */
+    }
+
+ }
