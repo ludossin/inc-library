@@ -1533,16 +1533,23 @@ ON RESIZE DO THESE THINGS
 ////////////////////
 ////CHANGE FONT SIZE
 ////////////////////
-
+var fontSize;
 ////DECREASE FONT SIZE AND ALIGN SIDENOTES
     $('#button_fontsizeminus, #button_fontsizeminus_xs').on('click', function(){
         fadeOutSidenotes();
-        var fontSize = parseInt($(".section").css('font-size'));
-        $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
-            alignSidenotes();
-            alignVertically();
-            alignParagraphNumbers();
-        });
+        fontSize = parseInt($(".section").css('font-size'));
+        //console.log('will DECREASE to' + fontSize );
+        // $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
+        //     alignSidenotes();
+        //     alignVertically();
+        //     alignParagraphNumbers();
+        // });
+        //replaced animation with dry css properties
+        $('.section').not('.references').css('font-size',Number(fontSize-1)+'px');
+        alignSidenotes();
+        alignVertically();
+        alignParagraphNumbers();
+        //
         fadeInSidenotes();
         H = html.outerHeight(true);
         S = $(window).scrollTop();
@@ -1552,12 +1559,19 @@ ON RESIZE DO THESE THINGS
 ////INCREASE FONT SIZE AND ALIGN SIDENOTES
     $('#button_fontsizeplus, #button_fontsizeplus_xs').on('click', function(){
         fadeOutSidenotes();
-        var fontSize = parseInt($(".section").css('font-size'));
-        $('.section').not('.references').animate({'font-size': '+=0.5'}, function() {
-            alignSidenotes();
-            alignVertically();
-            alignParagraphNumbers();
-        });
+        fontSize = parseInt($(".section").css('font-size'));
+        //console.log('will INCREASE ' + fontSize );
+        // $('.section').not('.references').animate({'font-size': '+=0.5'}, function() {
+        //     alignSidenotes();
+        //     alignVertically();
+        //     alignParagraphNumbers();
+        // });
+        //replaced animation with dry css properties
+        $('.section').not('.references').css('font-size',Number(fontSize+1)+'px');
+        alignSidenotes();
+        alignVertically();
+        alignParagraphNumbers();
+        //
         fadeInSidenotes();
         H = html.outerHeight(true);
         S = $(window).scrollTop();
