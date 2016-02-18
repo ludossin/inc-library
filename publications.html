@@ -1,511 +1,701 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+
+<!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/         HEAD         /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/->
 
 <!–––––––––––––––––––––––––– Metadata –––––––––––––––––––––––––––––––––––––-->
-
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+        </script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js">
+        </script>
         <meta content="text/css" http-equiv="Content-Style-Type">
-        <meta content="pandoc" name="generator">	
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
-        <meta name="editors" content="Gordana Nikolić and Šefik Tatlić" />
-        <meta name="apa-editors" content="G. Nikolić and Š. Tatlić" />
-        <meta name="title" content="The Gray Zones of Capitalism and Creativity (Theory on Demand #17)" />
-        <meta name="year" content="2015"/>
-        <meta name="publisher" content="Institute of Network Cultures"/>
-        <meta name="place" content="Amsterdam"/>
-        <title>INC Publications</title>
-
-        <!--–––––––––––––––––––––––––––––––– Favicon –––––––––––––––––––––––––––––––––––––-->
-        <link rel="icon" href="http://networkcultures.org/wp-content/themes/inc-home/favicon.png">
-        <!-- –––––––––––––––––––––––––– CSS –––––––––––––––––––––––––––––––––––––-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <!-- <link href="css/scrolling-nav.css"> -->
-
+        <meta content="pandoc" name="generator">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+        <meta content="Gordana Nikolić and Šefik Tatlić" name="editors">
+        <meta content="G. Nikolić and Š. Tatlić" name="apa-editors">
+        <meta content="The Gray Zones of Capitalism and Creativity (Theory on Demand #17)" name="title">
+        <meta content="2015" name="year">
+        <meta content="Institute of Network Cultures" name="publisher">
+        <meta content="Amsterdam" name="place">
+        <title>INC Publications</title><!--–––––––––––––––––––––––––––––––– Favicon –––––––––––––––––––––––––––––––––––––-->
+        <link href="http://networkcultures.org/wp-content/themes/inc-home/favicon.png" rel="icon"><!-- –––––––––––––––––––––––––– CSS –––––––––––––––––––––––––––––––––––––-->
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" rel="stylesheet"><!-- <link href="css/scrolling-nav.css"> -->
         <!--     <link rel="stylesheet" type="text/css" href="css/lambdaCSS.css">
--->    <link rel="stylesheet" type="text/css" href="publications.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/style-lambda3.css" media="screen" /> -->
-        <link rel="stylesheet" href="css/styleprint-last.css" type="text/css" media="print" />
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-        <!-- –––––––––––––––––––––––––– Scripts –––––––––––––––––––––––––––––––––––––-->
+-->
+        <link href="css/publications.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" type="text/css" href="css/style-lambda3.css" media="screen" /> -->
+        <link href="css/styleprint-last.css" media="print" rel="stylesheet" type="text/css">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'><!-- –––––––––––––––––––––––––– Scripts –––––––––––––––––––––––––––––––––––––-->
         <!-- // <script src="http://code.jquery.com/jquery-1.7.2.js"></script> -->
         <!--  // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- EARLY LIBRARY NEEDED FOR HIGHLIGHT TO WORK PROPERLY -->
-        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 
-        <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+        </script><!-- EARLY LIBRARY NEEDED FOR HIGHLIGHT TO WORK PROPERLY -->
 
-        <!--–––––––––––––––––––––––––– Plugins –––––––––––––––––––––––––––––––––––––-->
-        <!-- <script src="final_js/respond.min.js"></script>
-<script src="final_js/modernizr-custom.js"></script> -->
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js">
+        </script><!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
+        </script><!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+        </script><!--–––––––––––––––––––––––––– Plugins –––––––––––––––––––––––––––––––––––––-->
+
+
         <script src="final_js/jquery.easing.min.js"></script>
         <script src="final_js/scrolling-nav.js"></script>
         <script src="final_js/highlight.js"></script>
         <script src="final_js/moment.js"></script>
-        <!-- <script src="final_js/clipboard.min.js"></script> -->
         <script src="final_js/jquery.hotkeys.js"></script>
         <script src="final_js/velocity.min.js"></script>
         <script src="final_js/velocity.ui.min.js"></script>
         <script src="final_js/jquery.wrapSelection.js"></script>
-        <!-- <script src="final_js/jquery.rotate.js"></script> -->
-
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+        <script type="text/javascript" src="final_js/jquery.tablesorter.js"></script>
 
     </head>
-
-
-
-
-
     <body>
-
-
-
-        <!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+<!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/      STRUCTURATION      /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
+/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/      MENU      /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-->
-
-
-        <div id="main"> <!-- MAIN: DO NOT REMOVE --> 
-
-            <!--     <div class="row test-message col-lg-12">
-<div class="col-lg-8 col-lg-offset-2">
-
-<h2>You are looking at a new, experimental reading form for the publications of the <a href="http://networkcultures.org/publications/">Institute of Network Cultures</a>.<br>
-It is the result of a <a href="http://www.publishinglab.nl/navigating-tod/">research project</a> on online reading and investigates new ways of navigating books in browsers with the aim of making INC publications adaptive to how readers behave online.<br>
-This design of <i>Gray Zone of Creativity and Capital</i> is currently in the beta stage, and we appreciate all tips and comments from readers.<br>
-Read it, try it and help us improve it by <a href="#" style="font-weight:600;">giving your feedback</a>.<br>
-Thanks for participating! <i class="fa fa-smile-o"></i><br></h2>
-<h3>      <a href="http://www.publishinglab.nl">PublishingLab</a>   </h3>      
-
-</div>
-</div> -->
-
+        <div id="main">
+       
             <!-- –––––––––––––––––––––––––– Pushmenu/Toc (left) –––––––––––––––––––––––––––––––––––––-->
-            <div class="container-fluid" >
-               
-               
-              <div class="row" id="header">
-                 <div class="row news col-lg-offset-1 col-lg-10" id="novelty">
-                     <h1>Brand new book!</h1>
-                     <h2 class="date">22/01/2016</h2>
-                     <p>Hey this it the content of the actuality. This new book just arrived, please have a look, it is super!</p>
-                 </div>
-                  <div class="row news col-lg-offset-1 col-lg-10" id="novelty">
-                      <h1>Brand new book!</h1>
-                      <h2 class="date">22/01/2016</h2>
-                      <p>Hey this it the content of the actuality. This new book just arrived, please have a look, it is super!</p>                  
-                    </div>
-              </div>
+            <div class="container-fluid">
+                <div class="row" id="info-top" style="
+                                                      left: 0;
+                                                      width: 100%;
+                                                      margin-right: 0;
+                                                      margin-left: 0;
+                                                      height: auto;
+                                                      background-color:#ff3B00;
+                                                      color:black;
+                                                      padding-left:6%;
+                                                      padding-right:6%;">
+                <h1 class="col-lg-4">INC Library</h1>
+                    <h1 class="col-lg-2" id="targeting-info"><a href="#info">Info</a></h1>
+                    <h1 class="col-lg-2" id="targeting-books"><a href="#bar-top">Books</a></h1>
+                <h1 class="col-lg-3">My collection</h1>
+                </div>
+                <div class="row" style="
+                                                      left: 0;
+                                                      width: 100%;
+                                                      margin-right: 0;
+                                                      margin-left: 0;
+                                                      height: auto;
+                                                      background-color: #4e4e4e;
+                                                      color:white;
+                                                      text-align:center;
+                                        padding-left:6%;
+                                        padding-right:6%;
 
-               
-               
-               
-                <div class="row">
-            <!--–––––––––––––––––––––––––– Vertical scrolling indicator –––––––––––––––––––––––––––––––––––––-->
-                    <div id="menu_bar" class="col-lg-5" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+                                        box-shadow: inset 0px -4px 3px rgba(51, 51, 51, 0.27);">
+                   
+                   
+                    <h1 style="padding-bottom:20px;">
+                        Welcome to the Institute of Network Cultures Library. Since 1997, over 120 books have been published by the INC. Artists, writers and musicians present work in progress, experiment or present work that doesn't fit into their oeuvre (yet). A specific and unique stage for diverse and hybrid works which don't fit comfortably into galleries or museums.
 
+                        The program is compiled from received and selected material. The evenings were held in Amsterdam, Alexandria, Berlin, Cairo, Los Angeles, New York, Reykjavík, Rotterdam and Vilnius. Please invite us if you would like to host a Lost & Found.
+
+                        The collection of Lost & Found invitations was exhibited at Stedelijk Museum Amsterdam and AFAC - Alexandria Contemporary Art Forum. The Netherlands Institute for Art History has taken the flyers into their collection.</h1>
+                   <div id="info" class="hide">
+                    <div class="row">
+                     <h3 class="col-lg-4">
+                        Contact<br>
+                        Visit address:<br>
+
+                        INSTITUTE OF NETWORK CULTURES<br>
+                        Hogeschool van Amsterdam<br>
+                        Benno Premsela Huis<br>
+                        Rhijnspoorplein 1<br>
+                        Room 04A07<br>
+                        1091 GC Amsterdam<br>
+                        Tel: 020 595 1866<br>
+
+                        Postal address:<br>
+
+                        INSTITUTE OF NETWORK CULTURES<br>
+                        Hogeschool van Amsterdam<br>
+                        Postbus 1025<br>
+                        Rhijnspoorplein 1<br>
+                        1000 BA Amsterdam<br>
+
+                        Please contact us if you have any questions: info@networkcultures.org<br>
+                        or mail to Geert Lovink: geert@xs4all.nl<br>
+                        <br>
+
+                        Subscribe to our mailinglist <br>
+                    </h3>
                     
-                        <div class="panel-group" id="accordion">
+                    <h3 class="col-lg-4">
+                        Board<br>
 
-                        
-                            <!-- panel 1: News-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="" alt="">
-                                        News</a>
-                                        <br>
-                                    </h4>
-                                </div>
-                                <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                    </div>
-                                </div>
-                            </div>
+                        Erik Mattijssen<br>
+                        Chair<br>
 
-                            <!-- panel 2: Quote-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="" alt=""><!-- <i class="fa fa-quote-left"></i> -->
-                                            Books</a>
-                                    </h4>
-                                </div>
-                                <div id="collapse3" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                    </div>
-                                </div>
-                            </div>
+                        Bart Tunninssen<br>
+                        Treasurer<br>
 
-                            <!-- panel 3: Print-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper">About</a>
-                                    </h4>
-                                </div>
-                                <div id="collapse5" class="panel-collapse collapse">
-                                    <div class="panel-body">Print this book:
-                                        <br>
-                                        <a href="javascript:window.print()" class="extra">Print on your own printer</a>
-                                        <br>
-                                        <a href="http://www.lulu.com/shop/%C5%A1efik-tatli%C4%87-and-gordana-nikoli%C4%87/the-gray-zones-of-creativity-and-capital/paperback/product-22467485.html" class="extra" target="_blank">Print and order on Lulu</a> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- #accordion -->
+                        Barbara Visser<br>
+                        Secretary<br>
 
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div class="keyword-toggle">
-                        
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">INC Readers</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Network Notebooks</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Theory on Demand</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">INC Longforms</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Gert Lovink's books</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Studies in Network Cultures</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Conference reports</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Miscellanea</button> 
 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Geert Lovink</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Dutch</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">English</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">French</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">German</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Spanish</button> 
 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2005</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2006</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2007</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2007</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2008</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2009</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2010</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2011</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2012</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2013</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2014</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2015</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">2016</button> 
+                        DIRECTOR<br>
 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Johnatan Beller</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Josephine Berry Slater</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Marc James Léger</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Ana Vilenica</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Sandi Abram</button> 
-                        <button type="button" class="btn btn-default keyword-button" id="keyword_toggle0">Irmgard Emmelheinz</button> 
-                        
-                        
-                        
-                    </div> 
+                        Julia van Mourik<br>
+
+
+                        TECHNICAL DIRECTOR<br>
+
+                        Misha de Ridder<br>
+                    </h3>
+                    <h3 class="col-lg-4">
+                        Editors<br>
+
+                        Alma Mathijsen & Julia van Mourik<br>
+
+                        and Jan Hoek, Eric Giraudet de Boudemange, Hugo van Heijningen, Tereza Rullerova, Björn Ottenheim, Sascha Landshoff, Joris Jansen, Gover Meit, Richard John Jones, Roel Wouters, Yeb Wiersma, Suzanne Wallinga, Jeanine Hofland, Mick Johan, Carel Alphenaar, Merijn Bolink, Odilo Girod, Arnar Ásgeirsson, Raoul de Jong, Constant Dullaart, Lernert Engelberts, Sander Plug, Misha de Ridder, Gabriel Lester, Katja Mater, Virginija Januškevičiūtė, Sunny Bergman, Nathalie Bruys, Falke Pisano, Marnix Goossens, Jop van Bennekom, Jan Rothuizen, Mathijs de Bruijne, Armand Meevis, Menno Grootveld, Bregtje van der Haak and others.
+                    </h3>
+                       </div>  
+                       <div class="row">
+                    <h3 class="col-lg-4">
+                        Partners<br>
+                        Lost & Found is supported by Mondriaan Fund.<br>
+
+                        In 2015 and 2016, the activities of Lost & Found were made possible by robstolk®, Sandberg Instituut, Paradiso, Muziekgebouw aan 't IJ, Society of Arts, Cultural Embassy of Lloyd Hotel, Oude Kerk, Waag Society, Kattenkabinet, Knust Nijmegen, Trust Finance en Consulting, Loekie and all editors, artists and designers.
+                    </h3>
+                    <h3 class="col-lg-4">
+                        Imprint<br>
+                        All material on this site is licensed under a Creative Commons Attribution NonCommercial – ShareAlike 3.0 Unported License
+                    </h3>
+                    <h3 class="col-lg-4">
+                        About website<br>
+                        The project is an initiative of Valentina Karga and Pieterjan Grandry and it is supported by the Vilém Flusser Residency Programme for Artistic Research 2015 and transmediale, festival for art and digital culture.<br>
+
+                        Graphic design and website by Modem Studio
                    
-                   
-                
-                   
-                   
-                   
-                   
-                   
-                <a class="vertical-text-wrapper">
-                    <h1 class="vertical-text">The Gray Zones of Creativity and Capital</h1>
-                </a>
-            </div>
-<!-- 
-                <div class="row" id="library-tree">
-                    <div class="col-lg-6 col-md-10 hidden-sm hidden-xs" id="breadcrumb">
-                
-                        <ol class="breadcrumb">
-                            <li>
-                                <a href="#">Open menu</a>
-                            </li>
-                
-                        </ol>
-                
+                    </h3>
+                       </div>
                     </div>
-                </div> -->
 
+                        
+                        
+               </div>
+               
+                <div class="row" style="
+                                        left: 0;
+                                        width: 100%;
+                                        margin-right: 0;
+                                        margin-left: 0;
+                                        height: auto;
+                                        background-color: rgba(255, 59, 0, 0.36);
+                                        color:black;
+                                        text-align:center;
+                                        padding-left:6%;
+                                        padding-right:6%;
 
+                                        box-shadow: inset 0px -4px 3px rgba(51, 51, 51, 0.27);">
+                                            
+                    <h1>Upcoming events</h1>                          
+                    <h2>New books to come!</h2>                          
+                                            
+                </div>
+                <div class="row" id="bar-top" style="
+                                                     z-index: 20;
+                                                     width: 100%;
+                                                     height: 11%;
+                                                     background-color: #F4F4F4;
+                                                     text-align: center;
+                                                     color:#8E8E8E;
+                                                     font-size: 40px;" data-spy="affix" data-offset-top="600">
+                    <i class="fa fa-chevron-down"></i>
 
+              
+                    <div class="row hide" id="menu-top" style="
 
-
-                <div id="content" class="col-lg-9 col-lg-offset-3 col-md-offset-0 col-md-6 col-sm-8 col-sm-offset-0 col-xs-offset-0 col-xs-12">
-
-                    <div class="container">
-                        <div id="publications" class="row">
-                            <div id="1" class="post item col-lg-4">
+                                                               left: 0;
+                                                               z-index: 999999999999999999999;
+                                                               width: 100%;
+                                                               margin-right: 0;
+                                                               margin-left: 0;
+                                                               /* margin-top: 100px; */
+                                                               height: auto;
+                                                               overflow-y: auto;
+                                                               /* padding-bottom: 30px; */
+                                                               font-size: 22px;
+                                                               color: black !important;
+                                                               /* background-color: white; */
+                                                               text-transform: uppercase;
+                                                               /* -webkit-box-shadow: 0px 0px 27px 19px white; */
+                                                               -moz-box-shadow: 0px 0px 27px 19px white;
+                                                               /* box-shadow: 0px 0px 27px 19px white; */
+                                                               /* background: linear-gradient( to top, rgba( 255, 255, 255, 0 ) 0%, rgba( 255, 255, 255, 1 ) 15px, rgba( 255, 255, 255, 1 ) 100% ); */
+                                                               background-color: #F4F4F4;
+                                                               color: black;
+                                                               /* margin-top: 110px; */
+                                                               margin-top: -2px;
+                                                               padding-left: 6%;
+                                                               padding-right: 6%;
+                                                               padding-top: 15px;
+                                                               padding-bottom: 5px;"
+                         >
+                        <p class="col-lg-10" style="
+                                                    -webkit-column-width: 100px;
+                                                    column-width: 100px;">
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">INC Readers</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Network Notebooks</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Theory on Demand</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">INC Longforms</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Gert Lovink's books</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Studies in Network Cultures</span>                                 <span class="btn-taglist" id="btn-taglist-0" type="button">Conference reports</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Miscellanea</span>
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Dutch</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">English</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">French</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">German</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Spanish</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2005</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2006</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2007</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2007</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2008</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2009</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2010</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2011</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2012</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2013</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">2014</span>
+                             <span class="btn-taglist" id="btn-taglist-0" type="button">2015</span> 
+                             <span class="btn-taglist" id="btn-taglist-0" type="button">2016</span> 
+                            
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Johnatan Beller</span>
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Josephine Berry Slater</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Marc James Léger</span>
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Ana Vilenica</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Sandi Abram</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Irmgard Emmelheinz</span>
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Johnatan Beller</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Josephine Berry Slater</span> 
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">Marc James Léger</span>
+                             <span class="btn-taglist" id="btn-taglist-0" type="button">Ana Vilenica</span> 
+                             <span class="btn-taglist" id="btn-taglist-0" type="button">Sandi Abram</span> 
+                            
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">creativity</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">capitalism</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">industry</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">globalization</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">new media</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">politics</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">culture</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">society</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">economy</span>    
+                            <span class="btn-taglist" id="btn-taglist-0" type="button">modernism</span>    
+                            </p>   
+                            
+                            
+                            <p class="col-lg-2">
+                                <span class="btn-taglist" id="btn-taglist-0" type="button">Reset all</span>    
+                                <span class="btn-taglist" id="btn-taglist-0" type="button">Collection</span>    
+                        </p>
+                            
+                            
+                    
+                        
+                        
+                    </div>
+               </div>
+               
+                
+<!--–––––––––––––––––––––––––– Container - books –––––––––––––––––––––––––––––––––––––-->
+                    <div class="container col-lg-12 col-lg-offset-0" style="background-color:white;">
+                       
+                        <div class="row" id="books">
+                            <div class="post item col-lg-4" id="1">
                                 <div class="well">
-                                   <div >
-                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2016/01/TOD-Geoblocking-Front.jpg">
+                                   <div class="col-lg-12">
+<img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2016/01/TOD-Geoblocking-Front.jpg">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> 
                                     </div>
-                                    <div >
-
-                                    <h4>
-                                        <a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a>
-                                    </h4>
-                                    <h5>Ramon Lobato & James Meese</h5>
-                                   
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span>
+                                </div>
+                            </div>
+                            <div class="post item col-lg-4" id="2">
+                                <div class="well">
+                                    <div class="col-lg-12">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2015/12/cover.jpg">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post item col-lg-4" id="3">
+                                <div class="well">
+                                    <div class="col-lg-12">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2015/11/Schermafbeelding-2015-07-27-om-11.00.26.png">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
                                         <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
                                     </div>
                                 </div>
-                                </div>
                             </div>
-                            <div id="2" class="post item col-lg-3 ">
+                            <div class="post item col-lg-4" id="3">
                                 <div class="well">
-                                    <img class="thumbnail" src="http://www.publishinglab.nl/navigating-tod/wp-content/uploads/sites/8/2015/12/cover.jpg">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-                                    
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
+                                    <div class="col-lg-12">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2015/04/Screen-Shot-2015-02-19-at-09.54.03.png">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="3" class="post item col-lg-3 ">
-                                <div class="well">
-                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2015/07/cover.png">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
-                                    </div>
+                            </div>                            
+                            <div class="post item col-lg-4" id="3">
+                            <div class="well">
+                                <div class="col-lg-12">
+                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                    <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                    <h5>Ramon Lobato & James Meese</h5>
+                                    <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
                                 </div>
                             </div>
-                            <div id="4" class="post item col-lg-3 ">
-                                <div class="well">
-                                    <img class="thumbnail" src="http://www.digitalislam.eu/dwn/1003/7193C350x494_tacticalmedia2.JPG">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
-                                    </div>
-                                </div>
                             </div>
-                            <div id="5" class="post item col-lg-3 ">
+                            
+                            <div class="post item col-lg-4" id="3">
                                 <div class="well">
-                                    <img class="thumbnail" src="https://image.isu.pub/140204131523-eee90401b835c676e68b76b820bbdc3d/jpg/page_1_thumb_large.jpg">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="6" class="post item col-lg-3 ">
-                                <div class="well">
-                                    <img class="thumbnail" src="http://image.issuu.com/151112081142-c39ce0046d665907cde4f1505ae16795/jpg/page_1_thumb_large.jpg">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="2" class="post item col-lg-3 ">
-                                <div class="well">
-                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/07/eindverantwoordingCPOV_voorwebsite-1.jpg">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="7" class="post item col-lg-3 ">
-                                <div class="well">
-                                    <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2010/10/Screen-shot-2010-10-21-at-14.00.101.png">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="8" class="post item col-lg-3 ">
-                                <div class="well">
-                                    <img class="thumbnail" src="http://www.miningtheseem.org.uk/wp-content/uploads/2015/08/moneylabInterventionPic-m.jpg">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="9" class="post item col-lg-3 ">
-                                <div class="well">
-                                    <img class="thumbnail" src="http://www.miriamrasch.nl/index_files/page0_blog_entry596-anti-media.jpg">
-                                    <h4>
-                                        <a href="${permalink_absolute}" target="_blank">TOD 17: The Gray Zones of Creativity and Capital</a>
-                                    </h4>
-
-                                    <div class="info">
-                                        <span class="badge">100</span>
-                                        <span class="badge">45</span> <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span>
+                                    <div class="col-lg-12">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
                                     </div>
                                 </div>
                             </div>
                             
+                            <div class="post item col-lg-4" id="3">
+                                <div class="well">
+                                    <div class="col-lg-12">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                                    </div>
+                                </div>
+                            </div>
                             
-                        </div>
-
-
-
-
-
-
-                        <div id="info-box" class="row col-lg-12 vertical-align">
-
-                            <!-- BOOK TITLE -->
-
-                            <div id="book-title-box" class="col-lg-3 col-md-8 col-sm-8 col-xs-11 col-lg-offset-0 col-md-offset-2 col-sm-offset-2 col-xs-offset-0" id="book-title">
-                                N°17: The Gray Zones of Creativity and Capital
-<!-- 
-                            <div id="book-author">
-                                Gordana Nikolić & Šefik Tatlić
-                            </div> -->
-                                <p class="info-box-column-header">
-                                    Author(s)
-                                </p>
-
-                                Johnatan Beller, 
-                                Josephine Berry Slater, 
-                                Marc James Léger, 
-                                Ana Vilenica, 
-                                Sandi Abram, 
-                               Irmgard Emmelheinz
-
-                                <p class="info-box-column-header">
-                                    Editor(s)
-                                </p>
-                                <a href="#">Gordana Nikolić</a>, <a href="#">Šefik Tatlić</a>
-                                <p class="info-box-column-header">
-                                    Date
-                                </p>
-                                Writing: 03/12/2014<br>
-                                Publishing: 03/12/2015
-<!--                                 <p class="info-box-column-header">
-                                    ISBN
-                                </p>
-                                978-94-92302-02-1. -->
-                                <p class="info-box-column-header">
-                                    Series
-                                </p>
-                                <a href="#">Theory on Demand</a>
+                            <div class="post item col-lg-4" id="3">
+                                <div class="well">
+                                    <div class="col-lg-12">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="summary col-lg-3">
-                                What is the correlation among the creative industries, creative industry policies, new media paradigms and capitalism as colonial relations of dominance? What is the role of these industries in the prioritization of the interests of capital at the expense of those of society and how can these paradigms be criticized in the context of the actual, neoliberal, flexible regime of reproduction of capital?(…)
-
-                        </div>
-                        <div class="col-lg-3">
-                            <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
-                        </div>
-                        <div class="go col-lg-1">
-                            →
+                            
+                            <div class="post item col-lg-4" id="3">
+                                <div class="well">
+                                    <div class="col-lg-12">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                                    </div>
+                                </div>
                             </div>
+                            
+                            <div class="post item col-lg-12" id="3">
+                                <div class="well">
+                                    <div class="col-lg-4">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                    </div>
+                                       <div class="col-lg-8">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                                    </div>
+                                </div>
                             </div>
-
-
-                
+                            
+                            <div class="post item col-lg-12" id="3">
+                                <div class="well">
+                                    <div class="col-lg-4">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="post item col-lg-12" id="3">
+                                <div class="well">
+                                    <div class="col-lg-4">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="post item col-lg-12" id="3">
+                                <div class="well">
+                                    <div class="col-lg-4">
+                                        <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2013/04/Cover-TOD121.jpg">
+                                        <div class="add-to-collection" style="    position: absolute;
+                                                                              bottom: 0;
+                                                                              margin-bottom: 6px;">
+                                        <button type="button" class="btn btn-primary btn-xs">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h4><a href="#" target="_blank">TOD 18: Geoblocking and Global Video Culture</a></h4>
+                                        <h5>Ramon Lobato & James Meese</h5>
+                                        <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <h4>Read →</h4>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                           </div>
+                           
+                          
+                        
+                        
+                        
+                        
                     </div>
+                    
+                    
+                    <div class="row" style="background-color:#F4F4F4; padding-left:8%; padding-right:8%;">
 
-                </div> <!-- END OF MAIN -->   
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Editor</th>
+                                    <th>Topics</th>
+                                    <th>Read</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td>TOD 17: The Gray Zones of Creativity and Capital</td>
+                                    <td>Šefik Tatlić, Gordana Nikolić</td>
+                                    <td>john@example.com</td>
+                                    <td>john@example.com</td>
+                                    <td>Read</td>
+                                </tr>
+                                <tr>
+                                    <td>TOD 18: Geoblocking and Global Video Culture</td>
+                                    <td>Ramon Lobato & James Meese</td>
+                                    <td>mary@example.com</td>
+                                    <td>mary@example.com</td>
+                                    <td>Read</td>
 
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                    <td>july@example.com</td>
+                                    <td>Read</td>
 
-        <!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+                                </tr>
+                            </tbody>
+                        </table>
+
+                   
+                    </div>
+                    
+                    
+                    
+                
+                
+                <!-- END OF MAIN --><!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/         SCRIPTS        /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-->
+                <!--         <script type="text/javascript">
+$(document).ready(function()
+{
 
-        <script src="lambda.js"></script>
-        <script src="final_js/instantclick.min.js" data-no-instant></script>
-        <script data-no-instant>InstantClick.init();</script>
-        <!-- –––––––––––––––––––––––––– Menu on XS devices that toggle –––––––––––––––––––––––––– -->
-        <script> 
+function toggle_color(color1,color2, color3,color4,color5, cycle_time,wait_time) {
+setInterval(function first_color() {
+$("body").animate({
+backgroundColor: color1
+}, 8000, function () {
+setTimeout(change_color, wait_time);
+});
+}, cycle_time);
 
-            $.getScript('http://cdn.jsdelivr.net/isotope/1.5.25/jquery.isotope.min.js',function(){
+function change_color() {
+$("body").animate({
+backgroundColor: color2
+}, 8000, function () {
+setTimeout(function () {}, wait_time);
+});
+}
 
-                /* activate jquery isotope */
-                $('#publications').imagesLoaded( function(){
-                    $('#publications').isotope({
-                        itemSelector : '.item'
+function change_color() {
+$("body").animate({
+backgroundColor: color3
+}, 8000, function () {
+setTimeout(function () {}, wait_time);
+});
+}
+
+function change_color() {
+$("body").animate({
+backgroundColor: color4
+}, 8000, function () {
+setTimeout(function () {}, wait_time);
+});
+}
+
+function change_color() {
+$("body").animate({
+backgroundColor: color5
+}, 8000, function () {
+setTimeout(function () {}, wait_time);
+});
+}
+}
+
+toggle_color('#f30','#ff3e0e', 'rgb(255, 71, 25)', 'rgb(255, 89, 47)', 'rgb(255, 139, 110)',8000, 8000, 8000, 8000, 8000);
+});
+
+$(document).ready(function()
+{
+
+function toggle_color(color1,color2, cycle_time,wait_time) {
+setInterval(function first_color() {
+$("#content").animate({
+backgroundColor: color1
+}, 18000, function () {
+setTimeout(change_color, wait_time);
+});
+}, cycle_time);
+
+function change_color() {
+$("#content").animate({
+backgroundColor: color2
+}, 18000, function () {
+setTimeout(function () {}, wait_time);
+});
+}
+
+}
+
+toggle_color('#f4F4F4','#f30', 5, 5);
+});
+</script> -->
+                <script src="lambda.js">
+                </script> 
+                <script data-no-instant="" src="final_js/instantclick.min.js">
+                </script> 
+                <script data-no-instant="">
+                    InstantClick.init();
+                </script> <!-- –––––––––––––––––––––––––– Menu on XS devices that toggle –––––––––––––––––––––––––– -->
+
+               
+               
+               
+               
+                <script>
+
+                    
+                   
+
+/*                    $('#panel-heading-1').on('click', function() {
+                        $('#panel-heading-4').toggleClass('hide');
+                        $('#panel-heading-2').toggleClass('hide');
+                        $('#panel-heading-3').toggleClass('hide');
+                        $('#content3').hide();
+                        $('#content2').hide();
+                        $('#content4').hide();   
+                        $('#content1').show();  
+                    });            
+
+                    $('#panel-heading-2').on('click', function() {
+                        $('#panel-heading-1').toggleClass('hide');
+                        $('#panel-heading-3').toggleClass('hide');
+                        $('#panel-heading-4').toggleClass('hide');
+                        $('#content1').hide();
+                        $('#content3').hide();
+                        $('#content4').hide();   
+                        $('#content2').show();  
+                        $('#keyword-toggle').toggleClass('hide'); 
+
                     });
-                });
 
-            });
-            
-            /* activate sidebar */
-            $('#menu_bar').affix({
-                offset: {
-                    top: 235,
-                    bottom: function () {
-                    return (this.bottom = $('.footer').outerHeight(true))
-                }
-                }
-            });
-
-            /* activate scrollspy menu */
-            var $body   = $(document.body);
-            var navHeight = $('#header').outerHeight(true) + 10;
-
-            $body.scrollspy({
-                target: '#menu_bar',
-                offset: navHeight
-            });
-
-            
-        </script>
-
-
+                    $('#panel-heading-3').on('click', function() {
+                        $('#panel-heading-1').toggleClass('hide');
+                        $('#panel-heading-2').toggleClass('hide');
+                        $('#panel-heading-4').toggleClass('hide');
+                        $('#content1').hide();
+                        $('#content2').hide();
+                        $('#content4').hide();   
+                        $('#content3').show();   
+                    });
+                    
+                    $('#panel-heading-4').on('click', function() {
+                        $('#panel-heading-1').toggleClass('hide');
+                        $('#panel-heading-2').toggleClass('hide');
+                        $('#panel-heading-3').toggleClass('hide');
+                        $('#content1').hide();
+                        $('#content2').hide();
+                        $('#content3').hide();   
+                        $('#content4').show();
+                    });
+                    
+                    */
+                    
+                    $('#bar').on('click', function() {
+                        $('#menu').toggleClass('hide');
+                    });  
+                    
+                    $('#bar-right').on('click', function() {
+                        $('#menu-right').toggleClass('hide');
+                    });  
+                    
+                    $('#bar-top').on('click', function() {
+                        $('#menu-top').toggleClass('hide');
+                    }); 
+                    
+                    $('#targeting-info').on('click', function() {
+                        $('#info').toggleClass('hide');
+                    });    
+                    
+                </script> 
+                
+                <script>
+                    $(document).ready(function(){
+                        $(function(){
+                            $("#book-collection").tablesorter();
+                        });
+                    });
+                </script>
+                
+            </div>
+        </div>
     </body>
 </html>

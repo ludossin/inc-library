@@ -276,7 +276,13 @@ div {
 .section {
     /* edit 
     margin-left: -2cm;
+<<<<<<< Updated upstream
     to change the left margin, edit #content */
+=======
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+>>>>>>> Stashed changes
 }
 
 .section h2 {

@@ -88,28 +88,151 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 
 /* ******************************************************* 5. TYPOGRAPHY ******************** */
 
-/* Font-faces used in styles */
+
 @font-face {
-    font-family: Hkgrotesk;
-    src: url('css/fonts/hkgrotesk-regular-webfont.eot'); /* IE9 Compat Modes */
-    src: url('css/fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('css/fonts/hkgrotesk-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-        url('css/fonts/hkgrotesk-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-        url('css/fonts/hkgrotesk-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('css/fonts/hkgrotesk-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-@font-face {
-    font-family: HkgroteskBold;
-    src: url('css/fonts/hkgrotesk-bold-webfont.eot'); /* IE9 Compat Modes */
-    src: url('css/fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('css/fonts/hkgrotesk-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-        url('css/fonts/hkgrotesk-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-        url('css/fonts/hkgrotesk-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('css/fonts/hkgrotesk-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'hk_groteskbold';
+    src: url('fonts/hkgrotesk-bold-webfont.eot');
+    src: url('fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-bold-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-bold-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-bold-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-bold-webfont.svg#hk_groteskbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
+
+
+
+@font-face {
+    font-family: 'hk_groteskbold_italic';
+    src: url('fonts/hkgrotesk-bolditalic-webfont.eot');
+    src: url('fonts/hkgrotesk-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-bolditalic-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-bolditalic-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-bolditalic-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-bolditalic-webfont.svg#hk_groteskbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_groteskitalic';
+    src: url('fonts/hkgrotesk-italic-webfont.eot');
+    src: url('fonts/hkgrotesk-italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-italic-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-italic-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-italic-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-italic-webfont.svg#hk_groteskitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_grotesklight';
+    src: url('fonts/hkgrotesk-light-webfont.eot');
+    src: url('fonts/hkgrotesk-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-light-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-light-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-light-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-light-webfont.svg#hk_grotesklight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_grotesklight_italic';
+    src: url('fonts/hkgrotesk-lightitalic-webfont.eot');
+    src: url('fonts/hkgrotesk-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-lightitalic-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-lightitalic-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-lightitalic-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-lightitalic-webfont.svg#hk_grotesklight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_groteskmedium';
+    src: url('fonts/hkgrotesk-medium-webfont.eot');
+    src: url('fonts/hkgrotesk-medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-medium-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-medium-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-medium-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-medium-webfont.svg#hk_groteskmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_groteskmedium_italic';
+    src: url('fonts/hkgrotesk-mediumitalic-webfont.eot');
+    src: url('fonts/hkgrotesk-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-mediumitalic-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-mediumitalic-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-mediumitalic-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-mediumitalic-webfont.svg#hk_groteskmedium_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_groteskregular';
+    src: url('fonts/hkgrotesk-regular-webfont.eot');
+    src: url('fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-regular-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-regular-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-regular-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-regular-webfont.svg#hk_groteskregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'hk_groteskbold';
+    src: url('fonts/hkgrotesk-bold-webfont.eot');
+    src: url('fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-bold-webfont.woff2') format('woff2'),
+        url('fonts/hkgrotesk-bold-webfont.woff') format('woff'),
+        url('fonts/hkgrotesk-bold-webfont.ttf') format('truetype'),
+        url('fonts/hkgrotesk-bold-webfont.svg#hk_groteskbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 body{
-    font-family: "Hkgrotesk";
+    font-family: "hk_groteskregular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -127,13 +250,16 @@ body {
     text-rendering: optimizeSpeed;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-x:hidden;
-    background-color: #f30;
+/*     background-color:#f4f4f4;
+     */
+    height: 100%;
 }	
 
 
 #content{
-    background-color:#f4f4f4;
-    padding-top: 30px;
+/*     background-color:#f4f4f4;
+     */    padding-top: 30px;
+    height: 100%;
 }
 
 
@@ -153,25 +279,29 @@ body {
 
 a{
     color:#000000;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     text-decoration: none;
 }
 
 a:visited{
     color:#000;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     text-decoration: none !important;
 }
 
 a:hover{
     color:#ff3300;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     text-decoration: none !important;
 }
 
-hr{
-    margin-top: 5px;
-    margin-bottom: 5px;
+
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 4px solid #f30;
 }
 
 
@@ -221,6 +351,7 @@ hr{
     transition: padding .3s ease;
     padding-top: 3px;
     padding-bottom: 0px;
+    padding: 0;
 }
 
 .well:hover{
@@ -277,22 +408,24 @@ hr{
 
 #novelty{
     background-color: white;
-    color: #f30;
     font-size: 26px;
     margin-right: 0;
     text-align: center;
     margin-bottom: 2%;
-    border: 3px solid #f4f4f4;
+    border: 3px solid white;
     cursor: pointer;
-
+margin-right: 0;
+    margin-left: 0;
+    padding:15px;
 }
 #novelty:hover{
+    color:#f30;
     border: 3px solid #f30;
 }
 #novelty h1{
     font-size:60px;
     text-transform: uppercase;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 #novelty h2{
     font-size:40px;
@@ -352,17 +485,6 @@ hr{
 ***********************/
 
 
-.affix {
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    transition: top 0.3s ease-in-out;
-}
-
-
-.affix-up {
-    top: -55px;
-}
 
 /* #library-tree{
 left: 0;
@@ -433,7 +555,7 @@ color:black;
 #library-tree  #breadcrumb .breadcrumb a{
     background-color: transparent;
     padding-top: 2px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     border-radius: 4px;
     text-decoration: none;
     padding: 4px;
@@ -444,7 +566,7 @@ color:black;
 #library-tree  #breadcrumb .breadcrumb>.active a{
     background-color: transparent;
     padding-top: 2px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -454,7 +576,7 @@ color:black;
     background-color:#ffffff;
     */    /* background-color: #ffffff; */
     padding-top: 2px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 
 
@@ -504,7 +626,7 @@ color:black;
     padding: 0px;
     padding: 15px;
     padding-top: 40px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 
 #book-title-box{
@@ -553,20 +675,20 @@ color:black;
 }
 
 #info-box a{
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
     color: #8e8e8e;
     cursor: pointer;
     text-decoration: none;
 }
 
 #info-box a:hover{
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
     color: #f30;
     cursor: pointer;
 }
 
 #info-box .info-box-column-header{
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     width:auto;
     text-align: left;
     margin-top: 20px;
@@ -649,6 +771,8 @@ Defines the typography for texts in reader */
     font-weight: 400;
 }
 
+
+
 /* Font-size for the reading text: !! do not change the units (em) to pixels !! */
 .section p {
     font-size: 2.1em;
@@ -656,7 +780,7 @@ Defines the typography for texts in reader */
     text-rendering: optimizeLegibility;
     max-width: 580px;
     margin-bottom: 1em;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
 }
 
 
@@ -717,7 +841,7 @@ p + p{
 .section .author {
     margin-left: 0;
     margin-right: 0;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     font-size: 1.7em;
     margin-bottom: 5px;
     cursor: pointer;
@@ -782,7 +906,7 @@ p + p{
 .references a{
     color:#000000;
     word-break: break-all;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 
 .references a:hover{
@@ -796,7 +920,7 @@ p + p{
     padding: 0px;
     -webkit-margin-before:0px;
     padding-bottom: 10px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 /****************************
 4-3. IMAGES IN TEXT
@@ -811,6 +935,12 @@ img {
     margin-bottom: 0px;
     border:0px;
     background-color:transparent;
+}
+
+.logo{
+    width: auto;
+    max-width: 300px;
+    padding: 10px;
 }
 
 .section img, img.grayscale{
@@ -834,7 +964,7 @@ filter: none;
     font-size: 14px;
     margin-bottom: 1.5em;
     text-indent: 0px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 
 
@@ -899,7 +1029,7 @@ filter: none;
 .toc_title{
     margin-left: 20px;
     font-size: 12px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     line-height: 14px;
     padding-right: 2px;
     margin-bottom: 0px;
@@ -1006,7 +1136,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     text-overflow: ellipsis;
     z-index: 0;
     /* font-style: italic; */
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     /* text-transform: uppercase; */
     font-size: 14px;
     vertical-align: middle;
@@ -1051,7 +1181,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 
 .toggle_menu_right .toggle_menu_right_button{
     color: #000000;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     text-transform: uppercase;
     text-align: center;
     vertical-align: middle;
@@ -1085,14 +1215,15 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 #menu-left-close{
-    margin-left:15%;
+    margin-left: 38%;
     top: 50%;
     margin-top: -10px;
     position: fixed;
     top: 50%;
     /* height: 20px; */
+    color: white;
     padding: 20px 10px 20px 10px;
-    background-color: #f4f4F4;
+    /* background-color: #f4f4F4; */
 }
 
 #menu-left-close:hover{
@@ -1105,41 +1236,8 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding-left: 5%;
     font-size: 15px;
     line-height: 18px;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
-
-/********************************************************
-2-3. TABLE OF CONTENT (left, inside the pushmenu)
-*********************************************************
-Table of content is contained in pushmenu, it shows the different parts of the book and can be clicked to navigate through them */
-
-/* Table of contents: title for big part */
-#menu h2 {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    margin:10px;
-    margin-right: 0px;
-    text-align: left;
-    padding-top:4px;
-    background-color:#ffffff;
-    font-size: 14px;
-    line-height: 18px;
-    font-family: "HKGrotesk";
-}
-
-
-/* Table of contents: when the user goes over a part of the book */
-#menu h2:hover{
-    cursor: pointer;
-    color: #000000;
-}
-
-#toc_wrapper h2 a {
-    color: #000000;
-}
-
 
 /*******VERTICAL BAR THAT*********
 ********OPENS UP THE MENU********/
@@ -1156,32 +1254,39 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     -webkit-transition: all 2s ease-in;
     transition: all 1s ease-in;
     color: white;
+    padding: 0;
 }
 
-#menu_bar.affix {
-    position: fixed;
+/* #menu_bar.affix {
+position: fixed;
     top:0px;
     width: 25%;
+    padding: 0;
 }
-
+ */
 
 .vertical-text-wrapper{
     position: absolute;
-    top: 51%;
     width: 457px;
-    left: -403%;
+    left: 5%;
     height: 10px;
     text-overflow: ellipsis;
     text-rendering: geometricPrecision;
+    color:white;
+}
+
+.vertical-text-wrapper:hover{
+    color:white;
 }
 
 .vertical-text-wrapper h1{
-    -ms-transform: rotate(-90deg);
+     -ms-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    font-size: 2.6vh;
     overflow: hidden;
     white-space: nowrap;
+    color:white; 
+    margin-left: -400px;
 }
 
 /*******VERTICAL SCROLL BAR*******/
@@ -1207,6 +1312,43 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     color:#000000;
 }
 
+#bar, #bar-right{
+    z-index: 999999999;
+    background-color:#f30; position:fixed; height:100%; width:6%; color:white;
+    -webkit-transition: width .3s ease;
+    -moz-transition: width .3s ease;
+    -o-transition: width .3s ease;
+    transition: width .3s ease;
+    background-color:#f4f4f4;
+    display:none;
+}
+
+#bar-right{
+    right:0;
+}
+
+#bar:hover, #bar-right:hover{
+    cursor: pointer;
+}
+
+#bar:hover #menu{
+    margin-left:7%;
+}
+
+#menu {			
+    /* left: -16.66666667%; */
+    padding: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 30;
+    max-width: 100%;
+    background-attachment: fixed;
+    left: 0;
+    background-color:#f4f4f4;
+    padding-left:6%;
+    color:#8e8e8e;
+    overflow-y: scroll;
+}
 
 @media (max-width: 768px){
 
@@ -1225,7 +1367,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     .toc_title{
         margin-left: 30px;
         font-size: 17px;
-        font-family: "HKGroteskbold";
+        font-family: "hk_groteskbold";
         line-height: 20px;
         padding-right: 2px;
         margin-bottom: 0px;
@@ -1301,7 +1443,31 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 
+#content1, #books, #content3, #content4{
+    padding-top: 20px;
+    font-size: 62.5%;
+    padding-left: 6%;
+    padding-right:6%;
+    width: 100%;
+    overflow-y: scroll;
+}
 
+#content1{
+    background-color:white;
+}
+#books{
+    background-color:white;
+}
+#content3{
+    background-color:white;
+}
+#content4{
+    background-color:white;
+}
+#content1 p, #content2 p, #content3 p, #content4 p{
+    font-size: 2em;
+    line-height: 1.55em;
+}
 
 #print-pannel input{
     background-color:#dbdbdb;
@@ -1650,7 +1816,7 @@ fieldset {
 /* how is the text the user writes when searching */
 #filter-count {
     font-size: 13px;
-    font-family: "Hkgrotesk";
+    font-family: "hk_groteskregular";
     text-align: right;
     position: fixed;
     color: #8e8e8E;
@@ -1808,14 +1974,14 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     border-bottom: dashed 1px #000000;
     color: #000000;
     text-decoration: none;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
 }
 
 .in-text a:hover, .in-text:hover{
     color: #f30;
     text-decoration: none !important;
     border-bottom: dashed 1px #f30;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
 }
 
 .in-text a:focus, .in-text:focus, .in-text a:active, .in-text:active{
@@ -1832,7 +1998,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     line-break: strict;
     word-break:break-word;
     /* border-radius: 8px; */
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
     border-radius: 5px;
     border:1px solid #dbdbdb;
     width: 300px;
@@ -1842,7 +2008,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 /********THE TEXT*********************/
 .tip p {
     margin: 0;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
     text-indent: 0;
 }
 
@@ -1863,7 +2029,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     line-break: strict;
     word-break:break-word;
     /* border-radius: 8px; */
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
     border-radius: 5px;
     border:1px solid #ffffff;
     background-color:rgb(255, 255, 255);
@@ -1881,7 +2047,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 .popover p a{
     text-decoration: underline;
     color:#f30;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
 }
 
 .popover .arrow{
@@ -1961,7 +2127,7 @@ color: #0000ff;
     display: inline;
     width: auto;
     font-size: 15px;
-    font-family: "Hkgrotesk";
+    font-family: "hk_groteskregular";
     border-style: none;
     background-color: rgba(0, 228, 74, 0.14);
 
@@ -2081,7 +2247,7 @@ color: #0000ff;
     font-size: 1.25em;
     line-height: 1.2em;
     /* border-radius: 8px; */
-    font-family: "HKGroteskBold";
+    font-family: "hk_groteskbold";
     display: inline-block;
     float: left;
 }
@@ -2090,7 +2256,7 @@ color: #0000ff;
 /* THIS IS THE SAME AS .sidenote BELOW */
 #chapter8 ol li p{
     color: #f30;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
     font-weight: normal;
     font-size: 12px;
     line-height: 1.1em;
@@ -2106,7 +2272,7 @@ color: #0000ff;
 
 #chapter8 ol li p a{
     color: #f30;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
     word-wrap:break-word;
     hyphens: auto;
     -ms-hyphens:auto;
@@ -2158,7 +2324,7 @@ color: #0000ff;
 /********************************************/
 
 a sup{
-    font-family: "HKGroteskBold";
+    font-family: "hk_groteskbold";
     vertical-align: 75%;
     color:#000000;
     text-decoration: none;
@@ -2252,12 +2418,11 @@ ol {
 }
 
 .btn-default {
-    color: white;
+    color: black;
     background-color: transparent;
     border-color: none;
 }
 .btn {
-    display: inline-block;
     padding: 4px 9px;
     margin-bottom: 0;
     font-size: 14px;
@@ -2276,13 +2441,19 @@ ol {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    color:black;
 }
 
+p .btn{
+    font-size: 18px;
+    line-height: 1em;
+    display: block;
+}
 .btn:hover{
-    color:white;
+    color:black;
     background-color: transparent;
     border:none;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 
 /******* MENU RIGHT *******/
@@ -2297,7 +2468,7 @@ ol {
     margin-right:4px;
     line-height: 2em;
     color: #000000 !important;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
     cursor: pointer;
     white-space: nowrap;
     word-break: keep-all;
@@ -2308,7 +2479,7 @@ ol {
     /*     background-color:#dbdbdb;
     */    text-decoration: none;
     color: #000000;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
 }
 
 .extra-btn.active{
@@ -2316,13 +2487,13 @@ ol {
 
 .extra:active, .extra-btn:active{
     color: #000000;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
 }
 
 .extra a, .extra a:visited, .extra a:focus, .extra a:hover,
 .extra-btn a, .extra-btn a:visited, .extra-btn a:focus, .extra-btn a:hover{
     color:#000000 !important;
-    font-family: "HKGrotesk";
+    font-family: "hk_groteskregular";
 }
 
 .section .keyword-button{
@@ -2378,17 +2549,20 @@ ol {
 
 
 #menu-right{
-    position: fixed;
-    right: 0px;
-    left: auto;
-    /* padding: 10px; */
-    /* margin: 0px; */
-    padding: 0px;
+
     height: 100%;
-    border: none;
-    background-color: #f4f4F4;
-    font-family: "HKGrotesk";
-    z-index: 30;
+    position: fixed;
+    z-index: 9999999;
+    /* max-width: 100%; */
+    /* background-attachment: fixed; */
+    display: block;
+    /* right: 5%; */
+    /* width: 55%; */
+    background-color: #f30;
+    padding-right: 0%;
+    margin-left: 1.2%;
+    color: white;
+    overflow-y: scroll;
 }
 
 #menu-right .panel-group, #menu-right .panel-group:hover, #menu-right .panel-group:focus, #menu-right .panel-group:active{
@@ -2418,6 +2592,15 @@ ol {
     padding-left: 8px;
 }
 
+.hide{
+    max-height: 0;
+    -webkit-transition:0.7s;
+    -moz-transition:0.7s;
+    -ms-transition:0.7s;
+    -o-transition:0.7s;
+    transition:0.7s;
+}
+
 .panel-body{
     font-size: 13px;
     background-color: transparent;
@@ -2435,33 +2618,34 @@ ol {
     padding: 7px;
     background-color: transparent;
     border:none;
-    /*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    */
-    font-family: "HKGroteskbold";
+    margin-left: 0;
+    font-family: "hk_groteskregular";
 }
 
 .panel-heading a{
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskregular";
 }
 .panel-default>.panel-heading a:hover, .panel-default>.panel-heading a:focus{
-    color: #000000;
-    text-decoration: none;
-    background-color: #f4f4f4;
+    font-family: "hk_groteskbold";
+
 }
 
 .panel-default>.panel-heading:hover{
-    color: #000000;
     text-decoration: none;
+    font-family: "hk_groteskbold";
+
 }
 
 .panel-default>.panel-heading:focus{
-    color: #000000;
-    text-decoration: none;
+    text-decoration: underline;
+    font-family: "hk_groteskbold";
+
 }
 
 .panel-default>.panel-heading:active{
-    color: #000000;
-    text-decoration: none;
+    text-decoration: underline;
+    font-family: "hk_groteskbold";
+
 }
 
 .panel-body p{
@@ -2471,17 +2655,61 @@ ol {
     font-size:11px;
     background-color: transparent;
     color: #000000;
-    font-family: "HKGroteskbold";
+    font-family: "hk_groteskbold";
 }
 
-.panel-title {
-    margin-top: 0;
+/* .panel-title {
+    margin-top: 20px;
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 3vw;
     color: inherit;
     color: #000000;
+    text-align: center;
+
+    color: #c7c7c7;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.panel-title:hover{
+    color:#f30;
+} */
+
+
+.panel-title {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 4vw;
+    color: inherit;
+    color: #000000;
+    text-align: center;
+    color: #c7c7c7;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline;
+    padding: 15px;
+}
+.panel-title:hover, .panel-title-2nd:hover{
+    color:#f30;
 }
 
+.panel-title-2nd{
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 2vw;
+    color: inherit;
+    color: #000000;
+    text-align: center;
+    color: #c7c7c7;
+    text-align: center;
+    font-weight: bold;
+    text-transform: none;
+    cursor: pointer;
+    display: inline;
+    padding: 15px;
+}
 /************** tools on selection ************/
 
 .on-selection{
@@ -2762,7 +2990,7 @@ blockquote p{
 /* how is the text the user writes when searching */
 #panel6 #filter-count {
     font-size: 13px;
-    font-family: "Hkgrotesk";
+    font-family: "hk_groteskregular";
     text-align: right;
     position: fixed;
     color: #8e8e8E;
@@ -2778,7 +3006,7 @@ blockquote p{
 #panel6 input {
     width: 200px;
     font-size: 15px;
-    font-family: "Hkgrotesk";
+    font-family: "hk_groteskregular";
     border-style: none;
     color: #000000;
     padding: 0;
@@ -2811,22 +3039,61 @@ button:focus {
 /* make the well swell */
 .well {
     background-color: transparent;
+    height: auto;
+
 }
 
+
+.post:hover{
+}
+.well:hover{
+    cursor: pointer;
+
+}
+
+.well:hover h4 a{
+}
+.well h4{
+    font-size:2.5em;   
+}
+
+.well h5{
+    font-size:2em;
+}
+
+.well .keyword{
+    font-size: 1.7em;
+}
 
 .post h4 {
     margin-bottom: 9px;
 }
 
 .post h4 a {
-    color: #333;
+    color: black;
 }
 
-.post img.image {
-    max-width: 100%;
-    margin-top: 9px;
+.post img{
+
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    padding-left: 25%;
+    padding-right: 25%;
+    /* margin: 0 auto; */
+}
+.post{
+    padding: 0;
+    margin-top: 15px;
+
+}
+.post item col-lg-4:hover{
+    border:1px solid #f30;
 }
 
+.post:nth-child(3n+1) {
+    clear: left;
+}
 .info {
     padding:4px;
 }
@@ -2923,15 +3190,226 @@ button:focus {
     line-height: 1.42857143;
     /* background-color: #fff; */
     /* border: 1px solid #ddd; */
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-transition: border .2s ease-in-out;
     -o-transition: border .2s ease-in-out;
     align-content: center;
     transition: border .2s ease-in-out;
     border:0px;
-    background-color:transparent;
+    background-color:#f4F4F4;
 }
 
 #header{
     background-color:#f4f4f4;
+}
+
+#book-collection tr:nth-child(even) { 
+    background-color : white;
+}
+
+td, th {
+    padding: 0;
+    font-size: 0.8em;
+}
+
+#keyword-toggle p{
+    font-size: 16px;
+    /* text-transform: uppercase; */
+    margin: 0;
+    font-size: 2.4vw;
+    font-family: 'hk_groteskbold';
+    line-height: 2.6vw;
+    padding: 0;
+}
+
+
+/**********************
+3-1. LIBRARY TREE
+***********************/
+
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: top 0.3s ease-in-out;
+}
+
+
+.affix-up, .affix-down {
+    top: 0px;
+    height:11%;
+}
+
+/* #library-tree{
+left: 0;
+z-index: 20;
+width: 100%;
+background-color: #f30;
+color: #ffffff;
+margin-right: 0;
+margin-left: 0;
+height: 40px;
+color:black;
+
+} */
+
+#library-tree {
+
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    height: auto;
+    /* padding-bottom: 30px; */
+    font-size: 22px;
+    color: black !important;
+    /* background-color: white; */
+    text-transform: uppercase;
+    /* -webkit-box-shadow: 0px 0px 27px 19px white; */
+    -moz-box-shadow: 0px 0px 27px 19px white;
+    /* box-shadow: 0px 0px 27px 19px white; */
+    background: linear-gradient( to top, rgba( 255, 255, 255, 0 ) 0%, rgba( 255, 255, 255, 1 ) 15px, rgba( 255, 255, 255, 1 ) 100% );
+    /* background-color: white; */
+}
+
+
+#library-tree #breadcrumb{
+    padding: 0px;
+    -webkit-transition: padding .3s ease;
+    -moz-transition: padding .3s ease;
+    -o-transition: padding .3s ease;
+    transition: padding .3s ease;
+    text-align: center;
+}
+
+.breadcrumb {
+
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-indent: 0;
+    padding-top: 10px;
+    background-color: transparent;
+    border-radius: 0px;
+    /* text-align: center; */
+    /* margin-left: 6%; */
+    font-size: 2.5vw;
+    color: #5b5b5b;
+    padding-left: 0%;
+}
+
+#library-tree:hover #breadcrumb{
+    padding: 2px;
+
+    /* 
+    opacity: 0.5;
+    */
+    color:#f30;
+}
+
+.breadcrumb ol{
+    text-indent: 0;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#info-box .breadcrumb a{
+    color: #5b5b5b;
+
+}
+
+.breadcrumb>li+li:before {
+    padding: 0 0px;
+    padding-right: 8px;
+    padding-left: 8px;
+    content: ">";
+}
+
+#library-tree  #breadcrumb .breadcrumb a{
+    background-color: transparent;
+    padding-top: 2px;
+    font-family: "hk_groteskbold";
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 4px;
+    color: #f30;
+    font-size: 5vw;
+    text-transform: none;
+}
+
+#library-tree  #breadcrumb .breadcrumb>.active a{
+    background-color: transparent;
+    padding-top: 2px;
+    font-family: "hk_groteskbold";
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#library-tree  #breadcrumb .breadcrumb a:hover{
+    /*   color: #f30;
+    background-color:#ffffff;
+    */    /* background-color: #ffffff; */
+    padding-top: 2px;
+    font-family: "hk_groteskbold";
+    color:#f30;
+}
+
+#keyword-toggle{
+    padding-left: 6%;
+}
+
+p{
+
+    font-size: 1.6em;
+}
+
+
+
+.row {
+    margin-right: 0px; 
+    margin-left: 0px;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto; */
+}
+
+#bar-top .fa-chevron-down:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#bar-top:hover{
+    height:80px;
+}
+
+.btn-taglist{
+    text-align: left;
+    font-size: 0.4em;
+    line-height: 11px !important;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    text-transform: none;
+    display: block;
+}
+
+div#menu-top p {
+    line-height: 27px;
+    text-align: left;
+}
+
+.add-to-collection .btn-primary{
+    background-color:white;
+    border-radius: 0px;
 }
