@@ -479,6 +479,7 @@ $(document).ready(function(){
         return i;
     }
 ////////GO TO THE NEXT INSTANCE
+    var topPos; //scrollTo position
     function toNext(n){
         counter = n;
         if(counter < maxCount){
@@ -486,7 +487,10 @@ $(document).ready(function(){
         }else{
             counter = 0;
         }
-        location.href="#hit"+counter;
+        //location.href="#hit"+counter;
+        //replaced by scrollTop due to offset issues
+        topPos = $("#hit"+counter).offset().top ; // 55px (#library-tree height) not needed here
+        $('html, body').animate({scrollTop: topPos}, 400);
         $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
         $('#next').focus();
 
@@ -514,7 +518,10 @@ $(document).ready(function(){
         }else{
             counter = maxCount;
         }
-        location.href="#hit"+counter;
+        //location.href="#hit"+counter;
+        //replaced by scrollTo due to offset issues
+        topPos = $("#hit"+counter).offset().top - 55;
+        $('html, body').animate({scrollTop: topPos}, 400);
         $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
         $('#prev').focus();
 
