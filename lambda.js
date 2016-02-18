@@ -738,9 +738,9 @@ $(document).ready(function(){
             $('.p_number').each(function() {
                 $(this).attr('id', 'pnr'+p_id_number);
                 $('#pnr'+p_id_number).each(function() {
-                    var p_id = $('#p'+p_id_number);
-                    if (p_id) {
-                        var p_offset = $(p_id).offset().top;
+                    //var p_id = '#p'+p_id_number;
+                    if ($('#p'+p_id_number).length) {
+                        var p_offset = $('#p'+p_id_number).offset().top;
                         $(this).offset({top: p_offset}).html(p_id_number);
                         // var paragraphPin = '<div id="pin'+p_id_number+'" class="pin" style="width: auto; min-width: 210px !important; background-color: #0ff; margin-bottom: -3px; bottom: 25px; left: 178px; position: relative; cursor: default;"><div class="pin-icon" style="float: left; width: 12%; text-align: left; position: relative; top: 2px;"><i class="fa fa-thumb-tack"></i></div><div class="pin-input" contenteditable="true" style="width: auto; min-width: 72% !important; font-size: 1em; line-height: 1.8em; margin-top: 0; float: left; height: 1.8em; text-align: left;"></div><div class="pin-close" style="float: right; width: 12%; text-align: right; position: relative; top: 2px;"><i class="fa fa-ban"></i></div></div>';
                         //adds the pin to the paragraph
@@ -749,7 +749,7 @@ $(document).ready(function(){
                 });
                 p_id_number++;
             });
-        }, 3000);
+        }, 400); //replaced 3000 with 400
     }
 
     alignParagraphNumbers();
@@ -1420,18 +1420,20 @@ if ($(window).width() > "480") {
 
 ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
     function fadeOutSidenotes() {
-        $('.sidenote').animate({
-            opacity: 0,
-            left: '+=40px'
-        }, 100);
+        $('.sidenote').css('opacity',0);
+        // $('.sidenote').animate({
+        //     opacity: 0,
+        //     left: '+=40px'
+        // }, 100);
     }
 
 ////FADES IN SIDENOTES AND SLIDES THEM LEFT
     function fadeInSidenotes() {
-        $('.sidenote').animate({
-            opacity: 1,
-            left: '-=40px'
-        }, 3000);
+        $('.sidenote').css('opacity',1);
+        // $('.sidenote').animate({
+        //     opacity: 1,
+        //     left: '-=40px'
+        // }, 3000);
     }
 
 ////SIDENOTES BECOME POPOVER BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
