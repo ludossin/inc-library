@@ -68,7 +68,7 @@ $(document).ready(function(){
     var window_width = $(window).width();
 
     $('.toggle_menu_right').on('click', function() {
-        console.log(window_width, menu_wrapper_width);
+        //console.log(window_width, menu_wrapper_width);
         if ($(window).width() >= "768") {
             $(this).fadeIn();//.show();
             // var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
@@ -85,7 +85,7 @@ $(document).ready(function(){
     });
 
     $('#menu-right-close').on('click', function(e) {
-        console.log(window_width, menu_wrapper_width);
+        //console.log(window_width, menu_wrapper_width);
        // $('.toggle_menu_right').css('right', '0px');
         //if (Math.floor($('#menu-right-wrapper').offset().left) <= window_width) {
             //menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
@@ -125,7 +125,7 @@ $(document).ready(function(){
             // }
         // } else {
             var menu_width = $('#toc_wrapper').width();
-            console.log($('#menu').offset().left);
+            //console.log($('#menu').offset().left);
             if ($('#menu').offset().left < 0) {
             //     // console.log('left was == 0');
             //     $('#menu').animate({left: -menu_width});    
@@ -357,11 +357,8 @@ $(document).ready(function(){
             $('#buttons_wrapper').hide();
             $('#search_ui').hide(); 
         }else{
-        
-
 // ///OOOOOOOOO
         //if($("#filter-count_xs").length){
-        
             $("#filter-count_xs").hide();
             $('#buttons_wrapper_xs').hide();
             $('#search_ui_xs').hide();
@@ -373,12 +370,14 @@ $(document).ready(function(){
 ////////ON ENTER CLEAR RESULTS, THEN GO TO THE FIRST NEW INSTENCE
 //if($(document).width >= 1024){
     //if($('#filter').length){
-    console.log('wth? ' + $(document).width());
-    if($(document).width() > 992){
+
+    //PUT RIGHT VALUE HERE!!!
+    if($(document).width() > 768){
+        //alert('checking width > 992! Correct?');
         $('#filter').keypress(function(e){
             
             if(e.keyCode == 13){
-                console.log('filling ' + e.target.id);
+                //console.log('filling ' + e.target.id);
                 counter = 0;
                 e.preventDefault();
                 cancelSearch();
@@ -393,29 +392,29 @@ $(document).ready(function(){
                 $('#hit0').css('background-color', 'yellow');
             }
         });
-    }
+    }else{
 //}
-
-
 // ////OOOOOOOO
 //if($(document).width < 1024){
     //if($('#filter_xs').length){
-    else{
-        console.log("ok, we're in tablet portrait... " + $(document).width());
+        //console.log("ok, we're in tablet portrait... " + $(document).width());
         //$('#filter_xs').keypress(function(e){
         $('#live-search_xs').submit(function(e){
-            //alert(e.target.id);
-            console.log('please');
+            //console.log('mr. form_xs -> ' + e.target.id );
             //if(e.keyCode == 13){
-                // counter = 0;
-                 e.preventDefault();
-                // cancelSearch();
-                // searchAndHighlight(e.target.id);
-                // //location.href="#hit0";
-                // topPos = $("#hit0").offset().top - 55;
-                // $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
-                // $('#next_xs').focus();
-                // $('#hit0').css('background-color', 'yellow');
+                counter = 0;
+                e.preventDefault();
+                cancelSearch();
+                searchAndHighlight(e.target.id);
+                //hides the keyboard
+                $('#filter_xs').blur();
+                //location.href="#hit0";
+                topPos = $("#hit0").offset().top - 55;
+                $('html, body').animate({scrollTop: topPos}, 400);
+                $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
+                $('#buttons_wrapper_xs').css('display','block');
+                $('#next_xs').focus();
+                $('#hit0').css('background-color', 'yellow');
                 return false;
             //}
         });
@@ -456,16 +455,17 @@ $(document).ready(function(){
         //replaced by scrollTo due to offset issues
         topPos = $("#hit"+counter).offset().top - 55;
         $('html, body').animate({scrollTop: topPos}, 400);
-        if($('#filter').length){
+        //if($('#filter').length){
+        if($(document).width() > 768){
             $('#next').focus();
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
-        }
+        }else{
        
 ////OOOOOOOOOOO
         //if($('#filter_xs').length){
-            //$('#next_xs').focus();
-            //$("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
-        //}
+            $('#next_xs').focus();
+            $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
+        }
 
 
         $('#hit'+counter).css('background-color', 'yellow');
@@ -483,7 +483,7 @@ var filter;
                 filter = $('#filter').val().toLowerCase();
             }
 // ///OOOOOOOOOOOOOO
-            if(id=="#filter_xs"){
+            if(id=="live-search_xs"){
                 //console.log('here it is');
                 //previously filter_xs
                 filter = $('#filter_xs').val().toLowerCase();
@@ -506,7 +506,7 @@ var filter;
                     $('#search_ui').css('display', 'block');
                     $('#buttons_wrapper').css('display', 'block');
                 }
-                if(id == "filter_xs"){
+                if(id == "live-search_xs"){
                     $('#search_ui_xs').css('display', 'block');
                     $('#buttons_wrapper_xs').css('display', 'block');
                 }
@@ -516,7 +516,7 @@ var filter;
                     $('#search_ui').css('display', 'none');
                     $('#buttons_wrapper').css('display', 'none');
                 }
-                if(id == 'filter_xs'){
+                if(id == 'live-search_xs'){
                     $('#search_ui_xs').css('display', 'none');
                     $('#buttons_wrapper_xs').css('display', 'none');
                 }
@@ -545,6 +545,7 @@ var filter;
                 $(this).css("display", "none");
                 $('#buttons_wrapper_xs').css('display', 'none');
                 $("#filter_xs").val('');
+                //$("#filter_xs").blur();
                 cancelSearch();
             });
         });
@@ -577,8 +578,14 @@ var filter;
         //replaced by scrollTop due to offset issues
         topPos = $("#hit"+counter).offset().top ; // 55px (#library-tree height) not needed here
         $('html, body').animate({scrollTop: topPos}, 400);
-        $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
-        $('#next').focus();
+        if($(document).width() > 768){
+            $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
+            $('#next').focus();
+        }else{
+            $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
+            $('#next_xs').focus();
+        }
+        
 
 // ////OOOOOOOOOO
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
@@ -592,9 +599,9 @@ var filter;
         toNext(counter);
     });
 ////OOOOOOOOO
-    // $('#next_xs').click(function() {
-    //     toNext(counter);
-    // });
+     $('#next_xs').click(function() {
+         toNext(counter);
+     });
 
 ////ON CLICK GO TO THE PREVIOUS INSTANCE
     function toPrev(n) {
@@ -608,8 +615,14 @@ var filter;
         //replaced by scrollTo due to offset issues
         topPos = $("#hit"+counter).offset().top - 55;
         $('html, body').animate({scrollTop: topPos}, 400);
-        $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
-        $('#prev').focus();
+        if($(document).width() > 768){
+            $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
+            $('#prev').focus();
+        }else{
+            $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
+            $('#prev_xs').focus();
+        }
+
 
 // ////OOOOOOOOOO
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
@@ -625,9 +638,9 @@ var filter;
 
 
 // ///OOOOOOOOOO
-//     $('#prev_xs').click(function() {
-//         toPrev(counter);
-//     });
+    $('#prev_xs').click(function() {
+        toPrev(counter);
+    });
 
 
 
@@ -697,11 +710,11 @@ var filter;
 
     $('.section a>sup').bind('mouseup', function(e){
         e.stopPropagation();
-        //to prevent indexError from being thrown
+        //prevents indexError from being thrown
     });
 
-    $('.section').bind('mouseup', function(e){
-       //alert('hello');
+    $('.section').bind('mouseup touchend', function(e){
+       
         // try {
             if (window.getSelection) {
                 selection = window.getSelection().getRangeAt(0); //MAKE THIS WORK ON EVERY BROWSER
@@ -742,7 +755,7 @@ var filter;
                 $('#erase').show();
             } else {
                 $('#erase').hide();
-                console.log('parent-hide');
+                //console.log('parent-hide');
             }
         }
 
@@ -1376,7 +1389,7 @@ var filter;
         for (var i = 0; i < keywords.length; i++) {
             if ($(this).hasClass('active')) {
                 if ($('#keyword_toggle'+i).hasClass('active')) {
-                    console.log('active');
+                    //console.log('active');
                 } else {
                     $('#keyword_toggle'+i).button('toggle');
                     $('#keyword_toggle'+i).closest('.section').highlight(keywords[i], {element: 'span', className: keywords[i], wordsOnly: true});
