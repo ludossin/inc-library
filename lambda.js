@@ -1530,9 +1530,9 @@ if ($(window).width() > "480") {
 
 ////SIDENOTES BECOME POPOVER BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
     function sideToBox() {
-        console.log('calling sideToBox');
+        //console.log('calling sideToBox');
         if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
-            console.log('< 768');
+            //console.log('< 768');
             
             $(".footnoteRef").each(function(){
                 var n = $(this).text();
@@ -1540,9 +1540,11 @@ if ($(window).width() > "480") {
                 $(this).attr({"data-toggle": "popover", "data-content": tt, "data-placement": "top", "href": "#", "role": "button", "data-trigger": "focus", "tabindex": n}).addClass("button");
                 $("#fnref"+n).popover();
             });
+            //prevents page to scroll to top
+            $('a.footnoteRef').on('click', function(e) {e.preventDefault(); return true;});
             
         } else {
-            console.log('NOT < 768');
+            //console.log('NOT < 768');
             //$('.footnoteRef').popover('destroy');
             $('[data-toggle="popover"]').popover('destroy');
         }
