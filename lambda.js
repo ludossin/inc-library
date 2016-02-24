@@ -26,12 +26,12 @@ $(document).ready(function(){
     $(window).scroll(function(){
         if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
         // if ($(document).scrollTop() > $('#info-box').offset().top) {
-            $('#arrows').hide();
+        //    $('#arrows').hide();
         } else {
             if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
-                $('#arrows').hide();
+        //        $('#arrows').hide();
             } else {
-                $('#arrows').show();
+        //        $('#arrows').show();
             }
         }
 
@@ -78,7 +78,7 @@ $(document).ready(function(){
             //if (Math.floor($('#menu-right-wrapper').offset().left) >= window_width) {
                 $('#menu-right').animate({left: 1});
                 $('.toggle_menu_right').hide();//('background-color', 'white');
-                $('#arrows').hide();
+           //     $('#arrows').hide();
             //} 
         }
     });
@@ -92,12 +92,20 @@ $(document).ready(function(){
             $('.toggle_menu_right').fadeIn(0);
             $('#menu-right').animate({left: + menu_wrapper_width});
             // $(this).hide();
-            $('#arrows').show();
+          //  $('#arrows').show();
        // }
     });
-
     
-
+    
+//////////////////////////////////////////////////////////////////////////////////
+////ACCORDION IN THE RIGHT/TOOLBOX
+//////////////////////////////////////////////////////////////////////////////////
+////ON CLICK THE ANGLE RIGHT TURNS INTO ANGLE DOWN
+    
+ /*   $('.panel-heading').on('click', function(){
+        $(this).find('i').toggleClass('fa-angle-right fa-angle-down');
+    });
+*/
 
 //////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
@@ -196,9 +204,9 @@ $(document).ready(function(){
     $('#menu-left-close').hide();
     if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
     // if ($(document).scrollTop() > $('#info-box').offset().top) {
-        $('#arrows').hide();
+   //    $('#arrows').hide();
     } else {
-        $('#arrows').show();
+     //   $('#arrows').show();
     }
 
 
@@ -758,7 +766,7 @@ $(document).ready(function(){
         if (Math.floor($('#menu-right-wrapper').offset().left) >= window_width) {
             $('#menu-right').animate({left: 1});
             $('.toggle_menu_right').fadeOut();//('background-color', 'white');
-            $('#arrows').hide();
+        //    $('#arrows').hide();
         // } 
             // console.log('djbhbcd');
             if ($('#cite').hasClass('collapsed')) {

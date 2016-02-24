@@ -98,7 +98,7 @@
 <!-- –––––––––––––––––––––––––– Pushmenu/Toc (left) –––––––––––––––––––––––––––––––––––––-->
 <div class="container-fluid" >
     <div class="row">
-        <div id="menu" class="not col-lg-6 col-md-2 col-sm-2 col-xs-11 ">
+        <div id="menu" class="not col-lg-6 col-md-6 col-sm-6 col-xs-11 ">
             <div id="toc_wrapper">
                 <div id="menu-left-close">
                     <i class="fa fa-chevron-left"></i>
@@ -231,10 +231,11 @@
                        
                         <!-- panel 1: Download-->
                         <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div class="panel-heading collapsed" >
                             <h4 class="panel-title">
-                                <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="Download this text in various formats" alt="Download this text in various formats">
-                                <!-- <i class="fa fa-download"></i>  -->Download</a>
+                                <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="Download this text in various formats" alt="Download this text in various formats" class="accordion-toggle">
+                                    <!-- <i class="fa fa-download"></i>  -->Download <i class="fa fa-angle-right"></i>
+                                </a>
                                 <br>
                             </h4>
                         </div>
@@ -248,10 +249,10 @@
                         
                         <!-- panel 2: Quote-->
                         <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div class="panel-heading collapsed">
                                 <h4 class="panel-title">
-                                    <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><!-- <i class="fa fa-quote-left"></i> -->
-                                        Referencing tool</a>
+                                    <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"  class="accordion-toggle"><!-- <i class="fa fa-quote-left"></i> -->
+                                        Referencing tool <i class="fa fa-angle-right"></i></a>
                                 </h4>
                             </div>
                             <div id="collapse3" class="panel-collapse collapse">
@@ -274,9 +275,9 @@
                         
                         <!-- panel 3: Print-->
                         <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div class="panel-heading collapsed">
                                 <h4 class="panel-title">
-                                    <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"><!-- <i class="fa fa-print"></i> --> Print</a>
+                                    <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"  class="accordion-toggle"><!-- <i class="fa fa-print"></i> --> Print <i class="fa fa-angle-right"></i></a>
                                 </h4>
                             </div>
                             <div id="collapse5" class="panel-collapse collapse">
@@ -291,9 +292,9 @@
                         
                         <!-- panel 4: Settings-->
                         <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div class="panel-heading collapsed">
                                 <h4 class="panel-title">
-                                    <a id="settings" data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"><!-- <i class="fa fa-wrench"></i> --> Settings</a>
+                                    <a id="settings" data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"  class="accordion-toggle"><!-- <i class="fa fa-wrench"></i> --> Settings <i class="fa fa-angle-right"></i></a>
                                 </h4>
                             </div>
                             <div id="collapse6" class="panel-collapse collapse">
@@ -317,9 +318,9 @@
                         
                         <!-- panel 5: Share-->
                         <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div class="panel-heading collapsed">
                                 <h4 class="panel-title">
-                                    <a id="share" data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"><!-- <i class="fa fa-external-link"></i> --> Share</a>
+                                    <a id="share" data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"  class="accordion-toggle"><!-- <i class="fa fa-external-link"></i> --> Share <i class="fa fa-angle-right"></i></a>
                                 </h4>
                             </div>
                             <div id="collapse7" class="panel-collapse collapse">
@@ -400,18 +401,19 @@
                 <span id="button_fontsizeminus_xs" class="extra-btn hidden-xs" value="smaller"><i class="fa fa-font"></i>-</span>
                 <span id="button_fontsizeplus_xs" class="extra-btn hidden-xs" value="larger"><i class="fa fa-font"></i>+</span>
             
-            <hr>
             
             <!--––––––––––––––––––––––––––––––– panel 4: Keywords –––––––––––––––––––––––––––––––-->
-
-            <span type="button" id="keyword-show-all_xs" class="extra-btn">Display keywords <i class="fa fa-tags"></i></span>
+                <i class="fa fa-tags"></i> Keywords<br>
+            <span type="button" id="keyword-show-all_xs" class="extra-btn">On</span>
+            <span type="button" id="keyword-hide-all" class="extra-btn">Off</span>
 
             </div>
             
             <!--––––––––––––––––––––––––––––––– panel 4: Highlight –––––––––––––––––––––––––––––––-->
             <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
-            <span id="highlight-show-all_xs" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
-            <span id="highlight-remove_xs" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span>
+            Highlighted parts<br>
+            <span id="highlight-show-all_xs" class="extra-btn">Show<i class="fa fa-pencil"></i></span>
+            <span id="highlight-remove_xs" class="extra-btn">Erase<i class="fa fa-eraser"></i></span>
 <!-- 
             <hr>
             <span id="bookmark" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span> -->
@@ -473,14 +475,45 @@
     </div> <!-- #menu-right-xs --> 
 
     <span class="vertical-text-wrapper">
-        <h1 class="vertical-text">← Library</h1>
+        <h1 class="vertical-text"></h1>
     </span>
+
+
+    <div id="menu_bar_gotoinc">
+        <a href="publications2.html?div=about">inc</a>
+    </div>
+    
+<div id="menu_bar_gotoselection">
+    back
+</div>
+   
 
 <!--–––––––––––––––––––––––––– Vertical scrolling indicator –––––––––––––––––––––––––––––––––––––-->
     <div id="menu_bar">
 
         <div id="menu_bar_scroll"></div>
 
+        <div   style=" 
+                      top: 85%;
+                      left: 10%;
+                      -ms-transform: translateX(0%) translateY(-600%) rotate(90deg);
+                      -webkit-transform: translateX(0%) translateY(-600%) rotate(90deg);
+                      transform: translateX(0%) translateY(-600%) rotate(90deg);
+                      line-height: 3em;
+                      text-transform: uppercase;
+                      height: 40px;
+                      position: absolute;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      -webkit-transform-origin: top left;
+                      -ms-transform-origin: top left;
+                      transform-origin: top left;
+                      -webkit-transform: rotate(270deg);
+                      -ms-transform: rotate(270deg);
+                      transform: rotate(270deg);
+                      font-family:'Hk_groteskbold';">
+                    
+      The Gray Zones of Creativity and Capital</div>
     </div>
        
 
@@ -525,7 +558,7 @@
                         
                         <ol class="breadcrumb">
                             <li>
-                                <a href="#">INC Library</a>
+                                <a href="publications.html">← Library</a>
                             </li>
 
                         </ol>
@@ -669,7 +702,7 @@ by Kiliano Foearun & Coolio Andthegang
     <!-- –––––––––––––––––––––––––– Arrows for LG,MD devices (right) –––––––––––––––––––––––––––––––––––––-->
     <div class="container-fluid">
         <div class="row">
-            <div id="arrows" class="col-lg-1 col-md-1 col-lg-offset-10 col-md-offset-9 col-sm-offset-11 col-xs-offset-11 col-sm-1 col-xs-1">
+            <div id="arrows" class="col-lg-1 col-md-1 col-lg-offset-10 col-md-offset-9 col-sm-1 col-xs-1">
                 <a href="#0" id="up" class="display"><i class="fa fa-angle-up"></i></a>
                 <br>
                 <a href="#0" id="down" class="display"><i class="fa fa-angle-down"></i></a>
@@ -688,10 +721,10 @@ by Kiliano Foearun & Coolio Andthegang
 
     <!--––––––––––––––––––––––––––– COLUMN WITH PARAGRAPH NUMBERS –––––––––––––––––––––––––––-->
 
-            <div id="par_numbr" class="col-lg-1 col-lg-offset-0 col-md-1 col-sm-1 col-xs-offset-0 col-xs-1" style="z-index:-999;"></div>
+            <div id="par_numbr" class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-offset-0 col-xs-1" style="z-index:-999;"></div>
 
     <!--––––––––––––––––––––––––––– #CONTENT –––––––––––––––––––––––––––-->
-            <div id="content" class="col-lg-6 col-lg-offset-1 col-md-offset-0 col-md-6 col-sm-8 col-sm-offset-0 col-xs-offset-0 col-xs-12">
+            <div id="content" class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-8 col-sm-offset-0 col-xs-offset-0 col-xs-12">
 
     <!--––––––––––––––––––––––––––– SELECTION MENU #ASD –––––––––––––––––––––––––––-->
                 <div class="container on-selection" id="asd">
