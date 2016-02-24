@@ -1413,7 +1413,7 @@ var filter;
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 2000, 'easeInOutQuart');
+        }, 2000);
         e.preventDefault();
     });
 
@@ -1437,11 +1437,11 @@ var filter;
             if (scrollTop >= section_top && scrollTop < nextTop) {
                 $('html, body').stop().animate({
                     scrollTop: nextTop
-                }, 2000, 'easeInOutQuart');
+                }, 2000);
             } else if (scrollTop < first_section || scrollTop >= last_section) {
                 $('html, body').stop().animate({
                     scrollTop: first_section
-                }, 2000, 'easeInOutQuart');
+                }, 2000);
             } else {
                 e.preventDefault();
             }
@@ -1464,11 +1464,11 @@ var filter;
             if (scrollTop > section_top && scrollTop <= nextTop) {
                 $('html, body').stop().animate({
                     scrollTop: section_top
-                }, 2000, 'easeInOutQuart');
+                }, 2000);
             } else if (scrollTop > last_section || scrollTop <= first_section) {
                 $('html, body').stop().animate({
                     scrollTop: last_section
-                }, 2000, 'easeInOutQuart');
+                }, 2000);
             } else {
                 e.preventDefault();
             }

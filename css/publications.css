@@ -630,7 +630,7 @@ Defines the typography for texts in reader */
     /* margin-bottom: 20px; */
     padding-bottom: 20px;
     padding-right: 0;
-    padding-top: 2.8%;
+    padding-top: 30px;
     font-size: 4.5em;
     line-height: 1.1em;
     -webkit-margin-before: 0;
@@ -1332,34 +1332,18 @@ padding: 0;
     border: 1px solid #f30;
 }
 
-#content1,#books,#content3,#content4 {
+#books{
     padding-top: 20px;
     font-size: 62.5%;
     padding-right: 6%;
     width: 100%;
     overflow-y: scroll;
     height: 100%;
-}
-
-#content1 {
-    background-color: #fff;
-}
-
-#books {
-    background-color: #fff;
-}
-
-#content3 {
-    background-color: #fff;
-}
-
-#content4 {
-    background-color: #fff;
-}
-
-#content1 p,#content2 p,#content3 p,#content4 p {
-    font-size: 2em;
-    line-height: 1.55em;
+    background-color: white;
+    box-shadow: -5px 0 2px rgba(54,54,54,0.32);
+    z-index:9999999999999; 
+    position:absolute;
+    padding-left: 5%;
 }
 
 #print-pannel input {
@@ -3242,12 +3226,16 @@ content: "-";
 
 #about{
     height: 100%;
-    background-color: #f30;
+    background-color: lightgray;
     color:white;
     text-align:center;
-    padding-right:6%;
+
+    padding-left: 5%;
+    padding-right: 10%;    
     box-shadow: inset 0px -4px 3px rgba(51, 51, 51, 0.27);
     overflow-y: auto;
+    /* initially hidden 
+    display: none;*/
 }
 #about:hover {
     cursor: pointer;
