@@ -349,7 +349,7 @@ $(document).ready(function(){
 
 ////CANCEL SEARCH AND REMOVE HIGHLIGHTING
     function cancelSearch() {
-
+        //console.log('[from cancelSearch] -> ' + window_width);
         $('.highlight').each(function() {
             var par = $(this).parent();
             $(this).contents().unwrap();
@@ -357,7 +357,8 @@ $(document).ready(function(){
         });
         $('.search-notfound').removeClass('search-notfound');
         //if($("#filter-count").length){
-        if($(document).width() > 768){
+        //if($(document).width() > 768){
+        if(window_width > 768){
             $("#filter-count").hide();
             $('#buttons_wrapper').hide();
             $('#search_ui').hide(); 
@@ -377,11 +378,13 @@ $(document).ready(function(){
     //if($('#filter').length){
 
     //PUT RIGHT VALUE HERE!!!
-    if($(document).width() > 768){
+   // if($(document).width() > 768){
+    //if(window_width > 768){
         //alert('checking width > 992! Correct?');
-        $('#filter').keypress(function(e){
-            
+    $('#filter').keypress(function(e){
+        if(window_width > 768){
             if(e.keyCode == 13){
+                 //console.log('[from normal] width is ' +window_width);
                 //console.log('filling ' + e.target.id);
                 counter = 0;
                 e.preventDefault();
@@ -396,8 +399,9 @@ $(document).ready(function(){
                 $('#next').focus();
                 $('#hit0').css('background-color', 'yellow');
             }
-        });
-    }else{
+        }
+    });
+    
 //}
 // ////OOOOOOOO
 //if($(document).width < 1024){
@@ -405,8 +409,10 @@ $(document).ready(function(){
         //console.log("ok, we're in tablet portrait... " + $(document).width());
         //$('#filter_xs').keypress(function(e){
         $('#live-search_xs').submit(function(e){
+            //console.log('[from xs] width is ' +window_width);
             //console.log('mr. form_xs -> ' + e.target.id );
             //if(e.keyCode == 13){
+            if(window_width <= 768){
                 counter = 0;
                 e.preventDefault();
                 cancelSearch();
@@ -421,9 +427,9 @@ $(document).ready(function(){
                 $('#next_xs').focus();
                 $('#hit0').css('background-color', 'yellow');
                 return false;
-            //}
+            }
         });
-    }
+   
 //}
 
 
@@ -432,7 +438,8 @@ $(document).ready(function(){
         if (e.keyCode == 27){
             cancelSearch();
             //if($("#filter").length){
-            if($(document).width() > 768){
+            //if($(document).width() > 768){
+            if(window_width > 768){
                $('#filter, #next, #prev').blur();
                 //empty search field value
                 $("#filter").val(''); 
@@ -461,7 +468,8 @@ $(document).ready(function(){
         topPos = $("#hit"+counter).offset().top - 55;
         $('html, body').animate({scrollTop: topPos}, 400);
         //if($('#filter').length){
-        if($(document).width() > 768){
+        //if($(document).width() > 768){
+        if(window_width > 768){
             $('#next').focus();
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
         }else{
@@ -583,7 +591,8 @@ var filter;
         //replaced by scrollTop due to offset issues
         topPos = $("#hit"+counter).offset().top ; // 55px (#library-tree height) not needed here
         $('html, body').animate({scrollTop: topPos}, 400);
-        if($(document).width() > 768){
+        //if($(document).width() > 768){
+        if(window_width > 768){
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
             $('#next').focus();
         }else{
@@ -620,7 +629,8 @@ var filter;
         //replaced by scrollTo due to offset issues
         topPos = $("#hit"+counter).offset().top - 55;
         $('html, body').animate({scrollTop: topPos}, 400);
-        if($(document).width() > 768){
+        //if($(document).width() > 768){
+        if(window_width > 768){
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
             $('#prev').focus();
         }else{
@@ -1631,7 +1641,8 @@ ON RESIZE DO THESE THINGS
         fadeInSidenotes();
         H = html.outerHeight(true);
         $(window).scrollTop(P*H);
-
+        cancelSearch(); //trying to fix the empty page after submit
+        //alert('changed ' + window_width);
     });
 
 
