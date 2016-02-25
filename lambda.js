@@ -231,6 +231,11 @@ $(document).ready(function(){
         $(this).find('.timee').html("| "+deci[0]+":"+secs+" min");
     });
 
+////MENU ON HOVER
+    $('#menu_bar_gotoinc').mouseover(function(){
+        $("#menu_bar_gotoselection").css('left', '3%');
+    });
+
 
 //////////////////////////////////////////////////////////////////////////////////
 ////SCROLL PROGRESSION BARS

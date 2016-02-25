@@ -66,7 +66,7 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 }
 
 .test-message a,.test-message a:visited,.test-message a:hover {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none;
     font-family: 'Open Sans',sans-serif;
     font-weight: 400;
@@ -192,12 +192,12 @@ html {
 /* Easy changes :-) */
 /* Background-color of text on selection */
 ::-moz-selection {
-    background-color: #f30;
+    background-color: #FF5200;
     color: #fff;
 }
 
 ::selection {
-    background-color: #f30;
+    background-color: #FF5200;
     color: #fff;
 }
 
@@ -214,7 +214,7 @@ a:visited {
 }
 
 a:hover {
-    color: #f30;
+    color: #FF5200;
     font-family: "hk_groteskbold";
     text-decoration: none !important;
 }
@@ -223,7 +223,7 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 0;
-    border-top: 4px solid #f30;
+    border-top: 4px solid #FF5200;
 }
 
 /* ******************************************************* 3. INFO BOX (TOP) ******************** */
@@ -339,8 +339,8 @@ float: none;
 }
 
 #novelty:hover {
-    color: #f30;
-    border: 3px solid #f30;
+    color: #FF5200;
+    border: 3px solid #FF5200;
 }
 
 #novelty h1 {
@@ -358,9 +358,9 @@ float: none;
 }
 
 #info-box-inside-container {
-    color: #f30;
+    color: #FF5200;
     height: auto;
-    border: 1px solid #f30;
+    border: 1px solid #FF5200;
 }
 
 .info-box-left {
@@ -390,7 +390,7 @@ float: none;
 ***********************/
 #inc-info {
     background-color: #FFE5DE;
-    color: #f30;
+    color: #FF5200;
     font-size: 2em;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -407,7 +407,7 @@ float: none;
 left: 0;
 z-index: 20;
 width: 100%;
-background-color: #f30;
+background-color: #FF5200;
 color: #ffffff;
 margin-right: 0;
 margin-left: 0;
@@ -425,7 +425,7 @@ color:black;
     /* padding-bottom: 30px; */
     font-size: 22px;
     color: #000 !important;
-    background-color: #f30;
+    background-color: #FF5200;
     text-transform: uppercase;
     -webkit-box-shadow: 0 0 27px 19px #fff;
     -moz-box-shadow: 0 0 27px 19px #fff;
@@ -487,7 +487,7 @@ color:black;
 }
 
 #library-tree #breadcrumb .breadcrumb a:hover {
-    /*   color: #f30;
+    /*   color: #FF5200;
     background-color:#ffffff;
     */
     /* background-color: #ffffff; */
@@ -508,7 +508,7 @@ color:black;
 
 .info-box-book-before-button,.info-box-book-after-button {
     background-color: #fff;
-    color: #f30;
+    color: #FF5200;
     width: 50%;
     height: 100%;
     text-align: center;
@@ -522,8 +522,8 @@ color:black;
 
 .info-box-book-before-button:hover,.info-box-book-after-button:hover {
     color: #fff;
-    background-color: #f30;
-    border: 1px solid #f30;
+    background-color: #FF5200;
+    border: 1px solid #FF5200;
     cursor: pointer;
 }
 
@@ -553,7 +553,7 @@ color:black;
     padding-left: 15Px;
     text-align: center;
     background-color: #fff;
-    color: #f30;
+    color: #FF5200;
 }
 
 @media (max-width: 480px) {
@@ -591,7 +591,7 @@ color:black;
 
 #info-box a:hover {
     font-family: "hk_groteskregular";
-    color: #f30;
+    color: #FF5200;
     cursor: pointer;
 }
 
@@ -746,7 +746,7 @@ p + p {
 }
 
 .section .author:hover {
-    color: #f30;
+    color: #FF5200;
 }
 
 /* words: the way the words contained in each chapter display */
@@ -809,7 +809,7 @@ p + p {
 }
 
 .references a:hover {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none;
 }
 
@@ -999,7 +999,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     width: 4%;
     height: 100%;
     z-index: 30;
-    /* background-color: #f30; */
+    /* background-color: #FF5200; */
 }
 
 .toggle_menu:hover #menu_bar {
@@ -1058,7 +1058,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     right: 0;
     position: fixed;
     background-color: #f4f4f4;
-    /*     background-color:#f30;
+    /*     background-color:#FF5200;
     */
     width: 5%;
     /* 24% */
@@ -1131,7 +1131,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     height: 100%;
     position: fixed;
     color: #000;
-    background-color: #f30;
+    background-color: #FF5200;
     left: 0;
     /*     background-color:rgba(255, 51, 0, 0.75);
     */
@@ -1181,7 +1181,7 @@ padding: 0;
     position: fixed;
     display: block;
     background-color: #ff8c00;
-    /*     background-color:#f30;
+    /*     background-color:#FF5200;
     */
 }
 
@@ -1204,7 +1204,7 @@ padding: 0;
 
 #bar,#bar-right {
     z-index: 999999999;
-    background-color: #f30;
+    background-color: #FF5200;
     position: fixed;
     height: 100%;
     width: 6%;
@@ -1306,7 +1306,7 @@ padding: 0;
 ******* HEADER  **********************
 ***************************************/
 #nav_test {
-    background-color: #f30;
+    background-color: #FF5200;
     top: 800px;
     height: 300px;
 }
@@ -1329,7 +1329,7 @@ padding: 0;
 }
 
 #search-button:active,#files-button:active,#copy-button:active,#print-button:active,#tools-button:active,#share-button:active {
-    border: 1px solid #f30;
+    border: 1px solid #FF5200;
 }
 
 #books{
@@ -1551,7 +1551,7 @@ padding: 0;
 }
 
 .highlight {
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 .form-control:focus {
@@ -1832,7 +1832,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .ui-menu-item:focus {
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 /*************************************
@@ -1846,9 +1846,9 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .in-text a:hover,.in-text:hover {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none !important;
-    border-bottom: dashed 1px #f30;
+    border-bottom: dashed 1px #FF5200;
     font-family: "hk_groteskregular";
 }
 
@@ -1881,7 +1881,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .tip p a {
-    color: #f30;
+    color: #FF5200;
 }
 
 /***************** POPOVER ***************************/
@@ -1912,7 +1912,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 
 .popover p a {
     text-decoration: underline;
-    color: #f30;
+    color: #FF5200;
     font-family: "hk_groteskregular";
 }
 
@@ -2011,7 +2011,7 @@ color: #0000ff;
 }
 
 .pin-close:hover {
-    color: #f30;
+    color: #FF5200;
 }
 
 #tools {
@@ -2110,7 +2110,7 @@ color: #0000ff;
 
 /* THIS IS THE SAME AS .sidenote BELOW */
 #chapter8 ol li p {
-    color: #f30;
+    color: #FF5200;
     font-family: "hk_groteskregular";
     font-weight: 400;
     font-size: 12px;
@@ -2126,7 +2126,7 @@ color: #0000ff;
 }
 
 #chapter8 ol li p a {
-    color: #f30;
+    color: #FF5200;
     font-family: "hk_groteskbold";
     word-wrap: break-word;
     hyphens: auto;
@@ -2137,7 +2137,7 @@ color: #0000ff;
 }
 
 #chapter8 ol li p a:hover {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none;
 }
 
@@ -2151,18 +2151,18 @@ color: #0000ff;
     max-width: 100%;
     border-radius: 5px;
     background-color: rgba(255,51,0,0.17);
-    color: #f30;
+    color: #FF5200;
 }
 
 .sidenote p {
     margin-bottom: 0;
     padding-bottom: 0;
-    color: #f30;
+    color: #FF5200;
 }
 
 .footnoteRef {
     text-decoration: none;
-    color: #f30;
+    color: #FF5200;
 }
 
 .footnoteRef:hover {
@@ -2183,7 +2183,7 @@ a sup {
 }
 
 a sup:hover,a sup:active,a sup:focus {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none !important;
 }
 
@@ -2387,7 +2387,7 @@ p .btn {
     display: block;
     /* right: 5%; */
     /* width: 55%; */
-    background-color: #f30;
+    background-color: #FF5200;
     padding-right: 0;
     margin-left: 1.2%;
     color: #fff;
@@ -2495,7 +2495,7 @@ font-weight: bold;
 text-transform: uppercase;
 }
 .panel-title:hover{
-color:#f30;
+color:#FF5200;
 } */
 .panel-title {
     margin-top: 20px;
@@ -2514,7 +2514,7 @@ color:#f30;
 }
 
 .panel-title:hover,.panel-title-2nd:hover {
-    color: #f30;
+    color: #FF5200;
 }
 
 .panel-title-2nd {
@@ -2628,7 +2628,7 @@ border-bottom: 5px solid #0000ff;
 }*/
 /* Tooltip on left */
 /*.tooltip.left > .tooltip-arrow {
-border-left: 5px solid #f30;
+border-left: 5px solid #FF5200;
 }*/
 /* Tooltip on right */
 /*.tooltip.right > .tooltip-arrow {
@@ -2640,7 +2640,7 @@ border-right: 5px solid #000000;
 
 .dropdown-menu {
     position: absolute;
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 .dropdown-menu > li > a {
@@ -2676,7 +2676,7 @@ blockquote p {
 }
 
 .ui-effects-transfer {
-    color: #f30;
+    color: #FF5200;
     background-color: rgba(255,51,0,0.13);
     border-radius: 5px;
 }
@@ -2716,7 +2716,7 @@ blockquote p {
 }
 
 #flip {
-    background-color: #f30;
+    background-color: #FF5200;
     color: #fff;
     z-index: 99;
     border-radius: 5px;
@@ -2739,7 +2739,7 @@ blockquote p {
 
 .panel-open {
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 #panel,#panel2,#panel3,#panel4,#panel5,#panel6 {
@@ -2894,7 +2894,7 @@ input:focus,select:focus,textarea:focus,button:focus {
 }
 
 .post item col-lg-4:hover {
-    border: 1px solid #f30;
+    border: 1px solid #FF5200;
 }
 
 .post:nth-child(3n+1) {
@@ -3046,7 +3046,7 @@ td,th {
 left: 0;
 z-index: 20;
 width: 100%;
-background-color: #f30;
+background-color: #FF5200;
 color: #ffffff;
 margin-right: 0;
 margin-left: 0;
@@ -3102,7 +3102,7 @@ color:black;
     /* 
     opacity: 0.5;
     */
-    color: #f30;
+    color: #FF5200;
 }
 
 .breadcrumb ol {
@@ -3134,7 +3134,7 @@ color:black;
     border-radius: 4px;
     text-decoration: none;
     padding: 4px;
-    color: #f30;
+    color: #FF5200;
     font-size: 5vw;
     text-transform: none;
 }
@@ -3148,13 +3148,13 @@ color:black;
 }
 
 #library-tree #breadcrumb .breadcrumb a:hover {
-    /*   color: #f30;
+    /*   color: #FF5200;
     background-color:#ffffff;
     */
     /* background-color: #ffffff; */
     padding-top: 2px;
     font-family: "hk_groteskbold";
-    color: #f30;
+    color: #FF5200;
 }
 
 #keyword-toggle {
@@ -3200,7 +3200,7 @@ p {
 }
 
 .active {
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 .add-to-collection {
@@ -3226,7 +3226,7 @@ content: "-";
 
 #about{
     height: 100%;
-    background-color: lightgray;
+    background-color: #FF5200;
     color:white;
     text-align:center;
 

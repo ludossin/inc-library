@@ -66,7 +66,7 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 }
 
 .test-message a,.test-message a:visited,.test-message a:hover {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none;
     font-family: 'Open Sans',sans-serif;
     font-weight: 400;
@@ -178,12 +178,12 @@ body {
 /* Easy changes :-) */
 /* Background-color of text on selection */
 ::-moz-selection {
-    background-color: #f30;
+    background-color: #FF5200;
     color: #fff;
 }
 
 ::selection {
-    background-color: #f30;
+    background-color: #FF5200;
     color: #fff;
 }
 
@@ -200,7 +200,7 @@ a:visited {
 }
 
 a:hover {
-    color: #f30;
+    color: #FF5200;
     font-family: "hk_groteskbold";
     text-decoration: none !important;
 }
@@ -264,7 +264,7 @@ hr {
 ***********************/
 #inc-info {
     background-color: #FFE5DE;
-    color: #f30;
+    color: #FF5200;
     font-size: 2em;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -292,7 +292,7 @@ hr {
 left: 0;
 z-index: 20;
 width: 100%;
-background-color: #f30;
+background-color: #FF5200;
 color: #ffffff;
 margin-right: 0;
 margin-left: 0;
@@ -344,7 +344,7 @@ color:black;
 
 #library-tree:hover #breadcrumb {
     padding: 2px;
-    color: #f30;
+    color: #FF5200;
 }
 
 #library-tree:hover {
@@ -393,13 +393,13 @@ color:black;
 }
 
 #library-tree #breadcrumb .breadcrumb a:hover {
-    /*   color: #f30;
+    /*   color: #FF5200;
     background-color:#ffffff;
     */
     /* background-color: #ffffff; */
     padding-top: 2px;
     font-family: "hk_groteskbold";
-    color: #f30;
+    color: #FF5200;
 }
 
 /* How is written the book's title */
@@ -570,7 +570,7 @@ text-indent: 60px;
 }
 
 .section .author:hover {
-    color: #f30;
+    color: #FF5200;
 }
 
 /* words: the way the words contained in each chapter display */
@@ -632,7 +632,7 @@ text-indent: 60px;
 }
 
 .references a:hover {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none;
 }
 
@@ -706,7 +706,7 @@ a {
 .horizScroll {
     margin-left: -19%;
     width: 16%;
-    background-color: #f30;
+    background-color: #FF5200;
     border-bottom: 2px solid #f4F4F4;
 }
 
@@ -824,7 +824,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     width: 4%;
     height: 100%;
     z-index: 30;
-    /* background-color: #f30; */
+    /* background-color: #FF5200; */
 }
 
 .toggle_menu:hover #menu_bar {
@@ -883,7 +883,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     right: 0;
     position: fixed;
     background-color: #f4f4f4;
-    /*     background-color:#f30;
+    /*     background-color:#FF5200;
     */
     width: 5%;
     /* 24% */
@@ -1053,7 +1053,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     color: #000;
     width: 2%;
     left:0%;
-    background-color: #f30;
+    background-color: #ff5200;
     z-index: 30;
     cursor: pointer;
     -webkit-transition: width .3s ease;
@@ -1069,7 +1069,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     color: #000;
     width: 2%;
     left: 2%;
-    background-color: #ff0;
+    background-color: white;
     z-index: 30;
     cursor: pointer;
     -webkit-transition: width .3s ease;
@@ -1078,6 +1078,11 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     transition: width .3s ease;
     box-shadow: inset -5px 0 2px rgba(54,54,54,0.32);
 }
+
+#menu_bar_gotoinc:hover, #menu_bar_gotoselection:hover{
+    width:3%;
+}
+
 
 #menu_bar {
     height: 100%;
@@ -1203,7 +1208,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 ******* HEADER  **********************
 ***************************************/
 #nav_test {
-    background-color: #f30;
+    background-color: #FF5200;
     top: 800px;
     height: 300px;
 }
@@ -1226,7 +1231,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 #search-button:active,#files-button:active,#copy-button:active,#print-button:active,#tools-button:active,#share-button:active {
-    border: 1px solid #f30;
+    border: 1px solid #FF5200;
 }
 
 #print-pannel input {
@@ -1434,7 +1439,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 .highlight {
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 .form-control:focus {
@@ -1715,7 +1720,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .ui-menu-item:focus {
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 /*************************************
@@ -1729,9 +1734,9 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .in-text a:hover,.in-text:hover {
-    color: #f30;
+    color: #FF5200;
     text-decoration: none !important;
-    border-bottom: dashed 1px #f30;
+    border-bottom: dashed 1px #FF5200;
     font-family: "Hk_groteskregular";
 }
 
@@ -1764,7 +1769,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .tip p a {
-    color: #f30;
+    color: #FF5200;
 }
 
 /***************** POPOVER ***************************/
@@ -1796,7 +1801,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 
 .popover p a {
     text-decoration: underline;
-    color: #f30;
+    color: #FF5200;
     font-family: "Hk_groteskregular";
 }
 
@@ -1826,7 +1831,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 .capitalism,.capital,.creativity,.art,.contemporary,.culture,.ideological,.social,.labor,.attention,.image,.production,.capitalism,.art,.state,.life,.public,.city,.economics,.production,.development,.art,.social,.avant-garde,.world,.big,.Other,.art,.urban,.cultural,.project,.creativity,.Belgrade,.Rog,.capital,.creative,.collective,.urban,.factory,.gentrification,.art,.political,.social,.culture,.autonomy,.public,.work {
     /* color: rgb(0, 0, 255);
     */
-    color: #f30;
+    color: #FF5200;
 }
 
 /********CITATIONS************************/
@@ -1906,7 +1911,7 @@ color: #0000ff;
 }
 
 .pin-close:hover {
-    color: #f30;
+    color: #FF5200;
 }
 
 #pins-list {
@@ -2042,7 +2047,7 @@ list-style-type: none;
 
 /* THIS IS THE SAME AS .sidenote BELOW */
 #chapter8 ol li p {
-    /*     color: #f30;
+    /*     color: #FF5200;
     */
     font-family: "hk_groteskregular";
     font-weight: 400;
@@ -2059,7 +2064,7 @@ list-style-type: none;
 }
 
 #chapter8 ol li p a {
-    /*     color: #f30;
+    /*     color: #FF5200;
     */
     font-family: "hk_groteskbold";
     word-wrap: break-word;
@@ -2071,7 +2076,7 @@ list-style-type: none;
 }
 
 #chapter8 ol li p a:hover {
-    /* color:#f30;
+    /* color:#FF5200;
     */
     text-decoration: none;
 }
@@ -2086,19 +2091,19 @@ list-style-type: none;
     max-width: 100%;
     border-radius: 5px;
     /* background-color:rgba(255, 51, 0, 0.17);
-    color: #f30; */
+    color: #FF5200; */
 }
 
 .sidenote p {
     margin-bottom: 0;
     padding-bottom: 0;
-    /*     color: #f30;
+    /*     color: #FF5200;
     */
 }
 
 .footnoteRef {
     text-decoration: none;
-    /* color: #f30;
+    /* color: #FF5200;
     */
 }
 
@@ -2120,7 +2125,7 @@ a sup {
 }
 
 a sup:hover,a sup:active,a sup:focus {
-    /* color:#f30;
+    /* color:#FF5200;
     */
     text-decoration: none !important;
 }
@@ -2483,7 +2488,7 @@ border-bottom: 5px solid #0000ff;
 }*/
 /* Tooltip on left */
 /*.tooltip.left > .tooltip-arrow {
-border-left: 5px solid #f30;
+border-left: 5px solid #FF5200;
 }*/
 /* Tooltip on right */
 /*.tooltip.right > .tooltip-arrow {
@@ -2495,7 +2500,7 @@ border-right: 5px solid #000000;
 
 .dropdown-menu {
     position: absolute;
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 .dropdown-menu > li > a {
@@ -2524,7 +2529,7 @@ blockquote p {
 }
 
 .ui-effects-transfer {
-    color: #f30;
+    color: #FF5200;
     background-color: rgba(255,51,0,0.13);
     border-radius: 5px;
 }
@@ -2533,6 +2538,7 @@ blockquote p {
 #par_numbr {
     height: auto;
     z-index: 1;
+    margin-left:3%;
 }
 
 .p_number {
@@ -2565,7 +2571,7 @@ blockquote p {
 }
 
 #flip {
-    background-color: #f30;
+    background-color: #FF5200;
     color: #fff;
     z-index: 99;
     border-radius: 5px;
@@ -2588,7 +2594,7 @@ blockquote p {
 
 .panel-open {
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-    background-color: #f30;
+    background-color: #FF5200;
 }
 
 #panel,#panel2,#panel3,#panel4,#panel5,#panel6 {
@@ -2787,6 +2793,16 @@ input:focus,select:focus,textarea:focus,button:focus {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
-    background-color: #f30;
+    background-color: #FF5200;
     -webkit-box-shadow: 0 0 1px #ff9d84;
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #par_numbr {
+        margin-left:3%;
+        height: auto;
+        z-index: 1;
+    }
 }
