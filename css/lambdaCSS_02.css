@@ -779,9 +779,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     z-index: 31;
     max-width: 100%;
     background-attachment: fixed;
-    left: 0;
-    display:none;
-
+    left: 70px;
 }
 
 #toc_wrapper {
@@ -885,7 +883,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     background-color: #f4f4f4;
     /*     background-color:#FF5200;
     */
-    width: 5%;
+    width: 52px;
     /* 24% */
     -webkit-transition: width .3s ease;
     -moz-transition: width .3s ease;
@@ -922,13 +920,19 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     position: relative;
 }
 
-.toggle_menu_right:hover {
+.toggle_menu_right:hover, #menu_bar:hover, #menu_bar_gotoselection:hover, #menu_bar_gotoinc:hover, #menu_bar_scroll:hover {
     cursor: pointer;
     width: 6%;
 }
 
 .toggle_menu_right:hover .toggle_menu_right_button {
     opacity: .5;
+}
+
+#menu_bar{
+    left:120px;
+    background-color:yellow;
+    position:absolute;
 }
 
 #menu-right-close {
@@ -1051,8 +1055,8 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     height: 100%;
     position: fixed;
     color: #000;
-    width: 2%;
-    left:0%;
+    width: 35px;
+    left:0px;
     background-color: #ff5200;
     z-index: 30;
     cursor: pointer;
@@ -1062,13 +1066,34 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     transition: width .3s ease;
     box-shadow: inset -5px 0 2px rgba(54,54,54,0.32);
 }
-
+#menu_bar_gotoinc_button{
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform-origin: center left;
+-moz-transform-origin: center left;
+-ms-transform-origin: center left;
+-o-transform-origin: center left;
+transform-origin: center left;
+-webkit-transition: color .5s;
+-moz-transition: color .5s;
+transition: color .5s;
+color: #fff;
+font-size: 12px;
+text-transform: uppercase;
+white-space: nowrap; 
+-webkit-transform: rotate(-90deg) translate(-50%);
+-moz-transform: rotate(-90deg) translate(-50%);
+-ms-transform: rotate(-90deg) translate(-50%);
+-o-transform: rotate(-90deg) translate(-50%);
+transform: rotate(-90deg) translate(-50%);
+}
 #menu_bar_gotoselection {
     height: 100%;
     position: fixed;
     color: #000;
-    width: 2%;
-    left: 2%;
+    width: 35px;
+    left: 35px;
     background-color: white;
     z-index: 30;
     cursor: pointer;
@@ -1079,38 +1104,46 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     box-shadow: inset -5px 0 2px rgba(54,54,54,0.32);
 }
 
-#menu_bar_gotoinc:hover, #menu_bar_gotoselection:hover{
-    width:3%;
+#menu_bar_gotoselection_button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: center left;
+    -moz-transform-origin: center left;
+    -ms-transform-origin: center left;
+    -o-transform-origin: center left;
+    transform-origin: center left;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    transition: color .5s;
+    font-size: 12px;
+    text-transform: uppercase;
+    white-space: nowrap; 
+    -webkit-transform: rotate(-90deg) translate(-50%);
+    -moz-transform: rotate(-90deg) translate(-50%);
+    -ms-transform: rotate(-90deg) translate(-50%);
+    -o-transform: rotate(-90deg) translate(-50%);
+    transform: rotate(-90deg) translate(-50%);
 }
-
-
 #menu_bar {
     height: 100%;
     position: fixed;
     color: #000;
-    width: 4%;
-    background-color: transparent;
+    width: 35px;
+    background-color:white;
     z-index: 30;
     cursor: pointer;
     -webkit-transition: width .3s ease;
     -moz-transition: width .3s ease;
     -o-transition: width .3s ease;
     transition: width .3s ease;
-    left: 4%;
-}
-
-#menu_bar:hover {
-    width: 6%;
-}
-
-#menu_bar:hover #menu_bar_scroll {
-    width: 6%;
+    left: 70px;
 }
 
 /*******VERTICAL SCROLL BAR*******/
 #menu_bar_scroll {
     height: 0;
-    width: 5%;
+    width: 35px;
     position: fixed;
     display: block;
     background-color: #f4f4F4;
@@ -1136,6 +1169,8 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     font-size: 18px;
     color: #000;
 }
+
+
 
 @media (max-width: 768px) {
     .menu-publication-title {
@@ -1504,7 +1539,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     #arrows {
         position: fixed;
         right: 2%;
-        z-index: 1.0E+23;
+        z-index:99999;
         margin-left: 96%;
     }
 
@@ -2718,6 +2753,27 @@ input:focus,select:focus,textarea:focus,button:focus {
 }
 
 @media (max-width: 480px) {
+    #menu_bar_gotoinc{
+        height:30px;
+        width:100%;
+        top:0;
+    }    
+    #menu_bar_gotoselection{
+        height:30px;
+        width:100%;
+        top:30px;
+        left:0px;
+        position:fixed;
+        background-color:white;
+    }
+    #menu_bar_gotoinc_button, #menu_bar_gotoselection_button{
+        -webkit-transform: rotate(0deg) translate(0%);
+        -moz-transform: rotate(0deg) translate(0%);
+        -ms-transform: rotate(0deg) translate(0%);
+        -o-transform: rotate(0deg) translate(0%);
+        transform: rotate(0deg) translate(0%);
+    }
+    
     .section p {
         text-indent: 0;
         margin-bottom: 1em;
@@ -2783,6 +2839,20 @@ input:focus,select:focus,textarea:focus,button:focus {
         font-size: 1em;
         line-height: 1.4em;
         font-style: italic;
+    }
+    #menu_bar {
+        height: 100%;
+        position: fixed;
+        color: #000;
+        width: 35px;
+        background-color:white;
+        z-index: 30;
+        cursor: pointer;
+        -webkit-transition: width .3s ease;
+        -moz-transition: width .3s ease;
+        -o-transition: width .3s ease;
+        transition: width .3s ease;
+        left: 0px;
     }
 }
 

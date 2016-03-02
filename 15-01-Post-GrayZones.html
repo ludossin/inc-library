@@ -482,50 +482,13 @@
 
     <a href="publications2.html#about">
     <div id="menu_bar_gotoinc">
-        <span style="
-                                                  top: 5px;
-                                                  left: -20px;
-                                                  -ms-transform: translateX(0%) translateY(-600%) rotate(90deg);
-                                                  -webkit-transform: translateX(0%) translateY(-600%) rotate(90deg);
-                                                  transform: translateX(0%) translateY(-600%) rotate(90deg);
-                                                  line-height: 50px;
-                                                  text-transform: uppercase;
-                                                  height: 40px;
-                                                  position: absolute;
-                                                  white-space: nowrap;
-                                                  overflow: hidden;
-                                                  -webkit-transform-origin: right bottom;
-                                                  -ms-transform-origin: right bottom;
-                                                  transform-origin: right bottom;
-                                                  -webkit-transform: rotate(270deg);
-                                                  -ms-transform: rotate(270deg);
-                                                  transform: rotate(270deg);
-                                                  font-family:'Hk_groteskbold'; color:white; font-size:15px;">About</span>
+        <span id="menu_bar_gotoinc_button">About</span>
     </div>
     </a>
-    <a href="publications2.html#books">
+    <a href="publications2.html#books" style="left:52px;">
 <div id="menu_bar_gotoselection">
    
-    <span style="
-
-       top: 5px;
-       left:-10px;
-       -ms-transform: translateX(0%) translateY(-600%) rotate(90deg);
-       -webkit-transform: translateX(0%) translateY(-600%) rotate(90deg);
-       transform: translateX(0%) translateY(-600%) rotate(90deg);
-       line-height: 25px;
-       text-transform: uppercase;
-       height: 40px;
-       position: absolute;
-       white-space: nowrap;
-       overflow: hidden;
-       -webkit-transform-origin: right bottom;
-       -ms-transform-origin: right bottom;
-       transform-origin: right bottom;
-       -webkit-transform: rotate(270deg);
-       -ms-transform: rotate(270deg);
-       transform: rotate(270deg);
-                 font-family:'Hk_groteskbold'; color:black; font-size:15px;">books</span>
+    <span id="menu_bar_gotoselection_button">books</span>
     </div>
     </a>
 
@@ -535,24 +498,25 @@
         <div id="menu_bar_scroll"></div>
 
         <div   style=" 
-                      bottom: 5%;
-                      left: 10%;
-                      -ms-transform: translateX(0%) translateY(-600%) rotate(90deg);
-                      -webkit-transform: translateX(0%) translateY(-600%) rotate(90deg);
-                      transform: translateX(0%) translateY(-600%) rotate(90deg);
-                      line-height: 3em;
+position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      -webkit-transform-origin: center left;
+                      -moz-transform-origin: center left;
+                      -ms-transform-origin: center left;
+                      -o-transform-origin: center left;
+                      transform-origin: center left;
+                      -webkit-transition: color .5s;
+                      -moz-transition: color .5s;
+                      transition: color .5s;
+                      font-size: 12px;
                       text-transform: uppercase;
-                      height: 40px;
-                      position: absolute;
-                      white-space: nowrap;
-                      overflow: hidden;
-                      -webkit-transform-origin: top left;
-                      -ms-transform-origin: top left;
-                      transform-origin: top left;
-                      -webkit-transform: rotate(270deg);
-                      -ms-transform: rotate(270deg);
-                      transform: rotate(270deg);
-                      font-family:'Hk_groteskbold';">
+                      white-space: nowrap; 
+                      -webkit-transform: rotate(-90deg) translate(-50%);
+                      -moz-transform: rotate(-90deg) translate(-50%);
+                      -ms-transform: rotate(-90deg) translate(-50%);
+                      -o-transform: rotate(-90deg) translate(-50%);
+                      transform: rotate(-90deg) translate(-50%);">
                     
       The Gray Zones of Creativity and Capital</div>
     </div>
@@ -581,25 +545,26 @@
 
                 <!-- LIBRARY TREE -->
 
-<!--                 <div class="row" id="library-tree">
-                    <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 hidden-sm hidden-xs" id="breadcrumb">
-                
+<!--                <div class="row" id="library-tree">
+               <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 hidden-sm hidden-xs" id="breadcrumb">
+                                    
                         
                         <ol class="breadcrumb">
                             <li>
                                 <a href="publications.html">← Library</a>
                             </li>
-                
+                                    
                         </ol>
                         
                     </div>
                     <div class="breadcrumb hidden-lg hidden-md col-sm-12 col-xs-12">
-                        <a href="#">← Library</a>
+                        <a href="publications2.html#about">About</a>
+                    </div>                    
+                   <div class="publications2.html#books">
+                        <a href="#">Books</a>
                     </div>
-                </div>
-                 -->
+                </div> -->
                 
-
                 
                 
                 
@@ -750,10 +715,10 @@ by Kiliano Foearun & Coolio Andthegang
 
     <!--––––––––––––––––––––––––––– COLUMN WITH PARAGRAPH NUMBERS –––––––––––––––––––––––––––-->
 
-            <div id="par_numbr" class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 col-xs-offset-0 col-xs-1" style="z-index:-999;"></div>
+            <div id="par_numbr" class="col-lg-1 col-lg-offset-1 col-md-1 col-sm-1 hidden-xs" style="z-index:-999;"></div>
 
     <!--––––––––––––––––––––––––––– #CONTENT –––––––––––––––––––––––––––-->
-            <div id="content" class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-8 col-sm-offset-0 col-xs-offset-0 col-xs-12">
+            <div id="content" class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-8 col-sm-offset-0 col-xs-offset-1 col-xs-11">
 
     <!--––––––––––––––––––––––––––– SELECTION MENU #ASD –––––––––––––––––––––––––––-->
                 <div class="container on-selection" id="asd">
