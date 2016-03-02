@@ -132,7 +132,7 @@ $(document).ready(function(){
             // } else {
                 // console.log('left was !== 0');
                // $('#menu').animate({left: 0});
-                $('#menu').animate({left: 0});
+                $('#menu').animate({left: 70});
 
                 $toggle_menu.hide();
                 $('#menu-left-close').show();
@@ -232,11 +232,32 @@ $(document).ready(function(){
     });
 
 ////MENU ON HOVER
-    $('#menu_bar_gotoinc').mouseover(function(){
-        $("#menu_bar_gotoselection").css('left', '3%');
+ $('#menu_bar_gotoinc').mouseover(function(){
+        $(this).css('width', '50px');
+        $("#menu_bar_gotoselection").css('margin-left', '15px');
+        $("#menu_bar").css('margin-left', '15px');
+    });
+    
+    $('#menu_bar_gotoinc').on('mouseleave', function(){
+        $(this).css('width', '35px');
+        $("#menu_bar_gotoselection").css('margin-left', '0px');
+        $("#menu_bar").css('margin-left', '0px');
+
+    });
+    
+    $('#menu_bar_gotoselection').mouseover(function(){
+        $(this).css('width', '50px');
+        $("#menu_bar").css('margin-left', '15px');
+    });
+
+    $('#menu_bar_gotoselection').on('mouseleave', function(){
+        $(this).css('width', '35px');
+        $("#menu_bar").css('margin-left', '0px');
+
     });
 
 
+    
 //////////////////////////////////////////////////////////////////////////////////
 ////SCROLL PROGRESSION BARS
 //////////////////////////////////////////////////////////////////////////////////
@@ -258,11 +279,11 @@ $(document).ready(function(){
         // console.log($(document).scrollTop());
         // console.log($('#content').offset().top)
 
-        // if ($(document).scrollTop() > $('#content').offset().top) {
-        //     $('#library-tree').slideUp(500);
-        // } else {
-        //     $('#library-tree').slideDown(500);
-        // }
+         if ($(document).scrollTop() > $('#content').offset().top) {
+             $('#library-tree').slideUp(500);
+         } else {
+             $('#library-tree').slideDown(500);
+         }
 
         var windowHeight = $(window).height();
         var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
