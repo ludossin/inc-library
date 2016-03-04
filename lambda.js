@@ -1,3 +1,8 @@
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut();
+    });
+
 if (!Array.prototype.some)
 {
    Array.prototype.some = function(fun /*, thisp*/)
@@ -115,38 +120,10 @@ $(document).ready(function(){
     $toggle_menu = $('#menu_bar');
 
     $toggle_menu.click(function() {
-
-        // if ($(window).width() <= "480") {
-            // var menu_width = $('#toc_wrapper').width();
-            // if ($('#menu').offset().left == 0) {
-            //     $('#menu').animate({left: -menu_width});
-            // } else {
-            //     $('#menu').animate({left: 0});
-            // }
-        // } else {
-            var menu_width = $('#toc_wrapper').width();
-            //console.log($('#menu').offset().left);
-            if ($('#menu').offset().left < 0) {
-            //     // console.log('left was == 0');
-            //     $('#menu').animate({left: -menu_width});    
-            // } else {
-                // console.log('left was !== 0');
-               // $('#menu').animate({left: 0});
+          var menu_width = $('#toc_wrapper').width();
                 $('#menu').animate({left: 70});
-
-                $toggle_menu.hide();
                 $('#menu-left-close').show();
-            // }
-         //   $('#menu_bar').fadeToggle(1000);
-      /*      $('#content, .footer').toggleClass('col-lg-offset-0', 'fast');
-            $('#content, .footer').toggleClass('col-lg-offset-1', 'fast');
-            $('#content, .footer').toggleClass('col-md-offset-0', 'fast');
-            $('#content, .footer').toggleClass('col-md-offset-1', 'fast');
-            $('#content, .footer').toggleClass('col-sm-offset-0', 'fast');
-            $('#content, .footer').toggleClass('col-sm-offset-1', 'fast'); */
-            // $('.toggle_menu_left_button div').css('display', 'none');
-        }
-    });
+        });
 
 ////OPENS AND CLOSES THE MENU ON SMALL DEVICES
     $('#flip').click(function() {
@@ -160,11 +137,14 @@ $(document).ready(function(){
 
 
 ////CLICKING THE CLOSE BUTTON CLOSES THE MENU, DUH
-    $('#menu-left-close').on('click', function(e) {
-        if ($('#menu').offset().left == 0) {
+    $('#menu-left-close').click(function() {
+      /*  if ($('#menu').offset().left == 0) {
             $('#menu').animate({left: -menu_width});
             $toggle_menu.show();
             $(this).hide();
+*/
+        $(this).hide();
+        $('#menu').animate({left: -menu_width});
 
          /*   $('#content, .footer').toggleClass('col-lg-offset-0', 'fast');
             $('#content, .footer').toggleClass('col-lg-offset-1', 'fast');
@@ -172,7 +152,7 @@ $(document).ready(function(){
             $('#content, .footer').toggleClass('col-md-offset-1', 'fast');
             $('#content, .footer').toggleClass('col-sm-offset-0', 'fast');
             $('#content, .footer').toggleClass('col-sm-offset-1', 'fast'); */
-        }
+    });
         // e.stopPropagation;
         // if ($('#menu-right').has(e.target).length === 0) {
             // e.preventDefault;
@@ -185,7 +165,7 @@ $(document).ready(function(){
                 // $('#menu').animate({left: + menu_wrapper_width});
             // }
         // }
-    });
+    
 
 ////ANIMATE SIDENOTES AND STUFF
     $('#content').animate({
@@ -231,30 +211,7 @@ $(document).ready(function(){
         $(this).find('.timee').html("| "+deci[0]+":"+secs+" min");
     });
 
-////MENU ON HOVER
- $('#menu_bar_gotoinc').mouseover(function(){
-        $(this).css('width', '50px');
-        $("#menu_bar_gotoselection").css('margin-left', '15px');
-        $("#menu_bar").css('margin-left', '15px');
-    });
-    
-    $('#menu_bar_gotoinc').on('mouseleave', function(){
-        $(this).css('width', '35px');
-        $("#menu_bar_gotoselection").css('margin-left', '0px');
-        $("#menu_bar").css('margin-left', '0px');
 
-    });
-    
-    $('#menu_bar_gotoselection').mouseover(function(){
-        $(this).css('width', '50px');
-        $("#menu_bar").css('margin-left', '15px');
-    });
-
-    $('#menu_bar_gotoselection').on('mouseleave', function(){
-        $(this).css('width', '35px');
-        $("#menu_bar").css('margin-left', '0px');
-
-    });
 
 
     
@@ -307,9 +264,9 @@ $(document).ready(function(){
                 $(this).css('height', f);
 
                 if ($(this).height() > 0) { 
-                    $(this).parent().css('color', 'black');
+                    $(this).parent().css('color', '#8e8e8e');
                 } else {
-                    $(this).parent().css('color', '#8e8e8e');            
+                    $(this).parent().css('color', '#cdcdcd');            
                 }
             });
 
@@ -322,36 +279,6 @@ $(document).ready(function(){
             $('#title7').css('height', lastHeight);
             n++;
         });
-
-/****************************************************
-////////KEEP THIS IN CASE WE HAVE OR WANT SUBTITLES
-****************************************************/
-        // $('.subchapter').each(function(){
-        //     $('#subtitle'+y).each(function(){
-        //         var subchapterTop = $('#subchapter'+y).offset().top;
-        //         var subchapterBottom = $('#subchapter'+y).height();
-        //         var subScrollTop = scrollTop - subchapterTop;
-        //         var subScrollBar = (subScrollTop / subchapterBottom) * subtitleHeight;
-        //         $(this).css('height', subScrollBar);
-        //         y++;
-        //     });
-        // });           
-
-        // var first_section = $('.section:first').offset().top;
-        // if (scrollTop <= first_section) {
-        //     $('#up').css('color', 'grey');
-        // } else {
-        //     $('#up').css('color', 'red');
-        //     // $('#down').show();
-        // }
-
-        // var last_section = $('.section:last').offset().top;
-        // if (scrollTop >= last_section) {
-        //     $('#down').css('color', 'grey');
-        // } else {
-        //     $('#down').css('color', 'red');
-        //     // $('#down').show();
-        // }
 
 ////////HIDE SELECTION MENU ON SCROLL
         $('#asd, .delete-underline').fadeOut('3000');
@@ -1408,10 +1335,16 @@ var filter;
 
                 $(this).button('toggle');
                 if ($(this).hasClass('active')) {
-                    $(this).closest('.section').highlight(keywords[m], {element: 'span', className: keywords[m], wordsOnly: true});
+                    $(this).closest('.section').highlight(keywords[m], {
+                        element: 'span', className: keywords[m], wordsOnly: true
+                    });
                 } else {
                     $(this).closest('.section').unhighlight({element: 'span', className: keywords[m], wordsOnly: true});	
                 }
+                
+                $(this).children().css('color', 'black');
+
+
             });
 
         });

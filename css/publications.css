@@ -159,6 +159,7 @@ body {
     font-family: "hk_groteskregular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color:#f30;
 }
 
 /************************************
@@ -1940,8 +1941,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .capitalism,.capital,.creativity,.art,.contemporary,.culture,.ideological,.social,.labor,.attention,.image,.production,.capitalism,.art,.state,.life,.public,.city,.economics,.production,.development,.art,.social,.avant-garde,.world,.big,.Other,.art,.urban,.cultural,.project,.creativity,.Belgrade,.Rog,.capital,.creative,.collective,.urban,.factory,.gentrification,.art,.political,.social,.culture,.autonomy,.public,.work {
-    color: #00f;
-    background-color: rgba(0,0,255,0.19);
+
 }
 
 /********CITATIONS************************/
@@ -2415,8 +2415,6 @@ p .btn {
     border-top: 0 solid #dbdbdb;
     border-bottom: 0 solid #dbdbdb;
     margin: 0;
-    padding: 0;
-    padding-left: 8px;
 }
 
 .hide {
@@ -2431,7 +2429,6 @@ p .btn {
 .panel-body {
     font-size: 13px;
     background-color: transparent;
-    border-radius: 4px;
     padding: 8px;
     border: none;
     color: #000;
@@ -2440,12 +2437,14 @@ p .btn {
 }
 
 .panel-default>.panel-heading {
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 7px;
     background-color: transparent;
     border: none;
     margin-left: 0;
     font-family: "hk_groteskregular";
+
+    border-top: 2px solid black;
 }
 
 .panel-heading a {
@@ -2471,12 +2470,15 @@ p .btn {
     font-family: "hk_groteskbold";
 }
 
-.panel-body p {
+.panel-body {
     margin: 0;
+    padding-left:12%;
+    padding-right:12%;
     padding-top: 5px;
     border: none;
-    font-size: 11px;
+    font-size: 20px;
     background-color: transparent;
+    text-align:center;
     color: #000;
     font-family: "hk_groteskbold";
 }
@@ -2504,13 +2506,52 @@ color:#FF5200;
     color: inherit;
     color: #000;
     text-align: center;
-    color: #c7c7c7;
+    color: black;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
     display: inline;
     padding: 15px;
+    
+    font-size: 41px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.panel-heading.pannel-title:after {
+    /* symbol for "opening" panels */
+    /* essential for enabling glyphicon */
+    content:"-";
+    /* adjust as needed, taken from bootstrap.css */
+    float: right;
+    /* adjust as needed */
+    /* adjust as needed */
+    font-size: 30px;
+    /* adjust as needed */
+    margin-left: 10px !important;
+    /* adjust as needed */
+    margin-right: 10px !important;
+    /* adjust as needed */
+}
+.panel-heading.pannel-title.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content:"+";
+    /* adjust as needed, taken from bootstrap.css */
+}
+
+.panel-title collapsed:after{
+    content:"+";
+}
+.panel-title:after{
+    content:"-";
+}
+
+.panel-title + .panel-title{
+
+    border-top: 2px solid black;
 }
 
 .panel-title:hover,.panel-title-2nd:hover {
@@ -2848,11 +2889,11 @@ input:focus,select:focus,textarea:focus,button:focus {
 }
 
 .well h4 {
-    font-size: 2.5em;
+    font-size: 1.2em;
 }
 
 .well h5 {
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .well .keyword,.well h6 {
@@ -3275,12 +3316,14 @@ content: "-";
     position:fixed; height:100%; width:2%; left:0;
 }
 
-#menu_bar_gotoselection{
-    position:fixed; height:100%; width:2%; left:2%; margin:0; top:0;
+#menu_bar_gotoread{
+    position:fixed; height:100%; width:40px; right:0; margin:0; top:0;
+    background-color:#f4f4F4;
+    z-index: 10;
 }
 
 
-#menu_bar_gotoselection_button{
+#menu_bar_gotoread_button{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3292,7 +3335,7 @@ content: "-";
     -webkit-transition: color .5s;
     -moz-transition: color .5s;
     transition: color .5s;
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
     white-space: nowrap; 
     -webkit-transform: rotate(-90deg) translate(-50%);
@@ -3300,7 +3343,7 @@ content: "-";
     -ms-transform: rotate(-90deg) translate(-50%);
     -o-transform: rotate(-90deg) translate(-50%);
     transform: rotate(-90deg) translate(-50%);
-    color: #dbdbdb;
+    color: black;
 
 }
 

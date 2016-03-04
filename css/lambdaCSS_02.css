@@ -162,6 +162,19 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 10%;
+    height: 10%;
+    z-index: 9999;
+    background: url(image/loading_spinner.gif) center no-repeat #fff;
+}
+
+
 /************************************
 ******* CONTENT *********************
 ************************************/
@@ -178,13 +191,11 @@ body {
 /* Easy changes :-) */
 /* Background-color of text on selection */
 ::-moz-selection {
-    background-color: #FF5200;
-    color: #fff;
+    background-color: #F4f4f4;
 }
 
 ::selection {
-    background-color: #FF5200;
-    color: #fff;
+    background-color: #F4f4f4;
 }
 
 a {
@@ -217,13 +228,13 @@ hr {
 #info-box {
     /*height: auto; */
     overflow: hidden;
-    /*     z-index: 2;
-    */
+    z-index: 2;
     position: relative;
     text-rendering: optimizeSpeed;
     padding-left: 0;
     /*     background-color:#f4f4f4;
     */
+    background-color:white;
     color: #000;
     /*     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
@@ -232,7 +243,7 @@ hr {
 
 .info-box-left {
     padding-bottom: 50px;
-    padding-left: 4%;
+    padding-left: 0%;
 }
 
 .info-box-right {
@@ -421,7 +432,6 @@ color:black;
     color: #000;
     padding: 15px;
     font-size: 18px;
-    text-align: center;
 }
 
 @media (max-width: 480px) {
@@ -705,8 +715,8 @@ a {
 
 .horizScroll {
     margin-left: -19%;
-    width: 16%;
-    background-color: #FF5200;
+    width: 35px;
+    background-color: #50FFCF;
     border-bottom: 2px solid #f4F4F4;
 }
 
@@ -778,8 +788,6 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     position: fixed;
     z-index: 31;
     max-width: 100%;
-    background-attachment: fixed;
-    left: 70px;
 }
 
 #toc_wrapper {
@@ -922,7 +930,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
 
 .toggle_menu_right:hover, #menu_bar:hover, #menu_bar_gotoselection:hover, #menu_bar_gotoinc:hover, #menu_bar_scroll:hover {
     cursor: pointer;
-    width: 6%;
+    background-color:white;
 }
 
 .toggle_menu_right:hover .toggle_menu_right_button {
@@ -1052,20 +1060,23 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 /*******VERTICAL BAR THAT*********
 ********OPENS UP THE MENU********/
 #menu_bar_gotoinc {
+
     height: 100%;
     position: fixed;
     color: #000;
-    width: 35px;
-    left:0px;
-    background-color: #ff5200;
+    width: 50px;
+    left: 0px;
+    background-color: #ccc;
     z-index: 30;
     cursor: pointer;
     -webkit-transition: width .3s ease;
     -moz-transition: width .3s ease;
     -o-transition: width .3s ease;
     transition: width .3s ease;
-    box-shadow: inset -5px 0 2px rgba(54,54,54,0.32);
-}
+    /* top: 50%; */
+    /* box-shadow: inset -5px 0 2px rgba(54,54,54,0.32); */
+    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANElEQ…sYTyLagiKiTBFMOcgKyZPIcgkoqzGFwLk+xqXqQCyIAwL739UDQAAAABJRU5ErkJggg== ) repeat; */
+    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYV2NkIAL8N2b4z0iEOoZRhXhDCRw8IIKYsAQAXSoV9egc4oEAAAAASUVORK5CYII= ) repeat; */}
 #menu_bar_gotoinc_button{
 position: absolute;
 top: 50%;
@@ -1078,9 +1089,9 @@ transform-origin: center left;
 -webkit-transition: color .5s;
 -moz-transition: color .5s;
 transition: color .5s;
-color: #fff;
-font-size: 12px;
-text-transform: uppercase;
+color: #8e8e8e;
+    font-size: 20px;
+    text-transform: uppercase;
 white-space: nowrap; 
 -webkit-transform: rotate(-90deg) translate(-50%);
 -moz-transform: rotate(-90deg) translate(-50%);
@@ -1092,17 +1103,18 @@ transform: rotate(-90deg) translate(-50%);
     height: 100%;
     position: fixed;
     color: #000;
-    width: 35px;
-    left: 35px;
-    background-color: white;
+    width: 40px;
+    left: 40px;
+    top: 0px;
+    background-color: #ddd;
     z-index: 30;
     cursor: pointer;
     -webkit-transition: width .3s ease;
     -moz-transition: width .3s ease;
     -o-transition: width .3s ease;
     transition: width .3s ease;
-    box-shadow: inset -5px 0 2px rgba(54,54,54,0.32);
-}
+    /* box-shadow: inset -5px 0 2px rgba(54,54,54,0.32); */
+    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQ…dD1aIyzpkcUZcimBuhMljOBrdE3AbsUlgEyPKRJBGALGPHTrqVQCmAAAAAElFTkSuQmCC ) repeat; */}
 
 #menu_bar_gotoselection_button{
     position: absolute;
@@ -1116,7 +1128,7 @@ transform: rotate(-90deg) translate(-50%);
     -webkit-transition: color .5s;
     -moz-transition: color .5s;
     transition: color .5s;
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
     white-space: nowrap; 
     -webkit-transform: rotate(-90deg) translate(-50%);
@@ -1124,12 +1136,13 @@ transform: rotate(-90deg) translate(-50%);
     -ms-transform: rotate(-90deg) translate(-50%);
     -o-transform: rotate(-90deg) translate(-50%);
     transform: rotate(-90deg) translate(-50%);
+    color:#8E8E8E;
 }
 #menu_bar {
     height: 100%;
     position: fixed;
     color: #000;
-    width: 35px;
+    width: 50px;
     background-color:white;
     z-index: 30;
     cursor: pointer;
@@ -1137,16 +1150,16 @@ transform: rotate(-90deg) translate(-50%);
     -moz-transition: width .3s ease;
     -o-transition: width .3s ease;
     transition: width .3s ease;
-    left: 70px;
+    left: 50px;
 }
 
 /*******VERTICAL SCROLL BAR*******/
 #menu_bar_scroll {
     height: 0;
-    width: 35px;
+    width: 50px;
     position: fixed;
     display: block;
-    background-color: #f4f4F4;
+    background-color: #50FFCF;
     -webkit-transition: width .3s ease;
     -moz-transition: width .3s ease;
     -o-transition: width .3s ease;
@@ -1866,7 +1879,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 .capitalism,.capital,.creativity,.art,.contemporary,.culture,.ideological,.social,.labor,.attention,.image,.production,.capitalism,.art,.state,.life,.public,.city,.economics,.production,.development,.art,.social,.avant-garde,.world,.big,.Other,.art,.urban,.cultural,.project,.creativity,.Belgrade,.Rog,.capital,.creative,.collective,.urban,.factory,.gentrification,.art,.political,.social,.culture,.autonomy,.public,.work {
     /* color: rgb(0, 0, 255);
     */
-    color: #FF5200;
+    color: #0000FF;
 }
 
 /********CITATIONS************************/
@@ -2099,8 +2112,8 @@ list-style-type: none;
 }
 
 #chapter8 ol li p a {
-    /*     color: #FF5200;
-    */
+
+    color:#f30;
     font-family: "hk_groteskbold";
     word-wrap: break-word;
     hyphens: auto;
@@ -2111,8 +2124,8 @@ list-style-type: none;
 }
 
 #chapter8 ol li p a:hover {
-    /* color:#FF5200;
-    */
+    color:#f30;
+
     text-decoration: none;
 }
 
@@ -2127,6 +2140,9 @@ list-style-type: none;
     border-radius: 5px;
     /* background-color:rgba(255, 51, 0, 0.17);
     color: #FF5200; */
+
+    color: #f30;
+    background-color: rgba(255, 51, 0, 0.2);
 }
 
 .sidenote p {
@@ -2154,7 +2170,7 @@ list-style-type: none;
 a sup {
     font-family: "hk_groteskbold";
     vertical-align: 75%;
-    color: #000;
+    color: #f30;
     text-decoration: none;
     /*font-size: small;*/
 }
@@ -2855,7 +2871,7 @@ input:focus,select:focus,textarea:focus,button:focus {
         left: 0px;
     }
 }
-
+/* 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
@@ -2865,7 +2881,7 @@ input:focus,select:focus,textarea:focus,button:focus {
     border-radius: 0;
     background-color: #FF5200;
     -webkit-box-shadow: 0 0 1px #ff9d84;
-}
+} */
 
 
 /* Medium Devices, Desktops */
