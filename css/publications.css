@@ -159,7 +159,7 @@ body {
     font-family: "hk_groteskregular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color:#f30;
+    background-color: #f4f4f4;
 }
 
 /************************************
@@ -2411,6 +2411,20 @@ p .btn {
     box-shadow: none;
 }
 
+
+.panel-group .panel-heading h4.collapsed:after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top:5px;
+}
+.panel-group .panel-heading h4:after {
+    content: '-';
+    position: absolute;
+    right: 20px;
+    top:5px;
+}
+
 .panel-group .panel-heading+.panel-collapse>.panel-body {
     border-top: 0 solid #dbdbdb;
     border-bottom: 0 solid #dbdbdb;
@@ -2509,12 +2523,12 @@ color:#FF5200;
     color: black;
     text-align: center;
     font-weight: 700;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     cursor: pointer;
     display: inline;
     padding: 15px;
     
-    font-size: 41px;
+    font-size: 71px;
     line-height: 50px;
     text-align: center;
     margin-bottom: 30px;
@@ -2522,9 +2536,6 @@ color:#FF5200;
 }
 
 .panel-heading.pannel-title:after {
-    /* symbol for "opening" panels */
-    /* essential for enabling glyphicon */
-    content:"-";
     /* adjust as needed, taken from bootstrap.css */
     float: right;
     /* adjust as needed */
@@ -2536,19 +2547,6 @@ color:#FF5200;
     margin-right: 10px !important;
     /* adjust as needed */
 }
-.panel-heading.pannel-title.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content:"+";
-    /* adjust as needed, taken from bootstrap.css */
-}
-
-.panel-title collapsed:after{
-    content:"+";
-}
-.panel-title:after{
-    content:"-";
-}
-
 .panel-title + .panel-title{
 
     border-top: 2px solid black;
@@ -3228,22 +3226,34 @@ p {
 }
 
 .btn-taglist {
-    text-align: left;
-    padding: 0;
-    font-size: 15px;
-    margin: 0;
-    /* white-space: nowrap; */
-    text-transform: none;
+   cursor: pointer;
     display: block;
-    color: #8E8E8E;
     border-radius: 5px;
-    margin-bottom: 5px;
-    background-color: #f4F4F4;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    background-color: #f4f4f4;
+    color: #000;
+    border: none;
+    height: auto;
+
+    font-size: 14px;
+    font-family: "Hk_groteskmedium";
 }
 
-.active {
-    background-color: #FF5200;
+.btn-taglist:hover{
+    margin-left:2px;
+    margin-right: 2px;
+    margin-top:2px;
+    background-color: #dbdbdb;
 }
+.active {
+    background-color: #dbdbdb;
+    /* box-shadow: inset 0 3px 5px rgba(0,0,0,.135); */
+    color: #000 !important;
+    box-shadow: none;}
 
 .add-to-collection {
     position: absolute;
@@ -3318,7 +3328,7 @@ content: "-";
 
 #menu_bar_gotoread{
     position:fixed; height:100%; width:40px; right:0; margin:0; top:0;
-    background-color:#f4f4F4;
+    background-color:greenyellow;
     z-index: 10;
 }
 
@@ -3372,8 +3382,12 @@ content: "-";
 
 
 .tags_container{
-    height: 250px;
+
+    /* height: 250px; */
     overflow-y: scroll;
+    /* -webkit-box-shadow: inset 0px -9px 17px 0px rgba(255,255,255,1); */
+    /* box-shadow: inset 0px -9px 17px 0px #ff5200; */
+    text-align: left;
 }
 
 @media (max-width: 480px) {

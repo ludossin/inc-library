@@ -1064,9 +1064,9 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     height: 100%;
     position: fixed;
     color: #000;
-    width: 50px;
+    width: 40px;
     left: 0px;
-    background-color: #ccc;
+    background-color: greenyellow;
     z-index: 30;
     cursor: pointer;
     -webkit-transition: width .3s ease;
@@ -1142,7 +1142,7 @@ transform: rotate(-90deg) translate(-50%);
     height: 100%;
     position: fixed;
     color: #000;
-    width: 50px;
+    width: 40px;
     background-color:white;
     z-index: 30;
     cursor: pointer;
@@ -1150,13 +1150,13 @@ transform: rotate(-90deg) translate(-50%);
     -moz-transition: width .3s ease;
     -o-transition: width .3s ease;
     transition: width .3s ease;
-    left: 50px;
+    left: 40px;
 }
 
 /*******VERTICAL SCROLL BAR*******/
 #menu_bar_scroll {
     height: 0;
-    width: 50px;
+    width: 40px;
     position: fixed;
     display: block;
     background-color: #50FFCF;
@@ -2218,6 +2218,9 @@ ol {
     border: none;
     height: auto;
     box-shadow: none;
+
+    margin-left:2px;
+    margin-right: 2px;
     /* 
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
     */
