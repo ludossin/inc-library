@@ -252,7 +252,7 @@ hr {
 }
 
 #info-box-left-img-container {
-    background-color: #fff;
+    background-color: #f4f4f4;
     padding: 20px;
     margin-top: 40px;
     margin-bottom: 30px;
@@ -443,7 +443,7 @@ color:black;
     }
 }
 
-#info-box .keyword {
+#info-box .keyword, #info-box a{
     background-color: rgba(0,0,0,0.12);
     border-radius: 5px;
     padding: 5px;
@@ -454,23 +454,25 @@ color:black;
     white-space: nowrap;
     word-break: keep-all;
     line-height: 2em;
+    font-family: "Hk_groteskmedium";
 }
 
-#info-box .keyword:hover {
+#info-box .keyword:hover, #info-box a:hover {
     background-color: rgba(0,0,0,0.19);
+    color:black;
 }
 
 #info-box a {
-    font-family: "hk_groteskmedium";
+/*     font-family: "hk_groteskmedium";
     color: #c7c7c7;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none; */
 }
 
 #info-box a:hover {
-    font-family: "hk_groteskmedium";
+/*     font-family: "hk_groteskmedium";
     color: #000;
-    cursor: pointer;
+    cursor: pointer; */
 }
 
 #info-box .info-box-column-header {
@@ -718,6 +720,14 @@ a {
     width: 35px;
     background-color: #50FFCF;
     border-bottom: 2px solid #f4F4F4;
+    background: rgba(244,244,244,1);
+    background: -moz-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(244,244,244,1)), color-stop(11%, rgba(227,227,227,1)), color-stop(78%, rgba(227,227,227,1)), color-stop(100%, rgba(244,244,244,1)));
+    background: -webkit-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
+    background: -o-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
+    background: -ms-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
+    background: linear-gradient(to bottom, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#f4f4f4', GradientType=0 );
 }
 
 .horizScroll,.subScroll {
@@ -930,7 +940,6 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
 
 .toggle_menu_right:hover, #menu_bar:hover, #menu_bar_gotoselection:hover, #menu_bar_gotoinc:hover, #menu_bar_scroll:hover {
     cursor: pointer;
-    background-color:white;
 }
 
 .toggle_menu_right:hover .toggle_menu_right_button {
@@ -1089,15 +1098,17 @@ transform-origin: center left;
 -webkit-transition: color .5s;
 -moz-transition: color .5s;
 transition: color .5s;
-color: #8e8e8e;
+color:black;
     font-size: 20px;
+
+    font-family: "Hk_groteskmedium";
     text-transform: uppercase;
 white-space: nowrap; 
--webkit-transform: rotate(-90deg) translate(-50%);
--moz-transform: rotate(-90deg) translate(-50%);
--ms-transform: rotate(-90deg) translate(-50%);
--o-transform: rotate(-90deg) translate(-50%);
-transform: rotate(-90deg) translate(-50%);
+-webkit-transform: rotate(90deg) translate(-50%);
+-moz-transform: rotate(90deg) translate(-50%);
+-ms-transform: rotate(90deg) translate(-50%);
+-o-transform: rotate(90deg) translate(-50%);
+transform: rotate(90deg) translate(-50%);
 }
 #menu_bar_gotoselection {
     height: 100%;
@@ -1159,7 +1170,7 @@ transform: rotate(-90deg) translate(-50%);
     width: 40px;
     position: fixed;
     display: block;
-    background-color: #50FFCF;
+    background-color: #F4F4F4;
     -webkit-transition: width .3s ease;
     -moz-transition: width .3s ease;
     -o-transition: width .3s ease;
@@ -1617,6 +1628,8 @@ fieldset {
     border-radius: 0;
     margin-left: 0;
     margin-right: 15px;
+
+    margin-top: 15px;
 }
 
 #filter > * {
@@ -1625,7 +1638,7 @@ fieldset {
 /* how is the text the user writes when searching */
 #filter-count {
     font-size: 13px;
-    font-family: "Hkgrotesk";
+    font-family: "Hk_groteskregular";
     text-align: right;
     position: fixed;
     color: #8e8e8E;
@@ -2113,8 +2126,8 @@ list-style-type: none;
 
 #chapter8 ol li p a {
 
-    color:#f30;
-    font-family: "hk_groteskbold";
+/*     color:#f30;
+     */    font-family: "hk_groteskbold";
     word-wrap: break-word;
     hyphens: auto;
     -ms-hyphens: auto;
@@ -2124,8 +2137,8 @@ list-style-type: none;
 }
 
 #chapter8 ol li p a:hover {
-    color:#f30;
-
+/*     color:#f30;
+     */
     text-decoration: none;
 }
 
@@ -2140,9 +2153,9 @@ list-style-type: none;
     border-radius: 5px;
     /* background-color:rgba(255, 51, 0, 0.17);
     color: #FF5200; */
-
+/* 
     color: #f30;
-    background-color: rgba(255, 51, 0, 0.2);
+    background-color: rgba(255, 51, 0, 0.2); */
 }
 
 .sidenote p {
@@ -2170,8 +2183,8 @@ list-style-type: none;
 a sup {
     font-family: "hk_groteskbold";
     vertical-align: 75%;
-    color: #f30;
-    text-decoration: none;
+/*     color: #f30;
+     */    text-decoration: none;
     /*font-size: small;*/
 }
 
@@ -2580,7 +2593,9 @@ blockquote p {
 .footer {
     font-size: 10px;
     color: #8e8e8e;
+    height:100px;
 }
+
 
 .ui-effects-transfer {
     color: #FF5200;
@@ -2700,7 +2715,7 @@ blockquote p {
 /* how is the text the user writes when searching */
 #panel6 #filter-count {
     font-size: 13px;
-    font-family: "Hkgrotesk";
+    font-family: "Hk_groteskregular";
     text-align: right;
     position: fixed;
     color: #8e8e8E;

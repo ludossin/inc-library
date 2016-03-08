@@ -121,7 +121,7 @@ $(document).ready(function(){
 
     $toggle_menu.click(function() {
           var menu_width = $('#toc_wrapper').width();
-                $('#menu').animate({left: 70});
+                $('#menu').animate({left: 40});
                 $('#menu-left-close').show();
         });
 
@@ -345,7 +345,7 @@ $(document).ready(function(){
                 $('html, body').animate({scrollTop: topPos}, 400);
                 $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
                 $('#next').focus();
-                $('#hit0').css('background-color', 'yellow');
+                $('#hit0').css('background-color', 'rgb(255, 106, 0)');
             }
         }
     });
@@ -373,7 +373,7 @@ $(document).ready(function(){
                 $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
                 $('#buttons_wrapper_xs').css('display','block');
                 $('#next_xs').focus();
-                $('#hit0').css('background-color', 'yellow');
+                $('#hit0').css('background-color', 'rgb(255, 106, 0)');
                 return false;
             }
         });
@@ -429,7 +429,7 @@ $(document).ready(function(){
         }
 
 
-        $('#hit'+counter).css('background-color', 'yellow');
+        $('#hit'+counter).css('background-color', 'rgb(255, 106, 0)');
         $('#hit'+(counter+1)).css('background-color', '#BFBFBF');
         return false;
     });
@@ -553,7 +553,7 @@ var filter;
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
 //         $('#next_xs').focus();
 
-        $('#hit'+counter).css('background-color', 'yellow');
+        $('#hit'+counter).css('background-color',  'rgb(255, 106, 0)');
         $('#hit'+(counter-1)).css('background-color', '#BFBFBF');
     }
 
@@ -591,7 +591,7 @@ var filter;
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
 //         $('#prev_xs').focus();
 
-        $('#hit'+counter).css('background-color', 'yellow');
+        $('#hit'+counter).css('background-color', 'rgb(255, 106, 0)');
         $('#hit'+(counter+1)).css('background-color', '#BFBFBF');
     }
 
