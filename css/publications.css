@@ -66,7 +66,7 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 }
 
 .test-message a,.test-message a:visited,.test-message a:hover {
-    color: #FF5200;
+    color: gray;
     text-decoration: none;
     font-family: 'Open Sans',sans-serif;
     font-weight: 400;
@@ -215,7 +215,7 @@ a:visited {
 }
 
 a:hover {
-    color: #FF5200;
+    color: gray;
     font-family: "hk_groteskbold";
     text-decoration: none !important;
 }
@@ -270,6 +270,7 @@ hr {
     padding-top: 3px;
     padding-bottom: 0;
     padding: 0;
+    text-align: left;
 }
 
 .carousel-content {
@@ -2336,6 +2337,7 @@ p .btn {
     background-color: transparent;
     text-align:center;
     color: #000;
+    padding-bottom: 45px;
     font-family: "hk_groteskbold";
 }
 
@@ -2366,13 +2368,13 @@ color:#FF5200;
 /*    text-transform: uppercase;*/
     cursor: pointer;
     display: inline;
-    padding: 15px;
+    padding: 0px;
     font-family:"Hk_groteskbold";
     font-size: 8.5vw;
-    line-height: 50px;
     text-align: center;
     margin-bottom: 30px;
-    margin-top: 20px;
+
+    margin-top: 10px;    
 }
 
 .panel-heading.pannel-title:after {
@@ -2734,7 +2736,6 @@ font-size:18px;
 }
 
 .well:hover {
-    cursor: pointer;
 }
 
 .well:hover h4 a {
@@ -2755,6 +2756,22 @@ font-size:18px;
     line-height: 20px;
     font-family: "Hk_groteskmedium";}
 
+.well .keyword{
+    cursor: initial;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    background-color: #f4f4f4;
+    color: #000;
+    border: none;
+    height: auto;
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: "Hk_groteskmedium";
+}
 .well h6 {
     display: block;
     display: -webkit-box;
@@ -2779,19 +2796,52 @@ font-size:18px;
     width: 100%;
     text-align: center;
     padding: 5%;
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 20%;
+    padding-right: 20%;
     /* margin: 0 auto; */
 }
 
 .post {
     padding: 0;
-    margin-top: 15px;
+    padding-top: 15px;
+    margin-top: 0px;
+    padding-bottom:15px;
+    padding-left: 12%;
+    padding-right: 12%;
 }
-
 
 .post:hover{
     background-color:greenyellow;
+}
+
+.read{
+    /* height: auto; */
+    height: 285px;
+    text-align: center;
+    /* background: #c0c0c0; */
+    /* border: #a0a0a0 solid 1px; */
+    /* margin: 20px; */
+    /* position: relative; */
+    /* top: 50%; */
+    cursor: pointer;
+}
+
+.read:before {
+    content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+
+    /* For visualization 
+    background: #808080; width: 5px;
+    */
+}
+
+.read h4{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 15px;
 }
 
 .post:nth-child(3n+1) {
@@ -2823,6 +2873,10 @@ font-size:18px;
     background-color: #f4F4F4;
 }
 
+.thumbnail:hover{
+/*     background-color:greenyellow;
+     */}
+
 #header {
 
     text-align: center;
@@ -2831,10 +2885,10 @@ font-size:18px;
     position: fixed;
     background-color: #F4F4F4;
     z-index: 4;
-    height: 100px;
+    height: 70px;
     top: 0;
     width: 100%;
-    padding: 35px;
+    padding: 20px;
 }
 
 #header-title{
@@ -3119,45 +3173,21 @@ content: "-";
     cursor: pointer;
 }
 
-#menu-top {
-    z-index: 9999999999;
-    margin-left: 95%;
-    /* margin-top: 100px; */
-    height: 100%;
-    overflow-y: auto;
-    /* padding-bottom: 30px; */
-    color: #000 !important;
-    /* background-color: white; */
-    text-transform: uppercase;
-    /* -webkit-box-shadow: 0px 0px 27px 19px white; */
-    -moz-box-shadow: 0 0 27px 19px #fff;
-    /* box-shadow: 0px 0px 27px 19px white; */
-    /* background: linear-gradient( to top, rgba( 255, 255, 255, 0 ) 0%, rgba( 255, 255, 255, 1 ) 15px, rgba( 255, 255, 255, 1 ) 100% ); */
-    background-color: #F4F4F4;
-    color: #000;
-    /* margin-top: 110px; */
-
-    padding-top: 15px;
-    padding-bottom: 5px;
-    text-align: left;
-    text-transform: none;
-    font-size: 2.1em;
-    letter-spacing: .01em;
-    line-height: 1.38em;
-    position: absolute;
-}
-
-#menu_bar_gotoinc{
-    position:fixed; height:100%; width:2%; left:0;
-}
-
 #menu_bar_gotoread{
     position:fixed; height:100%; width:40px; right:0; margin:0; top:0;
     background-color:greenyellow;
     z-index: 10;
     cursor: pointer;
+
+    -webkit-transition: width .15s ease;
+    -moz-transition: width .15s ease;
+    -o-transition: width .15s ease;
+    transition: width .15s ease;
 }
 
+#menu_bar_gotoread:hover{
+    width:50px; 
+}
 
 #menu_bar_gotoread_button{
     position: absolute;
@@ -3183,30 +3213,9 @@ content: "-";
 
     font-family: "Hk_groteskmedium";
 }
-
-#menu_bar_gotoinc_button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform-origin: center left;
-    -moz-transform-origin: center left;
-    -ms-transform-origin: center left;
-    -o-transform-origin: center left;
-    transform-origin: center left;
-    -webkit-transition: color .5s;
-    -moz-transition: color .5s;
-    transition: color .5s;
-    color: #dbdbdb;
-    font-size: 12px;
-    text-transform: uppercase;
-    white-space: nowrap; 
-    -webkit-transform: rotate(-90deg) translate(-50%);
-    -moz-transform: rotate(-90deg) translate(-50%);
-    -ms-transform: rotate(-90deg) translate(-50%);
-    -o-transform: rotate(-90deg) translate(-50%);
-    transform: rotate(-90deg) translate(-50%);
+#menu_bar_gotoread:hover #menu_bar_gotoread_button{
+    opacity: 0.5;
 }
-
 
 .tags_container{
 
@@ -3214,14 +3223,17 @@ content: "-";
     overflow-y: scroll;
     /* -webkit-box-shadow: inset 0px -9px 17px 0px rgba(255,255,255,1); */
     /* box-shadow: inset 0px -9px 17px 0px #ff5200; */
-    text-align: left;
+    text-align: center;
+
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 .tags_container_table{
     font-size: 14px;
-
-    padding: 0;
-    padding-top: 6px;    text-align: left;
+    padding-top: 6px;    text-align: center;
+    padding-left: 12% !important;
+    padding-right: 12%;
 }
 
 .table_row{
@@ -3584,6 +3596,8 @@ content: "-";
         text-align: center;
         color: #000;
         font-family: "hk_groteskbold";
+
+        padding-bottom: 45px;
     }
     
 

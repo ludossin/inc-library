@@ -444,7 +444,7 @@ color:black;
 }
 
 #info-box .keyword, #info-box a{
-    background-color: rgba(0,0,0,0.12);
+    background-color: #f4f4f4;
     border-radius: 5px;
     padding: 5px;
     padding-top: 2px;
@@ -458,7 +458,7 @@ color:black;
 }
 
 #info-box .keyword:hover, #info-box a:hover {
-    background-color: rgba(0,0,0,0.19);
+    background-color: #dbdbdb;
     color:black;
 }
 
@@ -901,12 +901,12 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     background-color: #f4f4f4;
     /*     background-color:#FF5200;
     */
-    width: 52px;
+    width: 40px;
     /* 24% */
-    -webkit-transition: width .3s ease;
-    -moz-transition: width .3s ease;
-    -o-transition: width .3s ease;
-    transition: width .3s ease;
+    -webkit-transition: width .15s ease;
+    -moz-transition: width .15s ease;
+    -o-transition: width .15s ease;
+    transition: width .15s ease;
     display: flex;
     align-items: center;
     display: -webkit-box;
@@ -946,10 +946,8 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     opacity: .5;
 }
 
-#menu_bar{
-    left:120px;
-    background-color:yellow;
-    position:absolute;
+.toggle_menu_right:hover{
+    width:50px;
 }
 
 #menu-right-close {
@@ -1076,12 +1074,12 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     width: 40px;
     left: 0px;
     background-color: greenyellow;
-    z-index: 30;
+    z-index: 33;
     cursor: pointer;
-    -webkit-transition: width .3s ease;
-    -moz-transition: width .3s ease;
-    -o-transition: width .3s ease;
-    transition: width .3s ease;
+    -webkit-transition: width .15s ease;
+    -moz-transition: width .15s ease;
+    -o-transition: width .15s ease;
+    transition: width .15s ease;
     /* top: 50%; */
     /* box-shadow: inset -5px 0 2px rgba(54,54,54,0.32); */
     /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANElEQ…sYTyLagiKiTBFMOcgKyZPIcgkoqzGFwLk+xqXqQCyIAwL739UDQAAAABJRU5ErkJggg== ) repeat; */
@@ -1110,60 +1108,38 @@ white-space: nowrap;
 -o-transform: rotate(90deg) translate(-50%);
 transform: rotate(90deg) translate(-50%);
 }
-#menu_bar_gotoselection {
-    height: 100%;
-    position: fixed;
-    color: #000;
-    width: 40px;
-    left: 40px;
-    top: 0px;
-    background-color: #ddd;
-    z-index: 30;
-    cursor: pointer;
-    -webkit-transition: width .3s ease;
-    -moz-transition: width .3s ease;
-    -o-transition: width .3s ease;
-    transition: width .3s ease;
-    /* box-shadow: inset -5px 0 2px rgba(54,54,54,0.32); */
-    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQ…dD1aIyzpkcUZcimBuhMljOBrdE3AbsUlgEyPKRJBGALGPHTrqVQCmAAAAAElFTkSuQmCC ) repeat; */}
 
-#menu_bar_gotoselection_button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform-origin: center left;
-    -moz-transform-origin: center left;
-    -ms-transform-origin: center left;
-    -o-transform-origin: center left;
-    transform-origin: center left;
-    -webkit-transition: color .5s;
-    -moz-transition: color .5s;
-    transition: color .5s;
-    font-size: 20px;
-    text-transform: uppercase;
-    white-space: nowrap; 
-    -webkit-transform: rotate(-90deg) translate(-50%);
-    -moz-transform: rotate(-90deg) translate(-50%);
-    -ms-transform: rotate(-90deg) translate(-50%);
-    -o-transform: rotate(-90deg) translate(-50%);
-    transform: rotate(-90deg) translate(-50%);
-    color:#8E8E8E;
+#menu_bar_gotoinc:hover, #menu_bar:hover, #menu_bar_scroll:hover{
+    width:50px;
 }
+
+#menu_bar:hover #menu_bar_scroll{
+    width:50px;
+}
+
+#menu_bar:hover{
+color: rgba(0, 0, 0, 0.5);
+}
+
 #menu_bar {
     height: 100%;
     position: fixed;
     color: #000;
     width: 40px;
     background-color:white;
-    z-index: 30;
-    cursor: pointer;
-    -webkit-transition: width .3s ease;
-    -moz-transition: width .3s ease;
-    -o-transition: width .3s ease;
-    transition: width .3s ease;
+/*     z-index: 30;
+     */    cursor: pointer;
+    -webkit-transition: width .15s ease;
+    -moz-transition: width .15s ease;
+    -o-transition: width .15s ease;
+    transition: width .15s ease;
     left: 40px;
 }
 
+
+#menu_bar_gotoinc:hover  #menu_bar_gotoinc_button{
+    opacity: 0.5;
+}
 /*******VERTICAL SCROLL BAR*******/
 #menu_bar_scroll {
     height: 0;
@@ -1171,10 +1147,10 @@ transform: rotate(90deg) translate(-50%);
     position: fixed;
     display: block;
     background-color: #F4F4F4;
-    -webkit-transition: width .3s ease;
-    -moz-transition: width .3s ease;
-    -o-transition: width .3s ease;
-    transition: width .3s ease;
+    -webkit-transition: width .15s ease;
+    -moz-transition: width .15s ease;
+    -o-transition: width .15s ease;
+    transition: width .15s ease;
 }
 
 #menu_bar_title_button {
@@ -2882,10 +2858,10 @@ input:focus,select:focus,textarea:focus,button:focus {
         background-color:white;
         z-index: 30;
         cursor: pointer;
-        -webkit-transition: width .3s ease;
-        -moz-transition: width .3s ease;
-        -o-transition: width .3s ease;
-        transition: width .3s ease;
+        -webkit-transition: width .15s ease;
+        -moz-transition: width .15s ease;
+        -o-transition: width .15s ease;
+        transition: width .15s ease;
         left: 0px;
     }
 }
