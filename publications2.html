@@ -287,8 +287,8 @@ Feel free to browse, read and share them!
                                     </div>
                                     </div>
                                 </div>    
-                                <div class="post item col-lg-12 col-md-12">
-                                    <div class="well 2016 english creativity capital industry capitalism ramon-lobato james-meese">
+                                <div class="post item col-lg-12 col-md-12 well 2016 english creativity capital industry capitalism ramon-lobato james-meese">
+                                    <!--<div class="well 2016 english creativity capital industry capitalism ramon-lobato james-meese">-->
                                         <div class="col-lg-4 col-md-4">
                                             <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2016/01/TOD-Geoblocking-Front.jpg">
                                             <div class="add-to-collection">
@@ -303,10 +303,10 @@ Feel free to browse, read and share them!
                                         <div class="col-lg-2 col-md-2 read">
                                             <h4>Read →</h4>
                                         </div>
-                                    </div>
+                                    <!--</div>-->
                                 </div>
-                                <div class="post item col-lg-12 col-md-12">
-                                    <div class="well 2016 english industry capitalism globalisation new-media neoliberal politics industry capitalism josephine-berry-slater marc-james-leger ana-vilenica">
+                                <div class="post item col-lg-12 col-md-12 well 2016 english industry capitalism globalisation new-media neoliberal politics industry capitalism josephine-berry-slater marc-james-leger ana-vilenica">
+                                    <!--<div class="well 2016 english industry capitalism globalisation new-media neoliberal politics industry capitalism josephine-berry-slater marc-james-leger ana-vilenica">-->
                                         <div class="col-lg-4 col-md-4">
                                             <img class="thumbnail" src="http://networkcultures.org/wp-content/uploads/2015/12/cover.jpg">
                                             <div class="add-to-collection">
@@ -322,10 +322,10 @@ Feel free to browse, read and share them!
                                         <div class="col-lg-2 col-md-2 read">
                                             <h4>Read →</h4>
                                         </div>
-                                    </div>
+                                    <!--</div>-->
                                 </div>
-                                <div class="post item col-lg-12 col-md-12">
-                                    <div class="well">
+                                <div class="post item col-lg-12 col-md-12 well">
+                                    <!--<div class="well">-->
                                         <div class="col-lg-4 col-md-4">
                                             <img class="thumbnail" src="http://image.issuu.com/150720084605-1f49537de5443c15ea9d1d109ac81ddb/jpg/page_1.jpg">
                                             <div class="add-to-collection">
@@ -339,10 +339,10 @@ Feel free to browse, read and share them!
                                         <div class="col-lg-2 col-md-2 read">
                                             <h4>Read →</h4>
                                         </div>
-                                    </div>
+                                    <!--</div>-->
                                 </div>
-                                <div class="post item col-lg-12 col-md-12">
-                                    <div class="well">
+                                <div class="post item col-lg-12 col-md-12 well">
+                                    <!--<div class="well">-->
                                         <div class="col-lg-4 col-md-4">
                                             <img class="thumbnail" src="http://image.issuu.com/151112081142-c39ce0046d665907cde4f1505ae16795/jpg/page_1.jpg">
                                             <div class="add-to-collection">
@@ -356,10 +356,10 @@ Feel free to browse, read and share them!
                                         <div class="col-lg-2 col-md-2 read">
                                             <h4>Read →</h4>
                                         </div>
-                                    </div>
+                                    <!--</div>-->
                                 </div>
-                                <div class="post item col-lg-12 col-md-12">
-                                    <div class="well">
+                                <div class="post item col-lg-12 col-md-12 well">
+                                    <!--<div class="well">-->
                                         <div class="col-lg-4 col-md-4">
                                             <img class="thumbnail" src="https://image.isu.pub/140204131523-eee90401b835c676e68b76b820bbdc3d/jpg/page_1_thumb_large.jpg">
                                             <div class="add-to-collection">
@@ -373,10 +373,10 @@ Feel free to browse, read and share them!
                                         <div class="col-lg-2 col-md-2 read">
                                             <h4>Read →</h4>
                                         </div>
-                                    </div>
+                                    <!--</div>-->
                                 </div>
-                                <div class="post item col-lg-12 col-md-12">
-                                    <div class="well">
+                                <div class="post item col-lg-12 col-md-12 well">
+                                    <!--<div class="well">-->
                                         <div class="col-lg-4 col-md-4">
                                             <img class="thumbnail" src="https://image.isu.pub/130408094651-6700011639614afaa387177251bc63ab/jpg/page_1_thumb_large.jpg">
                                             <div class="add-to-collection">
@@ -390,7 +390,8 @@ Feel free to browse, read and share them!
                                         <div class="col-lg-2 col-md-2 read">
                                             <h4>Read →</h4>
                                         </div>
-                                    </div></div> 
+                                    <!--</div>-->
+                            </div> 
                             </div>
                         </div>
                     </div>
@@ -638,20 +639,24 @@ Add a line about the website, its history and its contributors.
                     //    if ( $(this).attr('data-content', '-')){
                     if ( $(this).text()=='Add +'){
                         $(this).text('Remove -');
-                        alert('You added this publication to your collection');
-                        $(this).closest(".well").removeClass('hide');
+                        //alert('You added this publication to your collection');
+                        //$(this).closest(".well").removeClass('hide');
                         $(this).closest(".well").addClass('collected');
                     }else{
-                        alert("You removed this publication from your collection");
-                        $(this).text('+');
-                        $(this).closest(".well").removeClass('hide');
+                        //alert("You removed this publication from your collection");
+                        $(this).text('Add +');
+                        //$(this).closest(".well").removeClass('hide');
                         $(this).closest(".well").removeClass('collected');
-                        $(this).closest(".well").hide();
+                        if( $('#btn-taglist-collection').data('state') == 'all'){
+                            $(this).closest(".well").hide();
+                        }
+                        
                     }
                 });   
                 //////////////////////////////////////////////////////////////////////////////////
                 ////KEYWORDS PANNEL
-                //////////////////////////////////////////////////////////////////////////////////   
+                //////////////////////////////////////////////////////////////////////////////////
+                var terms = []; //store selected keywords
                 // Show the keywords container                  
                 $('#bar-top').on('click', function() {
                     $('#menu-top').toggleClass('hide');
@@ -665,26 +670,90 @@ Add a line about the website, its history and its contributors.
                 //////////////////////////////////////////////////////////////////////////////////    
                 //RESET ALL        
                 $('#btn-taglist-reset').on('click', function() {
-                    //  $('.well').not('.collected').toggleClass('hide');
-                    jQuery('.well').attr('class', 'cleanstate');
+                    //empty the array
+                    terms =[];
+                    //remove active class from all items
+                    $('.btn-taglist').removeClass('active');
+                    //displays all items
+                    $(".well").css("display", "block");
                 });
                 //COLLECTION: Displays the collected publications         
                 $('#btn-taglist-collection').on('click', function() {
                     if($(this).data('state') == 'collection'){
-                        $('.well').not('.collected').hide();
-                        $(this).data('state','all');
+                        //if there are items in the collection
+                        if($('.collected').length){
+                            $('.well').not('.collected').hide();
+                            $(this).data('state','all');
+                            $(this).html('Show All');
+                        }
                     }else{
                         $('.well').not('.collected').show();
                         $(this).data('state','collection');
+                        $(this).html('Collection'); 
                     }
                 });
                 $('.btn-taglist').on('click', function (){
                     $(this).toggleClass('active');
-                    var keyword = $(this).html();
-                    $(".well").toggle();
-                    $(".well div:contains('"+keyword+"')" ).each(function(){
-                        $(this).closest(".well").toggle();
-                    });     
+                    //var keyword = $(this).html();
+                    var term = $(this).attr('id');
+                    
+                    if(terms.indexOf(term) != -1){
+                        //console.log('found it there');
+                        //removes term from array
+                        terms = jQuery.grep(terms, function(value) {
+                          return value != term;
+                        });
+                        //checks if there's anything in the array
+                        if(terms.length > 0){
+                        //sets 'visibility' of all to none
+                        $(".well").css("display", "none");
+                
+                        //AND filter
+                        var classe = '';
+                        var t = 0;
+                        while (t < terms.length) {
+                            classe += "." + terms[t];
+                            t++;
+                        }
+                        //alert(classe);
+                        //console.log(classe);
+                        $( ".well" )
+                           .filter(function( index ) {
+                             return $(this).is(classe);
+                           })
+                           .css("display", "block");
+                      }else{
+                        //nothing in the array
+                        //set display block to all
+                        $(".well").css("display", "block");
+                
+                      }
+                    }else{
+                        //console.log('not there'); 
+                        //adds term to array
+                        terms.push(term);
+                        //sets 'visibility' of all back to normal
+                        $(".well").css("display", "none");
+                
+                        //AND filter
+                        var classe = '';
+                        var t = 0;
+                        while (t < terms.length) {
+                            classe += '.' + terms[t];
+                            t++;
+                        }
+                        //alert(classe);
+                        $( ".well" )
+                           .filter(function( index ) {
+                             return $(this).is(classe);
+                           })
+                           .css("display", "block");
+                    }
+                    
+                    //$(".well").toggle();
+                    //$(".well div:contains('"+keyword+"')" ).each(function(){
+                        //$(this).closest(".well").toggle();
+                    //});     
                 });
                 
                 
@@ -712,7 +781,7 @@ Add a line about the website, its history and its contributors.
                   
             
             
-            /**
+ /**
  * Check a href for an anchor. If exists, and in document, scroll to it.
  * If href argument ommited, assumes context (this) is HTML Element,
  * which will be the case when invoked by jQuery after an event
