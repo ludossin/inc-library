@@ -628,15 +628,18 @@ Add a line about the website, its history and its contributors.
                     //    if ( $(this).attr('data-content', '-')){
                     if ( $(this).text()=='Add +'){
                         $(this).text('Remove -');
-                        alert('You added this publication to your collection');
-                        $(this).closest(".well").removeClass('hide');
+                        //alert('You added this publication to your collection');
+                        //$(this).closest(".well").removeClass('hide');
                         $(this).closest(".well").addClass('collected');
                     }else{
-                        alert("You removed this publication from your collection");
-                        $(this).text('+');
-                        $(this).closest(".well").removeClass('hide');
+                        //alert("You removed this publication from your collection");
+                        $(this).text('Add +');
+                        //$(this).closest(".well").removeClass('hide');
                         $(this).closest(".well").removeClass('collected');
-                        $(this).closest(".well").hide();
+                        if( $('#btn-taglist-collection').data('state') == 'all'){
+                            $(this).closest(".well").hide();
+                        }
+                        
                     }
                 });   
                 //////////////////////////////////////////////////////////////////////////////////
@@ -666,11 +669,16 @@ Add a line about the website, its history and its contributors.
                 //COLLECTION: Displays the collected publications         
                 $('#btn-taglist-collection').on('click', function() {
                     if($(this).data('state') == 'collection'){
-                        $('.well').not('.collected').hide();
-                        $(this).data('state','all');
+                        //if there are items in the collection
+                        if($('.collected').length){
+                            $('.well').not('.collected').hide();
+                            $(this).data('state','all');
+                            $(this).html('Show All');
+                        }
                     }else{
                         $('.well').not('.collected').show();
                         $(this).data('state','collection');
+                        $(this).html('Collection'); 
                     }
                 });
                 $('.btn-taglist').on('click', function (){
@@ -697,7 +705,7 @@ Add a line about the website, its history and its contributors.
                             t++;
                         }
                         //alert(classe);
-                        console.log(classe);
+                        //console.log(classe);
                         $( ".well" )
                            .filter(function( index ) {
                              return $(this).is(classe);
@@ -723,7 +731,7 @@ Add a line about the website, its history and its contributors.
                             classe += '.' + terms[t];
                             t++;
                         }
-                        alert(classe);
+                        //alert(classe);
                         $( ".well" )
                            .filter(function( index ) {
                              return $(this).is(classe);
