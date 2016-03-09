@@ -1036,23 +1036,49 @@ var filter;
     //     }
     // }
 
+//////////////////////
+////COLLECTION
+//////////////////////
+$('.add').on('click', function() {
+    if ( $(this).text()=='Add to collection +'){
+        $(this).text('Remove from collection -');
+        //alert('You added this publication to your collection');
+        //save element id to localStorage
+        colElements.push($(".add-to-collection").attr("id"));
+        localStorage.setItem("saved_collection", JSON.stringify(colElements));
+        console.log('adding ' +colElements);
+    }else{
+        //alert("You removed this publication from your collection");
+        $(this).text('Add to collection +');
+        //remove element id from localStorage
+        var index = colElements.indexOf($(".add-to-collection").attr("id"));
+        colElements.splice(index, 1);
+        localStorage.setItem("saved_collection", JSON.stringify(colElements));
+        console.log('removed '+ index);
+    }
+}); 
 
 ////GET SAVED ITEMS
     //checks if localStorage is supported and if it has been set
     if(typeof(Storage) !== "undefined") {  //browser supports localStorage
-        if(localStorage.getItem("saved_pins")) {
-            //localStorage has been defined before, so let's get the stored values
-            pins = JSON.parse(localStorage.getItem("saved_pins"));
-            //console.log('pins loaded ' +pins);
-            last_pinID = localStorage.getItem("last_pinID");
-            if(pins.length > 0){
-                pin_count = pins.length;
-            }else{
-                pin_count = 0;
+        if(localStorage.getItem("saved_collection")) {
+            colElements = JSON.parse(localStorage.getItem("saved_collection"));
+            if(colElements.indexOf($(".add-to-collection").attr("id")) != -1){
+                $('.add-to-collection').find(".add").text('Remove from collection -');
+            } else{
+                $('.add-to-collection').find(".add").text('Add to collection +');
             }
+        // if(localStorage.getItem("saved_pins")) {
+            // pins = JSON.parse(localStorage.getItem("saved_pins"));
+            // last_pinID = localStorage.getItem("last_pinID");
+            // if(pins.length > 0){
+            //     pin_count = pins.length;
+            // }else{
+            //     pin_count = 0;
+            // }
 
             //CHANGE CSS from inline to CSS file
-            for (var i=0; i<pins.length; i++) {
+            // for (var i=0; i<pins.length; i++) {
                 //console.log(i);
                 // var appended_pins = $('<div style="position: absolute; width: 140px !important; background-color: #0ff;" cursor: default; class="pin-clone"><div class="pin-icon" style="float: left; width: 50%; text-align: left;"><i class="fa fa-thumb-tack fa-2x"></i></div><div class="pin-close" style="float: right; width: 50%; text-align: right;"><i class="fa fa-ban"></i></div><form class="pin-form" action="" style="width: 120px !important; display: inline;"><input class="pin-input" type="text" name="fname" placeholder="Tag this paragraph"  style="width: 120px !important;"></form></div>');
                 // appended_pins.appendTo('#content').attr('id', pins[i]["id"]).draggable({
@@ -1080,20 +1106,21 @@ var filter;
                 // appended_pins.offset({left: pins[i]["left"]}); //FIX THIS ONE TOO
                 // appended_pins.find('input').val(pins[i]["value"]);
                 // appended_pins.find('.pin-close').fadeOut();
-           }
+           // }
            //creates the pins-list in the menu
             //makeList();
 
         } else {
             //localStorage supported, but no values stored
-            pins = [];
-            pin_count = 0;
-            last_pinID = 0;
+            colElements = [];
+            // pins = [];
+            // pin_count = 0;
+            // last_pinID = 0;
         }
     } else {
         //browser does not support localStorage
         //DISABLE PINS ALTOGETHER THEN
-        $("#pin_wrapper").css('display','none');
+       // $("#pin_wrapper").css('display','none');
         //OR, alternatively
         //$("#pin_wrapper").html('<p>Your browser does not support localStorage :/');
     }
