@@ -1087,6 +1087,11 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     /* box-shadow: inset -5px 0 2px rgba(54,54,54,0.32); */
     /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANElEQ…sYTyLagiKiTBFMOcgKyZPIcgkoqzGFwLk+xqXqQCyIAwL739UDQAAAABJRU5ErkJggg== ) repeat; */
     /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYV2NkIAL8N2b4z0iEOoZRhXhDCRw8IIKYsAQAXSoV9egc4oEAAAAASUVORK5CYII= ) repeat; */}
+
+.arrow-down{
+margin-top: 14px;
+width: 17px;}
+
 #menu_bar_gotoinc_button{
 position: absolute;
 top: 50%;
@@ -1186,9 +1191,9 @@ color: rgba(0, 0, 0, 0.5);
         /* font-size: 12px; */
         /* font-size: 1.7vw; */
         /* line-height: 14px; */
-        font-size: 2.4vw;
+        font-size: 24px;
         /* font-family: "HKGroteskbold"; */
-        line-height: 2.6vw;
+        line-height: 1em;
         float: left;
         padding-left: 4px;
         padding-top: 15px;
@@ -1196,9 +1201,10 @@ color: rgba(0, 0, 0, 0.5);
 
     .toc_title {
         margin-left: 30px;
-        font-size: 2.4vw;
+        font-size: 24px;
+        line-height: 1em;
+
         /* font-family: "HKGroteskbold"; */
-        line-height: 2.6vw;
         padding-right: 2px;
         margin-bottom: 0;
         hyphens: auto;
@@ -1207,8 +1213,8 @@ color: rgba(0, 0, 0, 0.5);
     }
 
     .toc_author {
-        font-size: 1.3vw;
-        line-height: 2.1vw;
+        font-size: 18px;
+        line-height: 1em;
         margin-left: 30px;
         padding-bottom: 15px;
         margin-bottom: 0;
@@ -1216,16 +1222,14 @@ color: rgba(0, 0, 0, 0.5);
     }
 
     #menu {
-        -webkit-box-shadow: 10px 0 16px 1px rgba(255,255,255,1);
-        -moz-box-shadow: 10px 0 16px 1px rgba(255,255,255,1);
-        box-shadow: 10px 0 16px 1px rgba(255,255,255,1);
         margin-right: 0;
-        padding-bottom: 150px;
     }
 
     #toc_wrapper {
         margin-right: 0 !important;
-        padding-bottom: 100px;
+        padding-bottom: 150px;
+        padding-top:50px;
+
     }
 
     .toggle_menu {
@@ -2339,11 +2343,13 @@ ol {
 }
 
 .add-to-collection .btn-primary {
+
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 0p;
     border: 0px;
-color:black;
-    font-size:14px;
+    color: black;
+    font-size: 14px;
+    font-family: "Hk_groteskmedium";
 }
 
 
@@ -2384,14 +2390,14 @@ color:black;
 }
 
 .panel-default>.panel-heading {
+
     border-radius: 8px;
     padding-left: 0;
     padding-bottom: 5px;
     padding-top: 5px;
     background-color: transparent;
     border: none;
-    /*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    */
+    /* box-shadow: 0 3px 5px rgba(0,0,0,.135); */
     font-family: "hk_groteskbold";
 }
 
@@ -2626,22 +2632,11 @@ blockquote p {
     padding: 0;
 }
 
-#panel,#panel2,#flip2,#panel3,#flip3,#panel4,#flip4,#panel5,#flip5,#panel6,#flip6 {
+#flip, #panel,#panel2,#flip2,#panel3,#flip3,#panel4,#flip4,#panel5,#flip5,#panel6,#flip6 {
     padding: 5px;
     text-align: center;
     background-color: #f4f4f4;
     z-index: 99;
-    border-radius: 5px;
-    box-shadow: none;
-}
-
-#flip {
-    background-color: #FF5200;
-    color: #fff;
-    z-index: 99;
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
     box-shadow: none;
 }
 
@@ -2654,7 +2649,7 @@ blockquote p {
     display: inline-block;
     overflow: hidden;
     text-overflow: clip;
-    height: 65px;
+    height: 45px;
 }
 
 .panel-open {
@@ -2664,16 +2659,15 @@ blockquote p {
 
 #panel,#panel2,#panel3,#panel4,#panel5,#panel6 {
     padding: 5px;
-    display: none;
-    background-color: #fff;
+    display: none;/* 
     -webkit-box-shadow: 0 -22px 30px 5px rgba(255,255,255,1);
     -moz-box-shadow: 0 -22px 30px 5px rgba(255,255,255,1);
-    box-shadow: 0 -22px 30px 5px rgba(255,255,255,1);
+    box-shadow: 0 -22px 30px 5px rgba(255,255,255,1); */
 }
 
 .panel_container {
-    background-color: #fff;
-    /*     border:1px solid #dbdbdb;
+/*     background-color: #fff;
+     */    /*     border:1px solid #dbdbdb;
     */
     border-radius: 5px;
 }
@@ -2742,7 +2736,7 @@ blockquote p {
     #flip i,#flip2 i,#flip3 i,#flip4 i,#flip5 i,#flip6 i {
         margin: 0 auto;
         align-content: center;
-        font-size: 25px;
+        font-size: 20px;
         margin-top: 10px;
     }
 }
@@ -2784,10 +2778,46 @@ input:focus,select:focus,textarea:focus,button:focus {
 
 @media (max-width: 480px) {
     #menu_bar_gotoinc{
-        height:30px;
+        height:45px;
         width:100%;
         top:0;
     }    
+    
+    .arrow-down{
+        margin-top: 14px;
+        width: 17px;
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);}
+    
+    .nav-up {
+        top: -40px;
+    }
+    
+    #menu_bar_gotoinc_button {
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        -webkit-transform-origin: center left;
+        -moz-transform-origin: center left;
+        -ms-transform-origin: center left;
+        -o-transform-origin: center left;
+        transform-origin: center left;
+        -webkit-transition: color .5s;
+        -moz-transition: color .5s;
+        transition: color .5s;
+        color: black;
+        font-size: 20px;
+        font-family: "Hk_groteskmedium";
+        text-transform: uppercase;
+        white-space: nowrap;
+        -webkit-transform: rotate(90deg) translate(-50%);
+        -moz-transform: rotate(90deg) translate(-50%);
+        -ms-transform: rotate(90deg) translate(-50%);
+        -o-transform: rotate(90deg) translate(-50%);
+        transform: rotate(90deg) translate(-50%);
+    }
+    
     #menu_bar_gotoselection{
         height:30px;
         width:100%;
@@ -2861,7 +2891,7 @@ input:focus,select:focus,textarea:focus,button:focus {
     }
 
     #flip i,#flip2 i,#flip3 i,#flip4 i,#flip5 i,#flip6 i {
-        font-size: 23px;
+        font-size: 20px;
         margin-top: 8px;
     }
 
@@ -2900,6 +2930,18 @@ input:focus,select:focus,textarea:focus,button:focus {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    #info-box img {
+        /* max-width: 280px; */
+        width: auto;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        border: 1px solid #dbdbdb;
+        align-self: center;
+        /* padding: 0; */
+        margin: 0 auto;
+    }
+    
     #par_numbr {
         margin-left:3%;
         height: auto;
