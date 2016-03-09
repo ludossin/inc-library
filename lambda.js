@@ -202,13 +202,14 @@ $(document).ready(function(){
         var wordss = aaa ? aaa.length : 0;
         var timee = (wordss / 250).toString();
         var deci = timee.split('.');
-        var secss = deci[1] *60;
-        var secs = secss.toString().substr(0,2);
+        //var secss = deci[1] *60;
+        //var secs = secss.toString().substr(0,2);
 
         $(this).find('.words').html(""+wordss+" words");
         // $(this).find('.characters_no_spaces').html(charactersNoSpaces+" characters (no spaces)");
         $(this).find('.characterss').html("| "+charactersNoSpaces+" characters ("+characterss+" with spaces)");
-        $(this).find('.timee').html("| "+deci[0]+":"+secs+" min");
+        // $(this).find('.timee').html("| "+deci[0]+":"+secs+" min");
+        $(this).find('.timee').html("| approx. "+deci[0]+" min");
     });
 
 
@@ -411,9 +412,10 @@ $(document).ready(function(){
             counter = maxCount;
         }
 
-       // location.href="#hit"+counter;
+        //location.href="#hit"+counter;
         //replaced by scrollTo due to offset issues
-        topPos = $("#hit"+counter).offset().top - 55;
+        // topPos = $("#hit"+counter).offset().top - 55;
+        topPos = $("#hit"+counter).offset().top ;
         $('html, body').animate({scrollTop: topPos}, 400);
         //if($('#filter').length){
         //if($(document).width() > 768){
@@ -876,6 +878,15 @@ var filter;
             $('.delete-underline').fadeOut('3000');
         }
     });
+
+//////////////////////////////////
+////KEYWORDS @ PUB PAGE
+//////////////////////////////////
+    //$('.keyword').on('click', function (){
+        //var term = $(this).attr('id');
+        //add term to link with accordion hash
+        //window.location.href = "publications2.html#accordion_panel1&filter="+term;      
+    //});
 
 //localStorage.clear();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
