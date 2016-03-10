@@ -721,16 +721,8 @@ a {
 .horizScroll {
     margin-left: -19%;
     width: 35px;
-    background-color: #50FFCF;
-    border-bottom: 2px solid #f4F4F4;
-    background: rgba(244,244,244,1);
-    background: -moz-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(244,244,244,1)), color-stop(11%, rgba(227,227,227,1)), color-stop(78%, rgba(227,227,227,1)), color-stop(100%, rgba(244,244,244,1)));
-    background: -webkit-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
-    background: -o-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
-    background: -ms-linear-gradient(top, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
-    background: linear-gradient(to bottom, rgba(244,244,244,1) 0%, rgba(227,227,227,1) 11%, rgba(227,227,227,1) 78%, rgba(244,244,244,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#f4f4f4', GradientType=0 );
+    border-bottom: 1px solid #f4F4F4;
+    background: rgb(232, 232, 232);
 }
 
 .horizScroll,.subScroll {
@@ -1135,8 +1127,8 @@ color: rgba(0, 0, 0, 0.5);
     color: #000;
     width: 40px;
     background-color:white;
-/*     z-index: 30;
-     */    cursor: pointer;
+ z-index: 30;
+    cursor: pointer;
     -webkit-transition: width .15s ease;
     -moz-transition: width .15s ease;
     -o-transition: width .15s ease;
@@ -1871,12 +1863,12 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 .capitalism,.capital,.creativity,.art,.contemporary,.culture,.ideological,.social,.labor,.attention,.image,.production,.capitalism,.art,.state,.life,.public,.city,.economics,.production,.development,.art,.social,.avant-garde,.world,.big,.Other,.art,.urban,.cultural,.project,.creativity,.Belgrade,.Rog,.capital,.creative,.collective,.urban,.factory,.gentrification,.art,.political,.social,.culture,.autonomy,.public,.work {
     /* color: rgb(0, 0, 255);
     */
-    color: #0000FF;
+    color: #ff3300;
 }
 
 /********CITATIONS************************/
 .underline {
-    background-color: #ff0;
+    background-color:aquamarine;
 }
 
 .remove_highlight {
@@ -2261,6 +2253,7 @@ ol {
 }
 
 .extra-btn.active {
+    background-color:#E8E8E8;
 }
 
 .extra:active,.extra-btn:active {
@@ -2442,7 +2435,7 @@ ol {
     margin-bottom: 0;
     font-size: 15px;
     color: inherit;
-    background-color: #dbdbdb;
+    background-color: #E8E8E8;
     border-radius: 5px;
     padding: 5px;
     /* padding-top: 10px; */
@@ -2773,7 +2766,11 @@ input:focus,select:focus,textarea:focus,button:focus {
     left: -4vw;
     bottom: 17%;
     position: fixed;
-    font-size: 2vw;
+    font-size: 2vw;}
+
+    #menu_bar_gotoinc:hover{
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2782,6 +2779,10 @@ input:focus,select:focus,textarea:focus,button:focus {
         width:100%;
         top:0;
     }    
+    
+    #menu_bar_gotoinc:hover{
+        width: auto;
+    }
     
     .arrow-down{
         margin-top: 14px;

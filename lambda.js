@@ -386,7 +386,7 @@ $(document).ready(function(){
                 $('html, body').animate({scrollTop: topPos}, 400);
                 $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
                 $('#next').focus();
-                $('#hit0').css('background-color', 'rgb(255, 106, 0)');
+                $('#hit0').css('background-color', 'greenyellow');
             }
         }
     });
@@ -414,7 +414,7 @@ $(document).ready(function(){
                 $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
                 $('#buttons_wrapper_xs').css('display','block');
                 $('#next_xs').focus();
-                $('#hit0').css('background-color', 'rgb(255, 106, 0)');
+                $('#hit0').css('background-color', 'greenyellow');
                 return false;
             }
         });
@@ -471,7 +471,7 @@ $(document).ready(function(){
         }
 
 
-        $('#hit'+counter).css('background-color', 'rgb(255, 106, 0)');
+        $('#hit'+counter).css('background-color', 'greenyellow');
         $('#hit'+(counter+1)).css('background-color', '#f4F4F4');
         return false;
     });
@@ -595,7 +595,7 @@ var filter;
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
 //         $('#next_xs').focus();
 
-        $('#hit'+counter).css('background-color',  'rgb(255, 106, 0)');
+        $('#hit'+counter).css('background-color',  'greenyellow');
         $('#hit'+(counter-1)).css('background-color', '#f4F4F4');
     }
 
@@ -633,7 +633,7 @@ var filter;
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
 //         $('#prev_xs').focus();
 
-        $('#hit'+counter).css('background-color', 'rgb(255, 106, 0)');
+        $('#hit'+counter).css('background-color', 'greenyellow');
         $('#hit'+(counter+1)).css('background-color', '#f4F4F4');
     }
 
@@ -1436,10 +1436,15 @@ $('.add').on('click', function() {
         for (var i = 0; i < keywords.length; i++) {
             if ($(this).hasClass('active')) {
                 if ($('#keyword_toggle'+i).hasClass('active')) {
-                    //console.log('active');
+                    $(this).addClass('active');
+                    $('#keyword-hide-all').removeClass('active');
                 } else {
                     $('#keyword_toggle'+i).button('toggle');
                     $('#keyword_toggle'+i).closest('.section').highlight(keywords[i], {element: 'span', className: keywords[i], wordsOnly: true});
+                    $(this).addClass('active');
+                    $('#keyword-hide-all').removeClass('active');
+
+
                 }
             // } else {
             //     $('.keyword-button.active').trigger('click');
@@ -1463,6 +1468,10 @@ $('.add').on('click', function() {
                 $('.keyword-button.active').trigger('click');
             // }
         // }
+        $(this).addClass('active');
+
+        $('#keyword-show-all').removeClass('active');
+
     });
 
 
@@ -1684,10 +1693,11 @@ ON RESIZE DO THESE THINGS
 
 ////HIDE/SHOW ALL HIGHLIGHTED TEXT
     $('#highlight-hide-show-all, #highlight-show-all_xs').toggle(function() {
-        // $('.underline').css('background-color', 'rgba(255, 255, 0, 0.49)');
         $('.underline').css({'background-color': 'white'});
+        $(this).removeClass('active');
     }, function() {
-        $('.underline').css({'background-color': 'rgba(255, 255, 0, 0.49)'});        
+        $('.underline').css({'background-color': 'aquamarine'}); 
+        $(this).addClass('active');
     });
 
 

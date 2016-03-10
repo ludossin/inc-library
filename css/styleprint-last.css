@@ -193,14 +193,77 @@
 */
 /* end bootstrap stuff */
 
+
 @font-face {
-    font-family: Hkgrotesk;
-    src: url(fonts/HKGrotesk-Regular.otf);
+    font-family: 'hk_groteskbold';
+    src: url(fonts/hkgrotesk-bold-webfont.eot);
+    src: url(fonts/hkgrotesk-bold-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-bold-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-bold-webfont.woff) format("woff"),url(fonts/hkgrotesk-bold-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-bold-webfont.svg#hk_groteskbold) format("svg");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: HkgroteskBold;
-    src: url(fonts/HKGrotesk-Bold.otf);
+    font-family: 'hk_groteskbold_italic';
+    src: url(fonts/hkgrotesk-bolditalic-webfont.eot);
+    src: url(fonts/hkgrotesk-bolditalic-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-bolditalic-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-bolditalic-webfont.woff) format("woff"),url(fonts/hkgrotesk-bolditalic-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-bolditalic-webfont.svg#hk_groteskbold_italic) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_groteskitalic';
+    src: url(fonts/hkgrotesk-italic-webfont.eot);
+    src: url(fonts/hkgrotesk-italic-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-italic-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-italic-webfont.woff) format("woff"),url(fonts/hkgrotesk-italic-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-italic-webfont.svg#hk_groteskitalic) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_grotesklight';
+    src: url(fonts/hkgrotesk-light-webfont.eot);
+    src: url(fonts/hkgrotesk-light-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-light-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-light-webfont.woff) format("woff"),url(fonts/hkgrotesk-light-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-light-webfont.svg#hk_grotesklight) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_grotesklight_italic';
+    src: url(fonts/hkgrotesk-lightitalic-webfont.eot);
+    src: url(fonts/hkgrotesk-lightitalic-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-lightitalic-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-lightitalic-webfont.woff) format("woff"),url(fonts/hkgrotesk-lightitalic-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-lightitalic-webfont.svg#hk_grotesklight_italic) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_groteskmedium';
+    src: url(fonts/hkgrotesk-medium-webfont.eot);
+    src: url(fonts/hkgrotesk-medium-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-medium-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-medium-webfont.woff) format("woff"),url(fonts/hkgrotesk-medium-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-medium-webfont.svg#hk_groteskmedium) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_groteskmedium_italic';
+    src: url(fonts/hkgrotesk-mediumitalic-webfont.eot);
+    src: url(fonts/hkgrotesk-mediumitalic-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-mediumitalic-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-mediumitalic-webfont.woff) format("woff"),url(fonts/hkgrotesk-mediumitalic-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-mediumitalic-webfont.svg#hk_groteskmedium_italic) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_groteskregular';
+    src: url(fonts/hkgrotesk-regular-webfont.eot);
+    src: url(fonts/hkgrotesk-regular-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-regular-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-regular-webfont.woff) format("woff"),url(fonts/hkgrotesk-regular-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-regular-webfont.svg#hk_groteskregular) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_groteskbold';
+    src: url(fonts/hkgrotesk-bold-webfont.eot);
+    src: url(fonts/hkgrotesk-bold-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/hkgrotesk-bold-webfont.woff2) format("woff2"),url(fonts/hkgrotesk-bold-webfont.woff) format("woff"),url(fonts/hkgrotesk-bold-webfont.ttf) format("truetype"),url(fonts/hkgrotesk-bold-webfont.svg#hk_groteskbold) format("svg");
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
@@ -208,7 +271,7 @@ body {
     margin-top: 10mm;
     margin-bottom: 11.5mm;
     margin-left: 0;
-    font-family: "Hkgrotesk";
+    font-family: "Hk_groteskmedium";
     background-color: #fff;
 }
 
@@ -239,13 +302,18 @@ div {
     box-sizing: content-box !important;
 }
 
-#info-box {
+#menu_bar_gotoinc, #menu_bar_gotoinc_button, #menu_bar_gotoinc_linkwrapper, #menu_bar div{
     display: none;
 }
 
 #par_numbr {
     display: none;
 }
+
+.info-box-left, #info-box-left-img-container{
+    display: none;
+}
+
 
 #menu-bar-xs {
     display: none;
@@ -267,22 +335,22 @@ div {
     display: none;
 }
 
-#content {
-    margin: 2cm;
-    margin-left: 3cm;
+#content{
+    width:10cm;
+    margin: 1cm;
+    margin-left: 1.5cm;
     /* width: 50%; media queries at the end of file */
 }
-
+#book-title-box{
+    left: 1cm;
+    font-size:18pt;
+}
+.info-box-right{
+    margin-left: 1.5cm;
+}
 .section {
     /* edit 
-    margin-left: -2cm;
-<<<<<<< Updated upstream
-    to change the left margin, edit #content */
-=======
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
->>>>>>> Stashed changes
+    margin-left: -2cm;*/
 }
 
 .section h2 {
@@ -294,7 +362,7 @@ div {
     page-break-before: always !important;
     font-size: 24pt;
     line-height: 27pt;
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
     height: auto;
     background-color: transparent;
 }
@@ -332,7 +400,7 @@ div {
 .section p, .section h2, .section h3, .section h1, .section img, .references {max-width: 100%;}
 
 .section .author,.section .words {
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
     font-size: 9pt;
     line-height: 12pt;
     background-color: transparent;
@@ -382,7 +450,7 @@ div {
     margin-left: 11cm; */
     margin-top: 0;
     margin-left: 0;
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
     align-self: baseline;
     vertical-align: bottom;
 }
@@ -439,7 +507,11 @@ li {
     padding: 0;
     -webkit-margin-before: 0;
     margin-bottom: .2cm;
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
+}
+
+.subsection h3{
+    page-break-after: avoid;
 }
 
 #sidenote-wrapper {
@@ -486,7 +558,7 @@ li {
 
 #chapter8 ol li p {
     color: #000;
-    font-family: "HKGrotesk";
+    font-family: "Hk_groteskmedium";
     font-weight: 400;
     font-size: 7pt;
     line-height: 9pt;
@@ -502,7 +574,7 @@ li {
 
 #chapter8 ol li p a {
     color: #000;
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
     word-wrap: break-word;
     hyphens: auto;
     -ms-hyphens: auto;
@@ -562,7 +634,7 @@ li {
     margin-top: 0;
     font-size: 24pt;
     line-height: 27pt;
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
     margin-bottom: .5cm;
 }
 
@@ -576,7 +648,7 @@ li {
     background-color: #fff;
     font-size: 12pt;
     line-height: 15pt;
-    font-family: "HKGrotesk";
+    font-family: "Hk_groteskmedium";
     page-break-inside: avoid;
 }
 
@@ -594,7 +666,7 @@ li {
     line-height: 22pt;
     float: left;
     padding-left: 0;
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
     page-break-inside: avoid;
 }
 
@@ -604,7 +676,7 @@ li {
     margin-left: 1cm;
     font-size: 18pt;
     line-height: 22pt;
-    font-family: "HKGroteskbold";
+    font-family: "Hk_groteskbold";
     text-overflow: clip;
     page-break-inside: avoid;
     hyphens: auto;
