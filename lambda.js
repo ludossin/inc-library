@@ -157,12 +157,17 @@ $(document).ready(function(){
 ////PUSH MENU ON THE LEFT
 //////////////////////////////////////////////////////////////////////////////////
 ////ON CLICKING THE TOGGLE THAT OPENS THE MENU-LEFT
-    $toggle_menu = $('#menu_bar');
 
-    $toggle_menu.click(function() {
+    $('#menu_bar').click(function() {
           var menu_width = $('#toc_wrapper').width();
                 $('#menu').animate({left: 40});
                 $('#menu-left-close').show();
+        
+        if(window.innerWidth < 769) {
+            $('#menu').animate({left: 0});
+            $('#menu-left-close').hide();
+        }
+        
         });
 
 ////OPENS AND CLOSES THE MENU ON SMALL DEVICES
@@ -386,7 +391,7 @@ $(document).ready(function(){
                 $('html, body').animate({scrollTop: topPos}, 400);
                 $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
                 $('#next').focus();
-                $('#hit0').css('background-color', 'greenyellow');
+                $('#hit0').css('background-color', '#00fab1');
             }
         }
     });
@@ -414,7 +419,7 @@ $(document).ready(function(){
                 $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
                 $('#buttons_wrapper_xs').css('display','block');
                 $('#next_xs').focus();
-                $('#hit0').css('background-color', 'greenyellow');
+                $('#hit0').css('background-color', '#00fab1');
                 return false;
             }
         });
@@ -471,7 +476,7 @@ $(document).ready(function(){
         }
 
 
-        $('#hit'+counter).css('background-color', 'greenyellow');
+        $('#hit'+counter).css('background-color', '#00fab1');
         $('#hit'+(counter+1)).css('background-color', '#f4F4F4');
         return false;
     });
@@ -595,8 +600,8 @@ var filter;
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
 //         $('#next_xs').focus();
 
-        $('#hit'+counter).css('background-color',  'greenyellow');
-        $('#hit'+(counter-1)).css('background-color', '#f4F4F4');
+        $('#hit'+counter).css('background-color',  'rgb(0, 250, 146)');
+        $('#hit'+(counter-1)).css('background-color', ' rgba(0, 250, 146, 0.35)');
     }
 
     $('#next').click(function() {
@@ -633,8 +638,8 @@ var filter;
 //         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
 //         $('#prev_xs').focus();
 
-        $('#hit'+counter).css('background-color', 'greenyellow');
-        $('#hit'+(counter+1)).css('background-color', '#f4F4F4');
+        $('#hit'+counter).css('background-color', 'rgb(0, 250, 146)');
+        $('#hit'+(counter+1)).css('background-color', 'rgba(0, 250, 146, 0.35)');
     }
 
     $('#prev').click(function() {

@@ -190,14 +190,14 @@ body {
 
 /* Easy changes :-) */
 /* Background-color of text on selection */
-::-moz-selection {
+/* ::-moz-selection {
     background-color: #F4f4f4;
 }
 
 ::selection {
     background-color: #F4f4f4;
 }
-
+ */
 a {
     color: #000;
     font-family: "hk_groteskbold";
@@ -250,6 +250,8 @@ hr {
 .info-box-right {
     padding-top: 20px;
     padding-bottom: 50px;
+    padding-left: 0%;
+
 }
 
 #info-box-left-img-container {
@@ -260,8 +262,8 @@ hr {
 }
 
 #info-box img {
-    max-width: 280px;
     width: auto;
+    max-height: 300px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -438,8 +440,8 @@ color:black;
 
 @media (max-width: 480px) {
     #book-title {
-        font-size: 3em;
-        margin-top: 10px;
+        font-size: 2.3em;
+        margin-top: 50px;
         line-height: 1em;
         padding: 0;
     }
@@ -889,7 +891,7 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     font-size: 18px;
     color: #fff;
     vertical-align: middle;
-    z-index: 30;
+    z-index: 50;
     height: 100%;
     right: 0;
     position: fixed;
@@ -1068,7 +1070,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     color: #000;
     width: 40px;
     left: 0px;
-    background-color: greenyellow;
     z-index: 33;
     cursor: pointer;
     -webkit-transition: width .15s ease;
@@ -1078,7 +1079,16 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     /* top: 50%; */
     /* box-shadow: inset -5px 0 2px rgba(54,54,54,0.32); */
     /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANElEQ…sYTyLagiKiTBFMOcgKyZPIcgkoqzGFwLk+xqXqQCyIAwL739UDQAAAABJRU5ErkJggg== ) repeat; */
-    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYV2NkIAL8N2b4z0iEOoZRhXhDCRw8IIKYsAQAXSoV9egc4oEAAAAASUVORK5CYII= ) repeat; */}
+    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYV2NkIAL8N2b4z0iEOoZRhXhDCRw8IIKYsAQAXSoV9egc4oEAAAAASUVORK5CYII= ) repeat; */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff691+13,fff691+13,ff3300+100 */
+    background: rgb(255,246,145); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,246,145,1) 13%, rgba(255,246,145,1) 13%, rgba(255,51,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,246,145,1) 13%,rgba(255,246,145,1) 13%,rgba(255,51,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,246,145,1) 13%,rgba(255,246,145,1) 13%,rgba(255,51,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff691', endColorstr='#ff3300',GradientType=0 ); /* IE6-9 */
+
+
+}
 
 .arrow-down{
 margin-top: 14px;
@@ -1173,6 +1183,35 @@ color: rgba(0, 0, 0, 0.5);
 
 
 @media (max-width: 768px) {
+
+
+
+    #info-box-left-img-container {
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    #info-box img {
+        max-width: 170px;
+        width: auto;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        border: 1px solid #dbdbdb;
+        align-self: center;
+        /* padding: 0; */
+        margin: 0 auto;
+    }
+    #sidenote-wrapper {
+        margin-left: -27px !important;
+        width: 14%;
+        /* width: 13%; */
+        /* padding-right: 2%; */
+        height: auto;
+    }
+    
     .menu-publication-title {
         font-size: 17px;
         line-height: 15px;
@@ -1220,7 +1259,7 @@ color: rgba(0, 0, 0, 0.5);
     #toc_wrapper {
         margin-right: 0 !important;
         padding-bottom: 150px;
-        padding-top:50px;
+        padding-top:0px;
 
     }
 
@@ -1463,10 +1502,6 @@ color: rgba(0, 0, 0, 0.5);
     font-size: 24px;
 }
 
-.search-found {
-    color: #000;
-}
-
 .search-notfound {
     /* 		color: #c7c7c7 !important;
     */
@@ -1486,7 +1521,7 @@ color: rgba(0, 0, 0, 0.5);
 #arrows #up {
     position: fixed;
     top: 44%;
-    z-index: 0;
+    z-index: 30;
     font-size: 15px;
     border-radius: 4px;
     background-color: #f4f4f4;
@@ -1497,7 +1532,7 @@ color: rgba(0, 0, 0, 0.5);
 #arrows #down {
     position: fixed;
     top: 50%;
-    z-index: 0;
+    z-index: 30;
     font-size: 15px;
     border-radius: 4px;
     background-color: #f4f4f4;
@@ -1531,6 +1566,16 @@ color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
+
+
+    .horizScroll {
+        margin-left: -50px !important;
+        width: 35px;
+        border-bottom: 1px solid #f4F4F4;
+        background: rgb(232, 232, 232);
+    }
+    
+    
     #arrows {
         position: fixed;
         right: 2%;
@@ -1645,15 +1690,12 @@ input:hover {
 }
 
 /* how text of the book displays when a result is found */
-.search-found {
-    color: #000;
-}
+
 
 /* how "importantword" of the book displays when a result is found */
 .search-found .importantword {
     font-style: normal;
     cursor: text;
-    color: #000;
     border-bottom: 0 dotted #000;
 }
 
@@ -1663,7 +1705,6 @@ input:hover {
     background-color: #ff0;
     cursor: text;
     border-radius: 5px;
-    color: #000;
 }
 
 /* how the text of the book displays when no result is found */
@@ -1700,21 +1741,12 @@ input:hover {
     margin-top: 2px;
 }
 
-/* Next and prev buttons that appears to go to next word searched */
-.search-found {
-    color: #000;
-}
-
-.search-notfound {
-    color: #000;
-}
-
 .highlight {
     /*display: inline-block; 
     width: 50%;
     height: 50%;
     text-align: center;*/
-    background-color: #dbdbdb;
+    background-color: rgba(0, 250, 146, 0.35);
 }
 
 /*.search-found {
@@ -1863,12 +1895,12 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 .capitalism,.capital,.creativity,.art,.contemporary,.culture,.ideological,.social,.labor,.attention,.image,.production,.capitalism,.art,.state,.life,.public,.city,.economics,.production,.development,.art,.social,.avant-garde,.world,.big,.Other,.art,.urban,.cultural,.project,.creativity,.Belgrade,.Rog,.capital,.creative,.collective,.urban,.factory,.gentrification,.art,.political,.social,.culture,.autonomy,.public,.work {
     /* color: rgb(0, 0, 255);
     */
-    color: #ff3300;
+    color: #2247FF;
 }
 
 /********CITATIONS************************/
 .underline {
-    background-color:aquamarine;
+    background-color:#fcffb2;
 }
 
 .remove_highlight {
@@ -2323,7 +2355,7 @@ ol {
     border: none;
     background-color: #f4f4F4;
     font-family: "hk_groteskregular";
-    z-index: 30;
+    z-index: 50;
     color: #6f6f6f;
 }
 
@@ -2395,7 +2427,7 @@ ol {
 }
 
 .panel-heading a {
-    font-family: "hk_groteskbold";
+    font-family: "hk_groteskmedium";
 }
 
 .panel-default>.panel-heading a:hover,.panel-default>.panel-heading a:focus {
@@ -2652,7 +2684,10 @@ blockquote p {
 
 #panel,#panel2,#panel3,#panel4,#panel5,#panel6 {
     padding: 5px;
-    display: none;/* 
+    display: none;
+
+    color: #6f6f6f;
+    /* 
     -webkit-box-shadow: 0 -22px 30px 5px rgba(255,255,255,1);
     -moz-box-shadow: 0 -22px 30px 5px rgba(255,255,255,1);
     box-shadow: 0 -22px 30px 5px rgba(255,255,255,1); */
@@ -2671,7 +2706,7 @@ blockquote p {
 
 #panel6 .form-control {
     display: block;
-    width: 90%;
+    width: 100%;
     height: 30px;
     padding: 6px 12px;
     font-size: 14px;
@@ -2683,6 +2718,11 @@ blockquote p {
     border-radius: 4px;
 }
 
+#panel6 #cancel_xs{
+    border:0;
+    background-color:#f4f4f4;
+    color:#6f6f6f;
+}
 #panel6 fieldset {
     margin: 0;
     padding: 0;
@@ -2696,11 +2736,10 @@ blockquote p {
 }
 
 /* how is the text the user writes when searching */
-#panel6 #filter-count {
+#panel6 #filter-count_xs {
     font-size: 13px;
     font-family: "Hk_groteskregular";
     text-align: right;
-    position: fixed;
     color: #6f6f6f;
     z-index: 99;
 }
@@ -2714,7 +2753,7 @@ blockquote p {
 #panel6 input {
     width: 200px;
     font-size: 15px;
-    font-family: "Hkgrotesk";
+    font-family: "Hk_groteskregular";
     border-style: none;
     color: #000;
     padding: 0;
@@ -2731,6 +2770,8 @@ blockquote p {
         align-content: center;
         font-size: 20px;
         margin-top: 10px;
+
+        color: gray;
     }
 }
 
@@ -2768,33 +2809,65 @@ input:focus,select:focus,textarea:focus,button:focus {
     position: fixed;
     font-size: 2vw;}
 
-    #menu_bar_gotoinc:hover{
-        width: 100%;
+}
+
+/* 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: #FF5200;
+    -webkit-box-shadow: 0 0 1px #ff9d84;
+} */
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #info-box img {
+        /* max-width: 280px; */
+        width: auto;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        border: 1px solid #dbdbdb;
+        align-self: center;
+        /* padding: 0; */
+        margin: 0 auto;
+    }
+    
+    #par_numbr {
+        margin-left:3%;
+        height: auto;
+        z-index: 1;
     }
 }
 
+
 @media (max-width: 480px) {
     #menu_bar_gotoinc{
-        height:45px;
-        width:100%;
-        top:0;
+        height:45px !important;
+        width:100% !important;
+        top:0 !important;
     }    
-    
+
     #menu_bar_gotoinc:hover{
         width: auto;
     }
-    
+
     .arrow-down{
         margin-top: 14px;
         width: 17px;
         -ms-transform: rotate(90deg);
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);}
-    
+
     .nav-up {
         top: -40px;
     }
-    
+
     #menu_bar_gotoinc_button {
         position: absolute;
         top: 5%;
@@ -2818,7 +2891,7 @@ input:focus,select:focus,textarea:focus,button:focus {
         -o-transform: rotate(90deg) translate(-50%);
         transform: rotate(90deg) translate(-50%);
     }
-    
+
     #menu_bar_gotoselection{
         height:30px;
         width:100%;
@@ -2834,7 +2907,7 @@ input:focus,select:focus,textarea:focus,button:focus {
         -o-transform: rotate(0deg) translate(0%);
         transform: rotate(0deg) translate(0%);
     }
-    
+
     .section p {
         text-indent: 0;
         margin-bottom: 1em;
@@ -2889,6 +2962,9 @@ input:focus,select:focus,textarea:focus,button:focus {
         overflow: hidden;
         text-overflow: clip;
         height: 45px;
+
+        color: gray;
+        border-right: 1px solid gainsboro;
     }
 
     #flip i,#flip2 i,#flip3 i,#flip4 i,#flip5 i,#flip6 i {
@@ -2914,38 +2990,5 @@ input:focus,select:focus,textarea:focus,button:focus {
         -o-transition: width .15s ease;
         transition: width .15s ease;
         left: 0px;
-    }
-}
-/* 
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 0;
-    background-color: #FF5200;
-    -webkit-box-shadow: 0 0 1px #ff9d84;
-} */
-
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-    #info-box img {
-        /* max-width: 280px; */
-        width: auto;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 40px;
-        border: 1px solid #dbdbdb;
-        align-self: center;
-        /* padding: 0; */
-        margin: 0 auto;
-    }
-    
-    #par_numbr {
-        margin-left:3%;
-        height: auto;
-        z-index: 1;
     }
 }
