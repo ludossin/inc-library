@@ -698,8 +698,11 @@ var filter;
     $(".in-text").each(function(){
         var n = $(this).data("dref");
         var tx = $("#ref"+n).text();
-        $(this).attr({"data-toggle": "popover", "data-trigger": "click", "data-content": tx, "data-placement": "top", "href": "#"}).addClass("button");
+        $(this).attr({"data-toggle": "popover", "role": "button", "data-trigger": "click",  "data-content": tx, "data-placement": "top", "href": "#"}).addClass("button");
+        $(this).popover();
     });
+    //prevents page to scroll to top
+    $('a.in-text').on('click', function(e) {e.preventDefault(); return true;});
 
 ////////////////
 ////CITATION BOX
