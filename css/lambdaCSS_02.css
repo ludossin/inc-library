@@ -583,11 +583,10 @@ text-indent: 60px;
     font-family: "hk_groteskbold";
     font-size: 1.7em;
     margin-bottom: 5px;
-    cursor: pointer;
 }
 
 .section .author:hover {
-    color: #FF5200;
+    color: black;
 }
 
 /* words: the way the words contained in each chapter display */
@@ -793,12 +792,13 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     padding: 0;
     height: 100%;
     position: fixed;
-    z-index: 31;
+    z-index: 90;
     max-width: 100%;
 }
 
 #toc_wrapper {
     margin: 0;
+    width:100%;
     padding: 0;
     margin-right: 5%;
     height: 100%;
@@ -1005,15 +1005,16 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     -o-transition: margin-left .15s ease;
     transition: margin-left .15s ease;
     color: #6f6f6f;
+    z-index:100;
 }
 
 #menu-left-close:hover {
     cursor: pointer;
-    margin-left: 47.5%;
 }
 
 #menu-left-close:hover .fa {
     opacity: .5;
+    margin-left: 0.5%;
     -webkit-transition: opacity .15s ease;
     -moz-transition: opacity .15s ease;
     -o-transition: opacity .15s ease;
@@ -1137,7 +1138,7 @@ color: rgba(0, 0, 0, 0.5);
     color: #000;
     width: 40px;
     background-color:white;
- z-index: 30;
+ z-index: 60;
     cursor: pointer;
     -webkit-transition: width .15s ease;
     -moz-transition: width .15s ease;
@@ -2151,6 +2152,7 @@ list-style-type: none;
     left: 40px;
     -webkit-margin-after: 3px;
     padding: 2px;
+    height: auto;
     padding-top: 4px;
     max-width: 100%;
     border-radius: 5px;

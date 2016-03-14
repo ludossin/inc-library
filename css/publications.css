@@ -180,17 +180,6 @@ html {
     height: 100%;
 }
 
-/* Easy changes :-) */
-/* Background-color of text on selection */
-::-moz-selection {
-    background-color: #FF5200;
-    color: #fff;
-}
-
-::selection {
-    background-color: #FF5200;
-    color: #fff;
-}
 
 a {
     color: #000;
@@ -2865,9 +2854,12 @@ font-size:18px;
     padding: 10px 15px;
 }
 
+.read a:active{
+    text-decoration: none;
+}
 .read h4:hover{
 /* border:2px solid black;
-    */    background-color:#00FFD0;
+    */    background-color:greenyellow;
 }
 
 
@@ -3385,6 +3377,8 @@ cursor: pointer;
         margin-bottom: 0px;
         padding: 0;
     }
+    
+
 
     .panel-title {
         margin-top: 20px;
