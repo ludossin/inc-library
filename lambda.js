@@ -1,7 +1,3 @@
-    $(window).load(function() {
-        // Animate loader off screen
-        $(".se-pre-con").fadeOut();
-    });
 
 if (!Array.prototype.some)
 {
@@ -212,6 +208,128 @@ $(document).ready(function(){
         // }
     
 
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////SIDENOTES
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ////MAKES FOOTNOTES SIDENOTES
+    var noteCount = $('.sidenote').length; //nr of sidenotes USED in alignSideNotes 
+    function alignSidenotes() {
+        $('.sidenote').each(function(tic){
+            $('#fn'+tic).each(function(){
+                var anchorposition = $('#fnref'+tic).offset().top;
+                $(this).offset({top: anchorposition});
+                //console.log(tic + ' alignSideNotes -> '+ anchorposition);
+            });
+        });
+        //add last one manually
+        var anchorposition = $('#fnref'+noteCount).offset().top;
+        $('#fn'+noteCount).offset({top: anchorposition});
+    }
+
+
+
+    ////ALIGN SIDENOTES VERTICALL SO THEY DON'T OVERLAP
+
+    function alignVertically() {
+        $('.sidenote').each(function(count){
+            //console.log('count ' + count);
+            //noteCount = count + 1;
+            $('#fn'+count).each(function() {
+                var sideTop = $(this).offset().top;
+                var sideBottom = sideTop+$(this).height();
+                var newHeight = (sideBottom+10);
+                var sideNext = $('#fn'+(count+1));
+
+                if (sideNext) {
+                    var sideNextTop = sideNext.offset().top;
+                }
+                if ((sideBottom-sideNextTop) > 0) {
+                    $('#fn'+(count+1)).offset({top: newHeight});
+                }
+                //console.log(count + 'alignVertically -> '+ newHeight);
+            });
+        });       
+    }
+
+    sideToBox();
+
+
+    ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
+    if ($(window).width() > "480") {
+        $('a sup').click(function(ev){
+            var numbr = $(this).text();
+            var aidee = $('#fn'+numbr);
+            ev.stopPropagation();
+            ev.preventDefault();
+            //EDIT -> commented line below - not being used anyway
+            //var qwer = parseInt(aidee.css('font-size'));
+            // console.log(qwer);
+            // var nr_font_size = $('#fn'+numbr+':before').css('font-size');
+            // console.log(nr_font_size);
+            // $(this).effect('transfer', {to: aidee}, 700);
+            // aidee.animate({'font-size': qwer*1.75}, 500).animate({'font-size': qwer}, 200);
+            // console.log(nr_font_size);
+
+            // aidee.effect('bounce', 1000);
+        });
+    }
+
+    ////WHEN SIDENOTE IS CLOCKED
+    // $('.sidenote').click(function(e) {
+    //     var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
+    //     // console.log(sideNr);
+    //     var anchor = $('#fnref'+sideNr);
+    //     $(this).effect('transfer', {to: anchor}, 700);
+    //     sideNr.css('color', '#f30', 1000);
+    //     // $(anchor).effect('bounce', 1000);
+    // });
+
+    ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
+    function fadeOutSidenotes() {
+        $('.sidenote').css('opacity',0);
+        // $('.sidenote').animate({
+        //     opacity: 0,
+        //     left: '+=40px'
+        // }, 100);
+    }
+
+    ////FADES IN SIDENOTES AND SLIDES THEM LEFT
+    function fadeInSidenotes() {
+        $('.sidenote').css('opacity',1);
+        // $('.sidenote').animate({
+        //     opacity: 1,
+        //     left: '-=40px'
+        // }, 3000);
+    }
+
+    ////SIDENOTES BECOME POPOVER BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
+    function sideToBox() {
+        //console.log('calling sideToBox');
+        if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+            //console.log('< 768');
+
+            $(".footnoteRef").each(function(){
+                var n = $(this).text();
+                var tt = $("#fn"+n).text();
+                $(this).attr({"data-toggle": "popover", "data-content": tt, "data-placement": "top", "href": "#", "role": "button", "data-trigger": "focus", "tabindex": n}).addClass("button");
+                $("#fnref"+n).popover();
+            });
+            //prevents page to scroll to top
+            $('a.footnoteRef').on('click', function(e) {e.preventDefault(); return true;});
+
+        } else {
+            //console.log('NOT < 768');
+            //$('.footnoteRef').popover('destroy');
+            $('[data-toggle="popover"]').popover('destroy');
+        }
+    }
+
+
+    
+    
 ////ANIMATE SIDENOTES AND STUFF
     $('#content').animate({
         opacity: 1
@@ -331,7 +449,9 @@ $(document).ready(function(){
 
 ////////UPDATE SCROLLTOP
         S = $(window).scrollTop();
+        H = $(window).outerHeight(true);
         P = S/H;
+        
     });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1508,7 +1628,8 @@ $('.add').on('click', function() {
             var section_top = Math.floor($(this).offset().top);
             var first_section = Math.floor($('.section:first').offset().top);
             var last_section = Math.floor($('.section:last').offset().top);
-            if ($(this).next('.section')) {
+          /*ERROR HERE: .offset().top */
+          if ($(this).next('.section')) {
                 var nextTop = Math.floor($(this).next('.section').offset().top);
             }
             if (scrollTop >= section_top && scrollTop < nextTop) {
@@ -1552,149 +1673,6 @@ $('.add').on('click', function() {
         });
     });
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////SIDENOTES
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
-if ($(window).width() > "480") {
-    $('a sup').click(function(ev){
-        var numbr = $(this).text();
-        var aidee = $('#fn'+numbr);
-        ev.stopPropagation();
-        ev.preventDefault();
-        //EDIT -> commented line below - not being used anyway
-        //var qwer = parseInt(aidee.css('font-size'));
-        // console.log(qwer);
-        // var nr_font_size = $('#fn'+numbr+':before').css('font-size');
-        // console.log(nr_font_size);
-        // $(this).effect('transfer', {to: aidee}, 700);
-        // aidee.animate({'font-size': qwer*1.75}, 500).animate({'font-size': qwer}, 200);
-        // console.log(nr_font_size);
-
-        // aidee.effect('bounce', 1000);
-    });
-}
-
-////WHEN SIDENOTE IS CLOCKED
-    // $('.sidenote').click(function(e) {
-    //     var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
-    //     // console.log(sideNr);
-    //     var anchor = $('#fnref'+sideNr);
-    //     $(this).effect('transfer', {to: anchor}, 700);
-    //     sideNr.css('color', '#f30', 1000);
-    //     // $(anchor).effect('bounce', 1000);
-    // });
-
-////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
-    function fadeOutSidenotes() {
-        $('.sidenote').css('opacity',0);
-        // $('.sidenote').animate({
-        //     opacity: 0,
-        //     left: '+=40px'
-        // }, 100);
-    }
-
-////FADES IN SIDENOTES AND SLIDES THEM LEFT
-    function fadeInSidenotes() {
-        $('.sidenote').css('opacity',1);
-        // $('.sidenote').animate({
-        //     opacity: 1,
-        //     left: '-=40px'
-        // }, 3000);
-    }
-
-////SIDENOTES BECOME POPOVER BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
-    function sideToBox() {
-        //console.log('calling sideToBox');
-        if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
-            //console.log('< 768');
-            
-            $(".footnoteRef").each(function(){
-                var n = $(this).text();
-                var tt = $("#fn"+n).text();
-                $(this).attr({"data-toggle": "popover", "data-content": tt, "data-placement": "top", "href": "#", "role": "button", "data-trigger": "focus", "tabindex": n}).addClass("button");
-                $("#fnref"+n).popover();
-            });
-            //prevents page to scroll to top
-            $('a.footnoteRef').on('click', function(e) {e.preventDefault(); return true;});
-            
-        } else {
-            //console.log('NOT < 768');
-            //$('.footnoteRef').popover('destroy');
-            $('[data-toggle="popover"]').popover('destroy');
-        }
-    }
-
-////MAKES FOOTNOTES SIDENOTES
-var noteCount = $('.sidenote').length; //nr of sidenotes USED in alignSideNotes 
-    function alignSidenotes() {
-        $('.sidenote').each(function(tic){
-            $('#fn'+tic).each(function(){
-                var anchorposition = $('#fnref'+tic).offset().top;
-                $(this).offset({top: anchorposition});
-                //console.log(tic + ' alignSideNotes -> '+ anchorposition);
-            });
-        });
-        //add last one manually
-        anchorposition = $('#fnref'+noteCount).offset().top;
-        $('#fn'+noteCount).offset({top: anchorposition});
-    }
-
-
-
-////ALIGN SIDENOTES VERTICALL SO THEY DON'T OVERLAP
-    
-    function alignVertically() {
-        $('.sidenote').each(function(count){
-            //console.log('count ' + count);
-            //noteCount = count + 1;
-            $('#fn'+count).each(function() {
-                var sideTop = $(this).offset().top;
-                var sideBottom = sideTop+$(this).height();
-                var newHeight = (sideBottom+10);
-                var sideNext = $('#fn'+(count+1));
-
-                if (sideNext) {
-                    var sideNextTop = sideNext.offset().top;
-                }
-                if ((sideBottom-sideNextTop) > 0) {
-                    $('#fn'+(count+1)).offset({top: newHeight});
-                }
-                //console.log(count + 'alignVertically -> '+ newHeight);
-            });
-        });       
-    }
-
-    sideToBox();
-
-/*///////////////////////
-ON RESIZE DO THESE THINGS
-///////////////////////*/
-    var html = $('html'),
-        H = html.outerHeight(true),
-        S = $(window).scrollTop(),
-        P = S/H;
-
-    $(window).resize(function() {
-        //update vars
-        menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
-        window_width = $(window).width();
-////////ALIGNS SIDENOTES ON WINDOW RESIZE
-        fadeOutSidenotes();
-        sideToBox();
-        alignSidenotes();
-        alignVertically();
-        alignParagraphNumbers();
-        fadeInSidenotes();
-        H = html.outerHeight(true);
-        $(window).scrollTop(P*H);
-        cancelSearch(); //trying to fix the empty page after submit
-        //alert('changed ' + window_width);
-    });
-
-
 ////////////
 ////SETTINGS
 ////////////
@@ -1704,7 +1682,7 @@ ON RESIZE DO THESE THINGS
         $('.underline').css({'background-color': 'white'});
         $(this).removeClass('active');
     }, function() {
-        $('.underline').css({'background-color': 'aquamarine'}); 
+        $('.underline').css({'background-color': '#fcffb2'}); 
         $(this).addClass('active');
     });
 

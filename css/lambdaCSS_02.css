@@ -2147,7 +2147,6 @@ list-style-type: none;
 }
 
 .sidenote {
-    /*z-index: 9999999999999999999999999999;*/
     width: 100%;
     left: 40px;
     -webkit-margin-after: 3px;
@@ -2156,12 +2155,8 @@ list-style-type: none;
     padding-top: 4px;
     max-width: 100%;
     border-radius: 5px;
-    /* background-color:rgba(255, 51, 0, 0.17);
-    color: #FF5200; */
-/* 
-    color: #f30;
-    background-color: rgba(255, 51, 0, 0.2); */
-}
+/*     box-shadow: inset 0px 0px 9px #c7c7c7;
+     */}
 
 .sidenote p {
     margin-bottom: 0;
