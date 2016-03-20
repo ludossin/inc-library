@@ -1,64 +1,24 @@
 
-if (!Array.prototype.some)
-{
-   Array.prototype.some = function(fun /*, thisp*/)
-   {
-      var len = this.length;
-      if (typeof fun != "function")
-      throw new TypeError();
-      
-      var thisp = arguments[1];
-      for (var i = 0; i < len; i++)
-      {
-         if (i in this && fun.call(thisp, this[i], i, this))
-         return true;
-      }
-      return false;
-   };
-}
+//if (!Array.prototype.some)
+//{
+//   Array.prototype.some = function(fun /*, thisp*/)
+//   {
+//      var len = this.length;
+//      if (typeof fun != "function")
+//      throw new TypeError();
+//      
+//      var thisp = arguments[1];
+//      for (var i = 0; i < len; i++)
+//      {
+//         if (i in this && fun.call(thisp, this[i], i, this))
+//         return true;
+//      }
+//      return false;
+//   };
+//}
 
 $(document).ready(function(){
-//
-//
-//    // Hide Header on on scroll down
-//    var didScroll;
-//    var lastScrollTop = 0;
-//    var delta = 5;
-//    var navbarHeight = $('menu_bar_gotoinc').outerHeight();
-//
-//    $(window).scroll(function(event){
-//        didScroll = true;
-//    });
-//
-//    setInterval(function() {
-//        if (didScroll) {
-//            hasScrolled();
-//            didScroll = false;
-//        }
-//    }, 250);
-//
-//    function hasScrolled() {
-//        var st = $(this).scrollTop();
-//
-//        // Make sure they scroll more than delta
-//        if(Math.abs(lastScrollTop - st) <= delta)
-//            return;
-//
-//        // If they scrolled down and are past the navbar, add class .nav-up.
-//        // This is necessary so you never see what is "behind" the navbar.
-//        if (st > lastScrollTop && st > navbarHeight){
-//            // Scroll Down
-//            $('menu_bar_gotoinc').removeClass('nav-down').addClass('nav-up');
-//        } else {
-//            // Scroll Up
-//            if(st + $(window).height() < $(document).height()) {
-//                $('menu_bar_gotoinc').removeClass('nav-up').addClass('nav-down');
-//            }
-//        }
-//
-//        lastScrollTop = st;
-//    }
-    
+  
     
 //////////////////////////////////////////////////////////////////////////////////
 ////HIDE AND SHOW THE LIBRARY TREE ON SCROLL AFTER INFO-BOX
@@ -66,16 +26,12 @@ $(document).ready(function(){
     var lastScrollTop = 0, delta = 10;
 
     $(window).scroll(function(){
-        if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
-        // if ($(document).scrollTop() > $('#info-box').offset().top) {
-        //    $('#arrows').hide();
-        } else {
-            if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
-        //        $('#arrows').hide();
-            } else {
-        //        $('#arrows').show();
-            }
-        }
+        //if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
+        //} else {
+        //    if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
+        //    } else {
+        //    }
+        //}
 
         var nowScrollTop = $(this).scrollTop();
         if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
@@ -95,13 +51,6 @@ $(document).ready(function(){
             offset: {top: 55}
     });
 
-
-    // if ($(document).scrollTop() < $('#info-box').outerHeight(true)) {
-    //     $('#arrows').hide();
-    // } else {
-    //     $('#arrows').show();
-    // }
-
 //////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE RIGHT
 //////////////////////////////////////////////////////////////////////////////////
@@ -109,45 +58,18 @@ $(document).ready(function(){
     var window_width = $(window).width();
 
     $('.toggle_menu_right').on('click', function() {
-        //console.log(window_width, menu_wrapper_width);
         if ($(window).width() >= "768") {
-            $(this).fadeIn();//.show();
-            // var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
-            //var menu_right_width = $('#menu-right').outerWidth();
-            // var padding_left = parseInt($('#menu-right').css('padding-left').replace('px', ''));
-            // var correct_distance = menu_right_width - padding_left;
-            //var initial_offset = Math.floor($('#menu-right-wrapper').offset().left);
-            //if (Math.floor($('#menu-right-wrapper').offset().left) >= window_width) {
+            $(this).fadeIn();
                 $('#menu-right').animate({left: 1});
-                $('.toggle_menu_right').hide();//('background-color', 'white');
-           //     $('#arrows').hide();
-            //} 
+                $('.toggle_menu_right').hide();
         }
     });
 
     $('#menu-right-close').on('click', function(e) {
-        //console.log(window_width, menu_wrapper_width);
-       // $('.toggle_menu_right').css('right', '0px');
-        //if (Math.floor($('#menu-right-wrapper').offset().left) <= window_width) {
-            //menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
-          //  $('.toggle_menu_right').fadeIn(0).animate({'background-color': '#ff9e86'});
             $('.toggle_menu_right').fadeIn(0);
             $('#menu-right').animate({left: + menu_wrapper_width});
-            // $(this).hide();
-          //  $('#arrows').show();
-       // }
     });
     
-    
-//////////////////////////////////////////////////////////////////////////////////
-////ACCORDION IN THE RIGHT/TOOLBOX
-//////////////////////////////////////////////////////////////////////////////////
-////ON CLICK THE ANGLE RIGHT TURNS INTO ANGLE DOWN
-    
- /*   $('.panel-heading').on('click', function(){
-        $(this).find('i').toggleClass('fa-angle-right fa-angle-down');
-    });
-*/
 
 //////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
@@ -179,37 +101,9 @@ $(document).ready(function(){
 
 ////CLICKING THE CLOSE BUTTON CLOSES THE MENU, DUH
     $('#menu-left-close').click(function() {
-      /*  if ($('#menu').offset().left == 0) {
-            $('#menu').animate({left: -menu_width});
-            $toggle_menu.show();
-            $(this).hide();
-*/
         $(this).hide();
         $('#menu').animate({left: -menu_width});
-
-         /*   $('#content, .footer').toggleClass('col-lg-offset-0', 'fast');
-            $('#content, .footer').toggleClass('col-lg-offset-1', 'fast');
-            $('#content, .footer').toggleClass('col-md-offset-0', 'fast');
-            $('#content, .footer').toggleClass('col-md-offset-1', 'fast');
-            $('#content, .footer').toggleClass('col-sm-offset-0', 'fast');
-            $('#content, .footer').toggleClass('col-sm-offset-1', 'fast'); */
     });
-        // e.stopPropagation;
-        // if ($('#menu-right').has(e.target).length === 0) {
-            // e.preventDefault;
-            // var window_width = $(window).width();
-            // if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
-                // var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
-                // $('.toggle_menu_right').fadeIn().animate({'background-color': '#f30'});
-                // $('#menu-right').animate({left: 0});
-                // $('#toggle_menu_right').animate({width: '50px'});
-                // $('#menu').animate({left: + menu_wrapper_width});
-            // }
-        // }
-    
-
-
-
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////SIDENOTES
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -242,7 +136,7 @@ $(document).ready(function(){
                 var sideBottom = sideTop+$(this).height();
                 var newHeight = (sideBottom+10);
                 var sideNext = $('#fn'+(count+1));
-
+                
                 if (sideNext) {
                     var sideNextTop = sideNext.offset().top;
                 }
@@ -264,45 +158,17 @@ $(document).ready(function(){
             var aidee = $('#fn'+numbr);
             ev.stopPropagation();
             ev.preventDefault();
-            //EDIT -> commented line below - not being used anyway
-            //var qwer = parseInt(aidee.css('font-size'));
-            // console.log(qwer);
-            // var nr_font_size = $('#fn'+numbr+':before').css('font-size');
-            // console.log(nr_font_size);
-            // $(this).effect('transfer', {to: aidee}, 700);
-            // aidee.animate({'font-size': qwer*1.75}, 500).animate({'font-size': qwer}, 200);
-            // console.log(nr_font_size);
-
-            // aidee.effect('bounce', 1000);
         });
     }
-
-    ////WHEN SIDENOTE IS CLOCKED
-    // $('.sidenote').click(function(e) {
-    //     var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
-    //     // console.log(sideNr);
-    //     var anchor = $('#fnref'+sideNr);
-    //     $(this).effect('transfer', {to: anchor}, 700);
-    //     sideNr.css('color', '#f30', 1000);
-    //     // $(anchor).effect('bounce', 1000);
-    // });
 
     ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
     function fadeOutSidenotes() {
         $('.sidenote').css('opacity',0);
-        // $('.sidenote').animate({
-        //     opacity: 0,
-        //     left: '+=40px'
-        // }, 100);
     }
 
     ////FADES IN SIDENOTES AND SLIDES THEM LEFT
     function fadeInSidenotes() {
         $('.sidenote').css('opacity',1);
-        // $('.sidenote').animate({
-        //     opacity: 1,
-        //     left: '-=40px'
-        // }, 3000);
     }
 
     ////SIDENOTES BECOME POPOVER BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
@@ -310,7 +176,6 @@ $(document).ready(function(){
         //console.log('calling sideToBox');
         if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
             //console.log('< 768');
-
             $(".footnoteRef").each(function(){
                 var n = $(this).text();
                 var tt = $("#fn"+n).text();
@@ -322,12 +187,9 @@ $(document).ready(function(){
 
         } else {
             //console.log('NOT < 768');
-            //$('.footnoteRef').popover('destroy');
             $('[data-toggle="popover"]').popover('destroy');
         }
     }
-
-
     
     
 ////ANIMATE SIDENOTES AND STUFF
@@ -343,15 +205,14 @@ $(document).ready(function(){
     var menu_width = $('#toc_wrapper').width();
     $('#menu').animate({'left': -menu_width});
     $('#menu-right').animate({'left': + menu_wrapper_width});
-    //$('.toggle_menu_right').fadeIn(750).animate({'background-color': '#f30'});
     $('.toggle_menu_right').fadeIn(750);
     $('#menu-left-close').hide();
-    if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
-    // if ($(document).scrollTop() > $('#info-box').offset().top) {
-   //    $('#arrows').hide();
-    } else {
-     //   $('#arrows').show();
-    }
+   // if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
+   // // if ($(document).scrollTop() > $('#info-box').offset().top) {
+   ////    $('#arrows').hide();
+   // } else {
+   //  //   $('#arrows').show();
+   // }
 
 
 
@@ -388,11 +249,6 @@ $(document).ready(function(){
         nr++;
     });
 
-    // var x = 1;
-    // $('.subScroll').each(function() {
-    //     $(this).attr('id', 'subtitle'+x);
-    //     x++;
-    // });
 ////////////////////////
 ////ON SCROLL HAPPENINGS
 ////////////////////////
@@ -470,31 +326,20 @@ $(document).ready(function(){
             par[0].normalize();
         });
         $('.search-notfound').removeClass('search-notfound');
-        //if($("#filter-count").length){
-        //if($(document).width() > 768){
         if(window_width > 768){
             $("#filter-count").hide();
             $('#buttons_wrapper').hide();
             $('#search_ui').hide(); 
         }else{
-// ///OOOOOOOOO
-        //if($("#filter-count_xs").length){
             $("#filter-count_xs").hide();
             $('#buttons_wrapper_xs').hide();
             $('#search_ui_xs').hide();
         }
-
     };
 
 
 ////////ON ENTER CLEAR RESULTS, THEN GO TO THE FIRST NEW INSTENCE
-//if($(document).width >= 1024){
-    //if($('#filter').length){
 
-    //PUT RIGHT VALUE HERE!!!
-   // if($(document).width() > 768){
-    //if(window_width > 768){
-        //alert('checking width > 992! Correct?');
     $('#filter').keypress(function(e){
         if(window_width > 768){
             if(e.keyCode == 13){
@@ -516,16 +361,9 @@ $(document).ready(function(){
         }
     });
     
-//}
-// ////OOOOOOOO
-//if($(document).width < 1024){
-    //if($('#filter_xs').length){
-        //console.log("ok, we're in tablet portrait... " + $(document).width());
-        //$('#filter_xs').keypress(function(e){
-        $('#live-search_xs').submit(function(e){
+      $('#live-search_xs').submit(function(e){
             //console.log('[from xs] width is ' +window_width);
             //console.log('mr. form_xs -> ' + e.target.id );
-            //if(e.keyCode == 13){
             if(window_width <= 768){
                 counter = 0;
                 e.preventDefault();
@@ -543,24 +381,18 @@ $(document).ready(function(){
                 return false;
             }
         });
-   
-//}
+
 
 
 ////ON <ESC> CANCEL SEARCH AND BRING TEXT BACK TO NORMAL
     $(document).keyup(function(e){
         if (e.keyCode == 27){
             cancelSearch();
-            //if($("#filter").length){
-            //if($(document).width() > 768){
             if(window_width > 768){
                $('#filter, #next, #prev').blur();
                 //empty search field value
                 $("#filter").val(''); 
             }else{
-            
-/////OOOOOOOOO
-            //if($('#filter_xs').length){
                 $('#filter_xs, #next_xs, #prev_xs').blur();
                 //empty search field value
                 $("#filter_xs").val(''); 
@@ -588,9 +420,6 @@ $(document).ready(function(){
             $('#next').focus();
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
         }else{
-       
-////OOOOOOOOOOO
-        //if($('#filter_xs').length){
             $('#next_xs').focus();
             $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
         }
@@ -607,13 +436,9 @@ var filter;
 ////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
         $('.section > h2, .section > p, .section > ol > li, .section > span, .subchapter > h3, .subchapter > p, .subchapter > ol > li, .subchapter > span, blockquote > *, .references > h3, .references > p, #toc_wrapper  h2  a, #toc_wrapper > h3 > a, .btn-default, .author, .toc_author').each(function(){
             if(id=="filter"){
-                //console.log('here it is FILTER');
                 filter = $('#filter').val().toLowerCase();
             }
-// ///OOOOOOOOOOOOOO
             if(id=="live-search_xs"){
-                //console.log('here it is');
-                //previously filter_xs
                 filter = $('#filter_xs').val().toLowerCase();
             }
             
@@ -651,15 +476,6 @@ var filter;
 
             }
 
-// ////OOOOOOOOOOOOOOO
-//             if (0 < filter_xs.length) {
-//                 $('#search_ui_xs').css('display', 'block');
-//                 $('#buttons_wrapper_xs').css('display', 'block');
-//             } else {
-//                 $('#search_ui_xs').css('display', 'none');
-//                 $('#buttons_wrapper_xs').css('display', 'none');
-//             }
-
 ////////////HIDE CANCEL BUTTON WHEN CLICKED
             $('#search_ui').click(function() {
                 $(this).css("display", "none");
@@ -668,12 +484,10 @@ var filter;
                 cancelSearch();
             });
 
-// ////OOOOOOOOOOOOO
             $('#search_ui_xs').click(function() {
                 $(this).css("display", "none");
                 $('#buttons_wrapper_xs').css('display', 'none');
                 $("#filter_xs").val('');
-                //$("#filter_xs").blur();
                 cancelSearch();
             });
         });
@@ -716,9 +530,6 @@ var filter;
         }
         
 
-// ////OOOOOOOOOO
-//         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
-//         $('#next_xs').focus();
 
         $('#hit'+counter).css('background-color',  'rgb(0, 250, 146)');
         $('#hit'+(counter-1)).css('background-color', ' rgba(0, 250, 146, 0.35)');
@@ -727,7 +538,7 @@ var filter;
     $('#next').click(function() {
         toNext(counter);
     });
-////OOOOOOOOO
+
      $('#next_xs').click(function() {
          toNext(counter);
      });
@@ -754,10 +565,6 @@ var filter;
         }
 
 
-// ////OOOOOOOOOO
-//         $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
-//         $('#prev_xs').focus();
-
         $('#hit'+counter).css('background-color', 'rgb(0, 250, 146)');
         $('#hit'+(counter+1)).css('background-color', 'rgba(0, 250, 146, 0.35)');
     }
@@ -766,13 +573,9 @@ var filter;
         toPrev(counter);
     });
 
-
-// ///OOOOOOOOOO
     $('#prev_xs').click(function() {
         toPrev(counter);
     });
-
-
 
 
 ////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
@@ -799,20 +602,12 @@ var filter;
     });
 
 
-// /////OOOOOOOOOOOOOOOOO
-//     $("#filter_xs").autocomplete({
-//         source: someWords
-//     });
-
-
 
 //////////////////////////////////
 ////POP-OVER IN-TEXT REFERENCE BOX
 //////////////////////////////////
-    // var a = 1;
     $('.references p').each(function(a){
         $(this).attr('id', 'ref'+(a+1));
-        // a++;
     });
 
     $(".in-text").each(function(){
@@ -833,9 +628,6 @@ var filter;
         $(this).attr("id", "p"+(number+1));
     });
 
-    // $('.section').mousedown(function() {
-    //     $('.qwertz').remove();
-    // });
 
 ////ON MOUSEUP GET SELECTION AND DO THINGS TO IT
     var selection;
@@ -976,13 +768,9 @@ var filter;
             $('.p_number').each(function() {
                 $(this).attr('id', 'pnr'+p_id_number);
                 $('#pnr'+p_id_number).each(function() {
-                    //var p_id = '#p'+p_id_number;
                     if ($('#p'+p_id_number).length) {
                         var p_offset = $('#p'+p_id_number).offset().top;
                         $(this).offset({top: p_offset}).html(p_id_number);
-                        // var paragraphPin = '<div id="pin'+p_id_number+'" class="pin" style="width: auto; min-width: 210px !important; background-color: #0ff; margin-bottom: -3px; bottom: 25px; left: 178px; position: relative; cursor: default;"><div class="pin-icon" style="float: left; width: 12%; text-align: left; position: relative; top: 2px;"><i class="fa fa-thumb-tack"></i></div><div class="pin-input" contenteditable="true" style="width: auto; min-width: 72% !important; font-size: 1em; line-height: 1.8em; margin-top: 0; float: left; height: 1.8em; text-align: left;"></div><div class="pin-close" style="float: right; width: 12%; text-align: right; position: relative; top: 2px;"><i class="fa fa-ban"></i></div></div>';
-                        //adds the pin to the paragraph
-                        // $(this).offset({top: p_offset}).html(paragraphPin + p_id_number);
                     }
                 });
                 p_id_number++;
@@ -999,17 +787,12 @@ var filter;
 
 ////OPEN 'REFERENCE TOOL' PANEL ON SELECTION MENU 'REFERENCE THIS' CLICK
     $('#get-reference').click(function() {
-        // var window_width = $(window).width();
         if (Math.floor($('#menu-right-wrapper').offset().left) >= window_width) {
             $('#menu-right').animate({left: 1});
-            $('.toggle_menu_right').fadeOut();//('background-color', 'white');
-        //    $('#arrows').hide();
-        // } 
-            // console.log('djbhbcd');
+            $('.toggle_menu_right').fadeOut();
             if ($('#cite').hasClass('collapsed')) {
                 $('#cite').trigger('click');
             }
-            // $('#toggle_menu_right').trigger('click');
         } else {
             if ($('#cite').hasClass('collapsed')) {
                 $('#cite').trigger('click');
@@ -1047,122 +830,6 @@ var filter;
         }
     });
 
-//////////////////////////////////
-////KEYWORDS @ PUB PAGE
-//////////////////////////////////
-    //$('.keyword').on('click', function (){
-        //var term = $(this).attr('id');
-        //add term to link with accordion hash
-        //window.location.href = "publications2.html#accordion_panel1&filter="+term;      
-    //});
-
-//localStorage.clear();
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////DRAGGING AND DROPPING THE PIN
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // var pins,           //array that stores pinned paragraphs
-    //     t,              //pin text value (string)
-    //     pVisible,       //paragraph/pin visibility (boolean)
-    //     pPinned,        //paragraph pinned (boolean)
-        //ptop,         //pin top position
-        //pleft,        //pin left position
-    //     pObj;           //pin object
-    // var pin_count;      //how many pins are currently there (excludes the deleted ones)
-    //var last_pinID;     //equals how many pins were ever created (including the ones deleted)
-
-//FADES OUT THE BAN ICON IN THE ORIGINAL PIN ELEMENT
-//$("#pin").find('.pin-close').fadeOut();
-// $("#pin").css({
-//     'color': '#ccc',
-//     'cursor': 'default',
-//     'font-size': '.6em',
-//     'position': 'absolute',
-// });
-
-// {
-//     color: #5b5b5b;
-//     cursor: move;
-//     font-size: 14px;
-//     position: absolute;
-// }
-
-//Linked all pins to paragraphs (the pins need to be attached to the content to work properly on different screen sizes)
-
-////UPDATES THE INFO IN THE PINS ARRAY
-    // function checkPin(pinID,t) {
-    //     console.log('CHECKING pin =>' + pins.length);
-    //     if (pins.length > 0) {
-    //         for (var i=0; i<pins.length; i++) {
-    //              if(pins[i]["id"] == pinID){
-    //                 //pin already in array
-    //                  pins[i]["value"] = t;
-    //                  alert(i+ ' in array (thus editing)');
-    //              }else{
-    //                 //not editing, push it to the array
-    //                 pins.push(pObj);
-    //                 alert(i+ ' -> not editing, push it to the array');
-    //              }
-    //         }
-           
-    //     }else{
-    //         pins.push(pObj);
-    //     } 
-    //     updateList(pinID,t);
-    //     //saves all we need in localStorage
-    //     localStorage.setItem("saved_pins", JSON.stringify(pins));
-    //     //localStorage.last_pinID = last_pinID;
-    //     localStorage.pin_count = pin_count;
-
-    // } // end function checkPin
-
-    // function pinParagraph(pinID,t){
-    //     //alert('pinParagraph ' + pinID);
-    //         pObj = {value : t, id: pinID};
-    //         //get the id and store it in the array
-    //         pins.push(pObj);
-    //         //addClass pPinned
-    //         $("#"+pinID).addClass('pPinned'); //use CSS to color that differently
-    //         //save array to LocalStorage
-    //         localStorage.setItem("saved_pins", JSON.stringify(pins));
-    //         updateList(pinID);
-    // }
-
-//     function unpinParagraph(pinID){
-//         //if(){//pin is in the array
-//             //remove it from the array
-//             //remove pPinned class
-//             //save array to localStorage
-
-// //        }
-//     }
-
-    //populates list on pin
-    // function updateList(pinID){
-    //     $('#pins-list').children().remove();
-    //     if (pins.length > 0) {
-    //         for(var i=0; i<pins.length;i++){
-    //             $('#pins-list').append('<li><a href="#'+pins[i]["id"]+'">'+pins[i]["value"]+'</a> <i class="fa fa-ban delete-pin" style="color: red; cursor: pointer;"></i></li>'); //CSS INLINE TO FILE
-    //         }
-            
-    //     }else{
-    //         $('#pins-list').append('<li>You have no pins.</li>'); 
-    //     }
-    // }
-
-    //populates the ul with saved pins
-    // function makeList(){
-    //     if (pins.length > 0) {
-    //         for (var i=0; i<pins.length; i++) {
-    //             var t = pins[i]["value"];
-    //             if (t == '' || t == ' '){
-    //                 t = 'Untitled'
-    //             }
-    //             $('#pins-list').append('<li><a href="#'+pins[i]["id"]+'">'+t+'</a> <i class="fa fa-ban delete-pin" style="color: red; cursor: pointer;"></i></li>'); //CSS INLINE TO FILE
-    //         }
-    //     }else{
-    //         $('#pins-list').append('<li>You have no pins.</li>'); 
-    //     }
-    // }
 
 //////////////////////
 ////COLLECTION
@@ -1174,7 +841,7 @@ $('.add').on('click', function() {
         //save element id to localStorage
         colElements.push($(".add-to-collection").attr("id"));
         localStorage.setItem("saved_collection", JSON.stringify(colElements));
-        console.log('adding ' +colElements);
+        //console.log('adding ' +colElements);
     }else{
         //alert("You removed this publication from your collection");
         $(this).text('Add to collection +');
@@ -1182,7 +849,7 @@ $('.add').on('click', function() {
         var index = colElements.indexOf($(".add-to-collection").attr("id"));
         colElements.splice(index, 1);
         localStorage.setItem("saved_collection", JSON.stringify(colElements));
-        console.log('removed '+ index);
+        //console.log('removed '+ index);
     }
 }); 
 
@@ -1196,241 +863,17 @@ $('.add').on('click', function() {
             } else{
                 $('.add-to-collection').find(".add").text('Add to collection +');
             }
-        // if(localStorage.getItem("saved_pins")) {
-            // pins = JSON.parse(localStorage.getItem("saved_pins"));
-            // last_pinID = localStorage.getItem("last_pinID");
-            // if(pins.length > 0){
-            //     pin_count = pins.length;
-            // }else{
-            //     pin_count = 0;
-            // }
 
-            //CHANGE CSS from inline to CSS file
-            // for (var i=0; i<pins.length; i++) {
-                //console.log(i);
-                // var appended_pins = $('<div style="position: absolute; width: 140px !important; background-color: #0ff;" cursor: default; class="pin-clone"><div class="pin-icon" style="float: left; width: 50%; text-align: left;"><i class="fa fa-thumb-tack fa-2x"></i></div><div class="pin-close" style="float: right; width: 50%; text-align: right;"><i class="fa fa-ban"></i></div><form class="pin-form" action="" style="width: 120px !important; display: inline;"><input class="pin-input" type="text" name="fname" placeholder="Tag this paragraph"  style="width: 120px !important;"></form></div>');
-                // appended_pins.appendTo('#content').attr('id', pins[i]["id"]).draggable({
-                //     containment: '#main',
-                //     cursor: 'move',
-                //     snapTolerance: 100,
-                //     snap: '#content',
-                //     snapMode: "outer",
-                //     stop: pinMoved
-                // });
-                // appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').attr('id', pins[i]["id"]).draggable({
-                //     containment: '#main',
-                //     cursor: 'move',
-                //     snapTolerance: 100,
-                //     snap: '#content',
-                //     snapMode: "outer",
-                //     stop: pinMoved
-                // });
-
-                // console.log('text: ' +pins[i]["value"]);
-                // console.log('top: ' + pins[i]["top"]);
-                // console.log('last_pinID: '+ last_pinID);
-                // console.log('pin_count: '+ pin_count);
-                // appended_pins.offset({top: pins[i]["top"] * $(document).height()});
-                // appended_pins.offset({left: pins[i]["left"]}); //FIX THIS ONE TOO
-                // appended_pins.find('input').val(pins[i]["value"]);
-                // appended_pins.find('.pin-close').fadeOut();
-           // }
-           //creates the pins-list in the menu
-            //makeList();
 
         } else {
             //localStorage supported, but no values stored
             colElements = [];
-            // pins = [];
-            // pin_count = 0;
-            // last_pinID = 0;
         }
     } else {
         //browser does not support localStorage
-        //DISABLE PINS ALTOGETHER THEN
-       // $("#pin_wrapper").css('display','none');
-        //OR, alternatively
-        //$("#pin_wrapper").html('<p>Your browser does not support localStorage :/');
     }
 
-////DELETE ALL PINS
-    // $('#delete-pins').click(function() {
-    //         localStorage.clear();
-    //         pins = [];
-    //         pin_count = 0;
-    //         last_pinID = 0; 
-    //         $('.pin-clone').remove();
-    //         //delete all list
-    //         $("#pins-list li").remove();
-    // });
 
-
-////UPDATES INFO ABOUT PINS WHEN MOVED
-    // function pinMoved() {
-    //     pinID = $(this).attr("id");
-    //     ptop = $('#'+pinID).offset().top / $(document).height();
-    //     pleft = $('#'+pinID).offset().left; // FIX THIS TOO
-    //     t = $('#'+pinID).find('input').val();
-    //     //console.log('moving '+ pinID);
-    //     for(var i=0; i<pins.length; i++){
-    //         if(pins[i]["id"] == pinID){
-    //             console.log('found '+pins[i]["id"]+' at ' +i + ' ' +$(this).attr('id'));
-    //             pins[i]["value"] = t;
-    //             pins[i]["left"] = pleft;
-    //             pins[i]["top"] = ptop;
-    //             found = i;
-    //             //update list on the menu
-    //             if (t == '' || t == ' '){
-    //                 t = 'Untitled'
-    //             }
-    //             $("#pins-list li").eq(i).find('a').text(t);
-    //         }
-    //     }
-    //     localStorage.setItem("saved_pins", JSON.stringify(pins));
-    //     //console.log('moved pin AND found is' + found);
-    // }
-
-    //UPDATES INFO ABOUT PINS WHEN CHANGED (called on focusout)
-    // function pinChanged(pinID) {
-    //     //pinID = $(this).attr("id");
-    //     ptop = $('#'+pinID).offset().top / $(document).height();
-    //     pleft = $('#'+pinID).offset().left;
-    //     t = $('#'+pinID).find('input').val();
-    //     //console.log('moving '+ pinID);
-    //     for(var i=0; i<pins.length; i++){
-    //         if(pins[i]["id"] == pinID){
-    //             //console.log('found '+pins[i]["id"]+' at ' +i + ' ' +pinID);
-    //             pins[i]["value"] = t;
-    //             pins[i]["left"] = pleft;
-    //             pins[i]["top"] = ptop;
-    //             //update list on the menu
-    //             if (t == '' || t == ' '){
-    //                 t = 'Untitled'
-    //             }
-    //             $("#pins-list li").eq(i).find('a').text(t);
-    //         }
-    //     }
-
-    //     localStorage.setItem("saved_pins", JSON.stringify(pins));
-    // }
-
-
-////ORIGINAL PIN, THE BEGINNING OF ALL
-    // $('#pin').draggable({
-    //     containment: '#main',
-    //     snapTolerance: 100,
-    //     cursor: 'move',
-    //     snap: '#content',
-    //     snapMode: 'outer',
-    //     helper: 'clone',
-    //     stop: createPin
-    // });
-
-
-////ON HOVER SHOW INPUT AREA AND DELETE BUTTON
-    // $('#content').on('mouseenter', '.pin-clone', function() {
-    //     $(this).find('.pin-form, .pin-close').fadeIn();
-    //     $(this).find('.pin-input').focus();
-    // });
-
-    // $('#content').on('mouseleave', '.pin-clone', function() {
-    //     $(this).find('.pin-input').focusout();
-    //     $(this).find('.pin-form, .pin-close').fadeOut();
-        
-    // });
-
-////NEW FUNCTIONS (ON CLICK)
-    //  $('#par_numbr').on('click','.pin-icon', function(e){
-    //     //$('.pin-icon').on('click', function(e){
-    //     alert('would fadeOut...');
-    //    //$(this).siblings().fadeToggle();
-    // });
-
-
-//// TO BE USED IN PREVIOUSLY CREATED ITEMS 
-////ON SUBMIT PREVENT FORM FROM SUBMITTING   
-    // $('#par_numbr').on('submit', '.pin-form', function(e) {
-    // //$('.pin-form').on('submit', function(e) {
-    //     //var pid = $(this).parent().attr("id");
-    //     //var t = $(this).find('.pin-input').val();
-    //     pinParagraph(pid,t);
-    //     e.preventDefault();
-    // });
-
-////ON FOCUSOUT UPDATE VARs, CHECK PIN AND HIDE INPUT AREA + DELETE BTN 
-    // $('#par_numbr').on('focusout','.pin-input', function() {
-    //     $(this).blur();
-    //    // console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
-    //     t = $(this).val();
-        
-    //     var pid = $(this).closest('.p_number').attr("id");//.newPin.attr("id");
-    //     //var pidnr = pid.substr(11);
-        
-    //     //ptop = $(this).closest('.pin-clone').offset().top / $(document).height();//newPin.offset().top;
-    //     //pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left; //FIX THIS TOO
-    //     //pObj = {value : t, top: ptop, left: pleft, id: pid};
-
-    //     pinParagraph(pid,t);
-    //     //checkPin(pid,t);
-    //     //$(this).closest('.pin-form, .pin-close').fadeToggle();
-    // });
-////ON MOUSELEAVE UPDATE VARs, CHECK PIN AND HIDE INPUT AREA + DELETE BTN 
-    // $('#par_numbr').on('mouseleave', '.pin-input', function() {
-    //     $(this).blur();
-    //    //console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
-    //     t = $(this).val();
-        
-    //     var pid = $(this).closest('.p_number').attr("id");//.newPin.attr("id");
-    //     //var pidnr = pid.substr(11);
-        
-    //     //ptop = $(this).closest('.pin-clone').offset().top / $(document).height();//newPin.offset().top;
-    //     //pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left;
-    //     //pObj = {value : t, top: ptop, left: pleft, id: pid};
-    //     pinParagraph(pid,t);
-    //     //checkPin(pid,t);
-    //     //$(this).closest('.pin-form, .pin-close').fadeToggle();
-    // });
-
-////DELETE SINGLE PIN, REMOVE FROM ARRAY, LIST AND LOCALSTORAGE
-    // $('#content').on('click', '.pin-close', function() {
-    //     var pid = $(this).parent().attr('id');
-    //     //console.log(pid);
-    //     var pinID = $(this).parent().attr('id').substr(11);
-    //     //console.log('will remove ' + pid);
-    //     //remove the item from the pins array and localStorage
-    //     for(var i=0; i<pins.length; i++){
-    //         if(pins[i]["id"] == pid){
-    //             //console.log(pinID, pins);
-    //             pins.splice(i, 1);
-    //             //console.log(pinID, pins);
-    //             localStorage.setItem("saved_pins", JSON.stringify(pins));
-    //             //delete item on the list as well
-    //             $("#pins-list li").eq(i).remove();
-    //             $(this).parent().remove();
-    //         } //end if
-    //     } //end for
-        
-    // });
-
-////DELETE PIN FROM LIST, REMOVE FROM SCREEN, ARRAY AND LOCALSTORAGE
-    // $('#pin_wrapper').on('click','.delete-pin', function(){
-    //     var pid = $(this).siblings('a').attr('href');
-    //     pid = pid.substr(1);
-    //     //console.log(pid);
-        
-    //     for(var i=0; i<pins.length; i++){
-    //         if(pins[i]["id"] == pid){
-    //             //console.log(i);
-    //             pins.splice(i, 1);
-    //             //console.log(pinID, pins);
-    //             localStorage.setItem("saved_pins", JSON.stringify(pins));
-    //             $("#"+pid).remove();
-    //             //delete item on the list as well
-    //             //$("#pins-list li").eq(i).remove();
-    //             $(this).parent().remove();
-    //         } //end if
-    //     } //end for
-    // });
 
 ////EXECUTES WHEN NEW PIN IS DROPPED FOR THE FIRST TIME
     function createPin(e, ui) {
@@ -1452,14 +895,7 @@ $('.add').on('click', function() {
             snapMode: "outer",
             stop: pinMoved
         });
-        // newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
-        //     containment: '#main',
-        //     cursor: 'move',
-        //     snapTolerance: 100,
-        //     snap: '#content',
-        //     snapMode: "outer",
-        //     stop: pinMoved
-        // });
+
 
         t = newPin.find('.pin-input').val();
        // pinWidth = newPin.find('.pin-form').width();
@@ -1571,11 +1007,7 @@ $('.add').on('click', function() {
                     $('#keyword_toggle'+i).closest('.section').highlight(keywords[i], {element: 'span', className: keywords[i], wordsOnly: true});
                     $(this).addClass('active');
                     $('#keyword-hide-all').removeClass('active');
-
-
                 }
-            // } else {
-            //     $('.keyword-button.active').trigger('click');
             }
         }
     });
@@ -1584,22 +1016,9 @@ $('.add').on('click', function() {
 ////HIDE -ALL- KEYWORDS TOGGLE
     $('#keyword-hide-all_xs, #keyword-hide-all').on('click', function() {
         $(this).button('toggle');
-        // for (var i = 0; i < keywords.length; i++) {
-            // if ($(this).hasClass('active')) {
-            //     if ($('#keyword_toggle'+i).hasClass('active')) {
-            //         console.log('active');
-            //     } else {
-            //         $('#keyword_toggle'+i).button('toggle');
-            //         $('#keyword_toggle'+i).closest('.section').highlight(keywords[i], {element: 'span', className: keywords[i], wordsOnly: true});
-            //     }
-            // } else {
-                $('.keyword-button.active').trigger('click');
-            // }
-        // }
+        $('.keyword-button.active').trigger('click');
         $(this).addClass('active');
-
         $('#keyword-show-all').removeClass('active');
-
     });
 
 
@@ -1620,7 +1039,6 @@ $('.add').on('click', function() {
 
 ////ON ARROW-DOWN CLICK SCROLL TO NEXT SECTION
     $('#down').on('click', function (e) {
-        // var scrollTop = $(document).scrollTop();
         e.preventDefault(); 
 ////////SET DATA-TOP FOR EVERY SECTION
         $('.section').each(function() {
@@ -1696,17 +1114,10 @@ var fontSize;
         fadeOutSidenotes();
         fontSize = parseInt($(".section").css('font-size'));
         //console.log('will DECREASE to' + fontSize );
-        // $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
-        //     alignSidenotes();
-        //     alignVertically();
-        //     alignParagraphNumbers();
-        // });
-        //replaced animation with dry css properties
         $('.section').not('.references').css('font-size',Number(fontSize-1)+'px');
         alignSidenotes();
         alignVertically();
         alignParagraphNumbers();
-        //
         fadeInSidenotes();
         H = html.outerHeight(true);
         S = $(window).scrollTop();
@@ -1718,17 +1129,10 @@ var fontSize;
         fadeOutSidenotes();
         fontSize = parseInt($(".section").css('font-size'));
         //console.log('will INCREASE ' + fontSize );
-        // $('.section').not('.references').animate({'font-size': '+=0.5'}, function() {
-        //     alignSidenotes();
-        //     alignVertically();
-        //     alignParagraphNumbers();
-        // });
-        //replaced animation with dry css properties
         $('.section').not('.references').css('font-size',Number(fontSize+1)+'px');
         alignSidenotes();
         alignVertically();
         alignParagraphNumbers();
-        //
         fadeInSidenotes();
         H = html.outerHeight(true);
         S = $(window).scrollTop();
