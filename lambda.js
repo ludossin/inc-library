@@ -18,14 +18,27 @@
 //}
 
 $(document).ready(function(){
-  
-    
+
+   var thisPage = $('.add-to-collection').attr('id'); //used in localStorage reading Position
+   
 //////////////////////////////////////////////////////////////////////////////////
 ////HIDE AND SHOW THE LIBRARY TREE ON SCROLL AFTER INFO-BOX
 //////////////////////////////////////////////////////////////////////////////////
     var lastScrollTop = 0, delta = 10;
 
     $(window).scroll(function(){
+      //get number of 'top most' visible paragraph (localStorage reading Position)
+      var firstVisPar = $(window).scrollTop();
+     
+      $('.paragraph').each(function() {
+          if ($(this).offset().top > firstVisPar) {
+              var readingPosition = $(this).attr('id');
+              localStorage.setItem(thisPage, readingPosition);
+              return false; 
+          }
+      });
+      //end localStorage reading Position
+      
         //if ($(document).scrollTop() < $('#info-box').outerHeight(true) - parseInt($('#up').css('top'))) {
         //} else {
         //    if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
@@ -856,6 +869,14 @@ $('.add').on('click', function() {
 ////GET SAVED ITEMS
     //checks if localStorage is supported and if it has been set
     if(typeof(Storage) !== "undefined") {  //browser supports localStorage
+      //reading position
+      if(localStorage.getItem(thisPage)){
+         $('html, body').stop().animate({
+            scrollTop: $("#"+localStorage.getItem(thisPage)).offset().top
+        }, 2000);
+      }else{
+         //no position saved for this page
+      }
         if(localStorage.getItem("saved_collection")) {
             colElements = JSON.parse(localStorage.getItem("saved_collection"));
             if(colElements.indexOf($(".add-to-collection").attr("id")) != -1){
