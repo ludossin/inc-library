@@ -1,22 +1,3 @@
-
-//if (!Array.prototype.some)
-//{
-//   Array.prototype.some = function(fun /*, thisp*/)
-//   {
-//      var len = this.length;
-//      if (typeof fun != "function")
-//      throw new TypeError();
-//      
-//      var thisp = arguments[1];
-//      for (var i = 0; i < len; i++)
-//      {
-//         if (i in this && fun.call(thisp, this[i], i, this))
-//         return true;
-//      }
-//      return false;
-//   };
-//}
-
 $(document).ready(function(){
 
    var thisPage = $('.add-to-collection').attr('id'); //used in localStorage reading Position
@@ -34,6 +15,7 @@ $(document).ready(function(){
           if ($(this).offset().top > firstVisPar) {
               var readingPosition = $(this).attr('id');
               localStorage.setItem(thisPage, readingPosition);
+              //console.log(readingPosition);
               return false; 
           }
       });
@@ -117,92 +99,6 @@ $(document).ready(function(){
         $(this).hide();
         $('#menu').animate({left: -menu_width});
     });
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////SIDENOTES
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    ////MAKES FOOTNOTES SIDENOTES
-    var noteCount = $('.sidenote').length; //nr of sidenotes USED in alignSideNotes 
-    function alignSidenotes() {
-        $('.sidenote').each(function(tic){
-            $('#fn'+tic).each(function(){
-                var anchorposition = $('#fnref'+tic).offset().top;
-                $(this).offset({top: anchorposition});
-                //console.log(tic + ' alignSideNotes -> '+ anchorposition);
-            });
-        });
-        //add last one manually
-        var anchorposition = $('#fnref'+noteCount).offset().top;
-        $('#fn'+noteCount).offset({top: anchorposition});
-    }
-
-
-
-    ////ALIGN SIDENOTES VERTICALL SO THEY DON'T OVERLAP
-
-    function alignVertically() {
-        $('.sidenote').each(function(count){
-            //console.log('count ' + count);
-            //noteCount = count + 1;
-            $('#fn'+count).each(function() {
-                var sideTop = $(this).offset().top;
-                var sideBottom = sideTop+$(this).height();
-                var newHeight = (sideBottom+10);
-                var sideNext = $('#fn'+(count+1));
-                
-                if (sideNext) {
-                    var sideNextTop = sideNext.offset().top;
-                }
-                if ((sideBottom-sideNextTop) > 0) {
-                    $('#fn'+(count+1)).offset({top: newHeight});
-                }
-                //console.log(count + 'alignVertically -> '+ newHeight);
-            });
-        });       
-    }
-
-    sideToBox();
-
-
-    ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
-    if ($(window).width() > "480") {
-        $('a sup').click(function(ev){
-            var numbr = $(this).text();
-            var aidee = $('#fn'+numbr);
-            ev.stopPropagation();
-            ev.preventDefault();
-        });
-    }
-
-    ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
-    function fadeOutSidenotes() {
-        $('.sidenote').css('opacity',0);
-    }
-
-    ////FADES IN SIDENOTES AND SLIDES THEM LEFT
-    function fadeInSidenotes() {
-        $('.sidenote').css('opacity',1);
-    }
-
-    ////SIDENOTES BECOME POPOVER BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
-    function sideToBox() {
-        //console.log('calling sideToBox');
-        if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
-            //console.log('< 768');
-            $(".footnoteRef").each(function(){
-                var n = $(this).text();
-                var tt = $("#fn"+n).text();
-                $(this).attr({"data-toggle": "popover", "data-content": tt, "data-placement": "top", "href": "#", "role": "button", "data-trigger": "focus", "tabindex": n}).addClass("button");
-                $("#fnref"+n).popover();
-            });
-            //prevents page to scroll to top
-            $('a.footnoteRef').on('click', function(e) {e.preventDefault(); return true;});
-
-        } else {
-            //console.log('NOT < 768');
-            $('[data-toggle="popover"]').popover('destroy');
-        }
-    }
     
     
 ////ANIMATE SIDENOTES AND STUFF
@@ -908,81 +804,81 @@ $('.add').on('click', function() {
         //var pinWidth;
 
 ////////DRAG IT, GET TAG NAME FROM USER, ASSIGN DEFAULT ID TO IT, AND UPDATE VALUES WHEN EDITED OR MOVED
-        newPin.appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
-            containment: '#main',
-            cursor: 'move',
-            snapTolerance: 100,
-            snap: '#content',
-            snapMode: "outer",
-            stop: pinMoved
-        });
+        // newPin.appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
+        //     containment: '#main',
+        //     cursor: 'move',
+        //     snapTolerance: 100,
+        //     snap: '#content',
+        //     snapMode: "outer",
+        //     stop: pinMoved
+        // });
 
 
-        t = newPin.find('.pin-input').val();
-       // pinWidth = newPin.find('.pin-form').width();
-        pid = newPin.attr("id");
-        ptop = newPin.offset().top / $(document).height();
-        pleft = newPin.offset().left;
-        pObj = {value : t, top: ptop, left: pleft, id: pid};
-        pins.push(pObj);
-        //console.log('t -> '+t);
-        //css the trash icon left margin
-        //newPin.find('.pin-close').css('margin-left',pinWidth - 30+'px');
-        //update the list on the menu
+       //  t = newPin.find('.pin-input').val();
+       // // pinWidth = newPin.find('.pin-form').width();
+       //  pid = newPin.attr("id");
+       //  ptop = newPin.offset().top / $(document).height();
+       //  pleft = newPin.offset().left;
+       //  pObj = {value : t, top: ptop, left: pleft, id: pid};
+       //  pins.push(pObj);
+       //  //console.log('t -> '+t);
+       //  //css the trash icon left margin
+       //  //newPin.find('.pin-close').css('margin-left',pinWidth - 30+'px');
+       //  //update the list on the menu
 
         //MOVE INLINE CSS TO FILE
-        $('#pins-list').append('<li><a href="#dragged-pin'+last_pinID+'">new Pin</a> <i class="fa fa-ban delete-pin" style="color: red; cursor: pointer;"></i></li>');
-        //saves to localStorage
-        localStorage.setItem("saved_pins", JSON.stringify(pins));
-        localStorage.setItem("last_pinID", last_pinID);
+        // $('#pins-list').append('<li><a href="#dragged-pin'+last_pinID+'">new Pin</a> <i class="fa fa-ban delete-pin" style="color: red; cursor: pointer;"></i></li>');
+        // //saves to localStorage
+        // localStorage.setItem("saved_pins", JSON.stringify(pins));
+        // localStorage.setItem("last_pinID", last_pinID);
 
-        newPin.find('.pin-form').css('display', 'inline');
-        newPin.find('.pin-input').focus();
+        // newPin.find('.pin-form').css('display', 'inline');
+        // newPin.find('.pin-input').focus();
 
 
 ////////ON SUBMIT (ENTER) 
-        newPin.find('.pin-form').submit(function(e){
-            //alert(e.target);
-            //$(this).find('.pin-form').hide();
-           checkPin(pid,t); //return false there (not anymore)
-            e.preventDefault();
-           // return false;
-        });
+        // newPin.find('.pin-form').submit(function(e){
+        //     //alert(e.target);
+        //     //$(this).find('.pin-form').hide();
+        //    checkPin(pid,t); //return false there (not anymore)
+        //     e.preventDefault();
+        //    // return false;
+        // });
 
 ////////ON FOCUSOUT UPDATE PIN DATA ETC
-        newPin.find('.pin-input').focusout(function() {
-        //$('#content').find('.pin-input').focusout(function() {
-            $(this).blur();
-            //console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
-            t = $(this).val();
+        // newPin.find('.pin-input').focusout(function() {
+        // //$('#content').find('.pin-input').focusout(function() {
+        //     $(this).blur();
+        //     //console.log('focusout '+ $(this).closest('.pin-clone').attr("id"));
+        //     t = $(this).val();
             
-            var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
-            var pidnr = pid.substr(11);
+        //     var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
+        //     var pidnr = pid.substr(11);
             
-            ptop = $(this).closest('.pin-clone').offset().top / $(document).height();//newPin.offset().top;
-            pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left; //FIX THIS TOO
-            pObj = {value : t, top: ptop, left: pleft, id: pid};
+        //     ptop = $(this).closest('.pin-clone').offset().top / $(document).height();//newPin.offset().top;
+        //     pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left; //FIX THIS TOO
+        //     pObj = {value : t, top: ptop, left: pleft, id: pid};
 
-            checkPin(pid,t);
-            $(this).closest('.pin-form, .pin-close').fadeOut();
-        });
+        //     checkPin(pid,t);
+        //     $(this).closest('.pin-form, .pin-close').fadeOut();
+        // });
 
-        newPin.find('.pin-input').mouseout(function() {
-        //$('#content').find('.pin-input').mouseout(function() {
-            $(this).blur();
-            //console.log('mouseleave '+ $(this).closest('.pin-clone').attr("id"));
-            t = $(this).val();
+        // newPin.find('.pin-input').mouseout(function() {
+        // //$('#content').find('.pin-input').mouseout(function() {
+        //     $(this).blur();
+        //     //console.log('mouseleave '+ $(this).closest('.pin-clone').attr("id"));
+        //     t = $(this).val();
 
-            var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
-            var pidnr = pid.substr(11);
+        //     var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
+        //     var pidnr = pid.substr(11);
 
-            ptop = $(this).closest('.pin-clone').offset().top / $(document).height();//newPin.offset().top;
-            pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left; // FIX THIS TOO
-            pObj = {value : t, top: ptop, left: pleft, id: pid};
+        //     ptop = $(this).closest('.pin-clone').offset().top / $(document).height();//newPin.offset().top;
+        //     pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left; // FIX THIS TOO
+        //     pObj = {value : t, top: ptop, left: pleft, id: pid};
 
-            checkPin(pid,t);
-            $(this).closest('.pin-form, .pin-close').fadeOut();
-        });
+        //     checkPin(pid,t);
+        //     $(this).closest('.pin-form, .pin-close').fadeOut();
+        // });
     }
 
 
@@ -1111,6 +1007,131 @@ $('.add').on('click', function() {
             }
         });
     });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////SIDENOTES
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
+    if ($(window).width() > "480") {
+        $('a sup').click(function(ev){
+            var numbr = $(this).text();
+            var aidee = $('#fn'+numbr);
+            ev.stopPropagation();
+            ev.preventDefault();
+        });
+    }
+
+    ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
+    function fadeOutSidenotes() {
+        $('.sidenote').css('opacity',0);
+    }
+
+    ////FADES IN SIDENOTES AND SLIDES THEM LEFT
+    function fadeInSidenotes() {
+        $('.sidenote').css('opacity',1);
+    }
+
+    ////SIDENOTES BECOME POPOVER BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
+    function sideToBox() {
+        //console.log('calling sideToBox');
+        if ($(window).width() < "768") {    //SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+            //console.log('< 768');
+            $(".footnoteRef").each(function(){
+                var n = $(this).text();
+                var tt = $("#fn"+n).text();
+                $(this).attr({"data-toggle": "popover", "data-content": tt, "data-placement": "top", "href": "#", "role": "button", "data-trigger": "focus", "tabindex": n}).addClass("button");
+                $("#fnref"+n).popover();
+            });
+            //prevents page to scroll to top
+            $('a.footnoteRef').on('click', function(e) {e.preventDefault(); return true;});
+
+        } else {
+            //console.log('NOT < 768');
+            $('[data-toggle="popover"]').popover('destroy');
+        }
+    }
+
+    ////MAKES FOOTNOTES SIDENOTES
+    var noteCount = $('.sidenote').length; //nr of sidenotes USED in alignSideNotes 
+    function alignSidenotes() {
+        $('.sidenote').each(function(tic){
+            $('#fn'+tic).each(function(){
+                var anchorposition = $('#fnref'+tic).offset().top;
+                $(this).offset({top: anchorposition});
+                //console.log(tic + ' alignSideNotes -> '+ anchorposition);
+            });
+        });
+        //add last one manually
+        var anchorposition = $('#fnref'+noteCount).offset().top;
+        $('#fn'+noteCount).offset({top: anchorposition});
+    }
+
+
+
+    ////ALIGN SIDENOTES VERTICALL SO THEY DON'T OVERLAP
+
+    function alignVertically() {
+        $('.sidenote').each(function(count){
+            //console.log('count ' + count);
+            //noteCount = count + 1;
+            $('#fn'+count).each(function() {
+                var sideTop = $(this).offset().top;
+                var sideBottom = sideTop+$(this).height();
+                var newHeight = (sideBottom+10);
+                var sideNext = $('#fn'+(count+1));
+                
+                if (sideNext) {
+                    var sideNextTop = sideNext.offset().top;
+                }
+                if ((sideBottom-sideNextTop) > 0) {
+                    $('#fn'+(count+1)).offset({top: newHeight});
+                }
+                //console.log(count + 'alignVertically -> '+ newHeight);
+            });
+        });       
+    }
+
+    sideToBox();
+
+/*///////////////////////
+ON RESIZE DO THESE THINGS
+///////////////////////*/
+    var html = $('html'),
+        H = html.outerHeight(true),
+        S = $(window).scrollTop(),
+        P = S/H;
+
+    $(window).resize(function() {
+        //update vars
+        menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
+        window_width = $(window).width();
+////////ALIGNS SIDENOTES ON WINDOW RESIZE
+        //save to local Storage too
+        firstVisPar = $(window).scrollTop();
+        $('.paragraph').each(function() {
+          if ($(this).offset().top > firstVisPar) {
+              var readingPosition = $(this).attr('id');
+              localStorage.setItem(thisPage, readingPosition);
+              //console.log(readingPosition);
+              return false; 
+          }
+        });
+        //
+        fadeOutSidenotes();
+        sideToBox();
+        alignSidenotes();
+        alignVertically();
+        alignParagraphNumbers();
+        fadeInSidenotes();
+        H = html.outerHeight(true);
+        //$(window).scrollTop(P*H);
+        cancelSearch(); //trying to fix the empty page after submit
+        //console.log('changed ' + window_width);
+    });
+
+
 
 ////////////
 ////SETTINGS
