@@ -1181,7 +1181,28 @@ color: rgba(0, 0, 0, 0.5);
     color: #000;
 }
 
+#menu_bar_title{
 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: center left;
+    -moz-transform-origin: center left;
+    -ms-transform-origin: center left;
+    -o-transform-origin: center left;
+    transform-origin: center left;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    transition: color .5s;
+    font-size: 12px;
+    text-transform: uppercase;
+    white-space: nowrap; 
+    -webkit-transform: rotate(-90deg) translate(-50%);
+    -moz-transform: rotate(-90deg) translate(-50%);
+    -ms-transform: rotate(-90deg) translate(-50%);
+    -o-transform: rotate(-90deg) translate(-50%);
+    transform: rotate(-90deg) translate(-50%);
+}
 
 @media (max-width: 768px) {
 
@@ -1478,29 +1499,55 @@ color: rgba(0, 0, 0, 0.5);
 .search_nav {
     /*position: absolute;*/
     position: fixed;
-    margin-top: -35px;
+    margin-top: 25px;
     background-color: transparent;
     box-shadow: none;
     border: none;
 }
 
+.hide-show{
+    display: block;
+}
+
 #prev {
-    right: 35px;
+    right: 75px;
+    font-size: 30px;
 }
 
 #next {
-    right: 15px;
+    right: 45px;
+    font-size: 30px;
+}
+
+#prev_xs{
+    display: block;
+    position: fixed;
+    right: 55px;
+    font-size: 25px;
+    bottom:45px;
+}
+
+#next_xs{
+    display: block;
+    position: fixed;
+    right: 25px;
+    font-size: 25px;
+    bottom:45px;
+}
+#search_ui_xs{
+    position: fixed;
+    display: none;
 }
 
 #cancel {
     position: fixed;
-    margin-top: -80px;
+    margin-top: 25px;
     background-color: transparent;
     box-shadow: none;
     border: none;
     right: 15px;
     color: #c7c7c7;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .search-notfound {
@@ -1568,6 +1615,7 @@ color: rgba(0, 0, 0, 0.5);
 
 @media (max-width: 768px) {
 
+    
 
     .horizScroll {
         margin-left: -50px !important;
@@ -1645,25 +1693,60 @@ fieldset {
     border-radius: 0;
     margin-left: 0;
     margin-right: 15px;
-
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 #filter > * {
 }
 
+.live-search-clicked{
+    font-size:30px !important;
+}
+
 /* how is the text the user writes when searching */
 #filter-count {
+
     font-size: 13px;
     font-family: "Hk_groteskregular";
     text-align: right;
     position: fixed;
     color: #6f6f6f;
     z-index: 1;
-    margin-top: -25px;
-    margin-left: 10px;
+    right: 39px;
+    margin-left: 0;
+    margin-top: 0px;
+    /* padding: 10px; */
+    /* background-color: white; */
 }
 
+.filter-clicked{
+    border-style: none;
+    background-color: #fff;
+    box-shadow: none;
+    font-size: 30px;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 15px;
+    margin-top: 0px;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    right: 0px;
+}
+
+.form-clicked{
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 6px 12px;
+    font-size: 30px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+}
 #filter.text-input {
 }
 
@@ -1766,7 +1849,9 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     position: fixed;
     padding-top: 2px;
     -webkit-padding-start: 0;
-    z-index: 1;
+    z-index: 99999999;
+    font-size: 30px;
+
 }
 
 .ui-menu-item {
@@ -2413,6 +2498,7 @@ ol {
 
 .panel-default>.panel-heading {
 
+    padding-right: 0;
     border-radius: 8px;
     padding-left: 0;
     padding-bottom: 5px;
@@ -2632,6 +2718,7 @@ blockquote p {
     height: auto;
     z-index: 1;
     margin-left:3%;
+    z-index:-999;
 }
 
 .p_number {
@@ -2770,6 +2857,16 @@ blockquote p {
 
         color: gray;
     }
+    .section {
+        font-size: 56%;
+        clear: left;
+        padding-left: 0;
+        /*     background-color: #ffffff;
+        -webkit-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
+        -moz-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
+        box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99); */
+    }
+
 }
 
 input:focus,select:focus,textarea:focus,button:focus {
@@ -2823,6 +2920,7 @@ input:focus,select:focus,textarea:focus,button:focus {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+
     #info-box img {
         /* max-width: 280px; */
         width: auto;
@@ -2944,7 +3042,7 @@ input:focus,select:focus,textarea:focus,button:focus {
     ol {
         list-style-type: disc;
         margin: 0;
-        padding: 15px 0 0 25px;
+        padding: 10px 0 0 0px;
     }
 
     blockquote {

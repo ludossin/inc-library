@@ -225,6 +225,19 @@ $(document).ready(function(){
     var maxCount;
     var counter = 0;
     var topPos; //scrollTo position
+    
+    $("#live-search").click(function(){
+        $(this).addClass('filter-clicked');
+        $('.form-control').addClass('form-clicked');
+        $('#filter').addClass('live-search-clicked');
+        $('#buttons_wrapper').addClass('hide-show');
+    });
+    $("#cancel").click(function(){
+        $("#live-search").removeClass('filter-clicked');
+        $('.form-control').removeClass('form-clicked');
+        $('#filter').removeClass('live-search-clicked');
+        $('#buttons_wrapper').removeClass('hide-show');
+    });
 
 ////CANCEL SEARCH AND REMOVE HIGHLIGHTING
     function cancelSearch() {
@@ -745,7 +758,7 @@ var filter;
 //////////////////////
 $('.add').on('click', function() {
     if ( $(this).text()=='Add to collection +'){
-        $(this).text('Remove from collection -');
+        $(this).text('Remove -');
         //alert('You added this publication to your collection');
         //save element id to localStorage
         colElements.push($(".add-to-collection").attr("id"));
@@ -776,7 +789,7 @@ $('.add').on('click', function() {
         if(localStorage.getItem("saved_collection")) {
             colElements = JSON.parse(localStorage.getItem("saved_collection"));
             if(colElements.indexOf($(".add-to-collection").attr("id")) != -1){
-                $('.add-to-collection').find(".add").text('Remove from collection -');
+                $('.add-to-collection').find(".add").text('Remove -');
             } else{
                 $('.add-to-collection').find(".add").text('Add to collection +');
             }

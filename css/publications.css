@@ -3310,7 +3310,31 @@ cursor: pointer;
     margin-bottom: 10px;
 }
 
+@media (max-width:1200px){
+    .post {
+        padding: 0;
+        padding-top: 15px;
+        margin-top: 0px;
+        padding-bottom: 15px;
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        cursor: default;
+    }
+}
+
 @media (max-width:992px){
+
+    .post {
+        padding: 0;
+        padding-top: 15px;
+        margin-top: 0px;
+        padding-bottom: 15px;
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+        cursor: default;
+    }
+
+    
     .panel-body {
         margin: 0;
         padding-left: 5%;
