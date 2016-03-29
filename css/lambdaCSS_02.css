@@ -720,7 +720,7 @@ a {
 }
 
 .horizScroll {
-    margin-left: -19%;
+    margin-left: -16%;
     width: 35px;
     border-bottom: 1px solid #f4F4F4;
     background: rgb(232, 232, 232);
@@ -995,8 +995,8 @@ a.page-scroll:hover,a.page-scroll:active,a.page-scroll:link,a.page-scroll:visite
     position: fixed;
     padding-left: 5px;
     padding-right: 10px;
-    background-color: #f4f4f4;
-    cursor: pointer;
+/*     background-color: #f4f4f4;
+     */    cursor: pointer;
     height: 100%;
     display: flex;
     align-items: center;
@@ -1038,11 +1038,13 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
+
     -webkit-margin-end: 0;
-    margin: 16%;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
+    /* margin: 16%; */
+    /* margin-right: 7%; */
+    margin-left: 14£;
+    padding-left: 16%;
+    
     text-align: left;
     padding-top: 0;
     /* background-color: #ffffff; */
@@ -1082,13 +1084,19 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANElEQ…sYTyLagiKiTBFMOcgKyZPIcgkoqzGFwLk+xqXqQCyIAwL739UDQAAAABJRU5ErkJggg== ) repeat; */
     /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYV2NkIAL8N2b4z0iEOoZRhXhDCRw8IIKYsAQAXSoV9egc4oEAAAAASUVORK5CYII= ) repeat; */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff691+13,fff691+13,ff3300+100 */
-    background: rgb(255,246,145); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,246,145,1) 13%, rgba(255,246,145,1) 13%, rgba(255,51,0,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,246,145,1) 13%,rgba(255,246,145,1) 13%,rgba(255,51,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,246,145,1) 13%,rgba(255,246,145,1) 13%,rgba(255,51,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff691', endColorstr='#ff3300',GradientType=0 ); /* IE6-9 */
+   /* background: rgb(255,246,145); /* Old browsers */
+   /* background: -moz-linear-gradient(top,  rgba(255,246,145,1) 13%, rgba(255,246,145,1) 13%, rgba(255,51,0,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(255,246,145,1) 13%,rgba(255,246,145,1) 13%,rgba(255,51,0,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(255,246,145,1) 13%,rgba(255,246,145,1) 13%,rgba(255,51,0,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff691', endColorstr='#ff3300',GradientType=0 );*/
+    background-color:orangered;
 
+}
 
+.fixedDiv{
+    position: fixed;
+    top:0;
+    left:0;
 }
 
 .arrow-down{
@@ -1157,11 +1165,11 @@ color: rgba(0, 0, 0, 0.5);
     width: 40px;
     position: fixed;
     display: block;
-    background-color: #F4F4F4;
     -webkit-transition: width .15s ease;
     -moz-transition: width .15s ease;
     -o-transition: width .15s ease;
     transition: width .15s ease;
+    background-color:#F4F4F4;
 }
 
 #menu_bar_title_button {
@@ -1205,8 +1213,35 @@ color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
+    #menu h2{
+        margin-left:0;
+        padding-left:16%;
+    }
+    
+    
+    
+    #info-box .summary {
+        margin-top: 0px;
+        font-size: 15px;
+        padding-left:0px;
+    }
+    #menu_bar_scroll{
+        width:35px;
+    }
+    .info-box-right p{
+        margin-left:-15px;
+    }
 
-
+    .info-box-right {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        padding-left: 0%;
+    }
+    
+    .info-box-left {
+        padding-bottom: 0px;
+        padding-left: 0%;
+    }
 
     #info-box-left-img-container {
         background-color: #f4f4f4;
@@ -1291,6 +1326,108 @@ color: rgba(0, 0, 0, 0.5);
 
     .toggle_menu_left_button div {
         color: transparent;
+    }
+    
+    #menu_bar_gotoinc{
+        height: 35px !important;
+        margin-left: 35px;
+        width: 100%;
+        top: 0 !important;
+        background: white;
+    }    
+
+
+    .info-box-left {
+        padding-bottom: 0px;
+        padding-left: 0%;
+    }
+
+    #menu_bar_gotoinc:hover{
+        width: auto;
+    }
+
+    .arrow-down{
+        margin-top: 14px;
+        width: 17px;
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);}
+
+    .nav-up {
+        top: -40px;
+    }
+
+    #menu_bar_gotoinc_button {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        -webkit-transform-origin: center left;
+        -moz-transform-origin: center left;
+        -ms-transform-origin: center left;
+        -o-transform-origin: center left;
+        transform-origin: center left;
+        -webkit-transition: color .5s;
+        -moz-transition: color .5s;
+        transition: color .5s;
+        color: black;
+        font-size: 20px;
+        font-family: "Hk_groteskmedium";
+        text-transform: uppercase;
+        white-space: nowrap;
+        -webkit-transform: rotate(90deg) translate(-50%);
+        -moz-transform: rotate(90deg) translate(-50%);
+        -ms-transform: rotate(90deg) translate(-50%);
+        -o-transform: rotate(90deg) translate(-50%);
+        transform: rotate(90deg) translate(-50%);
+    }
+    
+    #menu_bar_gotoinc_button {
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        -webkit-transform-origin: center left;
+        -moz-transform-origin: center left;
+        -ms-transform-origin: center left;
+        -o-transform-origin: center left;
+        transform-origin: center left;
+        -webkit-transition: color .5s;
+        -moz-transition: color .5s;
+        transition: color .5s;
+        color: black;
+        font-size: 20px;
+        font-family: "Hk_groteskmedium";
+        text-transform: uppercase;
+        white-space: nowrap;
+        -webkit-transform: rotate(90deg) translate(-50%);
+        -moz-transform: rotate(90deg) translate(-50%);
+        -ms-transform: rotate(90deg) translate(-50%);
+        -o-transform: rotate(90deg) translate(-50%);
+        transform: rotate(90deg) translate(-50%);
+    }
+
+    #menu_bar_gotoselection{
+        height:30px;
+        width:100%;
+        top:30px;
+        left:0px;
+        position:fixed;
+        background-color:white;
+    }
+    #menu_bar_gotoinc_button, #menu_bar_gotoselection_button{
+        -webkit-transform: rotate(0deg) translate(0%);
+        -moz-transform: rotate(0deg) translate(0%);
+        -ms-transform: rotate(0deg) translate(0%);
+        -o-transform: rotate(0deg) translate(0%);
+        transform: rotate(0deg) translate(0%);
+    }
+    
+    #menu_bar_scroll{
+        left:0;
+    }
+    
+    #menu_bar{
+        left:0;
+        width: 35px;
     }
 }
 
@@ -1510,21 +1647,24 @@ color: rgba(0, 0, 0, 0.5);
 }
 
 #prev {
-    right: 75px;
-    font-size: 30px;
+    right: 95px;
+    font-size: 40px;
+    width: 50px;
 }
 
 #next {
     right: 45px;
-    font-size: 30px;
+    font-size: 40px;
+    width: 50px;
 }
 
 #prev_xs{
     display: block;
     position: fixed;
-    right: 55px;
+    right: 75px;
     font-size: 25px;
     bottom:45px;
+    width:50px;
 }
 
 #next_xs{
@@ -1532,7 +1672,8 @@ color: rgba(0, 0, 0, 0.5);
     position: fixed;
     right: 25px;
     font-size: 25px;
-    bottom:45px;
+    bottom: 45px;
+    width: 50px;
 }
 #search_ui_xs{
     position: fixed;
@@ -1541,11 +1682,12 @@ color: rgba(0, 0, 0, 0.5);
 
 #cancel {
     position: fixed;
-    margin-top: 25px;
-    background-color: transparent;
+    margin-top: -11px;
+    /* background-color: white; */
+    background-color:transparent;
     box-shadow: none;
     border: none;
-    right: 15px;
+    right: 14px;
     color: #c7c7c7;
     font-size: 30px;
 }
@@ -1614,11 +1756,23 @@ color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
-
-    
+    #book-title{
+        margin-left:-15px;
+    }
+    #book-author{
+        margin-left:-15px;
+    }
+    #content{
+        padding-left:0;
+    }
+    .info-box-right {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        padding-left: 0%;
+    }
 
     .horizScroll {
-        margin-left: -50px !important;
+        margin-left: -19%;
         width: 35px;
         border-bottom: 1px solid #f4F4F4;
         background: rgb(232, 232, 232);
@@ -1661,7 +1815,28 @@ color: rgba(0, 0, 0, 0.5);
 Search box is where the user can enter keyword (in input) and look for words in text */
 #live-search {
     margin-bottom: 10px;
+/*
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+*/
 }
+
+.filter-clicked{
+    border-style: none;
+    background-color: #fff;
+    font-size: 30px;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 15px;
+    margin-top: 0px;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    right: 0px;
+}
+
+
 
 .form-control {
     display: block;
@@ -1684,7 +1859,15 @@ fieldset {
     border-style: none;
     background-color: transparent;
 }
-
+/* 
+#filter:focus{
+    background-color:white;
+    font-size:30px;
+    width:300px;
+    height:100Px;
+    position:fixed;
+    right:15px;
+} */
 #filter {
     border-style: none;
     background-color: #fff;
@@ -1705,33 +1888,18 @@ fieldset {
 
 /* how is the text the user writes when searching */
 #filter-count {
-
     font-size: 13px;
     font-family: "Hk_groteskregular";
     text-align: right;
     position: fixed;
     color: #6f6f6f;
     z-index: 1;
-    right: 39px;
+    /* right: 39px; */
     margin-left: 0;
-    margin-top: 0px;
+    margin-top: 5px;
+    right: 55px;
+    margin-right: 0px;
     /* padding: 10px; */
-    /* background-color: white; */
-}
-
-.filter-clicked{
-    border-style: none;
-    background-color: #fff;
-    box-shadow: none;
-    font-size: 30px;
-    border-radius: 0;
-    margin-left: 0;
-    margin-right: 15px;
-    margin-top: 0px;
-    position: absolute;
-    width: 400px;
-    height: 100px;
-    right: 0px;
 }
 
 .form-clicked{
@@ -1851,11 +2019,12 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     -webkit-padding-start: 0;
     z-index: 99999999;
     font-size: 30px;
-
+    margin-top:-2px;
+    overflow-y: scroll;
 }
 
 .ui-menu-item {
-    background-color: #fff;
+    background-color: white;
     cursor: pointer;
     /*     -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
@@ -1863,14 +2032,12 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     border-bottom: 1px solid #f4f4f4;
     padding-left: 3px;
     z-index: 1;
+    overflow-y: scroll;
+    color: black;
 }
 
 .ui-menu-item:hover {
     background-color: #f4f4f4;
-}
-
-.ui-menu-item:focus {
-    background-color: #FF5200;
 }
 
 /*************************************
@@ -1982,6 +2149,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     /* color: rgb(0, 0, 255);
     */
     color: #2247FF;
+    background-color: rgba(34, 71, 255, 0.21);
 }
 
 /********CITATIONS************************/
@@ -2759,6 +2927,9 @@ blockquote p {
     overflow: hidden;
     text-overflow: clip;
     height: 45px;
+    font-size: 20px;
+    margin-top: 0px;
+    color: gray;
 }
 
 .panel-open {
@@ -2920,7 +3091,16 @@ input:focus,select:focus,textarea:focus,button:focus {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    #info-box .summary {
+        margin-top: 0px;
+        font-size: 15px;
+    }
 
+
+    .info-box-left {
+        padding-bottom: 0px;
+        padding-left: 0%;
+    }
     #info-box img {
         /* max-width: 280px; */
         width: auto;
@@ -2943,11 +3123,19 @@ input:focus,select:focus,textarea:focus,button:focus {
 
 @media (max-width: 480px) {
     #menu_bar_gotoinc{
-        height:45px !important;
-        width:100% !important;
-        top:0 !important;
+        height: 35px !important;
+        margin-left: 35px;
+        width: 100%;
+        top: 0 !important;
+        background: white;
     }    
 
+
+    .info-box-left {
+        padding-bottom: 0px;
+        padding-left: 0%;
+    }
+    
     #menu_bar_gotoinc:hover{
         width: auto;
     }
@@ -2966,7 +3154,7 @@ input:focus,select:focus,textarea:focus,button:focus {
     #menu_bar_gotoinc_button {
         position: absolute;
         top: 5%;
-        left: 30%;
+        left: 10%;
         -webkit-transform-origin: center left;
         -moz-transform-origin: center left;
         -ms-transform-origin: center left;
@@ -3059,7 +3247,6 @@ input:focus,select:focus,textarea:focus,button:focus {
         height: 45px;
 
         color: gray;
-        border-right: 1px solid gainsboro;
     }
 
     #flip i,#flip2 i,#flip3 i,#flip4 i,#flip5 i,#flip6 i {
@@ -3086,4 +3273,16 @@ input:focus,select:focus,textarea:focus,button:focus {
         transition: width .15s ease;
         left: 0px;
     }
+    
+    #info-box .summary {
+        margin-top: 0px;
+        font-size: 15px;
+    }
+
+    .info-box-right {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        padding-left: 0%;
+    }
 }
+

@@ -61,8 +61,13 @@ $(document).ready(function(){
     });
 
     $('#menu-right-close').on('click', function(e) {
-            $('.toggle_menu_right').fadeIn(0);
-            $('#menu-right').animate({left: + menu_wrapper_width});
+        $('.toggle_menu_right').fadeIn(0);
+        $("#live-search").removeClass('filter-clicked');
+        $('.form-control').removeClass('form-clicked');
+        $('#filter').removeClass('live-search-clicked');
+        $('#buttons_wrapper').css('display', 'none');
+        $('#filter-count').css('display', 'none');
+        $('#menu-right').animate({left: + menu_wrapper_width});
     });
     
 
@@ -226,6 +231,7 @@ $(document).ready(function(){
     var counter = 0;
     var topPos; //scrollTo position
     
+   
     $("#live-search").click(function(){
         $(this).addClass('filter-clicked');
         $('.form-control').addClass('form-clicked');
@@ -239,6 +245,11 @@ $(document).ready(function(){
         $('#buttons_wrapper').removeClass('hide-show');
     });
 
+    
+    $('#live-search').click(function(){
+        evt.preventDefault();
+    })
+    
 ////CANCEL SEARCH AND REMOVE HIGHLIGHTING
     function cancelSearch() {
         //console.log('[from cancelSearch] -> ' + window_width);
@@ -248,14 +259,14 @@ $(document).ready(function(){
             par[0].normalize();
         });
         $('.search-notfound').removeClass('search-notfound');
-        if(window_width > 768){
+        if(window_width > 992){
             $("#filter-count").hide();
             $('#buttons_wrapper').hide();
-            $('#search_ui').hide(); 
+           // $('#search_ui').hide(); 
         }else{
             $("#filter-count_xs").hide();
             $('#buttons_wrapper_xs').hide();
-            $('#search_ui_xs').hide();
+          //  $('#search_ui_xs').hide();
         }
     };
 
@@ -263,7 +274,7 @@ $(document).ready(function(){
 ////////ON ENTER CLEAR RESULTS, THEN GO TO THE FIRST NEW INSTENCE
 
     $('#filter').keypress(function(e){
-        if(window_width > 768){
+        if(window_width > 992){
             if(e.keyCode == 13){
                  //console.log('[from normal] width is ' +window_width);
                 //console.log('filling ' + e.target.id);
@@ -279,6 +290,7 @@ $(document).ready(function(){
                 $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
                 $('#next').focus();
                 $('#hit0').css('background-color', '#00fab1');
+                evt.preventDefault();
             }
         }
     });
@@ -286,7 +298,7 @@ $(document).ready(function(){
       $('#live-search_xs').submit(function(e){
             //console.log('[from xs] width is ' +window_width);
             //console.log('mr. form_xs -> ' + e.target.id );
-            if(window_width <= 768){
+            if(window_width <= 992){
                 counter = 0;
                 e.preventDefault();
                 cancelSearch();
@@ -310,7 +322,7 @@ $(document).ready(function(){
     $(document).keyup(function(e){
         if (e.keyCode == 27){
             cancelSearch();
-            if(window_width > 768){
+            if(window_width > 992){
                $('#filter, #next, #prev').blur();
                 //empty search field value
                 $("#filter").val(''); 
@@ -338,7 +350,7 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop: topPos}, 400);
         //if($('#filter').length){
         //if($(document).width() > 768){
-        if(window_width > 768){
+        if(window_width > 992){
             $('#next').focus();
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
         }else{
@@ -443,7 +455,7 @@ var filter;
         topPos = $("#hit"+counter).offset().top ; // 55px (#library-tree height) not needed here
         $('html, body').animate({scrollTop: topPos}, 400);
         //if($(document).width() > 768){
-        if(window_width > 768){
+        if(window_width > 992){
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
             $('#next').focus();
         }else{
@@ -478,7 +490,7 @@ var filter;
         topPos = $("#hit"+counter).offset().top - 55;
         $('html, body').animate({scrollTop: topPos}, 400);
         //if($(document).width() > 768){
-        if(window_width > 768){
+        if(window_width > 992){
             $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
             $('#prev').focus();
         }else{
@@ -782,7 +794,7 @@ $('.add').on('click', function() {
       if(localStorage.getItem(thisPage)){
          $('html, body').stop().animate({
             scrollTop: $("#"+localStorage.getItem(thisPage)).offset().top
-        }, 2000);
+        }, 400);
       }else{
          //no position saved for this page
       }
@@ -959,7 +971,7 @@ $('.add').on('click', function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 2000);
+        }, 400);
         e.preventDefault();
     });
 
@@ -983,11 +995,11 @@ $('.add').on('click', function() {
             if (scrollTop >= section_top && scrollTop < nextTop) {
                 $('html, body').stop().animate({
                     scrollTop: nextTop
-                }, 2000);
+                }, 400);
             } else if (scrollTop < first_section || scrollTop >= last_section) {
                 $('html, body').stop().animate({
                     scrollTop: first_section
-                }, 2000);
+                }, 400);
             } else {
                 e.preventDefault();
             }
@@ -1010,11 +1022,11 @@ $('.add').on('click', function() {
             if (scrollTop > section_top && scrollTop <= nextTop) {
                 $('html, body').stop().animate({
                     scrollTop: section_top
-                }, 2000);
+                }, 400);
             } else if (scrollTop > last_section || scrollTop <= first_section) {
                 $('html, body').stop().animate({
                     scrollTop: last_section
-                }, 2000);
+                }, 400);
             } else {
                 e.preventDefault();
             }
@@ -1027,7 +1039,7 @@ $('.add').on('click', function() {
 
     
     ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
-    if ($(window).width() > "480") {
+ if ($(window).width() > "480") {
         $('a sup').click(function(ev){
             var numbr = $(this).text();
             var aidee = $('#fn'+numbr);
@@ -1035,7 +1047,7 @@ $('.add').on('click', function() {
             ev.preventDefault();
         });
     }
-
+  
     ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
     function fadeOutSidenotes() {
         $('.sidenote').css('opacity',0);
@@ -1198,6 +1210,15 @@ var fontSize;
     $('[data-toggle="tooltip"]').tooltip(); 
 
 
+    
+  
+    
+    
+    
+    
+    
+    
+    
 }); // <-- document ready
 
 

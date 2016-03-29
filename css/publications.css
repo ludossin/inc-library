@@ -159,7 +159,7 @@ body {
     font-family: "hk_groteskregular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f4f4f4;
+    background-color: white;
     margin: 0;
     background-attachment: fixed;
     color: #000;
@@ -2819,9 +2819,8 @@ font-size:18px;
 }
 
 
-.post:hover{
-/*     background-color:greenyellow;
-     */
+.post:hover .keyword{
+ 
 }
 
 .read{
@@ -2859,7 +2858,8 @@ font-size:18px;
 }
 .read h4:hover{
 /* border:2px solid black;
-    */    background-color:greenyellow;
+    */
+
 }
 
 
@@ -3212,12 +3212,12 @@ content: "-";
 #menu_bar_gotoread{
     position:fixed; height:100%; width:40px; right:0; margin:0; top:0;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0fef00+0,fff691+87,fff691+87 */
-    background: rgb(15,239,0); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(15,239,0,1) 0%, rgba(255,246,145,1) 87%, rgba(255,246,145,1) 87%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(15,239,0,1) 0%,rgba(255,246,145,1) 87%,rgba(255,246,145,1) 87%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(15,239,0,1) 0%,rgba(255,246,145,1) 87%,rgba(255,246,145,1) 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0fef00', endColorstr='#fff691',GradientType=0 ); /* IE6-9 */
-
+  /*  background: -moz-linear-gradient(top,  rgba(15,239,0,1) 0%, rgba(255,246,145,1) 87%, rgba(255,246,145,1) 87%);
+    background: -webkit-linear-gradient(top,  rgba(15,239,0,1) 0%,rgba(255,246,145,1) 87%,rgba(255,246,145,1) 87%);
+    background: linear-gradient(to bottom,  rgba(15,239,0,1) 0%,rgba(255,246,145,1) 87%,rgba(255,246,145,1) 87%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0fef00', endColorstr='#fff691',GradientType=0 ); 
+*/
+    background-color:orangered;
 
     cursor: pointer;
 /*     display: none;
