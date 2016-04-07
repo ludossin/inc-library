@@ -2,7 +2,7 @@
 *************************** STYLE FOR LAMBDA PAGES ********************************
 ************************************************************************************
 
-Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)    
+Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)
 1. Colors
 
 00.--- SUMMARY
@@ -296,7 +296,7 @@ hr {
     align-items: center;
 }
 
-/* 
+/*
 .vcenter {
 display: inline-block;
 vertical-align: middle;
@@ -760,8 +760,8 @@ img {
 /*  img.grayscale {
 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 filter: gray;
--webkit-filter: grayscale(100%); 
--webkit-transition: all .1s ease; 
+-webkit-filter: grayscale(100%);
+-webkit-transition: all .1s ease;
 -webkit-backface-visibility: hidden;
 }
 
@@ -1199,7 +1199,7 @@ padding: 0;
     height: 100%;
     background-color: white;
     box-shadow: -5px 0 2px rgba(54,54,54,0.32);
-    z-index:9999999999999; 
+    z-index:9999999999999;
     position:fixed;
     padding-left: 5%;
 }
@@ -1617,7 +1617,7 @@ input:hover {
 }
 
 .highlight {
-    /*display: inline-block; 
+    /*display: inline-block;
     width: 50%;
     height: 50%;
     text-align: center;*/
@@ -1625,9 +1625,9 @@ input:hover {
 }
 
 /*.search-found {
-background: -webkit-radial-gradient(10px, white, white, #c7c7c7); /* Safari 5.1 to 6.0 
-background: -o-radial-gradient(10px, white, white, #c7c7c7); /* For Opera 11.6 to 12.0 
-background: -moz-radial-gradient(10px, white, white, #c7c7c7); /* For Firefox 3.6 to 15 
+background: -webkit-radial-gradient(10px, white, white, #c7c7c7); /* Safari 5.1 to 6.0
+background: -o-radial-gradient(10px, white, white, #c7c7c7); /* For Opera 11.6 to 12.0
+background: -moz-radial-gradient(10px, white, white, #c7c7c7); /* For Firefox 3.6 to 15
 background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (must be last) *
 }*/
 #buttons_wrapper {
@@ -1840,14 +1840,11 @@ color: #0000ff;
     color: #FF5200;
 }
 
-#tools {
+/*#tools {
     top: 2%;
     right: 1%;
-    /*position: static;
-    bottom: 5px;
-    display: inline-block;*/
     position: fixed;
-}
+}*/
 
 .full-citation {
     text-align: left;
@@ -2044,13 +2041,13 @@ ol {
     padding-right: 5px;
     margin-right: 4px;
     margin-bottom: 8px;
-    /*     background-color: rgba(28, 51, 229, 0.1);  
+    /*     background-color: rgba(28, 51, 229, 0.1);
     color: #0000ff;  */
     background-color: #8e8e8e;
     border: none;
     height: auto;
     box-shadow: none;
-    /* 
+    /*
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
     */
 }
@@ -2058,7 +2055,7 @@ ol {
 .section .btn.active {
     /*     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.3);
-    color: #0000ff;  
+    color: #0000ff;
     */
     background-color: #8e8e8e;
     outline: none;
@@ -2066,7 +2063,7 @@ ol {
 
 .section .keyword-button:focus {
     /*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    background-color: rgba(28, 51, 229, 0.1);  
+    background-color: rgba(28, 51, 229, 0.1);
     color: #0000ff;   */
     background-color: #8e8e8e;
     outline: none;
@@ -2172,8 +2169,8 @@ p .btn {
     padding-right: 5px;
     margin-right: 4px;
     margin-bottom: 8px;
-    /*     background-color: rgba(28, 51, 229, 0.1);  
-    color: #0000ff;  
+    /*     background-color: rgba(28, 51, 229, 0.1);
+    color: #0000ff;
     border:none;
     height: auto;
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135); */
@@ -2181,7 +2178,7 @@ p .btn {
 }
 
 .section .btn.active {
-    /*     
+    /*
     background-color: rgba(28, 51, 229, 0.3);
     color: #0000ff;   */
     background-color: #dbdbdb;
@@ -2193,7 +2190,7 @@ p .btn {
 
 .section .keyword-button:focus {
     /*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    background-color: rgba(28, 51, 229, 0.1);  
+    background-color: rgba(28, 51, 229, 0.1);
     color: #0000ff;   */
     background-color: #dbdbdb;
 }
@@ -2360,7 +2357,7 @@ color:#FF5200;
     text-align: center;
     margin-bottom: 30px;
     padding-left: 40px;
-    margin-top: 10px;    
+    margin-top: 10px;
 }
 
 .panel-heading.pannel-title:after {
@@ -2485,10 +2482,10 @@ color:#FF5200;
 
 /* Tooltip */
 /*.tooltip > .tooltip-inner {
-background-color: #73AD21; 
-color: #FFFFFF; 
+background-color: #73AD21;
+color: #FFFFFF;
 border: 1px solid green;
-width: 350px; 
+width: 350px;
 }*/
 /* Tooltip on top */
 /*.tooltip.top > .tooltip-arrow {
@@ -2522,7 +2519,7 @@ border-right: 5px solid #000000;
 blockquote {
     margin: 2em 0 2em 2.5em;
     font-size: inherit;
-    /* 
+    /*
     font-size: 1.22em;
     */
     border-left: 0;
@@ -2681,14 +2678,14 @@ input:focus,select:focus,textarea:focus,button:focus {
     -moz-column-width: 13em;
     -webkit-column-width: 13em;
     -moz-column-gap: 2em;
-    -webkit-column-gap:2em; 
+    -webkit-column-gap:2em;
 
 }
 
 #news-container .item {
     display: inline-block;
     padding:  .25rem;
-    width:  100%; 
+    width:  100%;
     margin-bottom: 40px;
 }
 
@@ -2731,7 +2728,7 @@ font-size:18px;
     font-size: 16px;
     line-height: 20px;
 }
-/* 
+/*
 .well .keyword{
     cursor:default;
     border-radius: 5px;
@@ -2820,7 +2817,7 @@ font-size:18px;
 
 
 .post:hover .keyword{
- 
+
 }
 
 .read{
@@ -2832,16 +2829,16 @@ font-size:18px;
     /* margin: 20px; */
     /* position: relative; */
     /* top: 50%; */
-}/* 
+}/*
 
 .read:before {
     content: '';
     display: inline-block;
-    height: 100%; 
+    height: 100%;
     vertical-align: middle;
     margin-right: -0.25em; Adjusts for spacing
 
-    For visualization 
+    For visualization
     background: #808080; width: 5px;
 } */
 
@@ -2932,7 +2929,7 @@ font-size:18px;
 }
 
 #header-info{
-    text-align:center; 
+    text-align:center;
     font-size: 22px;
     line-height: 28px;
 
@@ -3031,7 +3028,7 @@ color:black;
 
 #library-tree:hover #breadcrumb {
     padding: 2px;
-    /* 
+    /*
     opacity: 0.5;
     */
     color: #FF5200;
@@ -3141,7 +3138,7 @@ p {
     margin-top:2px;
     background-color: #dbdbdb;
 }
-#btn-taglist-reset, #btn-taglist-collection{ 
+#btn-taglist-reset, #btn-taglist-collection{
 
     cursor: pointer;
     /* border-radius: 5px; */
@@ -3199,10 +3196,10 @@ content: "-";
     text-align:center;
 
     padding-left: 5%;
-    padding-right: 10%;    
+    padding-right: 10%;
     box-shadow: inset 0px -4px 3px rgba(51, 51, 51, 0.27);
     overflow-y: auto;
-    /* initially hidden 
+    /* initially hidden
     display: none;*/
 }
 #about:hover {
@@ -3214,8 +3211,8 @@ content: "-";
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0fef00+0,fff691+87,fff691+87 */
   /*  background: -moz-linear-gradient(top,  rgba(15,239,0,1) 0%, rgba(255,246,145,1) 87%, rgba(255,246,145,1) 87%);
     background: -webkit-linear-gradient(top,  rgba(15,239,0,1) 0%,rgba(255,246,145,1) 87%,rgba(255,246,145,1) 87%);
-    background: linear-gradient(to bottom,  rgba(15,239,0,1) 0%,rgba(255,246,145,1) 87%,rgba(255,246,145,1) 87%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0fef00', endColorstr='#fff691',GradientType=0 ); 
+    background: linear-gradient(to bottom,  rgba(15,239,0,1) 0%,rgba(255,246,145,1) 87%,rgba(255,246,145,1) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0fef00', endColorstr='#fff691',GradientType=0 );
 */
     background-color:orangered;
 
@@ -3229,7 +3226,7 @@ content: "-";
 }
 
 #menu_bar_gotoread:hover{
-    width:50px; 
+    width:50px;
 }
 
 #menu_bar_gotoread_button{
@@ -3246,7 +3243,7 @@ content: "-";
     transition: color .5s;
     font-size: 20px;
     text-transform: uppercase;
-    white-space: nowrap; 
+    white-space: nowrap;
     -webkit-transform: rotate(-90deg) translate(-50%);
     -moz-transform: rotate(-90deg) translate(-50%);
     -ms-transform: rotate(-90deg) translate(-50%);
@@ -3267,8 +3264,8 @@ content: "-";
     overflow-y: scroll;
     /* -webkit-box-shadow: inset 0px -9px 17px 0px rgba(255,255,255,1); */
     /* box-shadow: inset 0px -9px 17px 0px #ff5200; */
-    text-align: center;/* 
-    
+    text-align: center;/*
+
     padding-left: 12%;
     padding-right: 12%; */
 }
@@ -3280,7 +3277,7 @@ content: "-";
     padding-right: 12%; */
     cursor: default;
     font-family:"HK_Groteskmedium";
-    
+
 }
 #filters1, #filters2, #filters3, #filters4, #filters5{
 background-color: #F4F4F4;
@@ -3334,7 +3331,7 @@ cursor: pointer;
         cursor: default;
     }
 
-    
+
     .panel-body {
         margin: 0;
         padding-left: 5%;
@@ -3392,7 +3389,7 @@ cursor: pointer;
         cursor: default;
         margin-bottom: 0;
     }
-    
+
     .read{
         height: auto;
     }
@@ -3401,7 +3398,7 @@ cursor: pointer;
         margin-bottom: 0px;
         padding: 0;
     }
-    
+
 
 
     .panel-title {
@@ -3541,7 +3538,7 @@ cursor: pointer;
         right: 60px;
         top: 0px;
     }
-    
+
     .panel-group .panel-heading h4.collapsed:after{
         position: absolute;
         right: 60px;
@@ -3567,13 +3564,13 @@ cursor: pointer;
         z-index: 10;
         cursor: pointer;
     }
-    
+
     #menu_bar_gotoread:hover{
-       width:30px; 
+       width:30px;
     }
 
     #header-info{
-        text-align:center; 
+        text-align:center;
         font-size: 22px;
         line-height: 28px;
 
@@ -3642,13 +3639,13 @@ cursor: pointer;
     }
 
 }
-    
+
 
 
 
 
 @media (max-width: 480px) {
-    
+
 
     .tags_container_table{
         font-size: 14px;
@@ -3659,8 +3656,8 @@ cursor: pointer;
         font-family:"HK_Groteskmedium";
     }
 
-    
-    
+
+
     #book-title {
         font-size: 3em;
         margin-top: 10px;
@@ -3733,7 +3730,7 @@ cursor: pointer;
         height:30px;
         width:100%;
         top:0;
-    }    
+    }
     #menu_bar_gotoselection{
         height:30px;
         width:100%;
@@ -3864,4 +3861,3 @@ cursor: pointer;
 
     }
 }
-
