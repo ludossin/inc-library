@@ -78,7 +78,7 @@ $(document).ready(function(){
 
     $('#menu_bar').click(function() {
           var menu_width = $('#toc_wrapper').width();
-                $('#menu').animate({left: 40});
+                $('#menu').animate({left: 0});
                 $('#menu-left-close').show();
         
         if(window.innerWidth < 769) {
@@ -466,7 +466,8 @@ var filter;
 
 
         $('#hit'+counter).css('background-color',  'rgb(0, 250, 146)');
-        $('#hit'+(counter-1)).css('background-color', ' rgba(0, 250, 146, 0.35)');
+        $('#hit'+(counter-1)).css('background-color', ' rgba(0, 250, 146, 0.34902)');
+        $('#hit'+(counter-1)).css('color', '#1c6a1c');
     }
 
     $('#next').click(function() {
@@ -500,7 +501,8 @@ var filter;
 
 
         $('#hit'+counter).css('background-color', 'rgb(0, 250, 146)');
-        $('#hit'+(counter+1)).css('background-color', 'rgba(0, 250, 146, 0.35)');
+        $('#hit'+(counter+1)).css('background-color', 'rgba(0, 250, 146, 0.34902)');
+        $('#hit'+(counter+1)).css('color', '#1c6a1c');
     }
 
     $('#prev').click(function() {
@@ -927,6 +929,7 @@ $('.add').on('click', function() {
                 }
                 
                 $(this).children().css('color', 'black');
+                $(this).children().css('background-color', 'transparent');
 
 
             });

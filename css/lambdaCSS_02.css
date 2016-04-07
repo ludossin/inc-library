@@ -188,16 +188,17 @@ body {
     overflow-x: hidden;
 }
 
-/* Easy changes :-) */
-/* Background-color of text on selection */
-/* ::-moz-selection {
-    background-color: #F4f4f4;
+ ::-moz-selection {
+    background-color: #FF3300;
+     color: white;
 }
 
 ::selection {
-    background-color: #F4f4f4;
+    background-color: #FF3300;
+    color: white;
+
 }
- */
+
 a {
     color: #000;
     font-family: "hk_groteskbold";
@@ -1152,7 +1153,7 @@ color: rgba(0, 0, 0, 0.5);
     -moz-transition: width .15s ease;
     -o-transition: width .15s ease;
     transition: width .15s ease;
-    left: 40px;
+    left: 0px;
 }
 
 
@@ -1877,6 +1878,9 @@ fieldset {
     margin-left: 0;
     margin-right: 15px;
     margin-top: 0px;
+    -webkit-box-shadow: 0px 0px 8px 5px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 8px 5px rgba(255,255,255,1);
+    box-shadow: 0px 0px 8px 5px rgba(255,255,255,1);
 }
 
 #filter > * {
@@ -1999,6 +2003,7 @@ input:hover {
     height: 50%;
     text-align: center;*/
     background-color: rgba(0, 250, 146, 0.35);
+    color:#165016;
 }
 
 /*.search-found {
@@ -2148,9 +2153,8 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 .capitalism,.capital,.creativity,.art,.contemporary,.culture,.ideological,.social,.labor,.attention,.image,.production,.capitalism,.art,.state,.life,.public,.city,.economics,.production,.development,.art,.social,.avant-garde,.world,.big,.Other,.art,.urban,.cultural,.project,.creativity,.Belgrade,.Rog,.capital,.creative,.collective,.urban,.factory,.gentrification,.art,.political,.social,.culture,.autonomy,.public,.work {
     /* color: rgb(0, 0, 255);
     */
-    color: #2247FF;
-    background-color: rgba(34, 71, 255, 0.21);
-}
+    color: #f30;
+    background-color:rgba(255, 82, 0, 0.19)};
 
 /********CITATIONS************************/
 .underline {
@@ -2269,14 +2273,14 @@ list-style-type: none;
     margin-right: 4px;
 }
 
-#tools {
+/* #tools {
     top: 2%;
     right: 1%;
-    /*position: static;
+    position: static;
     bottom: 5px;
-    display: inline-block;*/
+    display: inline-block;
     position: fixed;
-}
+} */
 
 .full-citation {
     text-align: left;
